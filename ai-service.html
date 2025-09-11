@@ -14,11 +14,11 @@
     <nav class="navigation">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="logo.png" alt="Mirai Engineering" class="logo-image">
+                <img src="assets/images/logos/logo.png" alt="Mirai Engineering" class="logo-image">
             </a>
             <ul class="nav-menu">
                 <li><a href="about.html" class="nav-link">Who we are</a></li>
-                <li><a href="ai-service.html" class="nav-link active">AI as a service</a></li>
+                <li><a href="ai-service.html" class="nav-link active">AI as a Service</a></li>
                 <li><a href="industries.html" class="nav-link">Case Studies</a></li>
                 <li><a href="ai-tech-stack.html" class="nav-link">AI Tech Stack</a></li>
                 <li><a href="contact.html" class="nav-link">Get in Touch</a></li>
@@ -38,82 +38,289 @@
             <div class="container">
                 <div class="section-header">
                     <h1 class="page-title">AI as a Service</h1>
-                    <p class="section-subtitle">Comprehensive AI solutions tailored to your business needs</p>
+                    <p class="intro-text">When we talk about implementing AI and ML services we refer to them as AI as a Service - or AIaaS -.</p>
+                    
+                    <p class="intro-text">Before continuing, put yourself in the following scenario: You want to buy a coffee machine to make yourself a tasty, grinded coffee. You know you love coffee and how it tastes, but you have no idea about the machine, how it works. On top, you know nothing about coffee beans, their ideal grind size etc. Would you go straight away and buy the 15.000$ coffee machine? Obviously not.</p>
+                    
+                    <p class="intro-text">The same happens with AI. In our vision, for the client to get the most out of it, he first needs to understand where it can be applied & how it works. In the next sections you will be able to understand how you can truly unlock AI's power tailored to your needs, through engineering.</p>
                 </div>
                 
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">🤖</div>
-                        <h3 class="service-title">Custom Model Development</h3>
-                        <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <ul class="service-features">
-                            <li>Machine Learning Model Training</li>
-                            <li>Deep Learning Architecture Design</li>
-                            <li>Data Preprocessing & Feature Engineering</li>
-                            <li>Model Optimization & Tuning</li>
-                        </ul>
-                    </div>
+                <!-- Introduction -->
+                <div class="ai-intro">
+                    <h2 class="intro-title centered-title">But... What is AI?</h2>
+                    <p class="intro-text">Artificial Intelligence has been around for decades. Think about it: isn't it fascinating that a simple calculator—just a small device with a few circuits, a display, and a battery—can already outperform us in arithmetic? (If you're not convinced, try solving 9,84567/37 in your head without using a pen).</p>
                     
-                    <div class="service-card">
-                        <div class="service-icon">⚙️</div>
-                        <h3 class="service-title">In-House Deployment</h3>
-                        <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <ul class="service-features">
-                            <li>On-Premises Infrastructure Setup</li>
-                            <li>Cloud Integration & Migration</li>
-                            <li>API Development & Integration</li>
-                            <li>Security & Compliance Implementation</li>
-                        </ul>
-                    </div>
+                    <p class="intro-text">AI is a broad field that covers anything designed to mimic human reasoning: from basic hardware like calculators and computers to more advanced algorithms such as machine learning and deep learning (the engines behind systems like ChatGPT, Gemini, and others). You can visualize it like this:</p>
                     
-                    <div class="service-card">
-                        <div class="service-icon">📊</div>
-                        <h3 class="service-title">Performance Optimization</h3>
-                        <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <ul class="service-features">
-                            <li>Model Performance Analysis</li>
-                            <li>Speed & Efficiency Optimization</li>
-                            <li>Resource Utilization Monitoring</li>
-                            <li>Scalability Planning & Implementation</li>
-                        </ul>
-                    </div>
+                    <p class="intro-text">But if AI has existed for so long, why has it only become a mainstream topic since 2022? The answer lies in data and computing power. AI achieved its first major breakthrough in the research community in 2017, when advances in computing and the explosion of available data allowed models to be trained on massive datasets using powerful clusters. Commercial applications followed just a few years later.</p>
                     
-                    <div class="service-card">
-                        <div class="service-icon">🔄</div>
-                        <h3 class="service-title">Continuous Monitoring</h3>
-                        <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <ul class="service-features">
-                            <li>24/7 System Monitoring</li>
-                            <li>Performance Metrics Tracking</li>
-                            <li>Automated Alert Systems</li>
-                            <li>Regular Maintenance & Updates</li>
-                        </ul>
+                    <p class="intro-text">Now that we've defined what AI is, the real question is: how can you apply it to your needs? At Mirai, our engineers specialize in the two key branches of AI: Generative AI and Analytical AI.</p>
+                </div>
+                
+                <!-- AI Types Section -->
+                <div class="ai-types-section">
+                    <h2 class="intro-title centered-title">Generative vs. Analytical Artificial Intelligence</h2>
+                    <p class="section-subtitle">Understanding the two fundamental approaches to artificial intelligence</p>
+                    
+                    <div class="ai-types-grid">
+                        <div class="ai-type-card">
+                            <div class="type-icon">🎨</div>
+                            <h3 class="type-title">Generative AI</h3>
+                            <p class="type-description">Focuses on <strong>creating new content</strong>, from text and images to code and music. Its mission is to produce original outputs that are often indistinguishable from human creations. If you've heard of Agents, LLMs or used tools like ChatGPT, Gemini, etc., you've used Generative AI.</p>
+                            <div class="type-image">
+                                <img src="assets/images/ai-types/GenAI.png" alt="Generative AI - Creating new content from text, images, and code" class="type-image-content">
+                            </div>
+                        </div>
+                        
+                        <div class="ai-type-card">
+                            <div class="type-icon">🔍</div>
+                            <h3 class="type-title">Analytical AI</h3>
+                            <p class="type-description">A tool for <strong>finding patterns and insights</strong> within existing data. Its mission is to analyze, categorize, predict, and optimize. It helps us make sense of the past and present to better inform the future. You could use e.g. a model to predict customer churn based on his purchasing behaviour, or optimise for your next coffee been composition to produce the most aromatic and tasty coffee.</p>
+                            <div class="type-image">
+                                <img src="assets/images/ai-types/AnalyAI.png" alt="Analytical AI - Finding patterns and insights in data" class="type-image-content">
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+                <h2 class="intro-title centered-title">Real World Applications of AI to Get Inspired</h2>
 
-                <!-- Process Section -->
-                <div class="process-section">
-                    <h2 class="section-title">Our AI Implementation Process</h2>
-                    <div class="process-steps">
-                        <div class="process-step">
+                <!-- Generative AI Details -->
+                <div class="ai-details-section">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-icon">🎨</div>
+                            <h3 class="detail-title">Generative AI: Creating the Future</h3>
+                        </div>
+                        <div class="detail-content">
+                            <p class="detail-text">Generative AI is a powerful engine for <strong>creativity and efficiency</strong>. Using technologies like Convolutional Neural Networks (CNNs), advanced Diffusion Models, or agents powered by Large Language Models (LLMs) we can generate high-quality images, human-like interactions, product mockups, and visual content from simple text prompts.</p>
+                            
+                            <div class="detail-image">
+                                <img src="assets/images/ai-types/face diffusion.png" alt="Face Diffusion Model - Advanced AI image generation technology" class="detail-image-content">
+                            </div>
+                            
+                            <h4 class="subsection-title">🤖 AI Agents & Automation</h4>
+                            <div class="use-cases-grid">
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">👥</div>
+                                    <h5 class="use-case-title">HR Automation</h5>
+                                    <p class="use-case-description">AI agents handle employee onboarding/offboarding by automatically generating contracts, provisioning accounts, and processing exit checklists.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🎧</div>
+                                    <h5 class="use-case-title">Customer Service Desk</h5>
+                                    <p class="use-case-description">Deploy agents that autonomously triage tickets, resolve common issues, and escalate only when needed.</p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="subsection-title">📊 Automated Reporting & Moderation</h4>
+                            <div class="use-cases-grid">
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">📋</div>
+                                    <h5 class="use-case-title">Regulatory & Compliance Reports</h5>
+                                    <p class="use-case-description">Automatically generate monthly or quarterly compliance summaries from structured data and logs.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🛡️</div>
+                                    <h5 class="use-case-title">Content Moderation</h5>
+                                    <p class="use-case-description">Real-time filtering of inappropriate user-generated text, images, or videos across your platform.</p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="subsection-title">🧠 Leveraging Enterprise Knowledge</h4>
+                            <div class="use-cases-grid">
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">📈</div>
+                                    <h5 class="use-case-title">Product & Service Improvement</h5>
+                                    <p class="use-case-description">Analyze social media posts, customer reviews, and call transcripts to uncover recurring pain points and feature requests.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🔍</div>
+                                    <h5 class="use-case-title">Internal Knowledge Base Search</h5>
+                                    <p class="use-case-description">Deploy a local LLM to query across documents, policies, and training materials — no external API calls, ensuring privacy.</p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="subsection-title">🏢 Local LLMs – Your Data, Your Control</h4>
+                            <div class="use-cases-grid">
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">💼</div>
+                                    <h5 class="use-case-title">Private Enterprise Assistants</h5>
+                                    <p class="use-case-description">Run an LLM on your own infrastructure to handle sensitive tasks like contract drafting or board meeting summaries.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🔒</div>
+                                    <h5 class="use-case-title">Data Security at Scale</h5>
+                                    <p class="use-case-description">Same capabilities as cloud-hosted models, but without sending confidential information outside your environment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Analytical AI Details -->
+                <div class="ai-details-section">
+                    <div class="detail-card">
+                        <div class="detail-header">
+                            <div class="detail-icon">🔍</div>
+                            <h3 class="detail-title">Analytical AI: Finding Insights in Your Data</h3>
+                        </div>
+                        <div class="detail-content">
+                            <p class="detail-text">Where Generative AI creates, Analytical AI <strong>clarifies and optimizes</strong>. Using advanced neural networks, we can derive actionable intelligence from your data, optimize processes, find optimal compositions and more. From fintech to engineering, from healthcare to data processing, Analytical AI can help you make better decisions and optimize your processes, the application fields are endless.</p>
+                            
+                            <div class="detail-image">
+                                <img src="assets/images/ai-types/market_analysis.png" alt="Market Analysis with AI - Advanced data analytics and prediction models" class="detail-image-content">
+                            </div>
+                            
+                            <h4 class="subsection-title">🔮 Predictive Analytics & Maintenance</h4>
+                            <div class="use-cases-grid">
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">⚙️</div>
+                                    <h5 class="use-case-title">End-of-Life & Predictive Maintenance</h5>
+                                    <p class="use-case-description">Anticipate when machinery, vehicles, or electronics are likely to fail by combining sensor data with predictive models. This reduces downtime and saves on unnecessary replacements.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🧬</div>
+                                    <h5 class="use-case-title">Structure–Property Modeling with GNNs</h5>
+                                    <p class="use-case-description">Use graph neural networks to model complex relationships in materials science or drug discovery, then optimize desired properties (strength, durability, conductivity, efficacy) with Bayesian optimization.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🛒</div>
+                                    <h5 class="use-case-title">Customer Behavior Forecasting</h5>
+                                    <p class="use-case-description">Build models that predict purchasing patterns, allowing you to deliver personalized recommendations and boost customer retention.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">📧</div>
+                                    <h5 class="use-case-title">Email Classification with NLP</h5>
+                                    <p class="use-case-description">Automatically categorize and prioritize incoming emails to reduce customer response time — used in logistics for faster ticket handling.</p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="subsection-title">💰 Profit Enhancement & Cost Savings</h4>
+                            <div class="use-cases-grid">
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🚨</div>
+                                    <h5 class="use-case-title">Failure Detection</h5>
+                                    <p class="use-case-description">Deploy real-time anomaly detection models to monitor production lines, vehicles, or IT systems — preventing costly outages.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">📦</div>
+                                    <h5 class="use-case-title">Supply Chain Acceleration</h5>
+                                    <p class="use-case-description">Forecast demand, optimize inventory, and automate planning to cut operational costs and delivery times.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">📊</div>
+                                    <h5 class="use-case-title">Market Analysis with Adaptive Deep Learning</h5>
+                                    <p class="use-case-description">Deep Learning models that adapt to data drift can track shifting consumer behavior, predict resource needs, and identify risks in volatile markets.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">📈</div>
+                                    <h5 class="use-case-title">ARIMA & Advanced Forecasting</h5>
+                                    <p class="use-case-description">Predict demand for groceries, meals, or consumer goods to optimize stock. Anticipate product trends, seasonal spikes, or global supply shocks with time-series models.</p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="subsection-title">👁️ Computer Vision Applications</h4>
+                            <div class="use-cases-grid">
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🎯</div>
+                                    <h5 class="use-case-title">Image Segmentation & Object Identification</h5>
+                                    <p class="use-case-description">Detect and classify objects such as cars, people, faces, or even driver behaviors (e.g., one-hand driving in mining trucks for safety monitoring).</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🆔</div>
+                                    <h5 class="use-case-title">Identity Verification & Fraud Prevention</h5>
+                                    <p class="use-case-description">Extract text and validate data from ID cards with OCR + image analysis to detect mismatches and prevent identity fraud in finance or lending.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🔧</div>
+                                    <h5 class="use-case-title">Edge Deployment with NVIDIA Jetson</h5>
+                                    <p class="use-case-description">Run computer vision models locally on small, efficient devices for real-time monitoring in logistics, retail, or manufacturing.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🚛</div>
+                                    <h5 class="use-case-title">Operational Efficiency in Logistics</h5>
+                                    <p class="use-case-description">Use CV to monitor fleet and warehouse activity, then optimize operations to reduce congestion. Automate access control and improve traceability across transport hubs.</p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="subsection-title">🎯 Specialized Business Applications</h4>
+                            <div class="use-cases-grid">
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">💳</div>
+                                    <h5 class="use-case-title">Churn Prediction & Credit Scoring</h5>
+                                    <p class="use-case-description">Spot customers likely to churn and intervene with retention strategies. Apply ML-based credit scoring to improve approval rates while reducing default risk.</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🧪</div>
+                                    <h5 class="use-case-title">Optimal Composition of Materials</h5>
+                                    <p class="use-case-description">Apply Bayesian Optimization to find the best-performing composition of products, chemicals, or processes (e.g., alloys, batteries, pharmaceuticals).</p>
+                                </div>
+                                <div class="use-case-item">
+                                    <div class="use-case-icon">🛡️</div>
+                                    <h5 class="use-case-title">Content Moderation</h5>
+                                    <p class="use-case-description">Automatically scan images, videos, and ads to flag inappropriate or non-compliant content before publication.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AIaaS Lifecycle -->
+                <div class="lifecycle-section">
+                    <h2 class="intro-title centered-title">The AIaaS Lifecycle</h2>
+                    <p class="section-subtitle">We are not a product; we are your partner in a journey. Our AI as a Service isn't a single transaction—it's a comprehensive, collaborative lifecycle designed for continuous innovation.</p>
+                    
+                    <div class="lifecycle-steps">
+                        <div class="lifecycle-step">
                             <div class="step-number">1</div>
-                            <h3 class="step-title">Discovery & Analysis</h3>
-                            <p class="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="step-content">
+                                <h3 class="step-title">Discovery & Data Phase</h3>
+                                <p class="step-description">Every successful AI project starts with a <strong>tailored understanding</strong> of your business needs. We begin with a product discovery goal: exploring the technology and possibilities to provide a customized recommendation.</p>
+                                <ul class="step-features">
+                                    <li>4-6 week exploration process</li>
+                                    <li>Data annotation and labeling</li>
+                                    <li>Machine Learning assisted annotation</li>
+                                    <li>Proof of concept development</li>
+                                </ul>
+                            </div>
+                            <div class="step-image-placeholder">
+                                <!-- Discovery phase image will be added here -->
+                            </div>
                         </div>
-                        <div class="process-step">
+                        
+                        <div class="lifecycle-step">
                             <div class="step-number">2</div>
-                            <h3 class="step-title">Model Development</h3>
-                            <p class="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="step-content">
+                                <h3 class="step-title">Development & Deployment Phase</h3>
+                                <p class="step-description">This is where the <strong>magic happens</strong>. Our machine learning experts step in to model and train your data, exploring different state-of-the-art algorithms to find the best fit for your challenge.</p>
+                                <ul class="step-features">
+                                    <li>Model training and optimization</li>
+                                    <li>Full-stack development (Python, Go, React, Docker)</li>
+                                    <li>End-to-end expertise</li>
+                                    <li>Seamless integration</li>
+                                </ul>
+                            </div>
+                            <div class="step-image-placeholder">
+                                <!-- Development phase image will be added here -->
+                            </div>
                         </div>
-                        <div class="process-step">
+                        
+                        <div class="lifecycle-step">
                             <div class="step-number">3</div>
-                            <h3 class="step-title">Testing & Validation</h3>
-                            <p class="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">4</div>
-                            <h3 class="step-title">Deployment & Support</h3>
-                            <p class="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="step-content">
+                                <h3 class="step-title">Optimization & Scale Phase</h3>
+                                <p class="step-description">Our job doesn't end at deployment. We look to build <strong>long-term, technical partnerships</strong> with our clients, ensuring your AI solution stays cutting-edge and continues to deliver unprecedented efficiency.</p>
+                                <ul class="step-features">
+                                    <li>CI/CD pipeline setup</li>
+                                    <li>Continuous model improvement</li>
+                                    <li>Service maintenance and updates</li>
+                                    <li>Feature additions and scaling</li>
+                                </ul>
+                            </div>
+                            <div class="step-image-placeholder">
+                                <!-- Optimization phase image will be added here -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,7 +334,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="index.html" class="footer-logo">
-                        <img src="logo.png" alt="Mirai Engineering" class="footer-logo-image">
+                        <img src="assets/images/logos/logo.png" alt="Mirai Engineering" class="footer-logo-image">
                     </a>
                     <a href="contact.html" class="footer-tagline" id="animated-tagline">Got a project? Let's talk</a>
                 </div>
@@ -136,7 +343,7 @@
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-nav">
                         <li><a href="about.html" class="footer-link">Who we are</a></li>
-                        <li><a href="ai-service.html" class="footer-link">AI as a service</a></li>
+                        <li><a href="ai-service.html" class="footer-link">AI as a Service</a></li>
                         <li><a href="industries.html" class="footer-link">Case Studies</a></li>
                         <li><a href="ai-tech-stack.html" class="footer-link">AI Tech Stack</a></li>
                         <li><a href="contact.html" class="footer-link">Get in Touch</a></li>
