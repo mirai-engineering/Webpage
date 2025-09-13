@@ -7,7 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
     </style>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=15">
 </head>
 <body>
     <!-- Navigation -->
@@ -38,37 +38,54 @@
             <div class="container">
                 <div class="section-header">
                     <h1 class="page-title">AI as a Service</h1>
-                    <p class="intro-text">When we talk about implementing AI and ML services we refer to them as AI as a Service - or AIaaS -.</p>
-                    
-                    <p class="intro-text">Before continuing, put yourself in the following scenario: You want to buy a coffee machine to make yourself a tasty, grinded coffee. You know you love coffee and how it tastes, but you have no idea about the machine, how it works. On top, you know nothing about coffee beans, their ideal grind size etc. Would you go straight away and buy the 15.000$ coffee machine? Obviously not.</p>
-                    
-                    <p class="intro-text">The same happens with AI. In our vision, for the client to get the most out of it, he first needs to understand where it can be applied & how it works. In the next sections you will be able to understand how you can truly unlock AI's power tailored to your needs, through engineering.</p>
+                    <p class="intro-text">When we talk about implementing AI and ML services we refer to them as AI as a Service - or AIaaS -. In this page you will learn about different AI types, its applications, and our methodology at Mirai.</p>
                 </div>
                 
                 <!-- Introduction -->
                 <div class="ai-intro">
                     <h2 class="intro-title centered-title">But... What is AI?</h2>
-                    <p class="intro-text">Artificial Intelligence has been around for decades. Think about it: isn't it fascinating that a simple calculator—just a small device with a few circuits, a display, and a battery—can already outperform us in arithmetic? (If you're not convinced, try solving 9,84567/37 in your head without using a pen).</p>
                     
-                    <p class="intro-text">AI is a broad field that covers anything designed to mimic human reasoning: from basic hardware like calculators and computers to more advanced algorithms such as machine learning and deep learning (the engines behind systems like ChatGPT, Gemini, and others). You can visualize it like this:</p>
+                    <p class="intro-text">Picture this: You're craving the perfect cup of coffee. You know what great coffee tastes like, but you're clueless about machines, grind sizes, or bean varieties. Would you impulsively drop $15,000 on a commercial espresso machine? Of course not. You'd start with understanding your needs, learning the basics, and finding the right solution for your situation. AI works exactly the same way. Before diving into complex implementations, you need to understand where AI fits, how it works, and what it can truly do for your business. That's where we come in—guiding you through AI's potential with the clarity and expertise you deserve.</p>
                     
-                    <p class="intro-text">But if AI has existed for so long, why has it only become a mainstream topic since 2022? The answer lies in data and computing power. AI achieved its first major breakthrough in the research community in 2017, when advances in computing and the explosion of available data allowed models to be trained on massive datasets using powerful clusters. Commercial applications followed just a few years later.</p>
+                    <!-- Text Separator -->
+                    <div class="text-separator">
+                        <div class="separator-line"></div>
+                        <div class="separator-icon">⚡</div>
+                        <div class="separator-line"></div>
+                    </div>
                     
-                    <p class="intro-text">Now that we've defined what AI is, the real question is: how can you apply it to your needs? At Mirai, our engineers specialize in the two key branches of AI: Generative AI and Analytical AI.</p>
+                    <p class="intro-text">Here's something that might surprise you: AI isn't new. That calculator on your desk? It's already outperforming you at arithmetic (try calculating 9,845.67 ÷ 37 in your head). AI is simply any system designed to mimic human thinking—from basic calculators to the sophisticated algorithms powering ChatGPT and Gemini. The difference? Today's AI can process vast amounts of data, learn patterns, and make decisions that would take humans years to master. It's the evolution from simple computation to genuine intelligence.</p>
+                    
+                    <!-- Text Separator -->
+                    <div class="text-separator">
+                        <div class="separator-line"></div>
+                        <div class="separator-icon">⚡</div>
+                        <div class="separator-line"></div>
+                    </div>
+                    
+                    <p class="intro-text">So why the sudden AI explosion? The answer is simple: data and computing power. In 2017, researchers finally had enough data and processing power to train models on massive datasets. The results were so impressive that commercial applications exploded just a few years later. Now, the real question isn't what AI is—it's how to harness its power for your specific needs. At Mirai, we specialize in the two branches that matter most: Generative AI (creating new content) and Analytical AI (understanding and predicting). Ready to discover which one fits your business?</p>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="ai-navigation-buttons">
+                        <button class="ai-nav-btn" onclick="scrollToSection('ai-types')">AI Types</button>
+                        <button class="ai-nav-btn" onclick="scrollToSection('applications')">Applications</button>
+                        <button class="ai-nav-btn" onclick="scrollToSection('lifecycle')">Our Process</button>
+                    </div>
                 </div>
                 
                 <!-- AI Types Section -->
-                <div class="ai-types-section">
-                    <h2 class="intro-title centered-title">Generative vs. Analytical Artificial Intelligence</h2>
-                    <p class="section-subtitle">Understanding the two fundamental approaches to artificial intelligence</p>
-                    
-                    <div class="ai-types-grid">
+                <div class="ai-types-section" id="ai-types">
+                    <div class="container">
+                        <h2 class="intro-title centered-title">Generative vs. Analytical Artificial Intelligence</h2>
+                        <p class="section-subtitle">Understanding the two fundamental approaches to artificial intelligence</p>
+                        
+                        <div class="ai-types-grid">
                         <div class="ai-type-card">
                             <div class="type-icon">🎨</div>
                             <h3 class="type-title">Generative AI</h3>
                             <p class="type-description">Focuses on <strong>creating new content</strong>, from text and images to code and music. Its mission is to produce original outputs that are often indistinguishable from human creations. If you've heard of Agents, LLMs or used tools like ChatGPT, Gemini, etc., you've used Generative AI.</p>
                             <div class="type-image">
-                                <img src="assets/images/ai-types/GenAI.png" alt="Generative AI - Creating new content from text, images, and code" class="type-image-content">
+                                <img src="assets/images/aiaas/GenAI.png" alt="Generative AI - Creating new content from text, images, and code" class="type-image-content">
                             </div>
                         </div>
                         
@@ -77,16 +94,18 @@
                             <h3 class="type-title">Analytical AI</h3>
                             <p class="type-description">A tool for <strong>finding patterns and insights</strong> within existing data. Its mission is to analyze, categorize, predict, and optimize. It helps us make sense of the past and present to better inform the future. You could use e.g. a model to predict customer churn based on his purchasing behaviour, or optimise for your next coffee been composition to produce the most aromatic and tasty coffee.</p>
                             <div class="type-image">
-                                <img src="assets/images/ai-types/AnalyAI.png" alt="Analytical AI - Finding patterns and insights in data" class="type-image-content">
+                                <img src="assets/images/aiaas/AnalyAI.png" alt="Analytical AI - Finding patterns and insights in data" class="type-image-content">
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
                 
-                <h2 class="intro-title centered-title">Real World Applications of AI to Get Inspired</h2>
+                <div class="real-world-applications-section" id="applications">
+                    <h2 class="intro-title centered-title">Some Real World Inspiration For Your Business of AI Projects</h2>
 
-                <!-- Generative AI Details -->
-                <div class="ai-details-section">
+                    <!-- Generative AI Details -->
+                    <div class="ai-details-section">
                     <div class="detail-card">
                         <div class="detail-header">
                             <div class="detail-icon">🎨</div>
@@ -96,7 +115,7 @@
                             <p class="detail-text">Generative AI is a powerful engine for <strong>creativity and efficiency</strong>. Using technologies like Convolutional Neural Networks (CNNs), advanced Diffusion Models, or agents powered by Large Language Models (LLMs) we can generate high-quality images, human-like interactions, product mockups, and visual content from simple text prompts.</p>
                             
                             <div class="detail-image">
-                                <img src="assets/images/ai-types/face diffusion.png" alt="Face Diffusion Model - Advanced AI image generation technology" class="detail-image-content">
+                                <img src="assets/images/aiaas/face diffusion.png" alt="Face Diffusion Model - Advanced AI image generation technology" class="detail-image-content">
                             </div>
                             
                             <h4 class="subsection-title">🤖 AI Agents & Automation</h4>
@@ -139,8 +158,8 @@
                                     <h5 class="use-case-title">Internal Knowledge Base Search</h5>
                                     <p class="use-case-description">Deploy a local LLM to query across documents, policies, and training materials — no external API calls, ensuring privacy.</p>
                                 </div>
-                            </div>
-                            
+                    </div>
+                    
                             <h4 class="subsection-title">🏢 Local LLMs – Your Data, Your Control</h4>
                             <div class="use-cases-grid">
                                 <div class="use-case-item">
@@ -169,7 +188,7 @@
                             <p class="detail-text">Where Generative AI creates, Analytical AI <strong>clarifies and optimizes</strong>. Using advanced neural networks, we can derive actionable intelligence from your data, optimize processes, find optimal compositions and more. From fintech to engineering, from healthcare to data processing, Analytical AI can help you make better decisions and optimize your processes, the application fields are endless.</p>
                             
                             <div class="detail-image">
-                                <img src="assets/images/ai-types/market_analysis.png" alt="Market Analysis with AI - Advanced data analytics and prediction models" class="detail-image-content">
+                                <img src="assets/images/aiaas/market_analysis.png" alt="Market Analysis with AI - Advanced data analytics and prediction models" class="detail-image-content">
                             </div>
                             
                             <h4 class="subsection-title">🔮 Predictive Analytics & Maintenance</h4>
@@ -242,8 +261,8 @@
                                     <h5 class="use-case-title">Operational Efficiency in Logistics</h5>
                                     <p class="use-case-description">Use CV to monitor fleet and warehouse activity, then optimize operations to reduce congestion. Automate access control and improve traceability across transport hubs.</p>
                                 </div>
-                            </div>
-                            
+                    </div>
+                    
                             <h4 class="subsection-title">🎯 Specialized Business Applications</h4>
                             <div class="use-cases-grid">
                                 <div class="use-case-item">
@@ -265,62 +284,76 @@
                         </div>
                     </div>
                 </div>
-                
+                </div>
+
                 <!-- AIaaS Lifecycle -->
-                <div class="lifecycle-section">
-                    <h2 class="intro-title centered-title">The AIaaS Lifecycle</h2>
-                    <p class="section-subtitle">We are not a product; we are your partner in a journey. Our AI as a Service isn't a single transaction—it's a comprehensive, collaborative lifecycle designed for continuous innovation.</p>
-                    
-                    <div class="lifecycle-steps">
+                <div class="lifecycle-section" id="lifecycle">
+                    <div class="container">
+                        <h2 class="intro-title centered-title">The AIaaS Lifecycle</h2>
+                        <p class="section-subtitle">We are not a product; we are your partner in a journey. Our AI as a Service isn't a single transaction—it's a comprehensive, collaborative lifecycle designed for continuous innovation.</p>
+                        
+                        <div class="lifecycle-steps">
                         <div class="lifecycle-step">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h3 class="step-title">Discovery & Data Phase</h3>
-                                <p class="step-description">Every successful AI project starts with a <strong>tailored understanding</strong> of your business needs. We begin with a product discovery goal: exploring the technology and possibilities to provide a customized recommendation.</p>
-                                <ul class="step-features">
-                                    <li>4-6 week exploration process</li>
-                                    <li>Data annotation and labeling</li>
-                                    <li>Machine Learning assisted annotation</li>
-                                    <li>Proof of concept development</li>
-                                </ul>
-                            </div>
-                            <div class="step-image-placeholder">
-                                <!-- Discovery phase image will be added here -->
+                                <div class="step-text">
+                                    <h3 class="step-title">Discovery & Data Phase</h3>
+                                    <p class="step-description">Every successful AI project starts with a <strong>tailored understanding</strong> of your business needs. We begin with a product discovery goal: exploring the technology and possibilities to provide a customized recommendation.</p>
+                                </div>
+                                <div class="step-content-row">
+                                    <ul class="step-features">
+                                        <li>4-6 week exploration process</li>
+                                        <li>Data annotation and labeling</li>
+                                        <li>Machine Learning assisted annotation</li>
+                                        <li>Proof of concept development</li>
+                                    </ul>
+                                    <div class="step-image">
+                                        <img src="assets/images/aiaas/ailifecycle/Data Discovery.png" alt="Data Discovery Phase" class="step-image-content">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="lifecycle-step">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h3 class="step-title">Development & Deployment Phase</h3>
-                                <p class="step-description">This is where the <strong>magic happens</strong>. Our machine learning experts step in to model and train your data, exploring different state-of-the-art algorithms to find the best fit for your challenge.</p>
-                                <ul class="step-features">
-                                    <li>Model training and optimization</li>
-                                    <li>Full-stack development (Python, Go, React, Docker)</li>
-                                    <li>End-to-end expertise</li>
-                                    <li>Seamless integration</li>
-                                </ul>
-                            </div>
-                            <div class="step-image-placeholder">
-                                <!-- Development phase image will be added here -->
+                                <div class="step-text">
+                                    <h3 class="step-title">Development & Deployment Phase</h3>
+                                    <p class="step-description">This is where the <strong>magic happens</strong>. Our machine learning experts step in to model and train your data, exploring different state-of-the-art algorithms to find the best fit for your challenge.</p>
+                                </div>
+                                <div class="step-content-row">
+                                    <ul class="step-features">
+                                        <li>Model training and optimization</li>
+                                        <li>Full-stack development (Python, Go, React, Docker)</li>
+                                        <li>End-to-end expertise</li>
+                                        <li>Seamless integration</li>
+                                    </ul>
+                                    <div class="step-image">
+                                        <img src="assets/images/aiaas/ailifecycle/Model Development.png" alt="Model Development Phase" class="step-image-content">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="lifecycle-step">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h3 class="step-title">Optimization & Scale Phase</h3>
-                                <p class="step-description">Our job doesn't end at deployment. We look to build <strong>long-term, technical partnerships</strong> with our clients, ensuring your AI solution stays cutting-edge and continues to deliver unprecedented efficiency.</p>
-                                <ul class="step-features">
-                                    <li>CI/CD pipeline setup</li>
-                                    <li>Continuous model improvement</li>
-                                    <li>Service maintenance and updates</li>
-                                    <li>Feature additions and scaling</li>
-                                </ul>
-                            </div>
-                            <div class="step-image-placeholder">
-                                <!-- Optimization phase image will be added here -->
-                            </div>
+                                <div class="step-text">
+                                    <h3 class="step-title">Optimization & Scale Phase</h3>
+                                    <p class="step-description">Our job doesn't end at deployment. We look to build <strong>long-term, technical partnerships</strong> with our clients, ensuring your AI solution stays cutting-edge and continues to deliver unprecedented efficiency.</p>
+                                </div>
+                                <div class="step-content-row">
+                                    <ul class="step-features">
+                                        <li>CI/CD pipeline setup</li>
+                                        <li>Continuous model improvement</li>
+                                        <li>Service maintenance and updates</li>
+                                        <li>Feature additions and scaling</li>
+                                    </ul>
+                                    <div class="step-image">
+                                        <img src="assets/images/aiaas/ailifecycle/Model Monitoring.png" alt="Model Monitoring Phase" class="step-image-content">
+                                    </div>
+                                </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -390,5 +423,16 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,3 +1,64 @@
+// Flip card functionality
+function flipCard(card) {
+    console.log('flipCard function called with:', card);
+    card.classList.toggle('flipped');
+    console.log('Card classes after toggle:', card.classList.toString());
+}
+
+// Simple test function
+function testFlip() {
+    console.log('Test flip function called');
+    const cards = document.querySelectorAll('.flip-card');
+    console.log('Found cards:', cards.length);
+    if (cards.length > 0) {
+        cards[0].classList.toggle('flipped');
+        console.log('First card toggled');
+    }
+}
+
+// Initialize flip cards with event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing flip cards...');
+    const flipCards = document.querySelectorAll('.flip-card');
+    console.log('Found flip cards:', flipCards.length);
+    
+    flipCards.forEach((card, index) => {
+        console.log(`Setting up flip card ${index + 1}:`, card);
+        
+        // Add click event listener to the entire card
+        card.addEventListener('click', function(e) {
+            console.log('Card clicked!', this);
+            e.preventDefault();
+            e.stopPropagation();
+            this.classList.toggle('flipped');
+            console.log('Card flipped:', this.classList.contains('flipped'));
+        });
+        
+        // Make sure the card is clickable
+        card.style.cursor = 'pointer';
+        card.style.pointerEvents = 'auto';
+        
+        // Also make the flip-hint clickable
+        const flipHint = card.querySelector('.flip-hint');
+        if (flipHint) {
+            console.log('Found flip hint for card', index + 1);
+            flipHint.addEventListener('click', function(e) {
+                console.log('Flip hint clicked!');
+                e.preventDefault();
+                e.stopPropagation();
+                card.classList.toggle('flipped');
+                console.log('Card flipped via hint:', card.classList.contains('flipped'));
+            });
+            flipHint.style.cursor = 'pointer';
+            flipHint.style.pointerEvents = 'auto';
+        }
+    });
+    
+    // Add a global test function
+    window.testFlip = testFlip;
+    console.log('Flip cards initialized. You can test with testFlip() in console.');
+});
+
 // Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -246,12 +307,98 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize typing effect on page load
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
-        }, 500);
+        // Check if the title has our custom structure with spans
+        const line1 = heroTitle.querySelector('.hero-title-line1');
+        const line2 = heroTitle.querySelector('.hero-title-line2');
+        
+        if (line1 && line2) {
+            // Use our custom two-line typing effect
+            const text1 = line1.textContent;
+            const text2 = line2.textContent;
+            
+            // Clear the content
+            heroTitle.innerHTML = '';
+            
+            // Create spans for the typing effect
+            const span1 = document.createElement('span');
+            span1.className = 'hero-title-line1';
+            span1.style.display = 'block';
+            const span2 = document.createElement('span');
+            span2.className = 'hero-title-line2';
+            span2.style.display = 'block';
+            
+            heroTitle.appendChild(span1);
+            heroTitle.appendChild(span2);
+            
+            // Type first line
+            let i1 = 0;
+            function typeLine1() {
+                if (i1 < text1.length) {
+                    span1.textContent += text1.charAt(i1);
+                    i1++;
+                    setTimeout(typeLine1, 50);
+                } else {
+                    // Start typing second line after first line is complete
+                    setTimeout(() => {
+                        let i2 = 0;
+                        function typeLine2() {
+                            if (i2 < text2.length) {
+                                span2.textContent += text2.charAt(i2);
+                                i2++;
+                                setTimeout(typeLine2, 50);
+                            }
+                        }
+                        typeLine2();
+                    }, 200);
+                }
+            }
+            
+            setTimeout(() => {
+                typeLine1();
+            }, 500);
+        } else {
+            // Fallback to original typing effect
+            const originalText = heroTitle.textContent;
+            setTimeout(() => {
+                typeWriter(heroTitle, originalText, 50);
+            }, 500);
+        }
     }
     
+    // Scroll-triggered animations for About page paragraphs
+    function initScrollAnimations() {
+        const paragraphSections = document.querySelectorAll('.paragraph-section');
+        const scrollSeparators = document.querySelectorAll('.scroll-separator');
+        
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe paragraph sections
+        paragraphSections.forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Observe scroll separators
+        scrollSeparators.forEach(separator => {
+            observer.observe(separator);
+        });
+    }
+    
+    // Initialize scroll animations if on about page
+    if (window.location.pathname.includes('about.html')) {
+        initScrollAnimations();
+    }
+
     // Animated tagline with React-like state changes
     const animatedTagline = document.getElementById('animated-tagline');
     if (animatedTagline) {
