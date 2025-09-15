@@ -7,7 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
     </style>
-    <link rel="stylesheet" href="styles.css?v=15">
+    <link rel="stylesheet" href="styles.css?v=47">
 </head>
 <body>
     <!-- Navigation -->
@@ -33,14 +33,22 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- AI as a Service Section -->
-        <section class="page-section">
-            <div class="container">
-                <div class="section-header">
-                    <h1 class="page-title">AI as a Service</h1>
-                    <p class="intro-text">When we talk about implementing AI and ML services we refer to them as AI as a Service - or AIaaS -. In this page you will learn about different AI types, its applications, and our methodology at Mirai.</p>
-                </div>
-                
+        <!-- AI as a Service Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-line1">AI as a Service</span>
+                </h1>
+                <p class="hero-subtitle">At Mirai, when we talk about implementing AI and ML services, we refer to them as "AI as a Service" - or AIaaS -. In this page you will learn about different AI types and their purposes, its different application fields (with real-world examples), and our methodology for implementing AI solutions.</p>
+            </div>
+        </section>
+
+        <!-- AI Content Section with Animated Node Background -->
+        <section class="info-section" style="position: relative; overflow: hidden;">
+            <!-- Animated Node Background for AI Intro -->
+            <div id="ai-intro-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
                 <!-- Introduction -->
                 <div class="ai-intro">
                     <h2 class="intro-title centered-title">But... What is AI?</h2>
@@ -50,11 +58,11 @@
                     <!-- Text Separator -->
                     <div class="text-separator">
                         <div class="separator-line"></div>
-                        <div class="separator-icon">⚡</div>
+                        <div class="separator-icon">☕</div>
                         <div class="separator-line"></div>
                     </div>
                     
-                    <p class="intro-text">Here's something that might surprise you: AI isn't new. That calculator on your desk? It's already outperforming you at arithmetic (try calculating 9,845.67 ÷ 37 in your head). AI is simply any system designed to mimic human thinking—from basic calculators to the sophisticated algorithms powering ChatGPT and Gemini. The difference? Today's AI can process vast amounts of data, learn patterns, and make decisions that would take humans years to master. It's the evolution from simple computation to genuine intelligence.</p>
+                    <p class="intro-text">And here's something that might surprise you: AI isn't new, it's been around for a decades. That calculator on your desk? This is one of the first forms of "Artificial Intelligence" that already outperfos humans. Not convinced? Try calculating 9,845.67 ÷ 37 in your head. Not so simple, right? AI is simply any system or model designed to mimic human thinking. From basic calculators to the sophisticated algorithms powering ChatGPT and Gemini.</p>
                     
                     <!-- Text Separator -->
                     <div class="text-separator">
@@ -63,52 +71,63 @@
                         <div class="separator-line"></div>
                     </div>
                     
-                    <p class="intro-text">So why the sudden AI explosion? The answer is simple: data and computing power. In 2017, researchers finally had enough data and processing power to train models on massive datasets. The results were so impressive that commercial applications exploded just a few years later. Now, the real question isn't what AI is—it's how to harness its power for your specific needs. At Mirai, we specialize in the two branches that matter most: Generative AI (creating new content) and Analytical AI (understanding and predicting). Ready to discover which one fits your business?</p>
+                    <p class="intro-text">So why the sudden AI explosion? Thanks to huge breakthroughs in computing power and data availability, we've been able to efficiently train the magical engine behind AI: Neural Networks powered by the backpropagation algorithm. In 2017, researchers finally had enough data and processing power to train models on massive datasets, resulting in famous paper <a href="https://arxiv.org/abs/1706.03762" target="_blank" class="paper-link">"Attention is all you need"</a>. The results were so impressive that commercial applications exploded just a few years later. Now, the real question isn't what AI is—it's how to harness its power for your specific needs. At Mirai, we specialize in the two branches that matter most: <strong>Generative AI</strong> (creating new content) and <strong>Analytical AI</strong> (understanding and predicting). Ready to discover which one fits your business?</p>
                     
                     <!-- Navigation Buttons -->
                     <div class="ai-navigation-buttons">
                         <button class="ai-nav-btn" onclick="scrollToSection('ai-types')">AI Types</button>
                         <button class="ai-nav-btn" onclick="scrollToSection('applications')">Applications</button>
-                        <button class="ai-nav-btn" onclick="scrollToSection('lifecycle')">Our Process</button>
+                        <button class="ai-nav-btn" onclick="scrollToSection('lifecycle')">AIaaS Lifecycle</button>
                     </div>
                 </div>
                 
-                <!-- AI Types Section -->
-                <div class="ai-types-section" id="ai-types">
-                    <div class="container">
-                        <h2 class="intro-title centered-title">Generative vs. Analytical Artificial Intelligence</h2>
-                        <p class="section-subtitle">Understanding the two fundamental approaches to artificial intelligence</p>
-                        
-                        <div class="ai-types-grid">
-                        <div class="ai-type-card">
-                            <div class="type-icon">🎨</div>
+                <!-- AI Types Section with Cloud Background -->
+                <section id="ai-types" class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important;">
+                    <div class="hero-content" style="max-width: none; width: 100%;">
+                        <h2 class="hero-title">
+                            <span class="hero-title-line1">Generative vs. Analytical</span>
+                            <span class="hero-title-line2">Artificial Intelligence</span>
+                        </h2>
+                        <p class="hero-subtitle">Understanding the two fundamental approaches to artificial intelligence. After a brief introduction to them, we'll show some ideas of how <strong>you</strong> can use them in your business.</p>
+                    </div>
+                    
+                    <div class="ai-types-grid" style="width: 100%; margin: 0; padding: 0 20px; box-sizing: border-box;">
+                        <div class="ai-type-card" style="width: 100%; max-width: none;">
                             <h3 class="type-title">Generative AI</h3>
-                            <p class="type-description">Focuses on <strong>creating new content</strong>, from text and images to code and music. Its mission is to produce original outputs that are often indistinguishable from human creations. If you've heard of Agents, LLMs or used tools like ChatGPT, Gemini, etc., you've used Generative AI.</p>
+                            <p class="type-description">Focuses on <strong>creating new content</strong>, from text and images to code and music. Its mission is to produce original outputs that are often indistinguishable from human creations. If you've heard of Agents, LLMs or used tools like ChatGPT, Gemini, etc., you've used Generative AI. Generative AI is a field where especially <strong>creative industries</strong> are leading the way in innovation, and where <strong>any company</strong> can benefit from it implementing agentic workflows for process optimization.</p>
                             <div class="type-image">
                                 <img src="assets/images/aiaas/GenAI.png" alt="Generative AI - Creating new content from text, images, and code" class="type-image-content">
                             </div>
                         </div>
                         
-                        <div class="ai-type-card">
-                            <div class="type-icon">🔍</div>
+                        <div class="ai-type-card" style="width: 100%; max-width: none;">
                             <h3 class="type-title">Analytical AI</h3>
-                            <p class="type-description">A tool for <strong>finding patterns and insights</strong> within existing data. Its mission is to analyze, categorize, predict, and optimize. It helps us make sense of the past and present to better inform the future. You could use e.g. a model to predict customer churn based on his purchasing behaviour, or optimise for your next coffee been composition to produce the most aromatic and tasty coffee.</p>
+                            <p class="type-description">A tool for <strong>finding patterns and insights</strong> within existing data. Its mission is to analyze, categorize, predict, and optimize. It helps us make sense of the past and present to better inform the future. You could use e.g. a model to optimise for your next coffee been composition to produce the most tasty coffee, and combine it with a model to predict customer consumption patterns to optimize your inventory base on age, gender, and occupation. Analytical AI is a field where especially <strong>engineering companies</strong> are leaving behind a huge amount of potential for cost and time savings.</p>
                             <div class="type-image">
                                 <img src="assets/images/aiaas/AnalyAI.png" alt="Analytical AI - Finding patterns and insights in data" class="type-image-content">
                             </div>
                         </div>
-                        </div>
                     </div>
-                </div>
+                </section>
                 
-                <div class="real-world-applications-section" id="applications">
-                    <h2 class="intro-title centered-title">Some Real World Inspiration For Your Business of AI Projects</h2>
+                <!-- Real World Applications Section with Animated Node Background -->
+                <section class="info-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); margin-bottom: 0 !important; background: white !important; background-image: none !important; padding: 40px 0 0px 0 !important; position: relative; overflow: hidden;">
+                    <!-- Animated Node Background -->
+                    <div id="node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+                    
+                    <div class="container" style="max-width: none; width: 100%; position: relative; z-index: 2;">
+                        <div class="real-world-applications-section" style="background-image: none !important; background-color: transparent !important; background: transparent !important; padding: 0 20px !important;">
+                            <!-- Title Card -->
+                            <div id="applications" style="background: white !important; border-radius: 12px !important; padding: 40px 30px !important; margin-bottom: 40px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important;">
+                                <h2 class="intro-title centered-title" style="color: var(--gray-900) !important; text-align: center !important; background: var(--gradient-primary) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; text-shadow: none !important; margin-bottom: 20px !important;">Some Real World Inspiration For Your Business</h2>
+                                <p class="section-subtitle" style="color: var(--gray-900) !important; text-align: center !important; background: var(--gradient-primary) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; font-size: 1.125rem !important; line-height: 1.75 !important; margin-bottom: 0 !important;">We've put together some widely implemented solutions that you might be missing in your business. Get inspired, look at some of our <a href="industries.html" class="paper-link" style="color: var(--gray-900) !important; background: var(--gradient-primary) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; text-decoration: underline !important; font-weight: bold !important;">use cases here</a>, and <a href="contact.html" class="paper-link" style="color: var(--gray-900) !important; background: var(--gradient-primary) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; text-decoration: underline !important; font-weight: bold !important;">let's get in touch</a>!</p>
+                            </div>
 
                     <!-- Generative AI Details -->
                     <div class="ai-details-section">
                     <div class="detail-card">
                         <div class="detail-header">
-                            <div class="detail-icon">🎨</div>
+
                             <h3 class="detail-title">Generative AI: Creating the Future</h3>
                         </div>
                         <div class="detail-content">
@@ -176,12 +195,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Analytical AI Details -->
                 <div class="ai-details-section">
                     <div class="detail-card">
                         <div class="detail-header">
-                            <div class="detail-icon">🔍</div>
+
                             <h3 class="detail-title">Analytical AI: Finding Insights in Your Data</h3>
                         </div>
                         <div class="detail-content">
@@ -199,9 +218,9 @@
                                     <p class="use-case-description">Anticipate when machinery, vehicles, or electronics are likely to fail by combining sensor data with predictive models. This reduces downtime and saves on unnecessary replacements.</p>
                                 </div>
                                 <div class="use-case-item">
-                                    <div class="use-case-icon">🧬</div>
-                                    <h5 class="use-case-title">Structure–Property Modeling with GNNs</h5>
-                                    <p class="use-case-description">Use graph neural networks to model complex relationships in materials science or drug discovery, then optimize desired properties (strength, durability, conductivity, efficacy) with Bayesian optimization.</p>
+                                    <div class="use-case-icon">📈</div>
+                                    <h5 class="use-case-title">Market Predictive Analysis</h5>
+                                    <p class="use-case-description">Analyze market trends, consumer sentiment, and economic indicators to predict stock prices, demand fluctuations, and market opportunities. Use advanced time-series models to forecast market movements and optimize investment strategies.</p>
                                 </div>
                                 <div class="use-case-item">
                                     <div class="use-case-icon">🛒</div>
@@ -229,8 +248,8 @@
                                 </div>
                                 <div class="use-case-item">
                                     <div class="use-case-icon">📊</div>
-                                    <h5 class="use-case-title">Market Analysis with Adaptive Deep Learning</h5>
-                                    <p class="use-case-description">Deep Learning models that adapt to data drift can track shifting consumer behavior, predict resource needs, and identify risks in volatile markets.</p>
+                                    <h5 class="use-case-title">Customer Behavior Prediction for Profit Enhancement</h5>
+                                    <p class="use-case-description">Predict customer lifetime value, churn probability, and purchase likelihood to optimize pricing strategies, personalize offers, and maximize revenue per customer. Use behavioral data to identify high-value segments and increase profit margins.</p>
                                 </div>
                                 <div class="use-case-item">
                                     <div class="use-case-icon">📈</div>
@@ -285,15 +304,58 @@
                     </div>
                 </div>
                 </div>
+                    </div>
+                </section>
+            </div>
+        </section>
 
-                <!-- AIaaS Lifecycle -->
-                <div class="lifecycle-section" id="lifecycle">
-                    <div class="container">
-                        <h2 class="intro-title centered-title">The AIaaS Lifecycle</h2>
-                        <p class="section-subtitle">We are not a product; we are your partner in a journey. Our AI as a Service isn't a single transaction—it's a comprehensive, collaborative lifecycle designed for continuous innovation.</p>
+        <!-- AIaaS Lifecycle -->
+        <section id="lifecycle" class="cloud-section" style="background-image: url('assets/images/hero/main-background/clouds-clean.png') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important; margin-right: calc(-50vw + 50%) !important; margin-top: 0 !important; margin-bottom: 0 !important; padding: 20px 0 60px 0 !important; position: relative !important; z-index: 1 !important;">
+            <style>
+                .cloud-section {
+                    background-image: url('assets/images/hero/main-background/clouds-clean.png') !important;
+                    background-size: cover !important;
+                    background-position: center !important;
+                    background-repeat: no-repeat !important;
+                    background-attachment: fixed !important;
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                }
+                .cloud-section::before {
+                    display: none !important;
+                }
+                .cloud-section .intro-title,
+                .cloud-section .centered-title,
+                .cloud-section .section-subtitle {
+                    color: white !important;
+                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+                    background: none !important;
+                    -webkit-background-clip: unset !important;
+                    -webkit-text-fill-color: white !important;
+                    background-clip: unset !important;
+                }
+                /* Remove any gap between sections */
+                .info-section + .cloud-section {
+                    margin-top: 0 !important;
+                }
+                /* Override info-section padding that creates the gap */
+                .info-section {
+                    padding-bottom: 0 !important;
+                }
+                body {
+                    background: transparent !important;
+                }
+                /* Make the main page background transparent to show section backgrounds */
+                .main-content {
+                    background: transparent !important;
+                }
+            </style>
+            <div class="container" style="background: transparent !important; position: relative !important; z-index: 2 !important;">
+                        <h2 class="intro-title centered-title" style="color: white !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;">The AIaaS Lifecycle</h2>
+                        <p class="section-subtitle" style="color: white !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;">We are not a product; we are your partner in a journey. Our AI as a Service isn't a single transaction—it's a comprehensive, collaborative lifecycle designed for continuous innovation.</p>
                         
-                        <div class="lifecycle-steps">
-                        <div class="lifecycle-step">
+                        <div class="lifecycle-steps-clean" style="background: transparent !important;">
+                        <div class="lifecycle-step-clean" style="background: white !important; border-radius: 12px !important; padding: 30px !important; margin-bottom: 30px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important;">
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <div class="step-text">
@@ -314,7 +376,7 @@
                             </div>
                         </div>
                         
-                        <div class="lifecycle-step">
+                        <div class="lifecycle-step-clean" style="background: white !important; border-radius: 12px !important; padding: 30px !important; margin-bottom: 30px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important;">
                             <div class="step-number">2</div>
                             <div class="step-content">
                                 <div class="step-text">
@@ -335,7 +397,7 @@
                             </div>
                         </div>
                         
-                        <div class="lifecycle-step">
+                        <div class="lifecycle-step-clean" style="background: white !important; border-radius: 12px !important; padding: 30px !important; margin-bottom: 30px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important;">
                             <div class="step-number">3</div>
                             <div class="step-content">
                                 <div class="step-text">
@@ -427,12 +489,285 @@
         function scrollToSection(sectionId) {
             const element = document.getElementById(sectionId);
             if (element) {
+                console.log('Scrolling to element:', element);
                 element.scrollIntoView({ 
                     behavior: 'smooth',
-                    block: 'start'
+                    block: 'start',
+                    inline: 'nearest'
                 });
+            } else {
+                console.log('Element not found:', sectionId);
             }
         }
+
+        // Animated Node Background Component
+        class AnimatedNodeBackground {
+            constructor(containerId) {
+                this.container = document.getElementById(containerId);
+                this.nodes = [];
+                this.connections = [];
+                this.animationId = null;
+                this.init();
+            }
+
+            init() {
+                if (!this.container) return;
+                
+                this.createNodes();
+                this.createConnections();
+                this.animate();
+                
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    this.resize();
+                });
+            }
+
+            createNodes() {
+                const containerRect = this.container.getBoundingClientRect();
+                const nodeCount = 200; // Dense network for better visual impact
+                
+                for (let i = 0; i < nodeCount; i++) {
+                    const node = {
+                        id: i,
+                        x: Math.random() * containerRect.width,
+                        y: Math.random() * containerRect.height,
+                        vx: (Math.random() - 0.5) * 0.1, // Much slower for dense network
+                        vy: (Math.random() - 0.5) * 0.1,
+                        size: Math.random() * 2 + 3, // Size between 3-5px (smaller for density)
+                        opacity: Math.random() * 0.2 + 0.4, // Opacity between 0.4-0.6 (more subtle)
+                        pulse: Math.random() * Math.PI * 2,
+                        pulseSpeed: Math.random() * 0.05 + 0.03, // Faster pulse
+                        connections: [] // Track connections for this node
+                    };
+                    this.nodes.push(node);
+                }
+            }
+
+            createConnections() {
+                this.connections = [];
+                
+                // Create ULTRA DENSE network with multiple connection strategies
+                for (let i = 0; i < this.nodes.length; i++) {
+                    const node = this.nodes[i];
+                    node.connections = [];
+                    
+                    // Strategy 1: Connect to nearby nodes (within 150px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance < 150) {
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.1, 1 - distance / 150) * 0.8, // Higher opacity for nearby
+                                strength: Math.max(0.2, 1 - distance / 150),
+                                distance: distance,
+                                type: 'nearby'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                    
+                    // Strategy 2: Connect to medium distance nodes (150-250px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance >= 150 && distance < 250 && Math.random() > 0.3) { // 70% chance
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.05, 1 - distance / 250) * 0.4,
+                                strength: Math.max(0.1, 1 - distance / 250),
+                                distance: distance,
+                                type: 'medium'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                    
+                    // Strategy 3: Random long-distance connections (250-400px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance >= 250 && distance < 400 && Math.random() > 0.7) { // 30% chance
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.02, 1 - distance / 400) * 0.2,
+                                strength: Math.max(0.05, 1 - distance / 400),
+                                distance: distance,
+                                type: 'long'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                }
+            }
+
+            getDistance(node1, node2) {
+                const dx = node1.x - node2.x;
+                const dy = node1.y - node2.y;
+                return Math.sqrt(dx * dx + dy * dy);
+            }
+
+            updateNodes() {
+                const containerRect = this.container.getBoundingClientRect();
+                
+                this.nodes.forEach(node => {
+                    // Update position
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    
+                    // Bounce off edges
+                    if (node.x <= 0 || node.x >= containerRect.width) {
+                        node.vx *= -1;
+                        node.x = Math.max(0, Math.min(containerRect.width, node.x));
+                    }
+                    if (node.y <= 0 || node.y >= containerRect.height) {
+                        node.vy *= -1;
+                        node.y = Math.max(0, Math.min(containerRect.height, node.y));
+                    }
+                    
+                    // Update pulse
+                    node.pulse += node.pulseSpeed;
+                });
+            }
+
+            updateConnections() {
+                this.connections.forEach(connection => {
+                    const distance = this.getDistance(connection.from, connection.to);
+                    connection.opacity = Math.max(0, 1 - distance / 300) * 0.6;
+                });
+            }
+
+            render() {
+                const containerRect = this.container.getBoundingClientRect();
+                let svg = this.container.querySelector('svg');
+                
+                if (!svg) {
+                    svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    svg.style.position = 'absolute';
+                    svg.style.top = '0';
+                    svg.style.left = '0';
+                    svg.style.width = '100%';
+                    svg.style.height = '100%';
+                    svg.style.pointerEvents = 'none';
+                    this.container.appendChild(svg);
+                }
+                
+                svg.setAttribute('width', containerRect.width);
+                svg.setAttribute('height', containerRect.height);
+                svg.innerHTML = '';
+                
+                // Render ULTRA DENSE connections with optimized performance
+                this.connections.forEach(connection => {
+                    if (connection.opacity > 0.01) { // Very low threshold for maximum density
+                        // Main connection line - much thicker for visibility
+                        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                        line.setAttribute('x1', connection.from.x);
+                        line.setAttribute('y1', connection.from.y);
+                        line.setAttribute('x2', connection.to.x);
+                        line.setAttribute('y2', connection.to.y);
+                        line.setAttribute('stroke', '#8B5CF6');
+                        line.setAttribute('stroke-width', Math.max(0.4, connection.strength * 3.2)); // 3-4x thicker!
+                        line.setAttribute('opacity', connection.opacity);
+                        line.setAttribute('stroke-linecap', 'round');
+                        svg.appendChild(line);
+                        
+                        // Add glow only for very strong connections (performance optimization)
+                        if (connection.strength > 0.7 && connection.type === 'nearby') {
+                            const glowLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                            glowLine.setAttribute('x1', connection.from.x);
+                            glowLine.setAttribute('y1', connection.from.y);
+                            glowLine.setAttribute('x2', connection.to.x);
+                            glowLine.setAttribute('y2', connection.to.y);
+                            glowLine.setAttribute('stroke', '#A78BFA');
+                            glowLine.setAttribute('stroke-width', Math.max(1.2, connection.strength * 6.0)); // 3-4x thicker glow!
+                            glowLine.setAttribute('opacity', connection.opacity * 0.3);
+                            glowLine.setAttribute('stroke-linecap', 'round');
+                            svg.insertBefore(glowLine, svg.firstChild);
+                        }
+                    }
+                });
+                
+                // Render nodes optimized for ULTRA DENSE network
+                this.nodes.forEach(node => {
+                    const pulseSize = node.size + Math.sin(node.pulse) * 1; // Minimal pulse for performance
+                    const nodeOpacity = node.opacity + Math.sin(node.pulse) * 0.1;
+                    
+                    // Add glow effect only for largest nodes (very selective for performance)
+                    if (node.size > 4.5 && Math.random() > 0.95) { // Only 5% of larger nodes get glow
+                        const glowCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        glowCircle.setAttribute('cx', node.x);
+                        glowCircle.setAttribute('cy', node.y);
+                        glowCircle.setAttribute('r', pulseSize + 2);
+                        glowCircle.setAttribute('fill', '#A78BFA');
+                        glowCircle.setAttribute('opacity', nodeOpacity * 0.1);
+                        svg.appendChild(glowCircle);
+                    }
+                    
+                    // Main node - simplified for performance
+                    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                    circle.setAttribute('cx', node.x);
+                    circle.setAttribute('cy', node.y);
+                    circle.setAttribute('r', pulseSize);
+                    circle.setAttribute('fill', '#8B5CF6');
+                    circle.setAttribute('opacity', nodeOpacity);
+                    svg.appendChild(circle);
+                    
+                    // Add inner highlight only for largest nodes (very selective)
+                    if (node.size > 4.5 && Math.random() > 0.98) { // Only 2% get highlight
+                        const highlightCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        highlightCircle.setAttribute('cx', node.x);
+                        highlightCircle.setAttribute('cy', node.y);
+                        highlightCircle.setAttribute('r', pulseSize * 0.4);
+                        highlightCircle.setAttribute('fill', '#C4B5FD');
+                        highlightCircle.setAttribute('opacity', nodeOpacity * 0.3);
+                        svg.appendChild(highlightCircle);
+                    }
+                });
+            }
+
+            animate() {
+                this.updateNodes();
+                this.updateConnections();
+                this.render();
+                this.animationId = requestAnimationFrame(() => this.animate());
+            }
+
+            resize() {
+                // Recreate nodes for new container size
+                this.nodes = [];
+                this.connections = [];
+                this.createNodes();
+                this.createConnections();
+            }
+
+            destroy() {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                }
+            }
+        }
+
+        // Initialize the animated backgrounds when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const nodeBackground = new AnimatedNodeBackground('node-background');
+            const aiIntroNodeBackground = new AnimatedNodeBackground('ai-intro-node-background');
+        });
     </script>
 </body>
 </html>

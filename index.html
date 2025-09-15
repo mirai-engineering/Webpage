@@ -7,7 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
     </style>
-    <link rel="stylesheet" href="styles.css?v=15">
+    <link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body>
     <!-- Navigation -->
@@ -39,9 +39,9 @@
                 <div class="hero-content">
                     <h1 class="hero-title">
                         <span class="hero-title-line1">Unlocking the Future</span>
-                        <span class="hero-title-line2">with AI-Powered Engineering.</span>
+                        <span class="hero-title-line2">with AI-Powered Engineering</span>
                     </h1>
-                    <p class="hero-subtitle"><strong>Mirai</strong>, the Japanese word for <strong>future</strong>, is more than just our name—it's our promise. Mirai Engineering crafts <strong>advanced AI solutions</strong> that bring the power of tomorrow's technology to your business, today. Let's build the future - together-.</p>
+                    <p class="hero-subtitle"><strong>Mirai</strong>, the Japanese word for <strong>future</strong>, is more than just our name: it's our mission. Mirai Engineering crafts <strong>advanced AI solutions</strong> that bring the power of tomorrow's technology to your business, today. Welcome to the future, welcome to <strong>Mirai</strong>.</p>
                     <div class="hero-cta">
                         <button class="btn-primary">What is AI? Unlocking Its Potential for Your Business</button>
                         <button class="btn-secondary">View Case Studies</button>
@@ -53,11 +53,15 @@
         </section>
 
         <!-- What is AI Section -->
-        <section id="what-is-ai" class="info-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">What is AI & How Can You Unlock Its Potential?</h2>
-                    <p class="section-subtitle">Understanding the transformative power of artificial intelligence</p>
+        <section id="what-is-ai" class="info-section" style="position: relative; overflow: hidden;">
+            <!-- Animated Node Background for What is AI Section -->
+            <div id="what-is-ai-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
+                <!-- Title Card -->
+                <div style="background: white; border-radius: 12px; padding: 40px 30px; margin-bottom: 40px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); text-align: center;">
+                    <h2 class="section-title" style="color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">What is AI & How Can You Unlock Its Potential?</h2>
+                    <p class="section-subtitle" style="color: var(--gray-700); font-size: 1.125rem; line-height: 1.75; margin: 0;">Understanding the transformative power of artificial intelligence</p>
                 </div>
                 
                 <div class="content-grid">
@@ -67,6 +71,9 @@
                         <div class="content-image">
                             <img src="assets/images/hero/what_is_ai.png" alt="What is AI - Understanding artificial intelligence concepts" class="content-image-content">
                         </div>
+                        <div class="content-cta">
+                            <a href="ai-service.html#ai-intro" class="learn-more-btn">Learn more</a>
+                        </div>
                     </div>
                     
                     <div class="content-card">
@@ -75,6 +82,9 @@
                         <div class="content-image">
                             <img src="assets/images/hero/what_we_offer.png" alt="What We Offer - AI consultancy, implementation, and workshops" class="content-image-content">
                         </div>
+                        <div class="content-cta">
+                            <a href="industries.html" class="learn-more-btn">View Case Studies</a>
+                        </div>
                     </div>
                     
                     <div class="content-card">
@@ -82,6 +92,9 @@
                         <p class="content-description"><strong>Fintech:</strong> Algorithmic trading, risk assessment, and fraud detection solutions. <strong>Engineering:</strong> Process optimization, predictive maintenance, and quality control systems. <strong>Medicine:</strong> Medical imaging analysis, drug discovery, and diagnostic assistance tools. <strong>Data Processing:</strong> Advanced image and text analysis using cutting-edge ML techniques.</p>
                         <div class="content-image">
                             <img src="assets/images/hero/what_industries.png" alt="Which Industries We Serve - Fintech, Engineering, Medicine, Data Processing" class="content-image-content">
+                        </div>
+                        <div class="content-cta">
+                            <a href="ai-service.html#ai-types" class="learn-more-btn">Learn about AI Types</a>
                         </div>
                     </div>
                 </div>
@@ -113,10 +126,13 @@
         </section>
 
         <!-- Case Studies Section -->
-        <section id="case-studies" class="case-studies-section">
+        <section id="case-studies" class="case-studies-section" style="position: relative; overflow: hidden;">
+            <!-- Animated Node Background for Case Studies Section -->
+            <div id="case-studies-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+            
             <div class="case-studies-decorative">
             </div>
-            <div class="container">
+            <div class="container" style="position: relative; z-index: 2;">
                 <div class="section-header">
                     <h2 class="section-title">Success Stories & Case Studies</h2>
                     <p class="section-subtitle">Real-world implementations delivering measurable results</p>
@@ -168,7 +184,7 @@
                         </div>
                         <div class="case-study-cta">
                             <span class="learn-more-btn">Learn More →</span>
-                        </div>
+                    </div>
                     </a>
                     
                     <a href="industries.html" class="case-study-card case-study-link">
@@ -192,7 +208,7 @@
                         </div>
                         <div class="case-study-cta">
                             <span class="learn-more-btn">Learn More →</span>
-                        </div>
+                    </div>
                     </a>
                     
                     <a href="industries.html" class="case-study-card case-study-link">
@@ -216,7 +232,7 @@
                         </div>
                         <div class="case-study-cta">
                             <span class="learn-more-btn">Learn More →</span>
-                        </div>
+                    </div>
                     </a>
                 </div>
             </div>
@@ -284,6 +300,276 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=8"></script>
+    <script>
+        // Animated Node Background Component for Home Page
+        class AnimatedNodeBackground {
+            constructor(containerId) {
+                this.container = document.getElementById(containerId);
+                this.nodes = [];
+                this.connections = [];
+                this.animationId = null;
+                this.init();
+            }
+
+            init() {
+                if (!this.container) return;
+                
+                this.createNodes();
+                this.createConnections();
+                this.animate();
+                
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    this.resize();
+                });
+            }
+
+            createNodes() {
+                const containerRect = this.container.getBoundingClientRect();
+                const nodeCount = 120; // Balanced network density for optimal visual appeal
+                
+                for (let i = 0; i < nodeCount; i++) {
+                    const node = {
+                        id: i,
+                        x: Math.random() * containerRect.width,
+                        y: Math.random() * containerRect.height,
+                        vx: (Math.random() - 0.5) * 0.1, // Much slower for dense network
+                        vy: (Math.random() - 0.5) * 0.1,
+                        size: Math.random() * 2 + 3, // Size between 3-5px (smaller for density)
+                        opacity: Math.random() * 0.2 + 0.4, // Opacity between 0.4-0.6 (more subtle)
+                        pulse: Math.random() * Math.PI * 2,
+                        pulseSpeed: Math.random() * 0.05 + 0.03, // Faster pulse
+                        connections: [] // Track connections for this node
+                    };
+                    this.nodes.push(node);
+                }
+            }
+
+            createConnections() {
+                this.connections = [];
+                
+                // Create ULTRA DENSE network with multiple connection strategies
+                for (let i = 0; i < this.nodes.length; i++) {
+                    const node = this.nodes[i];
+                    node.connections = [];
+                    
+                    // Strategy 1: Connect to nearby nodes (within 150px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance < 150) {
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.1, 1 - distance / 150) * 0.8, // Higher opacity for nearby
+                                strength: Math.max(0.2, 1 - distance / 150),
+                                distance: distance,
+                                type: 'nearby'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                    
+                    // Strategy 2: Connect to medium distance nodes (150-250px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance >= 150 && distance < 250 && Math.random() > 0.3) { // 70% chance
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.05, 1 - distance / 250) * 0.4,
+                                strength: Math.max(0.1, 1 - distance / 250),
+                                distance: distance,
+                                type: 'medium'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                    
+                    // Strategy 3: Random long-distance connections (250-400px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance >= 250 && distance < 400 && Math.random() > 0.7) { // 30% chance
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.02, 1 - distance / 400) * 0.2,
+                                strength: Math.max(0.05, 1 - distance / 400),
+                                distance: distance,
+                                type: 'long'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                }
+            }
+
+            getDistance(node1, node2) {
+                const dx = node1.x - node2.x;
+                const dy = node1.y - node2.y;
+                return Math.sqrt(dx * dx + dy * dy);
+            }
+
+            updateNodes() {
+                const containerRect = this.container.getBoundingClientRect();
+                
+                this.nodes.forEach(node => {
+                    // Update position
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    
+                    // Bounce off edges
+                    if (node.x <= 0 || node.x >= containerRect.width) {
+                        node.vx *= -1;
+                        node.x = Math.max(0, Math.min(containerRect.width, node.x));
+                    }
+                    if (node.y <= 0 || node.y >= containerRect.height) {
+                        node.vy *= -1;
+                        node.y = Math.max(0, Math.min(containerRect.height, node.y));
+                    }
+                    
+                    // Update pulse
+                    node.pulse += node.pulseSpeed;
+                });
+            }
+
+            updateConnections() {
+                this.connections.forEach(connection => {
+                    const distance = this.getDistance(connection.from, connection.to);
+                    connection.opacity = Math.max(0, 1 - distance / 300) * 0.6;
+                });
+            }
+
+            render() {
+                const containerRect = this.container.getBoundingClientRect();
+                let svg = this.container.querySelector('svg');
+                
+                if (!svg) {
+                    svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    svg.style.position = 'absolute';
+                    svg.style.top = '0';
+                    svg.style.left = '0';
+                    svg.style.width = '100%';
+                    svg.style.height = '100%';
+                    svg.style.pointerEvents = 'none';
+                    this.container.appendChild(svg);
+                }
+                
+                svg.setAttribute('width', containerRect.width);
+                svg.setAttribute('height', containerRect.height);
+                svg.innerHTML = '';
+                
+                // Render ULTRA DENSE connections with optimized performance
+                this.connections.forEach(connection => {
+                    if (connection.opacity > 0.01) { // Very low threshold for maximum density
+                        // Main connection line - much thicker for visibility
+                        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                        line.setAttribute('x1', connection.from.x);
+                        line.setAttribute('y1', connection.from.y);
+                        line.setAttribute('x2', connection.to.x);
+                        line.setAttribute('y2', connection.to.y);
+                        line.setAttribute('stroke', '#8B5CF6');
+                        line.setAttribute('stroke-width', Math.max(0.4, connection.strength * 3.2)); // 3-4x thicker!
+                        line.setAttribute('opacity', connection.opacity);
+                        line.setAttribute('stroke-linecap', 'round');
+                        svg.appendChild(line);
+                        
+                        // Add glow only for very strong connections (performance optimization)
+                        if (connection.strength > 0.7 && connection.type === 'nearby') {
+                            const glowLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                            glowLine.setAttribute('x1', connection.from.x);
+                            glowLine.setAttribute('y1', connection.from.y);
+                            glowLine.setAttribute('x2', connection.to.x);
+                            glowLine.setAttribute('y2', connection.to.y);
+                            glowLine.setAttribute('stroke', '#A78BFA');
+                            glowLine.setAttribute('stroke-width', Math.max(1.2, connection.strength * 6.0)); // 3-4x thicker glow!
+                            glowLine.setAttribute('opacity', connection.opacity * 0.3);
+                            glowLine.setAttribute('stroke-linecap', 'round');
+                            svg.insertBefore(glowLine, svg.firstChild);
+                        }
+                    }
+                });
+                
+                // Render nodes optimized for ULTRA DENSE network
+                this.nodes.forEach(node => {
+                    const pulseSize = node.size + Math.sin(node.pulse) * 1; // Minimal pulse for performance
+                    const nodeOpacity = node.opacity + Math.sin(node.pulse) * 0.1;
+                    
+                    // Add glow effect only for largest nodes (very selective for performance)
+                    if (node.size > 4.5 && Math.random() > 0.95) { // Only 5% of larger nodes get glow
+                        const glowCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        glowCircle.setAttribute('cx', node.x);
+                        glowCircle.setAttribute('cy', node.y);
+                        glowCircle.setAttribute('r', pulseSize + 2);
+                        glowCircle.setAttribute('fill', '#A78BFA');
+                        glowCircle.setAttribute('opacity', nodeOpacity * 0.1);
+                        svg.appendChild(glowCircle);
+                    }
+                    
+                    // Main node - simplified for performance
+                    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                    circle.setAttribute('cx', node.x);
+                    circle.setAttribute('cy', node.y);
+                    circle.setAttribute('r', pulseSize);
+                    circle.setAttribute('fill', '#8B5CF6');
+                    circle.setAttribute('opacity', nodeOpacity);
+                    svg.appendChild(circle);
+                    
+                    // Add inner highlight only for largest nodes (very selective)
+                    if (node.size > 4.5 && Math.random() > 0.98) { // Only 2% get highlight
+                        const highlightCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        highlightCircle.setAttribute('cx', node.x);
+                        highlightCircle.setAttribute('cy', node.y);
+                        highlightCircle.setAttribute('r', pulseSize * 0.4);
+                        highlightCircle.setAttribute('fill', '#C4B5FD');
+                        highlightCircle.setAttribute('opacity', nodeOpacity * 0.3);
+                        svg.appendChild(highlightCircle);
+                    }
+                });
+            }
+
+            animate() {
+                this.updateNodes();
+                this.updateConnections();
+                this.render();
+                this.animationId = requestAnimationFrame(() => this.animate());
+            }
+
+            resize() {
+                // Recreate nodes for new container size
+                this.nodes = [];
+                this.connections = [];
+                this.createNodes();
+                this.createConnections();
+            }
+
+            destroy() {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                }
+            }
+        }
+
+        // Initialize the animated backgrounds when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatIsAiNodeBackground = new AnimatedNodeBackground('what-is-ai-node-background');
+            const caseStudiesNodeBackground = new AnimatedNodeBackground('case-studies-node-background');
+        });
+    </script>
 </body>
 </html>

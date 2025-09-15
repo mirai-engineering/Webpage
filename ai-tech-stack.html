@@ -33,208 +33,241 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- AI Tech Stack Section -->
-        <section class="page-section">
-            <div class="container">
-                <div class="section-header">
-                    <h1 class="page-title">AI Tech Stack</h1>
-                    <p class="section-subtitle">Cutting-edge technologies and tools powering our AI solutions</p>
-                </div>
+        <!-- AI Tech Stack Hero Section -->
+        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important; margin-bottom: 0 !important;">
+            <div class="hero-content" style="max-width: none; width: 100%;">
+                <h1 class="hero-title">
+                    <span class="hero-title-line1">AI Tech</span>
+                    <span class="hero-title-line2">Stack</span>
+                </h1>
+                <p class="hero-subtitle">Cutting-edge technologies and tools powering our AI solutions</p>
+            </div>
+        </section>
+
+        <!-- Simple Tech Cards Section with Animated Node Background -->
+        <div style="padding: 60px 20px; background: transparent; position: relative; overflow: hidden;">
+            <!-- Animated Node Background for Tech Stack -->
+            <div id="tech-stack-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+            
+            <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
                 
                 <!-- Machine Learning Frameworks -->
-                <div class="tech-category">
-                    <h2 class="category-title">Machine Learning Frameworks</h2>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">🧠</div>
-                            <h3 class="tech-name">TensorFlow</h3>
-                            <p class="tech-description">Google's open-source platform for machine learning and deep learning applications. We use TensorFlow for building and deploying scalable ML models.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Deep Learning</span>
-                                <span class="feature-tag">Production Ready</span>
-                                <span class="feature-tag">Scalable</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">🔥</div>
-                            <h3 class="tech-name">PyTorch</h3>
-                            <p class="tech-description">Facebook's dynamic neural network framework. Perfect for research, prototyping, and production deployment of complex AI models.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Research</span>
-                                <span class="feature-tag">Dynamic Graphs</span>
-                                <span class="feature-tag">Python Native</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">⚡</div>
-                            <h3 class="tech-name">Scikit-learn</h3>
-                            <p class="tech-description">Comprehensive machine learning library for Python. Ideal for traditional ML algorithms, data preprocessing, and model evaluation.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Traditional ML</span>
-                                <span class="feature-tag">Easy to Use</span>
-                                <span class="feature-tag">Well Documented</span>
-                            </div>
-                        </div>
+                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
+                    <h2 style="font-size: 2rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Machine Learning Frameworks</h2>
                 </div>
-
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                    
+                    <!-- TensorFlow -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🧠</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">TensorFlow</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Google's open-source platform for machine learning and deep learning applications. We use TensorFlow for building and deploying scalable ML models.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Deep Learning</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Production Ready</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Scalable</span>
+                        </div>
+                    </div>
+                    
+                    <!-- PyTorch -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🔥</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">PyTorch</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Facebook's dynamic neural network framework. Perfect for research, prototyping, and production deployment of complex AI models.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Research</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Dynamic Graphs</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Python Native</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Scikit-learn -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">⚡</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">Scikit-learn</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Comprehensive machine learning library for Python. Ideal for traditional ML algorithms, data preprocessing, and model evaluation.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Traditional ML</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Easy to Use</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Well Documented</span>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- Data & Database Technologies -->
-                <div class="tech-category">
-                    <h2 class="category-title">Data & Database Technologies</h2>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">🐘</div>
-                            <h3 class="tech-name">PostgreSQL</h3>
-                            <p class="tech-description">Advanced open-source relational database system. Perfect for structured data storage, complex queries, and data integrity.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">ACID Compliant</span>
-                                <span class="feature-tag">JSON Support</span>
-                                <span class="feature-tag">High Performance</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">🍃</div>
-                            <h3 class="tech-name">MongoDB</h3>
-                            <p class="tech-description">NoSQL document database for handling unstructured and semi-structured data. Excellent for big data applications and real-time analytics.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Document Store</span>
-                                <span class="feature-tag">Scalable</span>
-                                <span class="feature-tag">Flexible Schema</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">🐼</div>
-                            <h3 class="tech-name">Pandas</h3>
-                            <p class="tech-description">Powerful data manipulation and analysis library for Python. Essential for data preprocessing, cleaning, and feature engineering.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Data Analysis</span>
-                                <span class="feature-tag">Data Cleaning</span>
-                                <span class="feature-tag">Feature Engineering</span>
-                            </div>
-                        </div>
+                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
+                    <h2 style="font-size: 2rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Data & Database Technologies</h2>
                 </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                    
+                    <!-- PostgreSQL -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🐘</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">PostgreSQL</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Advanced open-source relational database system. Perfect for structured data storage, complex queries, and data integrity.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">ACID Compliant</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">JSON Support</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">High Performance</span>
+                        </div>
+                    </div>
+                    
+                    <!-- MongoDB -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🍃</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">MongoDB</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">NoSQL document database for handling unstructured and semi-structured data. Excellent for big data applications and real-time analytics.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Document Store</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Scalable</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Flexible Schema</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Pandas -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🐼</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">Pandas</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Powerful data manipulation and analysis library for Python. Essential for data preprocessing, cleaning, and feature engineering.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Data Analysis</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Data Cleaning</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Feature Engineering</span>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- DevOps & Infrastructure -->
-                <div class="tech-category">
-                    <h2 class="category-title">DevOps & Infrastructure</h2>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">⚓</div>
-                            <h3 class="tech-name">Kubernetes</h3>
-                            <p class="tech-description">Container orchestration platform for deploying, scaling, and managing containerized applications. Essential for ML model deployment.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Container Orchestration</span>
-                                <span class="feature-tag">Auto Scaling</span>
-                                <span class="feature-tag">Production Ready</span>
-                            </div>
+                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
+                    <h2 style="font-size: 2rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">DevOps & Infrastructure</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                    
+                    <!-- Kubernetes -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">⚓</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">Kubernetes</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Container orchestration platform for deploying, scaling, and managing containerized applications. Essential for ML model deployment.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Container Orchestration</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Auto Scaling</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Production Ready</span>
                         </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">🐳</div>
-                            <h3 class="tech-name">Docker</h3>
-                            <p class="tech-description">Containerization platform for packaging applications and their dependencies. Ensures consistent deployment across environments.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Containerization</span>
-                                <span class="feature-tag">Portable</span>
-                                <span class="feature-tag">Consistent</span>
-                            </div>
+                    </div>
+                    
+                    <!-- Docker -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🐳</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">Docker</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Containerization platform for packaging applications and their dependencies. Ensures consistent deployment across environments.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Containerization</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Portable</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Consistent</span>
                         </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">🔄</div>
-                            <h3 class="tech-name">MLflow</h3>
-                            <p class="tech-description">Open-source platform for managing the ML lifecycle. Tracks experiments, manages models, and deploys ML applications.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">ML Lifecycle</span>
-                                <span class="feature-tag">Experiment Tracking</span>
-                                <span class="feature-tag">Model Registry</span>
-                            </div>
+                    </div>
+                    
+                    <!-- MLflow -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🔄</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">MLflow</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Open-source platform for managing the ML lifecycle. Tracks experiments, manages models, and deploys ML applications.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">ML Lifecycle</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Experiment Tracking</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Model Registry</span>
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Cloud Platforms -->
-                <div class="tech-category">
-                    <h2 class="category-title">Cloud Platforms</h2>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">☁️</div>
-                            <h3 class="tech-name">AWS</h3>
-                            <p class="tech-description">Amazon Web Services provides comprehensive cloud infrastructure and AI services including SageMaker, EC2, and Lambda for ML workloads.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">SageMaker</span>
-                                <span class="feature-tag">EC2</span>
-                                <span class="feature-tag">Lambda</span>
-                            </div>
+                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
+                    <h2 style="font-size: 2rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Cloud Platforms</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                    
+                    <!-- AWS -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">☁️</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">AWS</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Amazon Web Services provides comprehensive cloud infrastructure and AI services including SageMaker, EC2, and Lambda for ML workloads.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">SageMaker</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">EC2</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Lambda</span>
                         </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">🔵</div>
-                            <h3 class="tech-name">Google Cloud</h3>
-                            <p class="tech-description">Google Cloud Platform offers AI Platform, BigQuery, and Vertex AI for building, training, and deploying ML models at scale.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Vertex AI</span>
-                                <span class="feature-tag">BigQuery</span>
-                                <span class="feature-tag">AI Platform</span>
-                            </div>
+                    </div>
+                    
+                    <!-- Google Cloud -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🔵</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">Google Cloud</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Google Cloud Platform offers AI Platform, BigQuery, and Vertex AI for building, training, and deploying ML models at scale.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Vertex AI</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">BigQuery</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">AI Platform</span>
                         </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">🔷</div>
-                            <h3 class="tech-name">Azure</h3>
-                            <p class="tech-description">Microsoft Azure provides Azure ML, Databricks, and Cognitive Services for enterprise-grade AI and machine learning solutions.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Azure ML</span>
-                                <span class="feature-tag">Databricks</span>
-                                <span class="feature-tag">Cognitive Services</span>
-                            </div>
+                    </div>
+                    
+                    <!-- Azure -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🔷</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">Azure</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Microsoft Azure provides Azure ML, Databricks, and Cognitive Services for enterprise-grade AI and machine learning solutions.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Azure ML</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Databricks</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Cognitive Services</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Additional Tools -->
-                <div class="tech-category">
-                    <h2 class="category-title">Additional Tools & Technologies</h2>
-                    <div class="container">
-                        <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">📊</div>
-                            <h3 class="tech-name">Apache Spark</h3>
-                            <p class="tech-description">Unified analytics engine for large-scale data processing. Perfect for big data analytics and distributed machine learning.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Big Data</span>
-                                <span class="feature-tag">Distributed Computing</span>
-                                <span class="feature-tag">Real-time Processing</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">🔍</div>
-                            <h3 class="tech-name">Elasticsearch</h3>
-                            <p class="tech-description">Distributed search and analytics engine. Excellent for log analysis, full-text search, and real-time data exploration.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Search Engine</span>
-                                <span class="feature-tag">Analytics</span>
-                                <span class="feature-tag">Real-time</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">📈</div>
-                            <h3 class="tech-name">Grafana</h3>
-                            <p class="tech-description">Open-source analytics and monitoring platform. Essential for visualizing ML model performance and system metrics.</p>
-                            <div class="tech-features">
-                                <span class="feature-tag">Monitoring</span>
-                                <span class="feature-tag">Visualization</span>
-                                <span class="feature-tag">Dashboards</span>
-                            </div>
+                
+                <!-- Additional Tools & Technologies -->
+                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
+                    <h2 style="font-size: 2rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Additional Tools & Technologies</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                    
+                    <!-- Apache Spark -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">📊</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">Apache Spark</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Unified analytics engine for large-scale data processing. Perfect for big data analytics and distributed machine learning.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Big Data</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Distributed Computing</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Real-time Processing</span>
                         </div>
                     </div>
+                    
+                    <!-- Elasticsearch -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🔍</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">Elasticsearch</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Distributed search and analytics engine. Excellent for log analysis, full-text search, and real-time data exploration.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Search Engine</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Analytics</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Real-time</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Grafana -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">📈</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 15px;">Grafana</h3>
+                        <p style="color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Open-source analytics and monitoring platform. Essential for visualizing ML model performance and system metrics.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Monitoring</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Visualization</span>
+                            <span style="background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 4px 12px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Dashboards</span>
+                        </div>
+                    </div>
+                    
                 </div>
-                    </div>            </div>
-        </section>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -299,5 +332,274 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Animated Node Background Component for Tech Stack
+        class AnimatedNodeBackground {
+            constructor(containerId) {
+                this.container = document.getElementById(containerId);
+                this.nodes = [];
+                this.connections = [];
+                this.animationId = null;
+                this.init();
+            }
+
+            init() {
+                if (!this.container) return;
+                
+                this.createNodes();
+                this.createConnections();
+                this.animate();
+                
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    this.resize();
+                });
+            }
+
+            createNodes() {
+                const containerRect = this.container.getBoundingClientRect();
+                const nodeCount = 120; // Balanced network density for optimal visual appeal
+                
+                for (let i = 0; i < nodeCount; i++) {
+                    const node = {
+                        id: i,
+                        x: Math.random() * containerRect.width,
+                        y: Math.random() * containerRect.height,
+                        vx: (Math.random() - 0.5) * 0.1, // Much slower for dense network
+                        vy: (Math.random() - 0.5) * 0.1,
+                        size: Math.random() * 2 + 3, // Size between 3-5px (smaller for density)
+                        opacity: Math.random() * 0.2 + 0.4, // Opacity between 0.4-0.6 (more subtle)
+                        pulse: Math.random() * Math.PI * 2,
+                        pulseSpeed: Math.random() * 0.05 + 0.03, // Faster pulse
+                        connections: [] // Track connections for this node
+                    };
+                    this.nodes.push(node);
+                }
+            }
+
+            createConnections() {
+                this.connections = [];
+                
+                // Create ULTRA DENSE network with multiple connection strategies
+                for (let i = 0; i < this.nodes.length; i++) {
+                    const node = this.nodes[i];
+                    node.connections = [];
+                    
+                    // Strategy 1: Connect to nearby nodes (within 150px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance < 150) {
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.1, 1 - distance / 150) * 0.8, // Higher opacity for nearby
+                                strength: Math.max(0.2, 1 - distance / 150),
+                                distance: distance,
+                                type: 'nearby'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                    
+                    // Strategy 2: Connect to medium distance nodes (150-250px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance >= 150 && distance < 250 && Math.random() > 0.3) { // 70% chance
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.05, 1 - distance / 250) * 0.4,
+                                strength: Math.max(0.1, 1 - distance / 250),
+                                distance: distance,
+                                type: 'medium'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                    
+                    // Strategy 3: Random long-distance connections (250-400px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance >= 250 && distance < 400 && Math.random() > 0.7) { // 30% chance
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.02, 1 - distance / 400) * 0.2,
+                                strength: Math.max(0.05, 1 - distance / 400),
+                                distance: distance,
+                                type: 'long'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                }
+            }
+
+            getDistance(node1, node2) {
+                const dx = node1.x - node2.x;
+                const dy = node1.y - node2.y;
+                return Math.sqrt(dx * dx + dy * dy);
+            }
+
+            updateNodes() {
+                const containerRect = this.container.getBoundingClientRect();
+                
+                this.nodes.forEach(node => {
+                    // Update position
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    
+                    // Bounce off edges
+                    if (node.x <= 0 || node.x >= containerRect.width) {
+                        node.vx *= -1;
+                        node.x = Math.max(0, Math.min(containerRect.width, node.x));
+                    }
+                    if (node.y <= 0 || node.y >= containerRect.height) {
+                        node.vy *= -1;
+                        node.y = Math.max(0, Math.min(containerRect.height, node.y));
+                    }
+                    
+                    // Update pulse
+                    node.pulse += node.pulseSpeed;
+                });
+            }
+
+            updateConnections() {
+                this.connections.forEach(connection => {
+                    const distance = this.getDistance(connection.from, connection.to);
+                    connection.opacity = Math.max(0, 1 - distance / 300) * 0.6;
+                });
+            }
+
+            render() {
+                const containerRect = this.container.getBoundingClientRect();
+                let svg = this.container.querySelector('svg');
+                
+                if (!svg) {
+                    svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    svg.style.position = 'absolute';
+                    svg.style.top = '0';
+                    svg.style.left = '0';
+                    svg.style.width = '100%';
+                    svg.style.height = '100%';
+                    svg.style.pointerEvents = 'none';
+                    this.container.appendChild(svg);
+                }
+                
+                svg.setAttribute('width', containerRect.width);
+                svg.setAttribute('height', containerRect.height);
+                svg.innerHTML = '';
+                
+                // Render ULTRA DENSE connections with optimized performance
+                this.connections.forEach(connection => {
+                    if (connection.opacity > 0.01) { // Very low threshold for maximum density
+                        // Main connection line - much thicker for visibility
+                        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                        line.setAttribute('x1', connection.from.x);
+                        line.setAttribute('y1', connection.from.y);
+                        line.setAttribute('x2', connection.to.x);
+                        line.setAttribute('y2', connection.to.y);
+                        line.setAttribute('stroke', '#8B5CF6');
+                        line.setAttribute('stroke-width', Math.max(0.4, connection.strength * 3.2)); // 3-4x thicker!
+                        line.setAttribute('opacity', connection.opacity);
+                        line.setAttribute('stroke-linecap', 'round');
+                        svg.appendChild(line);
+                        
+                        // Add glow only for very strong connections (performance optimization)
+                        if (connection.strength > 0.7 && connection.type === 'nearby') {
+                            const glowLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                            glowLine.setAttribute('x1', connection.from.x);
+                            glowLine.setAttribute('y1', connection.from.y);
+                            glowLine.setAttribute('x2', connection.to.x);
+                            glowLine.setAttribute('y2', connection.to.y);
+                            glowLine.setAttribute('stroke', '#A78BFA');
+                            glowLine.setAttribute('stroke-width', Math.max(1.2, connection.strength * 6.0)); // 3-4x thicker glow!
+                            glowLine.setAttribute('opacity', connection.opacity * 0.3);
+                            glowLine.setAttribute('stroke-linecap', 'round');
+                            svg.insertBefore(glowLine, svg.firstChild);
+                        }
+                    }
+                });
+                
+                // Render nodes optimized for ULTRA DENSE network
+                this.nodes.forEach(node => {
+                    const pulseSize = node.size + Math.sin(node.pulse) * 1; // Minimal pulse for performance
+                    const nodeOpacity = node.opacity + Math.sin(node.pulse) * 0.1;
+                    
+                    // Add glow effect only for largest nodes (very selective for performance)
+                    if (node.size > 4.5 && Math.random() > 0.95) { // Only 5% of larger nodes get glow
+                        const glowCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        glowCircle.setAttribute('cx', node.x);
+                        glowCircle.setAttribute('cy', node.y);
+                        glowCircle.setAttribute('r', pulseSize + 2);
+                        glowCircle.setAttribute('fill', '#A78BFA');
+                        glowCircle.setAttribute('opacity', nodeOpacity * 0.1);
+                        svg.appendChild(glowCircle);
+                    }
+                    
+                    // Main node - simplified for performance
+                    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                    circle.setAttribute('cx', node.x);
+                    circle.setAttribute('cy', node.y);
+                    circle.setAttribute('r', pulseSize);
+                    circle.setAttribute('fill', '#8B5CF6');
+                    circle.setAttribute('opacity', nodeOpacity);
+                    svg.appendChild(circle);
+                    
+                    // Add inner highlight only for largest nodes (very selective)
+                    if (node.size > 4.5 && Math.random() > 0.98) { // Only 2% get highlight
+                        const highlightCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        highlightCircle.setAttribute('cx', node.x);
+                        highlightCircle.setAttribute('cy', node.y);
+                        highlightCircle.setAttribute('r', pulseSize * 0.4);
+                        highlightCircle.setAttribute('fill', '#C4B5FD');
+                        highlightCircle.setAttribute('opacity', nodeOpacity * 0.3);
+                        svg.appendChild(highlightCircle);
+                    }
+                });
+            }
+
+            animate() {
+                this.updateNodes();
+                this.updateConnections();
+                this.render();
+                this.animationId = requestAnimationFrame(() => this.animate());
+            }
+
+            resize() {
+                // Recreate nodes for new container size
+                this.nodes = [];
+                this.connections = [];
+                this.createNodes();
+                this.createConnections();
+            }
+
+            destroy() {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                }
+            }
+        }
+
+        // Initialize the animated background for tech stack
+        document.addEventListener('DOMContentLoaded', function() {
+            const techStackNodeBackground = new AnimatedNodeBackground('tech-stack-node-background');
+        });
+    </script>
 </body>
 </html>

@@ -7,7 +7,119 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
     </style>
-    <link rel="stylesheet" href="styles.css?v=15">
+    <link rel="stylesheet" href="styles.css?v=51">
+    <style>
+        /* Simplified CSS Grid Implementation */
+        .card-grid {
+            display: grid !important;
+            grid-template-columns: 2fr 1fr !important; /* About gets 2/3, Mission/Vision get 1/3 */
+            grid-template-rows: auto auto auto !important; /* Three rows */
+            gap: 30px !important;
+            max-width: 1400px !important;
+            margin: 0 auto !important;
+            padding: 60px 20px !important;
+        }
+
+        .card {
+            background: var(--white) !important;
+            color: var(--gray-900) !important;
+            border-radius: 12px !important;
+            padding: 30px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+            border: 1px solid rgba(139, 92, 246, 0.1) !important;
+        }
+
+        /* About card - spans 2 rows on the left */
+        .card-large { 
+            grid-row: 1 / 3 !important; /* Spans 2 rows */
+            grid-column: 1 / 2 !important; /* First column */
+            padding: 40px !important;
+            min-height: 600px !important;
+        }
+
+        /* Mission card - top right */
+        .card-mission {
+            grid-row: 1 / 2 !important;
+            grid-column: 2 / 3 !important; /* Second column */
+            min-height: 280px !important;
+        }
+
+        /* Vision card - bottom right */
+        .card-vision {
+            grid-row: 2 / 3 !important;
+            grid-column: 2 / 3 !important; /* Second column */
+            min-height: 320px !important;
+        }
+
+        /* Transform card - full width across bottom */
+        .card-full {
+            grid-row: 3 / 4 !important;
+            grid-column: 1 / 3 !important; /* Spans both columns */
+            min-height: 200px !important;
+        }
+
+        /* Content styling within cards */
+        .card .overview-content {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .card .mission-card,
+        .card .vision-card {
+            width: 100% !important;
+            height: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+        }
+
+        .card .transform-business-card {
+            width: 100% !important;
+            height: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+        }
+
+        /* Content-Specific Optimizations */
+        .card-large .overview-text {
+            font-size: 16px !important;
+            line-height: 1.6 !important;
+            margin-bottom: 20px !important;
+        }
+
+        .card-large .section-title {
+            font-size: 28px !important;
+            margin-bottom: 30px !important;
+        }
+
+        /* Mission/Vision cards - balanced text */
+        .card .mission-text,
+        .card .vision-text {
+            font-size: 15px !important;
+            line-height: 1.5 !important;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr !important;
+                grid-template-rows: auto !important;
+                gap: 20px !important;
+            }
+            
+            .card-large, .card-mission, .card-vision, .card-full {
+                grid-column: 1 / -1 !important;
+                grid-row: auto !important;
+                min-height: auto !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -33,126 +145,110 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- About Section -->
-        <section class="page-section">
+        <!-- Page Header Section with Clouds Background -->
+        <section class="page-section hero-section" style="background-image: url('assets/images/hero/main-background/clouds-clean.png') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important; margin-right: calc(-50vw + 50%) !important;">
             <div class="container">
                 <div class="section-header">
-                    <h1 class="page-title">Who We Are</h1>
-                    <p class="section-subtitle">Pioneering the future of AI engineering with innovation, expertise, and unwavering commitment to excellence</p>
+                    <h1 class="page-title" style="color: white !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;">Who We Are</h1>
+                    <p class="section-subtitle" style="color: white !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;">Pioneering the future of AI engineering with innovation, expertise, and unwavering commitment to excellence</p>
                 </div>
-                
-                <!-- Company Overview -->
-                <div class="about-overview">
+            </div>
+        </section>
+
+        <!-- Company Overview Section -->
+        <section class="page-section" style="background: white !important; background-color: white !important; background-image: none !important; position: relative; overflow: hidden;">
+            <!-- Animated Node Background for Company Overview -->
+            <div id="company-overview-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
+                <!-- Company Overview - CSS Grid Layout -->
+                <section class="card-grid">
+                    <!-- Card 1: About Mirai Engineering (Large) -->
+                    <div class="card card-large">
                     <div class="overview-content">
                         <h2 class="section-title">About Mirai Engineering</h2>
-                        
-                        <!-- Paragraph 1 -->
-                        <div class="paragraph-section" data-paragraph="1">
-                            <div class="paragraph-content">
-                                <p class="overview-text">Mirai Engineering is a cutting-edge AI consultancy firm specializing in the deployment of custom artificial intelligence models across diverse industries. Founded with a vision to democratize AI technology, we bridge the gap between complex machine learning algorithms and real-world business applications. Our team of expert engineers, data scientists, and AI specialists works tirelessly to deliver solutions that not only meet current business needs but anticipate future challenges.</p>
+                            
+                            <!-- Paragraph 1 -->
+                            <div class="paragraph-section" data-paragraph="1">
+                                <div class="paragraph-content">
+                                    <p class="overview-text">Mirai Engineering is a cutting-edge AI consultancy firm specializing in the deployment of custom artificial intelligence models across diverse industries. Founded with a vision to democratize AI technology, we bridge the gap between complex machine learning algorithms and real-world business applications. Our team of expert engineers, data scientists, and AI specialists works tirelessly to deliver solutions that not only meet current business needs but anticipate future challenges.</p>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <!-- Separator 1 -->
-                        <div class="scroll-separator" data-separator="1">
-                            <div class="separator-line"></div>
-                            <span class="separator-emoji">🚀</span>
-                            <div class="separator-line"></div>
-                        </div>
-                        
-                        <!-- Paragraph 2 -->
-                        <div class="paragraph-section" data-paragraph="2">
-                            <div class="paragraph-content">
-                                <p class="overview-text">At Mirai, we believe the best AI solution is the one that fits your unique vision, not a one-size-fits-all model. We empower our clients with the freedom to choose their AI environment. Whether you prefer the fully integrated ecosystems of major providers like AWS or Google Cloud, where we can deploy models that seamlessly leverage their existing services, or you require a solution that is Cloud-Native but Premise-Independent, we'll build it for you. This approach ensures your business receives a powerful, purpose-built AI that aligns with your goals, all while prioritizing data sovereignty and cost-effectiveness.</p>
+                            
+                            <!-- Separator 1 -->
+                            <div class="scroll-separator" data-separator="1">
+                                <div class="separator-line"></div>
+                                <span class="separator-emoji">🚀</span>
+                                <div class="separator-line"></div>
                             </div>
+                            
+                            <!-- Paragraph 2 -->
+                            <div class="paragraph-section" data-paragraph="2">
+                                <div class="paragraph-content">
+                                    <p class="overview-text">At Mirai, we believe the best AI solution is the one that fits your unique vision, not a one-size-fits-all model. We empower our clients with the freedom to choose their AI environment. Whether you prefer the fully integrated ecosystems of major providers like AWS or Google Cloud, where we can deploy models that seamlessly leverage their existing services, or you require a solution that is Cloud-Native but Premise-Independent, we'll build it for you. This approach ensures your business receives a powerful, purpose-built AI that aligns with your goals, all while prioritizing data sovereignty and cost-effectiveness.</p>
+                                </div>
+                    </div>
+                            
+                            <!-- Separator 2 -->
+                            <div class="scroll-separator" data-separator="2">
+                                <div class="separator-line"></div>
+                                <span class="separator-emoji">💡</span>
+                                <div class="separator-line"></div>
                         </div>
-                        
-                        <!-- Separator 2 -->
-                        <div class="scroll-separator" data-separator="2">
-                            <div class="separator-line"></div>
-                            <span class="separator-emoji">💡</span>
-                            <div class="separator-line"></div>
+                            
+                            <!-- Paragraph 3 -->
+                            <div class="paragraph-section" data-paragraph="3">
+                                <div class="paragraph-content">
+                                    <p class="overview-text">We are committed to helping organizations unlock their full potential through intelligent automation and data-driven insights. It's your business, and we're here to provide the intelligence to unlock its full potential.</p>
                         </div>
-                        
-                        <!-- Paragraph 3 -->
-                        <div class="paragraph-section" data-paragraph="3">
-                            <div class="paragraph-content">
-                                <p class="overview-text">We are committed to helping organizations unlock their full potential through intelligent automation and data-driven insights. It's your business, and we're here to provide the intelligence to unlock its full potential.</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Call to Action -->
-                        <div class="about-cta">
-                            <div class="cta-icon">🚀</div>
-                            <h3 class="cta-title">Ready to Transform Your Business?</h3>
-                            <p class="cta-text">Let's discuss how AI can revolutionize your operations and drive unprecedented growth.</p>
-                            <a href="contact.html" class="cta-button">Get Started Today</a>
                         </div>
                     </div>
-                    <div class="overview-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">4</div>
-                            <div class="stat-label">Core AI Disciplines</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">State-of-the-Art Research</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">2</div>
-                            <div class="stat-label">Advanced Domains</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">∞</div>
-                            <div class="stat-label">Future-Proof Systems</div>
-                        </div>
-                        
-                        <!-- Mission Card -->
+                </div>
+
+                    <!-- Card 2: Our Mission -->
+                    <div class="card card-mission">
                         <div class="mission-card">
                             <div class="mission-icon">🎯</div>
                             <h3 class="mission-title">Our Mission</h3>
                             <p class="mission-text">To demystify artificial intelligence and make it transparent and accessible to everyone. We believe AI should be understood, not feared. Our mission is to cut through the complexity and noise surrounding AI, empowering organizations to harness its true potential while maintaining ethical responsibility. We drive radical efficiency and unlock new possibilities for every client we serve. Together, let's build the future.</p>
                         </div>
-                        
-                        <!-- Vision Card -->
+                    </div>
+                    
+                    <!-- Card 3: Our Vision -->
+                    <div class="card card-vision">
                         <div class="vision-card">
                             <div class="vision-icon">🔮</div>
                             <h3 class="vision-title">Our Vision</h3>
                             <p class="vision-text">Having been at the forefront of the AI revolution since its inception, we've witnessed the critical gap between AI's potential and its practical implementation. Companies struggle with unrealistic expectations for AI engineering roles that barely existed before 2022, while simultaneously lacking clear pathways for in-house AI adoption. At Mirai, we envision a future where experience meets realistic expectations, where organizations can seamlessly integrate AI into their operations without the confusion and misalignment that currently plague the industry. We believe that by bridging this gap, we can unlock AI's true transformative potential.</p>
                         </div>
+                        </div>
+                    
+                    <!-- Card 4: Transform Your Business (Full Width) -->
+                    <div class="card card-full">
+                        <div class="transform-business-card">
+                            <div class="cta-icon">🚀</div>
+                            <h3 class="cta-title">Ready to Transform Your Business?</h3>
+                            <p class="cta-text" style="color: var(--purple); font-weight: 500;">Let's discuss how AI can revolutionize your operations and drive unprecedented growth.</p>
+                            <a href="contact.html" class="cta-button">Get Started Today</a>
+                        </div>
                     </div>
-                </div>
+                </section>
+            </div>
+        </section>
 
-                <!-- Our Values -->
-                <div class="values-section">
-                    <h2 class="section-title">Our Core Values</h2>
-                    <div class="values-grid">
-                        <div class="value-card">
-                            <div class="value-icon">🚀</div>
-                            <h3 class="value-title">Innovation</h3>
-                            <p class="value-description">We continuously push the boundaries of what's possible with AI technology, staying at the forefront of emerging trends and cutting-edge methodologies.</p>
-                        </div>
-                        <div class="value-card">
-                            <div class="value-icon">🎯</div>
-                            <h3 class="value-title">Excellence</h3>
-                            <p class="value-description">We maintain the highest standards in everything we do, from code quality to client relationships, ensuring exceptional results every time.</p>
-                        </div>
-                        <div class="value-card">
-                            <div class="value-icon">🤝</div>
-                            <h3 class="value-title">Collaboration</h3>
-                            <p class="value-description">We work closely with our clients as partners, fostering open communication and shared success throughout every project.</p>
-                        </div>
-                        <div class="value-card">
-                            <div class="value-icon">🔒</div>
-                            <h3 class="value-title">Integrity</h3>
-                            <p class="value-description">We operate with complete transparency, ethical practices, and unwavering commitment to our clients' success and data security.</p>
-                        </div>
-                    </div>
+        <!-- Leadership & Core Values Section -->
+        <section class="page-section" style="background: white !important; background-color: white !important; background-image: none !important; margin-top: -80px !important; padding-top: 40px !important; position: relative; overflow: hidden;">
+            <!-- Animated Node Background for Leadership & Core Values -->
+            <div id="leadership-values-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
+                <!-- Title Card -->
+                <div style="background: white; border-radius: 12px; padding: 40px 30px; margin-bottom: 40px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); text-align: center;">
+                    <h2 class="section-title" style="color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Leadership & Core Values</h2>
                 </div>
 
                 <!-- CEO Section -->
-                <div class="ceo-section">
-                    <h2 class="section-title">Leadership</h2>
+                <div class="ceo-section" style="margin-bottom: 60px;">
                     <div class="ceo-card">
                         <div class="ceo-image">
                             <div class="ceo-placeholder">👨‍💼</div>
@@ -179,6 +275,29 @@
                     </div>
                 </div>
 
+                <!-- Core Values Grid -->
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🚀</div>
+                        <h3 class="value-title">Innovation</h3>
+                        <p class="value-description">We continuously push the boundaries of what's possible with AI technology, staying at the forefront of emerging trends and cutting-edge methodologies.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h3 class="value-title">Excellence</h3>
+                        <p class="value-description">We maintain the highest standards in everything we do, from code quality to client relationships, ensuring exceptional results every time.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3 class="value-title">Collaboration</h3>
+                        <p class="value-description">We work closely with our clients as partners, fostering open communication and shared success throughout every project.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🔒</div>
+                        <h3 class="value-title">Integrity</h3>
+                        <p class="value-description">We operate with complete transparency, ethical practices, and unwavering commitment to our clients' success and data security.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -244,6 +363,276 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=7"></script>
+    <script>
+        // Animated Node Background Component for About Page
+        class AnimatedNodeBackground {
+            constructor(containerId) {
+                this.container = document.getElementById(containerId);
+                this.nodes = [];
+                this.connections = [];
+                this.animationId = null;
+                this.init();
+            }
+
+            init() {
+                if (!this.container) return;
+                
+                this.createNodes();
+                this.createConnections();
+                this.animate();
+                
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    this.resize();
+                });
+            }
+
+            createNodes() {
+                const containerRect = this.container.getBoundingClientRect();
+                const nodeCount = 120; // Balanced network density for optimal visual appeal
+                
+                for (let i = 0; i < nodeCount; i++) {
+                    const node = {
+                        id: i,
+                        x: Math.random() * containerRect.width,
+                        y: Math.random() * containerRect.height,
+                        vx: (Math.random() - 0.5) * 0.1, // Much slower for dense network
+                        vy: (Math.random() - 0.5) * 0.1,
+                        size: Math.random() * 2 + 3, // Size between 3-5px (smaller for density)
+                        opacity: Math.random() * 0.2 + 0.4, // Opacity between 0.4-0.6 (more subtle)
+                        pulse: Math.random() * Math.PI * 2,
+                        pulseSpeed: Math.random() * 0.05 + 0.03, // Faster pulse
+                        connections: [] // Track connections for this node
+                    };
+                    this.nodes.push(node);
+                }
+            }
+
+            createConnections() {
+                this.connections = [];
+                
+                // Create ULTRA DENSE network with multiple connection strategies
+                for (let i = 0; i < this.nodes.length; i++) {
+                    const node = this.nodes[i];
+                    node.connections = [];
+                    
+                    // Strategy 1: Connect to nearby nodes (within 150px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance < 150) {
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.1, 1 - distance / 150) * 0.8, // Higher opacity for nearby
+                                strength: Math.max(0.2, 1 - distance / 150),
+                                distance: distance,
+                                type: 'nearby'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                    
+                    // Strategy 2: Connect to medium distance nodes (150-250px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance >= 150 && distance < 250 && Math.random() > 0.3) { // 70% chance
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.05, 1 - distance / 250) * 0.4,
+                                strength: Math.max(0.1, 1 - distance / 250),
+                                distance: distance,
+                                type: 'medium'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                    
+                    // Strategy 3: Random long-distance connections (250-400px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance >= 250 && distance < 400 && Math.random() > 0.7) { // 30% chance
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.02, 1 - distance / 400) * 0.2,
+                                strength: Math.max(0.05, 1 - distance / 400),
+                                distance: distance,
+                                type: 'long'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                }
+            }
+
+            getDistance(node1, node2) {
+                const dx = node1.x - node2.x;
+                const dy = node1.y - node2.y;
+                return Math.sqrt(dx * dx + dy * dy);
+            }
+
+            updateNodes() {
+                const containerRect = this.container.getBoundingClientRect();
+                
+                this.nodes.forEach(node => {
+                    // Update position
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    
+                    // Bounce off edges
+                    if (node.x <= 0 || node.x >= containerRect.width) {
+                        node.vx *= -1;
+                        node.x = Math.max(0, Math.min(containerRect.width, node.x));
+                    }
+                    if (node.y <= 0 || node.y >= containerRect.height) {
+                        node.vy *= -1;
+                        node.y = Math.max(0, Math.min(containerRect.height, node.y));
+                    }
+                    
+                    // Update pulse
+                    node.pulse += node.pulseSpeed;
+                });
+            }
+
+            updateConnections() {
+                this.connections.forEach(connection => {
+                    const distance = this.getDistance(connection.from, connection.to);
+                    connection.opacity = Math.max(0, 1 - distance / 300) * 0.6;
+                });
+            }
+
+            render() {
+                const containerRect = this.container.getBoundingClientRect();
+                let svg = this.container.querySelector('svg');
+                
+                if (!svg) {
+                    svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    svg.style.position = 'absolute';
+                    svg.style.top = '0';
+                    svg.style.left = '0';
+                    svg.style.width = '100%';
+                    svg.style.height = '100%';
+                    svg.style.pointerEvents = 'none';
+                    this.container.appendChild(svg);
+                }
+                
+                svg.setAttribute('width', containerRect.width);
+                svg.setAttribute('height', containerRect.height);
+                svg.innerHTML = '';
+                
+                // Render ULTRA DENSE connections with optimized performance
+                this.connections.forEach(connection => {
+                    if (connection.opacity > 0.01) { // Very low threshold for maximum density
+                        // Main connection line - much thicker for visibility
+                        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                        line.setAttribute('x1', connection.from.x);
+                        line.setAttribute('y1', connection.from.y);
+                        line.setAttribute('x2', connection.to.x);
+                        line.setAttribute('y2', connection.to.y);
+                        line.setAttribute('stroke', '#8B5CF6');
+                        line.setAttribute('stroke-width', Math.max(0.4, connection.strength * 3.2)); // 3-4x thicker!
+                        line.setAttribute('opacity', connection.opacity);
+                        line.setAttribute('stroke-linecap', 'round');
+                        svg.appendChild(line);
+                        
+                        // Add glow only for very strong connections (performance optimization)
+                        if (connection.strength > 0.7 && connection.type === 'nearby') {
+                            const glowLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                            glowLine.setAttribute('x1', connection.from.x);
+                            glowLine.setAttribute('y1', connection.from.y);
+                            glowLine.setAttribute('x2', connection.to.x);
+                            glowLine.setAttribute('y2', connection.to.y);
+                            glowLine.setAttribute('stroke', '#A78BFA');
+                            glowLine.setAttribute('stroke-width', Math.max(1.2, connection.strength * 6.0)); // 3-4x thicker glow!
+                            glowLine.setAttribute('opacity', connection.opacity * 0.3);
+                            glowLine.setAttribute('stroke-linecap', 'round');
+                            svg.insertBefore(glowLine, svg.firstChild);
+                        }
+                    }
+                });
+                
+                // Render nodes optimized for ULTRA DENSE network
+                this.nodes.forEach(node => {
+                    const pulseSize = node.size + Math.sin(node.pulse) * 1; // Minimal pulse for performance
+                    const nodeOpacity = node.opacity + Math.sin(node.pulse) * 0.1;
+                    
+                    // Add glow effect only for largest nodes (very selective for performance)
+                    if (node.size > 4.5 && Math.random() > 0.95) { // Only 5% of larger nodes get glow
+                        const glowCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        glowCircle.setAttribute('cx', node.x);
+                        glowCircle.setAttribute('cy', node.y);
+                        glowCircle.setAttribute('r', pulseSize + 2);
+                        glowCircle.setAttribute('fill', '#A78BFA');
+                        glowCircle.setAttribute('opacity', nodeOpacity * 0.1);
+                        svg.appendChild(glowCircle);
+                    }
+                    
+                    // Main node - simplified for performance
+                    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                    circle.setAttribute('cx', node.x);
+                    circle.setAttribute('cy', node.y);
+                    circle.setAttribute('r', pulseSize);
+                    circle.setAttribute('fill', '#8B5CF6');
+                    circle.setAttribute('opacity', nodeOpacity);
+                    svg.appendChild(circle);
+                    
+                    // Add inner highlight only for largest nodes (very selective)
+                    if (node.size > 4.5 && Math.random() > 0.98) { // Only 2% get highlight
+                        const highlightCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        highlightCircle.setAttribute('cx', node.x);
+                        highlightCircle.setAttribute('cy', node.y);
+                        highlightCircle.setAttribute('r', pulseSize * 0.4);
+                        highlightCircle.setAttribute('fill', '#C4B5FD');
+                        highlightCircle.setAttribute('opacity', nodeOpacity * 0.3);
+                        svg.appendChild(highlightCircle);
+                    }
+                });
+            }
+
+            animate() {
+                this.updateNodes();
+                this.updateConnections();
+                this.render();
+                this.animationId = requestAnimationFrame(() => this.animate());
+            }
+
+            resize() {
+                // Recreate nodes for new container size
+                this.nodes = [];
+                this.connections = [];
+                this.createNodes();
+                this.createConnections();
+            }
+
+            destroy() {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                }
+            }
+        }
+
+        // Initialize the animated backgrounds when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const companyOverviewNodeBackground = new AnimatedNodeBackground('company-overview-node-background');
+            const leadershipValuesNodeBackground = new AnimatedNodeBackground('leadership-values-node-background');
+        });
+    </script>
 </body>
 </html>
