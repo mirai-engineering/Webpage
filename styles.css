@@ -1698,6 +1698,119 @@ body {
         margin: 0 auto var(--space-md) auto !important;
     }
     
+    /* About Page Mobile Fixes - About Mirai Engineering Card */
+    .card-large {
+        background: white !important;
+        border-radius: 12px !important;
+        padding: 20px !important;
+        margin-bottom: 20px !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+        border: 1px solid rgba(139, 92, 246, 0.1) !important;
+    }
+    
+    .card-large .overview-text {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 16px !important;
+        color: var(--gray-700) !important;
+    }
+    
+    .card-large .section-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 20px !important;
+        color: var(--gray-900) !important;
+    }
+    
+    .paragraph-section {
+        margin-bottom: 20px !important;
+    }
+    
+    .scroll-separator {
+        margin: 20px 0 !important;
+    }
+    
+    .separator-emoji {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Leadership & Core Values Mobile Fixes */
+    .ceo-section {
+        margin-bottom: 30px !important;
+    }
+    
+    .ceo-card {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 20px !important;
+    }
+    
+    .ceo-image {
+        margin: 0 auto 20px auto !important;
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .ceo-content {
+        width: 100% !important;
+    }
+    
+    .ceo-name {
+        font-size: 1.25rem !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .ceo-bio {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .ceo-credentials {
+        margin-top: 20px !important;
+    }
+    
+    .credential-item {
+        margin-bottom: 10px !important;
+        flex-direction: column !important;
+        text-align: left !important;
+    }
+    
+    .credential-label {
+        font-weight: 600 !important;
+        font-size: 0.85rem !important;
+        margin-bottom: 5px !important;
+    }
+    
+    .credential-value {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    .value-card {
+        padding: 20px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .value-title {
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .value-description {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .value-icon {
+        font-size: 1.5rem !important;
+        margin-bottom: 10px !important;
+    }
+    
     /* AI as a Service Page Mobile Fixes */
     .ai-types-grid {
         grid-template-columns: 1fr !important;
