@@ -17,12 +17,45 @@ function toggleDetails(button) {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Page loaded successfully');
     
+    // Initialize mobile navigation
+    initMobileNavigation();
+    
     // Initialize scroll animations for about page
     initScrollAnimations();
     
     // Initialize hero buttons functionality
     initHeroButtons();
 });
+
+// Mobile navigation functionality
+function initMobileNavigation() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    }
+}
 
 // Scroll-triggered animations for about page
 function initScrollAnimations() {
