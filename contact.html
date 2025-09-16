@@ -17,6 +17,31 @@
         @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
     </style>
     <link rel="stylesheet" href="styles.css?v=15">
+    <style>
+        /* Enhanced card borders for better contrast */
+        .contact-card {
+            border: 1px solid rgba(139, 92, 246, 0.1) !important;
+            border-radius: 12px !important;
+        }
+        
+        .contact-form {
+            border: 1px solid rgba(139, 92, 246, 0.1) !important;
+            border-radius: 12px !important;
+        }
+        
+        .faq-item {
+            border: 1px solid rgba(139, 92, 246, 0.1) !important;
+            border-radius: 12px !important;
+        }
+        
+        /* Ensure cards have proper background */
+        .contact-card,
+        .contact-form,
+        .faq-item {
+            background: white !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -43,20 +68,26 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Contact Section -->
-        <section class="page-section">
-            <div class="container">
-                <div class="section-header">
-                    <h1 class="page-title">Get in Touch</h1>
-                    <p class="section-subtitle">Ready to transform your business with AI?</p>
-                </div>
-                
+        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important;">
+            <div class="hero-content">
+                <h1 class="hero-title">Get in Touch</h1>
+                <p class="hero-subtitle">Ready to <strong>transform your business</strong> with <strong>AI</strong>?</p>
+            </div>
+        </section>
+
+        <!-- Contact Content Section -->
+        <section class="page-section" style="background: white !important; background-color: white !important; background-image: none !important; position: relative; overflow: hidden;">
+            <!-- Animated Node Background for Contact Content -->
+            <div id="contact-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
                 <div class="contact-content">
                     <div class="contact-info">
                         <div class="contact-card">
                             <div class="contact-icon">📩</div>
                             <h3>Email Us</h3>
                             <p>Send us a detailed message about your AI project requirements. We typically respond within 24 hours with initial insights and next steps. For complex projects, we'll schedule a consultation to discuss your specific needs and explore potential solutions.</p>
-                            <a href="mailto:contact@mirai-engineering.com" class="contact-link">contact@mirai-engineering.com</a>
+                            <div style="text-align: center; margin-top: 20px; font-size: 3rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">→</div>
                         </div>
                         
                         <div class="contact-card">
@@ -77,8 +108,7 @@
                         </div>
                     </div>
                     
-                    <div class="contact-form-container">
-                        <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" style="background: white !important; padding: 30px !important; border-radius: 12px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
                                 <input type="text" id="name" name="name" required>
@@ -147,8 +177,7 @@
                             </div>
                             
                             <button type="submit" class="btn-primary">Send Message</button>
-                        </form>
-                    </div>
+                    </form>
                 </div>
 
                 <!-- FAQ Section -->
@@ -239,5 +268,274 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Animated Node Background Component for Contact Page
+        class AnimatedNodeBackground {
+            constructor(containerId) {
+                this.container = document.getElementById(containerId);
+                this.nodes = [];
+                this.connections = [];
+                this.animationId = null;
+                this.init();
+            }
+
+            init() {
+                if (!this.container) return;
+                
+                this.createNodes();
+                this.createConnections();
+                this.animate();
+                
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    this.resize();
+                });
+            }
+
+            createNodes() {
+                const containerRect = this.container.getBoundingClientRect();
+                const nodeCount = 120; // Balanced network density for optimal visual appeal
+                
+                for (let i = 0; i < nodeCount; i++) {
+                    const node = {
+                        id: i,
+                        x: Math.random() * containerRect.width,
+                        y: Math.random() * containerRect.height,
+                        vx: (Math.random() - 0.5) * 0.1, // Much slower for dense network
+                        vy: (Math.random() - 0.5) * 0.1,
+                        size: Math.random() * 2 + 3, // Size between 3-5px (smaller for density)
+                        opacity: Math.random() * 0.2 + 0.4, // Opacity between 0.4-0.6 (more subtle)
+                        pulse: Math.random() * Math.PI * 2,
+                        pulseSpeed: Math.random() * 0.05 + 0.03, // Faster pulse
+                        connections: [] // Track connections for this node
+                    };
+                    this.nodes.push(node);
+                }
+            }
+
+            createConnections() {
+                this.connections = [];
+                
+                // Create ULTRA DENSE network with multiple connection strategies
+                for (let i = 0; i < this.nodes.length; i++) {
+                    const node = this.nodes[i];
+                    node.connections = [];
+                    
+                    // Strategy 1: Connect to nearby nodes (within 150px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance < 150) {
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.1, 1 - distance / 150) * 0.8, // Higher opacity for nearby
+                                strength: Math.max(0.2, 1 - distance / 150),
+                                distance: distance,
+                                type: 'nearby'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                    
+                    // Strategy 2: Connect to medium distance nodes (150-250px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance >= 150 && distance < 250 && Math.random() > 0.3) { // 70% chance
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.05, 1 - distance / 250) * 0.4,
+                                strength: Math.max(0.1, 1 - distance / 250),
+                                distance: distance,
+                                type: 'medium'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                    
+                    // Strategy 3: Random long-distance connections (250-400px)
+                    for (let j = i + 1; j < this.nodes.length; j++) {
+                        const targetNode = this.nodes[j];
+                        const distance = this.getDistance(node, targetNode);
+                        
+                        if (distance >= 250 && distance < 400 && Math.random() > 0.7) { // 30% chance
+                            const connection = {
+                                from: node,
+                                to: targetNode,
+                                opacity: Math.max(0.02, 1 - distance / 400) * 0.2,
+                                strength: Math.max(0.05, 1 - distance / 400),
+                                distance: distance,
+                                type: 'long'
+                            };
+                            
+                            this.connections.push(connection);
+                            node.connections.push(targetNode);
+                            targetNode.connections.push(node);
+                        }
+                    }
+                }
+            }
+
+            getDistance(node1, node2) {
+                const dx = node1.x - node2.x;
+                const dy = node1.y - node2.y;
+                return Math.sqrt(dx * dx + dy * dy);
+            }
+
+            updateNodes() {
+                const containerRect = this.container.getBoundingClientRect();
+                
+                this.nodes.forEach(node => {
+                    // Update position
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    
+                    // Bounce off edges
+                    if (node.x <= 0 || node.x >= containerRect.width) {
+                        node.vx *= -1;
+                        node.x = Math.max(0, Math.min(containerRect.width, node.x));
+                    }
+                    if (node.y <= 0 || node.y >= containerRect.height) {
+                        node.vy *= -1;
+                        node.y = Math.max(0, Math.min(containerRect.height, node.y));
+                    }
+                    
+                    // Update pulse
+                    node.pulse += node.pulseSpeed;
+                });
+            }
+
+            updateConnections() {
+                this.connections.forEach(connection => {
+                    const distance = this.getDistance(connection.from, connection.to);
+                    connection.opacity = Math.max(0, 1 - distance / 300) * 0.6;
+                });
+            }
+
+            render() {
+                const containerRect = this.container.getBoundingClientRect();
+                let svg = this.container.querySelector('svg');
+                
+                if (!svg) {
+                    svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    svg.style.position = 'absolute';
+                    svg.style.top = '0';
+                    svg.style.left = '0';
+                    svg.style.width = '100%';
+                    svg.style.height = '100%';
+                    svg.style.pointerEvents = 'none';
+                    this.container.appendChild(svg);
+                }
+                
+                svg.setAttribute('width', containerRect.width);
+                svg.setAttribute('height', containerRect.height);
+                svg.innerHTML = '';
+                
+                // Render ULTRA DENSE connections with optimized performance
+                this.connections.forEach(connection => {
+                    if (connection.opacity > 0.01) { // Very low threshold for maximum density
+                        // Main connection line - much thicker for visibility
+                        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                        line.setAttribute('x1', connection.from.x);
+                        line.setAttribute('y1', connection.from.y);
+                        line.setAttribute('x2', connection.to.x);
+                        line.setAttribute('y2', connection.to.y);
+                        line.setAttribute('stroke', '#8B5CF6');
+                        line.setAttribute('stroke-width', Math.max(0.4, connection.strength * 3.2)); // 3-4x thicker!
+                        line.setAttribute('opacity', connection.opacity);
+                        line.setAttribute('stroke-linecap', 'round');
+                        svg.appendChild(line);
+                        
+                        // Add glow only for very strong connections (performance optimization)
+                        if (connection.strength > 0.7 && connection.type === 'nearby') {
+                            const glowLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                            glowLine.setAttribute('x1', connection.from.x);
+                            glowLine.setAttribute('y1', connection.from.y);
+                            glowLine.setAttribute('x2', connection.to.x);
+                            glowLine.setAttribute('y2', connection.to.y);
+                            glowLine.setAttribute('stroke', '#A78BFA');
+                            glowLine.setAttribute('stroke-width', Math.max(1.2, connection.strength * 6.0)); // 3-4x thicker glow!
+                            glowLine.setAttribute('opacity', connection.opacity * 0.3);
+                            glowLine.setAttribute('stroke-linecap', 'round');
+                            svg.insertBefore(glowLine, svg.firstChild);
+                        }
+                    }
+                });
+                
+                // Render nodes optimized for ULTRA DENSE network
+                this.nodes.forEach(node => {
+                    const pulseSize = node.size + Math.sin(node.pulse) * 1; // Minimal pulse for performance
+                    const nodeOpacity = node.opacity + Math.sin(node.pulse) * 0.1;
+                    
+                    // Add glow effect only for largest nodes (very selective for performance)
+                    if (node.size > 4.5 && Math.random() > 0.95) { // Only 5% of larger nodes get glow
+                        const glowCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        glowCircle.setAttribute('cx', node.x);
+                        glowCircle.setAttribute('cy', node.y);
+                        glowCircle.setAttribute('r', pulseSize + 2);
+                        glowCircle.setAttribute('fill', '#A78BFA');
+                        glowCircle.setAttribute('opacity', nodeOpacity * 0.1);
+                        svg.appendChild(glowCircle);
+                    }
+                    
+                    // Main node - simplified for performance
+                    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                    circle.setAttribute('cx', node.x);
+                    circle.setAttribute('cy', node.y);
+                    circle.setAttribute('r', pulseSize);
+                    circle.setAttribute('fill', '#8B5CF6');
+                    circle.setAttribute('opacity', nodeOpacity);
+                    svg.appendChild(circle);
+                    
+                    // Add inner highlight only for largest nodes (very selective)
+                    if (node.size > 4.5 && Math.random() > 0.98) { // Only 2% get highlight
+                        const highlightCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        highlightCircle.setAttribute('cx', node.x);
+                        highlightCircle.setAttribute('cy', node.y);
+                        highlightCircle.setAttribute('r', pulseSize * 0.4);
+                        highlightCircle.setAttribute('fill', '#C4B5FD');
+                        highlightCircle.setAttribute('opacity', nodeOpacity * 0.3);
+                        svg.appendChild(highlightCircle);
+                    }
+                });
+            }
+
+            animate() {
+                this.updateNodes();
+                this.updateConnections();
+                this.render();
+                this.animationId = requestAnimationFrame(() => this.animate());
+            }
+
+            resize() {
+                // Recreate nodes for new container size
+                this.nodes = [];
+                this.connections = [];
+                this.createNodes();
+                this.createConnections();
+            }
+
+            destroy() {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                }
+            }
+        }
+
+        // Initialize the animated background for contact page
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactNodeBackground = new AnimatedNodeBackground('contact-node-background');
+        });
+    </script>
 </body>
 </html>

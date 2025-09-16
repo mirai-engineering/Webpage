@@ -178,7 +178,7 @@ body {
 
 .section {
     display: none;
-    min-height: calc(100vh - 80px);
+    min-height: calc(70vh - 80px);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -194,7 +194,7 @@ body {
     background-size: 150% 150%;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 70vh;
 
     display: flex;
     align-items: center;
@@ -1517,7 +1517,7 @@ body {
 /* Page Sections */
 .page-section {
     padding: var(--space-2xl) 0;
-    min-height: calc(100vh - 80px);
+    min-height: calc(70vh - 80px);
 }
 
 .page-title {
