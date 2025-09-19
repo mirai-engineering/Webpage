@@ -93,12 +93,17 @@ body {
     border-bottom: 1px solid rgba(229, 231, 235, 0.3);
     z-index: 1000;
     transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.navigation.hidden {
+    transform: translateY(-100%);
 }
 
 .nav-container {
     max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: var(--space-md) var(--space-xl);
+    padding: 2px var(--space-xl);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -700,7 +705,7 @@ body {
     }
     
     .nav-container {
-        padding: var(--space-md);
+        padding: 2px;
     }
 }
 

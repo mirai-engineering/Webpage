@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize hero buttons functionality
     initHeroButtons();
+    
+    // Initialize hide-on-scroll navigation
+    initHideOnScrollNavigation();
 });
 
 // Mobile navigation functionality
@@ -116,5 +119,54 @@ function initHeroButtons() {
             }
         });
     }
+}
+
+// Hide-on-scroll navigation functionality
+function initHideOnScrollNavigation() {
+    const navigation = document.querySelector('.navigation');
+    let lastScrollTop = 0;
+    let scrollTimeout;
+    
+    if (!navigation) return;
+    
+    function handleScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+        
+        // Clear any existing timeout
+        clearTimeout(scrollTimeout);
+        
+        // Only hide/show if scrolled more than 100px
+        if (Math.abs(scrollTop - lastScrollTop) > 5) {
+            if (scrollDirection === 'down' && scrollTop > 100) {
+                // Scrolling down - hide navigation
+                navigation.classList.add('hidden');
+            } else if (scrollDirection === 'up' || scrollTop <= 100) {
+                // Scrolling up or near top - show navigation
+                navigation.classList.remove('hidden');
+            }
+        }
+        
+        lastScrollTop = scrollTop;
+        
+        // Set a timeout to ensure navigation shows when scrolling stops
+        scrollTimeout = setTimeout(() => {
+            if (scrollTop <= 100) {
+                navigation.classList.remove('hidden');
+            }
+        }, 150);
+    }
+    
+    // Throttle scroll events for better performance
+    let ticking = false;
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(handleScroll);
+            ticking = true;
+            setTimeout(() => { ticking = false; }, 16); // ~60fps
+        }
+    }
+    
+    window.addEventListener('scroll', requestTick, { passive: true });
 }
 
