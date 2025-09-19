@@ -20,10 +20,7 @@
     <style>
         /* Simplified CSS Grid Implementation */
         .card-grid {
-            display: grid !important;
-            grid-template-columns: 2fr 1fr !important; /* About gets 2/3, Mission/Vision get 1/3 */
-            grid-template-rows: auto auto auto !important; /* Three rows */
-            gap: 30px !important;
+            display: block !important; /* Simple block layout since only one card remains */
             max-width: 1400px !important;
             margin: 0 auto !important;
             padding: 60px 20px !important;
@@ -39,34 +36,11 @@
             justify-content: center !important;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
             border: 1px solid rgba(139, 92, 246, 0.1) !important;
+            margin-bottom: 30px !important;
         }
 
-        /* About card - spans 2 rows on the left */
-        .card-large { 
-            grid-row: 1 / 3 !important; /* Spans 2 rows */
-            grid-column: 1 / 2 !important; /* First column */
-            padding: 40px !important;
-            min-height: 600px !important;
-        }
-
-        /* Mission card - top right */
-        .card-mission {
-            grid-row: 1 / 2 !important;
-            grid-column: 2 / 3 !important; /* Second column */
-            min-height: 280px !important;
-        }
-
-        /* Vision card - bottom right */
-        .card-vision {
-            grid-row: 2 / 3 !important;
-            grid-column: 2 / 3 !important; /* Second column */
-            min-height: 320px !important;
-        }
-
-        /* Transform card - full width across bottom */
+        /* Transform card - only remaining card */
         .card-full {
-            grid-row: 3 / 4 !important;
-            grid-column: 1 / 3 !important; /* Spans both columns */
             min-height: 200px !important;
         }
 
@@ -156,29 +130,34 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Page Header Section with Clouds Background -->
-        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important;">
-            <div class="hero-content">
+        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important; margin-bottom: 0 !important;">
+            <div class="hero-content" style="max-width: none; width: 100%;">
                 <h1 class="hero-title">Who We Are</h1>
-                <p class="hero-subtitle">We are a group of <strong>passionate engineers</strong> that adapted to the <strong>AI revolution</strong> of the future, and hence our name. We make sure that our engineers have a degree in an engineering field like <strong>mechanical, chemical, electrical or software engineering</strong>, honed with <strong>real-world experience in AI & Machine Learning</strong>. We are <strong>hybrids</strong> with the <strong>problem-solving mentality of engineers</strong>, backed by the <strong>technical expertise of data scientists & programmers</strong>.</p>
+                <p class="hero-subtitle">We are a group of <strong>passionate engineers</strong> that adapted to the <strong>AI revolution</strong> of the future, and hence our name.</p>
+                
+                <!-- Hero Buttons -->
+                <div class="hero-cta" style="margin-top: 30px;">
+                    <a href="#mission-vision" class="btn-primary">Mision & Vision</a>
+                    <a href="#our-values" class="btn-secondary">Our Values</a>
+                </div>
+            </div>
         </section>
 
-        <!-- Company Overview Section -->
-        <section class="page-section" style="background: white !important; background-color: white !important; background-image: none !important; position: relative; overflow: hidden;">
+        <!-- Company Overview Section with Animated Node Background -->
+        <div style="padding: 60px 20px; background: transparent; position: relative; overflow: hidden;">
+
             <!-- Animated Node Background for Company Overview -->
             <div id="company-overview-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
             
-            <div class="container" style="position: relative; z-index: 2;">
-                <!-- Company Overview - CSS Grid Layout -->
-                <section class="card-grid">
-                    <!-- Card 1: About Mirai Engineering (Large) -->
-                    <div class="card card-large">
-                    <div class="overview-content">
-                        <h2 class="section-title">About Mirai Engineering</h2>
+            <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
+                <!-- About Mirai Engineering Content (White Background) -->
+                <div id="about-mirai" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
+                        <h2 class="section-title" style="color: var(--gray-900); margin-bottom: 30px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">About Mirai Engineering</h2>
                             
                             <!-- Paragraph 1 -->
                             <div class="paragraph-section" data-paragraph="1">
                                 <div class="paragraph-content">
-                                    <p class="overview-text">Mirai Engineering is a cutting-edge AI consultancy firm specializing in the deployment of custom artificial intelligence models across diverse industries. Founded with a vision to democratize AI technology, we bridge the gap between complex machine learning algorithms and real-world business applications. Our team of expert engineers, data scientists, and AI specialists works tirelessly to deliver solutions that not only meet current business needs but anticipate future challenges.</p>
+                                    <p class="overview-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Mirai Engineering is a cutting-edge AI consultancy firm specializing in the deployment of custom artificial intelligence models across diverse industries. Founded with a vision to democratize AI technology, we bridge the gap between complex machine learning algorithms and real-world business applications. We make sure that our engineers have a degree in an engineering fields like <strong>mechanical, chemical, electrical or software engineering</strong>, honed with <strong>real-world experience in AI & Machine Learning</strong>. We are <strong>hybrids</strong> with the <strong>problem-solving mentality of engineers</strong>, backed by the <strong>technical expertise of data scientists & programmers</strong>. Our AI specialists work tirelessly to deliver solutions that not only meet current business needs but anticipate future challenges.</p>
                                 </div>
                             </div>
                             
@@ -192,7 +171,7 @@
                             <!-- Paragraph 2 -->
                             <div class="paragraph-section" data-paragraph="2">
                                 <div class="paragraph-content">
-                                    <p class="overview-text">At Mirai, we believe the best AI solution is the one that fits your unique vision, not a one-size-fits-all model. We empower our clients with the freedom to choose their AI environment. Whether you prefer the fully integrated ecosystems of major providers like AWS or Google Cloud, where we can deploy models that seamlessly leverage their existing services, or you require a solution that is Cloud-Native but Premise-Independent, we'll build it for you. This approach ensures your business receives a powerful, purpose-built AI that aligns with your goals, all while prioritizing data sovereignty and cost-effectiveness.</p>
+                                    <p class="overview-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">At Mirai, we believe the best AI solution is the one that fits your unique vision, not a one-size-fits-all model. We empower our clients with the freedom to choose their AI environment. Whether you prefer the fully integrated ecosystems of major providers like AWS or Google Cloud, where we can deploy models that seamlessly leverage their existing services, or you require a solution that is Cloud-Native but Premise-Independent, we'll build it for you. This approach ensures your business receives a powerful, purpose-built AI that aligns with your goals, all while prioritizing data sovereignty and cost-effectiveness.</p>
                                 </div>
                     </div>
                             
@@ -201,62 +180,49 @@
                                 <div class="separator-line"></div>
                                 <span class="separator-emoji">💡</span>
                                 <div class="separator-line"></div>
-                        </div>
-                            
+                </div>
+                
                             <!-- Paragraph 3 -->
                             <div class="paragraph-section" data-paragraph="3">
                                 <div class="paragraph-content">
-                                    <p class="overview-text">We are committed to helping organizations unlock their full potential through intelligent automation and data-driven insights. It's your business, and we're here to provide the intelligence to unlock its full potential.</p>
-                        </div>
-                        </div>
+                                    <p class="overview-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">We are committed to helping organizations unlock their full potential through intelligent automation and data-driven insights. It's your business, and we're here to provide the intelligence to unlock its full potential.</p>
                     </div>
+                        </div>
+                        </div>
                 </div>
 
-                    <!-- Card 2: Our Mission -->
-                    <div class="card card-mission">
-                        <div class="mission-card">
-                            <div class="mission-icon">🎯</div>
-                            <h3 class="mission-title">Our Mission</h3>
-                            <p class="mission-text">To demystify artificial intelligence and make it transparent and accessible to everyone. We believe AI should be understood, not feared. Our mission is to cut through the complexity and noise surrounding AI, empowering organizations to harness its true potential while maintaining ethical responsibility. We drive radical efficiency and unlock new possibilities for every client we serve. Together, let's build the future.</p>
+                <!-- Mission and Vision Cards Side by Side -->
+                <div id="mission-vision" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 35px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                        <!-- Our Mission Card -->
+                        <div style="background: white !important; background-color: white !important; background-image: none !important; border-radius: 12px !important; padding: 30px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important; text-align: center; position: relative; z-index: 3; opacity: 1 !important;">
+                            <div class="mission-icon" style="font-size: 3rem; margin-bottom: 20px;">🎯</div>
+                            <h3 class="mission-title" style="color: var(--gray-900); font-size: 2rem; font-weight: 700; margin-bottom: 25px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Our Mission</h3>
+                            <p class="mission-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin: 0;">To demystify artificial intelligence and make it transparent and accessible to everyone. We believe AI should be understood, not feared. Our mission is to cut through the complexity and noise surrounding AI, empowering organizations to harness its true potential while maintaining ethical responsibility. We drive radical efficiency and unlock new possibilities for every client we serve. Together, let's build the future.</p>
                         </div>
-                    </div>
-                    
-                    <!-- Card 3: Our Vision -->
-                    <div class="card card-vision">
-                        <div class="vision-card">
-                            <div class="vision-icon">🔮</div>
-                            <h3 class="vision-title">Our Vision</h3>
-                            <p class="vision-text">Having been at the forefront of the AI revolution since its inception, we've witnessed the critical gap between AI's potential and its practical implementation. Companies struggle with unrealistic expectations for AI engineering roles that barely existed before 2022, while simultaneously lacking clear pathways for in-house AI adoption. At Mirai, we envision a future where experience meets realistic expectations, where organizations can seamlessly integrate AI into their operations without the confusion and misalignment that currently plague the industry. We believe that by bridging this gap, we can unlock AI's true transformative potential.</p>
+                        
+                        <!-- Our Vision Card -->
+                        <div style="background: white !important; background-color: white !important; background-image: none !important; border-radius: 12px !important; padding: 30px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important; text-align: center; position: relative; z-index: 3; opacity: 1 !important;">
+                            <div class="vision-icon" style="font-size: 3rem; margin-bottom: 20px;">🔮</div>
+                            <h3 class="vision-title" style="color: var(--gray-900); font-size: 2rem; font-weight: 700; margin-bottom: 25px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Our Vision</h3>
+                            <p class="vision-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin: 0;">Having been at the forefront of the AI revolution since its inception, we've witnessed the critical gap between AI's potential and its practical implementation. Companies struggle with unrealistic expectations for AI engineering roles that barely existed before 2022, while simultaneously lacking clear pathways for in-house AI adoption. At Mirai, we envision a future where experience meets realistic expectations, where organizations can seamlessly integrate AI into their operations without the confusion and misalignment that currently plague the industry. We believe that by bridging this gap, we can unlock AI's true transformative potential.</p>
                         </div>
-                        </div>
-                    
-                    <!-- Card 4: Transform Your Business (Full Width) -->
-                    <div class="card card-full">
-                        <div class="transform-business-card">
-                            <div class="cta-icon">🚀</div>
-                            <h3 class="cta-title">Ready to Transform Your Business?</h3>
-                            <p class="cta-text" style="color: var(--purple); font-weight: 500;">Let's discuss how AI can revolutionize your operations and drive unprecedented growth.</p>
-                            <a href="contact.html" class="cta-button">Get Started Today</a>
-                        </div>
-                    </div>
-                </section>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Leadership & Core Values Section -->
-        <section class="page-section" style="background: white !important; background-color: white !important; background-image: none !important; margin-top: -120px !important; padding-top: 20px !important; position: relative; overflow: hidden;">
+        <!-- Leadership & Core Values Section with Animated Node Background -->
+        <div style="padding: 35px 20px 60px 20px; background: transparent; position: relative; overflow: hidden;">
             <!-- Animated Node Background for Leadership & Core Values -->
             <div id="leadership-values-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
             
-            <div class="container" style="position: relative; z-index: 2;">
+            <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
                 <!-- Title Card -->
-                <div style="background: white; border-radius: 12px; padding: 40px 30px; margin-bottom: 15px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); text-align: center;">
+                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
                     <h2 class="section-title" style="color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Leadership & Core Values</h2>
                 </div>
 
                 <!-- CEO Section -->
-                <div class="ceo-section" style="margin-bottom: 60px;">
-                    <div class="ceo-card">
+                <div class="ceo-card" style="margin-bottom: 30px;">
                         <div class="ceo-image" style="display: flex; flex-direction: column; align-items: center;">
                             <div class="ceo-placeholder">👨‍💼</div>
                             <h3 class="ceo-name" style="margin-top: 15px; margin-bottom: 0; text-align: center;">Bruno Copa</h3>
@@ -265,12 +231,11 @@
                             <h2 style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin-bottom: 25px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">CEO & Founder</h2>
                             <p class="ceo-bio">His journey started in the midst of the <strong>AI-revolution</strong>. Before the times where ChatGPT or Gemini were being used by everyone, Bruno was already <em>pioneering with artificial neural networks</em> in the field of <strong>combustion engineering</strong>. After being honed with a <strong>B.Sc and M.Sc in engineering at RWTH Aachen University</strong>, he worked in different projects and industries across the <strong>aviation and automotive sectors</strong>, working for names like <strong>Airbus and AVL</strong>. He was involved in key projects at <strong>Porsche and Cariad</strong>, and has led <em>ground-breaking projects with MIT</em>.</p>
                             <p class="ceo-bio"><strong>His vision:</strong> "<em>Artificial Neural Networks are the second most powerful form of intelligence we've seen in a long time. Just after Human Intelligence.</em> I firmly believe that AI is - and will always be - a <strong>tool to enhance our productivity and understanding of the world</strong>. But its underlying structure can only be fully comprehended by the <em>abstraction capabilities of humans</em>. It's a <strong>double-edge sword</strong>, and if we abuse from it, it will end up damaging our own -human- neural networks. Our mission as humans is to contribute to the world in the most meaningful way each of us can do. <em>My grain of sand is to bring this powerful technology closer to everyone</em>, so that we all can make the most out of it".</p>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Core Values Grid -->
-                    <div class="values-grid">
+                <div id="our-values" class="values-grid" style="margin-bottom: 30px;">
                         <div class="value-card">
                             <div class="value-icon">🚀</div>
                             <h3 class="value-title">Innovation</h3>
@@ -292,8 +257,18 @@
                             <p class="value-description">We operate with complete transparency, ethical practices, and unwavering commitment to our clients' success and data security.</p>
                     </div>
                 </div>
+
+                <!-- Ready to Transform Your Business Card (Moved to Bottom) -->
+                <div class="card card-full" style="margin-top: 20px;">
+                    <div class="transform-business-card">
+                        <div class="cta-icon">🚀</div>
+                        <h3 class="cta-title">Ready to Transform Your Business?</h3>
+                        <p class="cta-text" style="color: var(--purple); font-weight: 500;">Let's discuss how AI can revolutionize your operations and drive unprecedented growth.</p>
+                        <a href="contact.html" class="cta-button">Get Started Today</a>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- Footer -->

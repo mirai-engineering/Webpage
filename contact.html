@@ -69,25 +69,31 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Contact Section -->
-        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important;">
-            <div class="hero-content">
+        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important; margin-bottom: 0 !important;">
+            <div class="hero-content" style="max-width: none; width: 100%;">
                 <h1 class="hero-title">Get in Touch</h1>
                 <p class="hero-subtitle">Ready to <strong>transform your business</strong> with <strong>AI</strong>?</p>
             </div>
         </section>
 
         <!-- Contact Content Section -->
-        <section class="page-section" style="background: white !important; background-color: white !important; background-image: none !important; position: relative; overflow: hidden;">
+        <div style="padding: 60px 20px; background: transparent; position: relative; overflow: hidden;">
             <!-- Animated Node Background for Contact Content -->
             <div id="contact-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
             
-            <div class="container" style="position: relative; z-index: 2;">
+            <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
+                <!-- How to Find Us Title Card -->
+                <div class="contact-card" style="text-align: center; margin-bottom: 40px;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">How to Find Us</h2>
+                    <p style="color: var(--gray-700); font-size: 1.2rem; line-height: 1.6; margin: 20px 0 0 0; max-width: 800px; margin-left: auto; margin-right: auto;">Choose the communication method that works best for you. We're here to help transform your business with AI.</p>
+                </div>
+                
                 <div class="contact-content">
                     <div class="contact-info">
                         <div class="contact-card">
                             <div class="contact-icon">📩</div>
                             <h3>Email Us</h3>
-                            <p>Send us a detailed message about your AI project requirements. We typically respond within 24 hours with initial insights and next steps. For complex projects, we'll schedule a consultation to discuss your specific needs and explore potential solutions.</p>
+                            <p>Send us a detailed message about your AI project requirements. We typically respond within 24 hours with initial insights and next steps. For complex projects, we'll schedule a consultation to discuss your specific needs and explore potential solutions. Please use the form on the right to send us a message.</p>
                             <div style="text-align: center; margin-top: 20px; font-size: 3rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">→</div>
                         </div>
                         
@@ -183,7 +189,12 @@
 
                 <!-- FAQ Section -->
                 <div class="faq-section">
-                    <h2 class="section-title" style="color: white !important;">Frequently Asked Questions</h2>
+                    <!-- Frequently Asked Questions Title Card -->
+                    <div class="contact-card" style="text-align: center; margin-bottom: 40px;">
+                        <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">Frequently Asked Questions</h2>
+                        <p style="color: var(--gray-700); font-size: 1.2rem; line-height: 1.6; margin: 20px 0 0 0; max-width: 800px; margin-left: auto; margin-right: auto;">Find answers to common questions about our AI services, project timelines, and implementation process.</p>
+                    </div>
+                    
                     <div class="faq-grid">
                         <div class="faq-item">
                             <h3 class="faq-question">How long does a typical AI project take?</h3>
@@ -204,7 +215,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -270,6 +281,146 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this with your actual EmailJS public key
+        })();
+
+        // Contact form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    const data = {
+                        name: formData.get('name'),
+                        email: formData.get('email'),
+                        company: formData.get('company'),
+                        industry: formData.get('industry'),
+                        project_type: formData.get('project-type'),
+                        budget: formData.get('budget'),
+                        timeline: formData.get('timeline'),
+                        message: formData.get('message')
+                    };
+                    
+                    // Show loading state
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Send email using EmailJS
+                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                        to_email: 'contact@mirai-engineering.com',
+                        from_name: data.name,
+                        from_email: data.email,
+                        company: data.company || 'Not specified',
+                        industry: data.industry || 'Not specified',
+                        project_type: data.project_type || 'Not specified',
+                        budget: data.budget || 'Not specified',
+                        timeline: data.timeline || 'Not specified',
+                        message: data.message,
+                        reply_to: data.email
+                    })
+                    .then(function(response) {
+                        // Success
+                        submitBtn.textContent = 'Message Sent!';
+                        submitBtn.style.background = '#10B981';
+                        contactForm.reset();
+                        
+                        // Show success message
+                        showNotification('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
+                        
+                        // Reset button after 3 seconds
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                            submitBtn.style.background = '';
+                        }, 3000);
+                    })
+                    .catch(function(error) {
+                        // Error
+                        console.error('EmailJS Error:', error);
+                        submitBtn.textContent = 'Error - Try Again';
+                        submitBtn.style.background = '#EF4444';
+                        
+                        // Show error message
+                        showNotification('Sorry, there was an error sending your message. Please try again or contact us directly.', 'error');
+                        
+                        // Reset button after 3 seconds
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                            submitBtn.style.background = '';
+                        }, 3000);
+                    });
+                });
+            }
+        });
+        
+        // Notification system
+        function showNotification(message, type) {
+            // Remove existing notifications
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#10B981' : '#EF4444'};
+                color: white;
+                padding: 16px 24px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                z-index: 10000;
+                max-width: 400px;
+                font-weight: 500;
+                animation: slideIn 0.3s ease-out;
+            `;
+            notification.textContent = message;
+            
+            // Add animation styles
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Add to page
+            document.body.appendChild(notification);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideIn 0.3s ease-out reverse';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 300);
+            }, 5000);
+        }
+    </script>
     <script>
         // Animated Node Background Component for Contact Page
         class AnimatedNodeBackground {

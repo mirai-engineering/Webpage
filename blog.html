@@ -44,8 +44,8 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Blog Hero Section -->
-        <section class="hero-section">
-            <div class="hero-content">
+        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important; margin-bottom: 0 !important;">
+            <div class="hero-content" style="max-width: none; width: 100%;">
                 <h1 class="hero-title">
                     <span class="hero-title-line1">AI Blog</span>
                 </h1>
@@ -54,50 +54,105 @@
         </section>
 
         <!-- Blog Content Section with Animated Node Background -->
-        <section class="info-section" style="position: relative; overflow: hidden; padding: 35px 0 !important;">
+        <div style="padding: 60px 20px; background: transparent; position: relative; overflow: hidden;">
             <!-- Animated Node Background -->
             <div id="blog-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
             
-            <div class="container" style="position: relative; z-index: 2;">
+            <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
                 <!-- But... What is AI? Card -->
-                <div style="background: white; border-radius: 16px; padding: 50px 40px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 50px;">
-                    <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin-bottom: 25px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">But... What is AI?</h2>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-                        <!-- Card 1: Coffee Analogy -->
-                        <div style="background: #f8f9fa; border-radius: 12px; padding: 30px; border-left: 4px solid #8B5CF6;">
-                            <div style="text-align: center; margin-bottom: 20px;">
-                                <span style="font-size: 2.5rem;">☕</span>
+                <div style="background: white !important; border-radius: 12px !important; padding: 40px !important; margin-bottom: 30px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important;">
+                    <h2 class="section-title" style="color: var(--gray-900); margin-bottom: 30px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">But... What is AI?</h2>
+                            
+                            <!-- Paragraph 1 -->
+                            <div class="paragraph-section" data-paragraph="1">
+                                <div class="paragraph-content">
+                                    <p class="overview-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Picture this: You're craving the perfect cup of coffee. You know what great coffee tastes like, but you're clueless about machines, grind sizes, or bean varieties. Would you impulsively drop $15,000 on a commercial espresso machine? Of course not. You'd start with understanding your needs, learning the basics, and finding the right solution for your situation. AI works exactly the same way. Before diving into complex implementations, you need to understand where AI fits, how it works, and what it can truly do for your business. That's where we come in—guiding you through AI's potential with the clarity and expertise you deserve.</p>
+                                </div>
                             </div>
-                            <p style="color: var(--gray-700); line-height: 1.6; margin: 0; text-align: justify;">Picture this: You're craving the perfect cup of coffee. You know what great coffee tastes like, but you're clueless about machines, grind sizes, or bean varieties. Would you impulsively drop $15,000 on a commercial espresso machine? Of course not. You'd start with understanding your needs, learning the basics, and finding the right solution for your situation. AI works exactly the same way. Before diving into complex implementations, you need to understand where AI fits, how it works, and what it can truly do for your business. That's where we come in—guiding you through AI's potential with the clarity and expertise you deserve.</p>
+                            
+                            <!-- Separator 1 -->
+                            <div class="scroll-separator" data-separator="1">
+                                <div class="separator-line"></div>
+                                <span class="separator-emoji">⚡</span>
+                                <div class="separator-line"></div>
+                </div>
+                
+                            <!-- Paragraph 2 -->
+                            <div class="paragraph-section" data-paragraph="2">
+                                <div class="paragraph-content">
+                                    <p class="overview-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">And here's something that might surprise you: AI isn't new, it's been around for decades. That calculator on your desk? This is one of the first forms of "Artificial Intelligence" that already outperforms humans. Not convinced? Try calculating 9,845.67 ÷ 37 in your head. Not so simple, right? AI is simply any system or model designed to mimic human thinking. From basic calculators to the sophisticated algorithms powering ChatGPT and Gemini.</p>
+                                </div>
+                    </div>
+                            
+                            <!-- Separator 2 -->
+                            <div class="scroll-separator" data-separator="2">
+                                <div class="separator-line"></div>
+                                <span class="separator-emoji">🚀</span>
+                                <div class="separator-line"></div>
                         </div>
-
-                        <!-- Card 2: AI History -->
-                        <div style="background: #f8f9fa; border-radius: 12px; padding: 30px; border-left: 4px solid #8B5CF6;">
-                            <div style="text-align: center; margin-bottom: 20px;">
-                                <span style="font-size: 2.5rem;">⚡</span>
-                            </div>
-                            <p style="color: var(--gray-700); line-height: 1.6; margin: 0; text-align: justify;">And here's something that might surprise you: AI isn't new, it's been around for decades. That calculator on your desk? This is one of the first forms of "Artificial Intelligence" that already outperforms humans. Not convinced? Try calculating 9,845.67 ÷ 37 in your head. Not so simple, right? AI is simply any system or model designed to mimic human thinking. From basic calculators to the sophisticated algorithms powering ChatGPT and Gemini.</p>
+                            
+                            <!-- Paragraph 3 -->
+                            <div class="paragraph-section" data-paragraph="3">
+                                <div class="paragraph-content">
+                                    <p class="overview-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">So why the sudden AI explosion? Thanks to huge breakthroughs in computing power and data availability, we've been able to efficiently train the magical engine behind AI: Neural Networks powered by the backpropagation algorithm. In 2017, researchers finally had enough data and processing power to train models on massive datasets, resulting in the famous paper "Attention is all you need". The results were so impressive that commercial applications exploded just a few years later. Now, the real question isn't what AI is—it's how to harness its power for your specific needs. At Mirai, we specialize in the two branches that matter most: <strong>Generative AI</strong> (creating new content) and <strong>Analytical AI</strong> (understanding and predicting). Ready to discover which one fits your business?</p>
                         </div>
-
-                        <!-- Card 3: AI Revolution -->
-                        <div style="background: #f8f9fa; border-radius: 12px; padding: 30px; border-left: 4px solid #8B5CF6;">
-                            <div style="text-align: center; margin-bottom: 20px;">
-                                <span style="font-size: 2.5rem;">🚀</span>
-                            </div>
-                            <p style="color: var(--gray-700); line-height: 1.6; margin: 0; text-align: justify;">So why the sudden AI explosion? Thanks to huge breakthroughs in computing power and data availability, we've been able to efficiently train the magical engine behind AI: Neural Networks powered by the backpropagation algorithm. In 2017, researchers finally had enough data and processing power to train models on massive datasets, resulting in the famous paper "Attention is all you need". The results were so impressive that commercial applications exploded just a few years later. Now, the real question isn't what AI is—it's how to harness its power for your specific needs. At Mirai, we specialize in the two branches that matter most: <strong>Generative AI</strong> (creating new content) and <strong>Analytical AI</strong> (understanding and predicting). Ready to discover which one fits your business?</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- Coming Soon Section -->
-                <div style="background: white; border-radius: 16px; padding: 50px 40px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); text-align: center;">
-                    <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin-bottom: 25px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">More Articles Coming Soon</h2>
-                    <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 30px;">We're working on bringing you more insightful articles about AI trends, case studies, and technical deep-dives. Stay tuned for updates!</p>
-                    <a href="contact.html" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">Get in Touch</a>
+                <!-- Article Cards Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+                    <!-- Article 1 -->
+                    <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;">🤖</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 15px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">AI Agents: The Future of Business Automation</h3>
+                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Discover how AI agents are revolutionizing business operations, from customer service to internal processes. Learn about the latest developments in autonomous AI systems and how they can transform your workflow.</p>
+                        <a href="#" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">Read Full Article</a>
+                    </div>
+                    
+                    <!-- Article 2 -->
+                    <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;">🧠</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 15px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Neural Networks Explained: From Theory to Practice</h3>
+                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">A comprehensive guide to understanding neural networks, their architecture, and real-world applications. Perfect for business leaders who want to understand the technology behind AI solutions.</p>
+                        <a href="#" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">Read Full Article</a>
+                    </div>
+                    
+                    <!-- Article 3 -->
+                    <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;">📊</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 15px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Data Quality: The Foundation of Successful AI</h3>
+                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Why data quality matters more than algorithm complexity in AI projects. Learn best practices for data preparation, cleaning, and validation to ensure your AI initiatives succeed.</p>
+                        <a href="#" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">Read Full Article</a>
+                    </div>
+                    
+                    <!-- Article 4 -->
+                    <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;">🔮</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 15px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Predictive Analytics: Forecasting the Future</h3>
+                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;">Explore how predictive analytics can help your business anticipate trends, optimize operations, and make data-driven decisions. Real-world examples and implementation strategies.</p>
+                        <a href="#" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">Read Full Article</a>
+                    </div>
+                </div>
+                
+                <!-- Newsletter Subscription Card -->
+                <div id="newsletter" style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); text-align: center; margin-bottom: 30px;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">📧</div>
+                    <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">Subscribe to Our Newsletter</h2>
+                    <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Stay updated with the latest AI insights, industry trends, and exclusive content. Get expert analysis delivered directly to your inbox.</p>
+                    <a href="#" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">Subscribe Now</a>
+                </div>
+                
+                <!-- Ready to Transform Your Business Card -->
+                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); text-align: center;">
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 20px;">🚀</div>
+                        <h3 style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Ready to Transform Your Business?</h3>
+                        <p style="color: var(--purple); font-weight: 500; font-size: 1.1rem; margin-bottom: 25px;">Let's discuss how AI can revolutionize your operations and drive unprecedented growth.</p>
+                        <a href="contact.html" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">Get Started Today</a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- Footer -->

@@ -44,35 +44,35 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- AI as a Service Hero Section -->
-        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important; padding: 35px var(--space-xl) !important; padding-top: 100px !important; padding-bottom: 10px !important;">
-            <div class="hero-content">
+        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important; margin-bottom: 0 !important;">
+            <div class="hero-content" style="max-width: none; width: 100%;">
                 <h1 class="hero-title" style="color: white !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;">
                     <span class="hero-title-line1">AI as a Service</span>
                 </h1>
                 <p class="hero-subtitle" style="color: white !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;">At Mirai we offer two types of artificial intelligence: <strong>Generative AI</strong> and <strong>Analytical AI</strong>. Find out about what we do and how we do it!</p>
                 <div class="hero-cta" style="margin-top: 30px;">
                     <a href="#services" class="btn-primary">Our Services</a>
-                    <a href="#applications" class="btn-secondary">Learn More</a>
+                    <a href="#lifecycle" class="btn-secondary">How do we do it?</a>
                 </div>
             </div>
         </section>
 
         <!-- Services and AI Types Section with Animated Node Background -->
-        <section class="info-section" style="padding-top: 0 !important; padding-bottom: 0 !important; margin-bottom: 0 !important;">
-            <div class="container">
-                <div class="services-content" style="background: transparent !important; background-image: none !important; padding: 0 !important; position: relative !important; overflow: hidden !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important;">
-                    <!-- Animated Node Background -->
-                    <div id="node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></div>
-                    <!-- What do we offer Title Card -->
-                    <div id="services" style="background: white !important; border-radius: 16px !important; padding: 50px 40px !important; margin: 0 40px 40px 40px !important; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important; text-align: center !important; position: relative !important; z-index: 2 !important;">
+        <div style="padding: 60px 20px; background: transparent; position: relative; overflow: hidden;">
+            <!-- Animated Node Background -->
+            <div id="node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+            
+            <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
+                <!-- What do we offer Title Card -->
+                <div id="services" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
                         <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin-bottom: 25px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">What do we offer</h2>
                         <p style="color: var(--gray-700) !important; font-size: 1.1rem !important; line-height: 1.6 !important; margin: 0 !important; max-width: 800px !important; margin-left: auto !important; margin-right: auto !important;">Our comprehensive suite of AI services is designed to meet you wherever you are in your AI journey. From strategic consulting to hands-on implementation and team education, we provide the expertise and support you need to successfully integrate AI into your business operations.</p>
                     </div>
                     
-                    <!-- Services Grid -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin: 0 40px 50px 40px; position: relative; z-index: 2;">
-                        <!-- Professional AI Consulting Card -->
-                        <div style="background: white; border-radius: 16px; padding: 40px 30px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); text-align: left;">
+                <!-- Services Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                    <!-- Professional AI Consulting Card -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
                             <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.3; text-align: center;">Professional AI Consulting</h3>
                             <div style="text-align: center; margin-bottom: 20px;">
                                 <span style="font-size: 2rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🧠</span>
@@ -108,16 +108,16 @@
                         </div>
                     </div>
 
-                    <!-- What Kind of AI Title Card -->
-                    <div id="applications" style="background: white !important; border-radius: 16px !important; padding: 30px 40px !important; margin: 0 40px 50px 40px !important; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important; text-align: center !important; position: relative !important; z-index: 2 !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; min-height: 300px !important;">
+                <!-- What Kind of AI Title Card -->
+                <div id="applications" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
                         <h2 class="intro-title centered-title" style="color: var(--gray-900) !important; text-align: center !important; background: var(--gradient-primary) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; text-shadow: none !important; margin: 0 0 25px 0 !important; font-size: 2.2rem !important; font-weight: 700 !important; line-height: 1.2 !important;">What Kind of AI Is The Right One For Your Business?</h2>
                         <p style="color: var(--gray-700) !important; font-size: 1.1rem !important; line-height: 1.6 !important; margin: 0 0 20px 0 !important; max-width: 800px !important; margin-left: auto !important; margin-right: auto !important;">Understanding the difference between <strong>Generative AI</strong> and <strong>Analytical AI</strong> is crucial for choosing the right solution. These two main types of AI serve different purposes and can transform your business operations in unique ways. If you've never heard about the difference, here's a link to our blog post:</p>
                         <a href="blog.html" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3); margin-bottom: 20px;">But... What is AI?</a>
                         <p style="color: var(--gray-700) !important; font-size: 1.1rem !important; line-height: 1.6 !important; margin: 0 !important; max-width: 800px !important; margin-left: auto !important; margin-right: auto !important;">In an nutshell, Generative AI creates new content, while Analytical AI extracts insights from existing data. Both can transform your business operations in unique ways. Let's get inspired by some real-world examples!</p>
                     </div>
 
-                    <!-- Generative AI Main Card -->
-                    <div style="background: white; border-radius: 16px; padding: 50px 40px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin: 0 40px 50px 40px; position: relative; z-index: 2;">
+                <!-- Generative AI Main Card -->
+                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px;">
                         <h3 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">Generative AI: Creating the Future</h3>
                         <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 30px;">Generative AI is a powerful engine for <strong>creativity and efficiency</strong>. The following examples can be applied across virtually any industry.Using technologies like Convolutional Neural Networks (CNNs), advanced Diffusion Models, or agents powered by Large Language Models (LLMs) we can generate high-quality images, indistinguishable image transformations, product mockups, and visual content from simple text prompts.</p>
                         <div style="text-align: center;">
@@ -127,8 +127,8 @@
                         </div>
                     </div>
                     
-                    <!-- 2x2 Grid Layout for Cards 2, 3, 4, 5 -->
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin: 0 40px 50px 40px; position: relative; z-index: 2;">
+                <!-- 2x2 Grid Layout for Cards 2, 3, 4, 5 -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px;">
                         <!-- AI Agents & Automation Card -->
                         <div style="background: white; border-radius: 16px; padding: 40px 30px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
                             <h4 style="font-size: 1.8rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">AI Agents & Automation</h4>
@@ -227,7 +227,7 @@
                     </div>
                     
                 <!-- Analytical AI Main Card -->
-                <div style="background: white; border-radius: 16px; padding: 50px 40px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin: 0 40px 50px 40px; position: relative; z-index: 2;">
+                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px;">
                     <h3 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">Analytical AI: Finding Insights in Your Data</h3>
                     <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 30px;">Where Generative AI creates, Analytical AI <strong>clarifies and optimizes</strong>. Using advanced neural networks, we can derive actionable intelligence from your data, optimize processes, find optimal compositions and more. From fintech to engineering, from healthcare to data processing, Analytical AI can help you make better decisions and optimize your processes, the application fields are endless.</p>
                     <div style="text-align: center;">
@@ -238,7 +238,7 @@
                 </div>
 
                 <!-- 2x2 Grid Layout for Analytical AI Cards -->
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin: 0 40px 50px 40px; position: relative; z-index: 2;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px;">
                     <!-- Predictive Analytics & Maintenance Card -->
                     <div style="background: white; border-radius: 16px; padding: 40px 30px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
                         <h4 style="font-size: 1.8rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Predictive Analytics & Maintenance</h4>
@@ -356,14 +356,14 @@
                         </div>
                     </div>
                 </div>
-                    <!-- AIaaS Lifecycle Title Card -->
-                    <div style="background: white !important; border-radius: 16px !important; padding: 30px 30px !important; margin: 0 40px 40px 40px !important; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important; text-align: center !important; position: relative !important; z-index: 2 !important;">
+                <!-- AIaaS Lifecycle Title Card -->
+                <div id="lifecycle" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
                         <h2 class="intro-title centered-title" style="color: var(--gray-900) !important; background: var(--gradient-primary) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; text-shadow: none !important; margin: 0 0 20px 0 !important; font-size: 2.2rem !important; font-weight: 700 !important; line-height: 1.2 !important;">The AIaaS Lifecycle</h2>
                         <p style="color: var(--gray-700) !important; font-size: 1.1rem !important; line-height: 1.6 !important; margin: 0 !important; max-width: 800px !important; margin-left: auto !important; margin-right: auto !important;">We are not a product; we are your partner in a journey. Our AI as a Service isn't a single transaction—it's a comprehensive, collaborative lifecycle designed for continuous innovation.</p>
                     </div>
                         
-                        <!-- Lifecycle Phases Grid -->
-                        <div style="display: grid; grid-template-columns: 1fr; gap: 40px; margin: 0 40px 50px 40px; position: relative; z-index: 2;">
+                <!-- Lifecycle Phases Grid -->
+                <div style="display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 60px;">
                             <!-- Phase 1: Discovery & Data -->
                             <div style="background: white; border-radius: 16px; padding: 40px 30px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
                                 <div style="display: flex; align-items: center; margin-bottom: 25px;">
@@ -459,6 +459,16 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    
+                <!-- Ready to Transform Your Business Card -->
+                <div style="background: white !important; background-color: white !important; background-image: none !important; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-top: 40px; text-align: center; max-width: 1200px; margin-left: auto; margin-right: auto; position: relative; z-index: 3; opacity: 1 !important;">
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 20px;">🚀</div>
+                            <h3 style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Ready to Transform Your Business?</h3>
+                            <p style="color: var(--purple); font-weight: 500; font-size: 1.1rem; margin-bottom: 25px;">Let's discuss how AI can revolutionize your operations and drive unprecedented growth.</p>
+                            <a href="contact.html" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">Get Started Today</a>
                         </div>
                     </div>
                 </div>
