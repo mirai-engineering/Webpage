@@ -104,7 +104,7 @@
                             <a href="tel:+491792122655" class="contact-link">+49 179 2122655</a>
                         </div>
                         
-                        <div class="contact-card">
+                        <div class="contact-card" id="schedule-meeting">
                             <div class="contact-icon">🗓</div>
                             <h3>Schedule a Meeting</h3>
                             <p>Book a 30-minute consultation for free to discuss your AI project requirements and explore how Mirai Engineering can help transform your business with cutting-edge AI solutions.</p>
@@ -267,7 +267,7 @@
                         </div>
                         <span class="social-text">LinkedIn</span>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="blog.html#newsletter" class="social-link">
                         <span class="social-icon">📰</span>
                         <span class="social-text">Our Newsletter</span>
                     </a>
@@ -281,14 +281,8 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        // Initialize EmailJS
-        (function() {
-            emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this with your actual EmailJS public key
-        })();
-
-        // Contact form handling
+        // Contact form handling with Formspree
         document.addEventListener('DOMContentLoaded', function() {
             const contactForm = document.getElementById('contactForm');
             
@@ -296,57 +290,46 @@
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    // Get form data
-                    const formData = new FormData(contactForm);
-                    const data = {
-                        name: formData.get('name'),
-                        email: formData.get('email'),
-                        company: formData.get('company'),
-                        industry: formData.get('industry'),
-                        project_type: formData.get('project-type'),
-                        budget: formData.get('budget'),
-                        timeline: formData.get('timeline'),
-                        message: formData.get('message')
-                    };
-                    
                     // Show loading state
                     const submitBtn = contactForm.querySelector('button[type="submit"]');
                     const originalText = submitBtn.textContent;
                     submitBtn.textContent = 'Sending...';
                     submitBtn.disabled = true;
                     
-                    // Send email using EmailJS
-                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-                        to_email: 'contact@mirai-engineering.com',
-                        from_name: data.name,
-                        from_email: data.email,
-                        company: data.company || 'Not specified',
-                        industry: data.industry || 'Not specified',
-                        project_type: data.project_type || 'Not specified',
-                        budget: data.budget || 'Not specified',
-                        timeline: data.timeline || 'Not specified',
-                        message: data.message,
-                        reply_to: data.email
+                    // Prepare form data for Formspree
+                    const formData = new FormData(contactForm);
+                    
+                    // Send to Formspree (you'll need to replace with your Formspree endpoint)
+                    fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
                     })
-                    .then(function(response) {
-                        // Success
-                        submitBtn.textContent = 'Message Sent!';
-                        submitBtn.style.background = '#10B981';
-                        contactForm.reset();
-                        
-                        // Show success message
-                        showNotification('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
-                        
-                        // Reset button after 3 seconds
-                        setTimeout(() => {
-                            submitBtn.textContent = originalText;
-                            submitBtn.disabled = false;
-                            submitBtn.style.background = '';
-                        }, 3000);
+                    .then(response => {
+                        if (response.ok) {
+                            // Success
+                            submitBtn.textContent = 'Message Sent!';
+                            submitBtn.style.background = '#10B981';
+                            contactForm.reset();
+                            
+                            // Show success message
+                            showNotification('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
+                            
+                            // Reset button after 3 seconds
+                            setTimeout(() => {
+                                submitBtn.textContent = originalText;
+                                submitBtn.disabled = false;
+                                submitBtn.style.background = '';
+                            }, 3000);
+                        } else {
+                            throw new Error('Network response was not ok');
+                        }
                     })
-                    .catch(function(error) {
+                    .catch(error => {
                         // Error
-                        console.error('EmailJS Error:', error);
+                        console.error('Form submission error:', error);
                         submitBtn.textContent = 'Error - Try Again';
                         submitBtn.style.background = '#EF4444';
                         
