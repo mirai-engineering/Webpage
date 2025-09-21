@@ -17,6 +17,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
     </style>
     <link rel="stylesheet" href="styles.css?v=15">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <style>
         /* Enhanced card borders for better contrast */
         .contact-card {
@@ -84,8 +86,8 @@
             <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
                 <!-- How to Find Us Title Card -->
                 <div class="contact-card" style="text-align: center; margin-bottom: 40px;">
-                    <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">How to Find Us</h2>
-                    <p style="color: var(--gray-700); font-size: 1.2rem; line-height: 1.6; margin: 20px 0 0 0; max-width: 800px; margin-left: auto; margin-right: auto;">Choose the communication method that works best for you. We're here to help transform your business with AI.</p>
+                    <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">How to Find Us</h2>
+                    <p style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 20px 0 0 0; max-width: 800px; margin-left: auto; margin-right: auto;">Choose the communication method that works best for you. We're here to help transform your business with AI.</p>
                 </div>
                 
                 <div class="contact-content">
@@ -191,8 +193,8 @@
                 <div class="faq-section">
                     <!-- Frequently Asked Questions Title Card -->
                     <div class="contact-card" style="text-align: center; margin-bottom: 40px;">
-                        <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">Frequently Asked Questions</h2>
-                        <p style="color: var(--gray-700); font-size: 1.2rem; line-height: 1.6; margin: 20px 0 0 0; max-width: 800px; margin-left: auto; margin-right: auto;">Find answers to common questions about our AI services, project timelines, and implementation process.</p>
+                        <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">Frequently Asked Questions</h2>
+                        <p style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 20px 0 0 0; max-width: 800px; margin-left: auto; margin-right: auto;">Find answers to common questions about our AI services, project timelines, and implementation process.</p>
                     </div>
                     
                     <div class="faq-grid">
@@ -282,7 +284,12 @@
 
     <script src="script.js"></script>
     <script>
-        // Contact form handling with Formspree
+        // Initialize EmailJS
+        (function(){
+            emailjs.init("qI1ENg1mzZ8Z5OzwL"); // Replace with your actual EmailJS public key
+        })();
+        
+        // Contact form handling with EmailJS
         document.addEventListener('DOMContentLoaded', function() {
             const contactForm = document.getElementById('contactForm');
             
@@ -296,19 +303,24 @@
                     submitBtn.textContent = 'Sending...';
                     submitBtn.disabled = true;
                     
-                    // Prepare form data for Formspree
-                    const formData = new FormData(contactForm);
                     
-                    // Send to Formspree (you'll need to replace with your Formspree endpoint)
-                    fetch('https://formspree.io/f/YOUR_FORM_ID', {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    })
-                    .then(response => {
-                        if (response.ok) {
+                    // Get form data
+                    const templateParams = {
+                        from_name: contactForm.name.value,
+                        from_email: contactForm.email.value,
+                        company: contactForm.company.value,
+                        phone: contactForm.phone.value,
+                        industry: contactForm.industry.value,
+                        project_type: contactForm['project-type'].value,
+                        budget: contactForm.budget.value,
+                        timeline: contactForm.timeline.value,
+                        message: contactForm.message.value,
+                        to_email: 'contact@mirai-engineering.com'
+                    };
+                    
+                    // Send email using EmailJS
+                    emailjs.send('service_mirai', 'template_contact', templateParams)
+                    .then(function(response) {
                             // Success
                             submitBtn.textContent = 'Message Sent!';
                             submitBtn.style.background = '#10B981';
@@ -323,18 +335,15 @@
                                 submitBtn.disabled = false;
                                 submitBtn.style.background = '';
                             }, 3000);
-                        } else {
-                            throw new Error('Network response was not ok');
-                        }
                     })
-                    .catch(error => {
+                    .catch(function(error) {
                         // Error
-                        console.error('Form submission error:', error);
+                        console.error('Email sending failed:', error);
                         submitBtn.textContent = 'Error - Try Again';
                         submitBtn.style.background = '#EF4444';
                         
                         // Show error message
-                        showNotification('Sorry, there was an error sending your message. Please try again or contact us directly.', 'error');
+                        showNotification('Sorry, there was an error sending your message. Please try again or contact us directly at contact@mirai-engineering.com', 'error');
                         
                         // Reset button after 3 seconds
                         setTimeout(() => {
