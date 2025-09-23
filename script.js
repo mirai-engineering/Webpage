@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize hide-on-scroll navigation
     initHideOnScrollNavigation();
+    
+    // Initialize animated tagline
+    initAnimatedTagline();
 });
 
 // Mobile navigation functionality
@@ -168,5 +171,31 @@ function initHideOnScrollNavigation() {
     }
     
     window.addEventListener('scroll', requestTick, { passive: true });
+}
+
+// Animated tagline functionality
+function initAnimatedTagline() {
+    const taglineElement = document.getElementById('animated-tagline');
+    
+    if (!taglineElement) return;
+    
+    const taglines = [
+        "Got a project? Let's talk",
+        "Ready to transform your business?",
+        "Let's build the future together",
+        "AI solutions that work",
+        "Your success is our mission",
+        "Innovation starts here"
+    ];
+    
+    let currentIndex = 0;
+    
+    function updateTagline() {
+        taglineElement.textContent = taglines[currentIndex];
+        currentIndex = (currentIndex + 1) % taglines.length;
+    }
+    
+    // Update every 3 seconds
+    setInterval(updateTagline, 3000);
 }
 

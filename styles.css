@@ -38,7 +38,7 @@
     --gradient-testimonial: linear-gradient(135deg, #5B21B6 0%, #4C1D95 50%, #3B0764 100%);
 
     /* Typography */
-    --font-primary: 'Oxanium', system-ui, -apple-system, sans-serif;
+    --font-primary: 'Figtree', system-ui, -apple-system, sans-serif;
     --font-secondary: 'SF Pro Display', system-ui, sans-serif;
 
     /* Spacing */
@@ -76,6 +76,7 @@
 
 body {
     font-family: var(--font-primary);
+    font-weight: 400;
     line-height: 1.6;
     color: var(--gray-800);
     background-color: var(--white);
@@ -293,7 +294,7 @@ body {
     padding: 0.75rem 2rem;
     border-radius: var(--radius-xl);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.125rem;
     border: none;
     cursor: pointer;
     box-shadow: var(--shadow-lg);
@@ -314,7 +315,7 @@ body {
     padding: 0.75rem 2rem;
     border-radius: var(--radius-xl);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.125rem;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
@@ -351,14 +352,14 @@ body {
 }
 
 .section-title {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: 700;
     color: var(--gray-900);
     margin-bottom: var(--space-lg);
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--gray-900);
     max-width: 600px;
     margin: 0 auto var(--space-3xl) auto;
@@ -396,13 +397,14 @@ body {
 }
 
 .service-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     color: var(--gray-900);
     margin-bottom: var(--space-md);
 }
 
 .service-description {
+    font-size: 1.125rem;
     color: var(--gray-900);
     line-height: 1.6;
     text-align: justify;
@@ -439,13 +441,14 @@ body {
 }
 
 .industry-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     color: var(--gray-900);
     margin-bottom: var(--space-md);
 }
 
 .industry-description {
+    font-size: 1.25rem;
     color: var(--gray-900);
     margin-bottom: var(--space-lg);
     line-height: 1.6;
@@ -895,13 +898,14 @@ body {
 }
 
 .content-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     color: var(--gray-900);
     margin-bottom: var(--space-md);
 }
 
 .content-description {
+    font-size: 1.125rem;
     color: var(--gray-900);
     line-height: 1.6;
     margin-bottom: 0.75rem;
@@ -1221,7 +1225,7 @@ body {
 }
 
 .case-study-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     color: var(--gray-900);
     margin-bottom: var(--space-xs);
@@ -1237,6 +1241,7 @@ body {
 }
 
 .case-study-description {
+    font-size: 1.25rem;
     color: var(--gray-900);
     line-height: 1.6;
     margin-bottom: var(--space-lg);
@@ -1594,7 +1599,7 @@ body {
 }
 
 .intro-text {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     color: var(--gray-900);
     line-height: 1.7;
     font-weight: 500;
@@ -2042,7 +2047,7 @@ body {
 
 /* Use Cases Grid Styles */
 .subsection-title {
-    font-size: 1.5rem;
+    font-size: 1.625rem;
     font-weight: 600;
     color: var(--gray-800);
     margin: var(--space-3xl) 0 var(--space-xl) 0;
@@ -3599,7 +3604,7 @@ body {
 }
 
 .contact-text {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.5;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.9);
