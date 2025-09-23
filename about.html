@@ -112,7 +112,7 @@
                 <img src="assets/images/logos/logo.png" alt="Mirai Engineering" class="logo-image">
             </a>
             <ul class="nav-menu">
-                <li><a href="about.html" class="nav-link active">Who we are</a></li>
+                <li><a href="about.html" class="nav-link active">Who We Are</a></li>
                 <li><a href="ai-service.html" class="nav-link">AI as a Service</a></li>
                 <li><a href="industries.html" class="nav-link">Case Studies</a></li>
                 <li><a href="ai-tech-stack.html" class="nav-link">AI Tech Stack</a></li>
@@ -133,7 +133,7 @@
         <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important; margin-bottom: 0 !important;">
             <div class="hero-content" style="max-width: none; width: 100%;">
                 <h1 class="hero-title">Who We Are</h1>
-                <p class="hero-subtitle">We are a group of <strong>passionate engineers</strong> that adapted to the <strong>AI revolution of the future</strong>. We are hybrids with the <strong>problem-solving mentality of engineers</strong>, backed by the <strong>technical expertise of data scientists & programmers</strong>.</p>
+                <p class="hero-subtitle">We are a group of <strong>passionate engineers</strong> that adapted to the <strong>AI revolution of the future</strong>. We are hybrids with the <strong>problem-solving mentality</strong> of engineers, backed by the <strong>technical expertise</strong> of data scientists & programmers.</p>
                 
                 <!-- Hero Buttons -->
                 <div class="hero-cta" style="margin-top: 30px;">
@@ -150,45 +150,60 @@
             <div id="company-overview-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
             
             <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
-                <!-- About Mirai Engineering Content (White Background) -->
-                <div id="about-mirai" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center;">
-                        <h2 class="section-title" style="color: var(--gray-900); margin-bottom: 30px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">About Mirai Engineering</h2>
-                            
-                            <!-- Paragraph 1 -->
-                            <div class="paragraph-section" data-paragraph="1">
-                                <div class="paragraph-content">
-                                    <p class="overview-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;">Mirai Engineering is a cutting-edge AI consultancy firm specializing in the deployment of custom artificial intelligence models across diverse industries. Founded with a vision to democratize AI technology, we bridge the gap between complex machine learning algorithms and real-world business applications. We make sure that our engineers have a degree in an engineering fields like <strong>mechanical, chemical, electrical or software engineering</strong>, honed with <strong>real-world experience in AI & Machine Learning</strong>. We are <strong>hybrids</strong> with the <strong>problem-solving mentality of engineers</strong>, backed by the <strong>technical expertise of data scientists & programmers</strong>. Our AI specialists work tirelessly to deliver solutions that not only meet current business needs but anticipate future challenges.</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Separator 1 -->
-                            <div class="scroll-separator" data-separator="1">
-                                <div class="separator-line"></div>
-                                <span class="separator-emoji">🚀</span>
-                                <div class="separator-line"></div>
-                            </div>
-                            
-                            <!-- Paragraph 2 -->
-                            <div class="paragraph-section" data-paragraph="2">
-                                <div class="paragraph-content">
-                                    <p class="overview-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;">At Mirai, we believe the best AI solution is the one that fits your unique vision, not a one-size-fits-all model. We empower our clients with the freedom to choose their AI environment. Whether you prefer the fully integrated ecosystems of major providers like AWS or Google Cloud, where we can deploy models that seamlessly leverage their existing services, or you require a solution that is Cloud-Native but Premise-Independent, we'll build it for you. This approach ensures your business receives a powerful, purpose-built AI that aligns with your goals, all while prioritizing data sovereignty and cost-effectiveness.</p>
-                                </div>
-                    </div>
-                            
-                            <!-- Separator 2 -->
-                            <div class="scroll-separator" data-separator="2">
-                                <div class="separator-line"></div>
-                                <span class="separator-emoji">💡</span>
-                                <div class="separator-line"></div>
+                <!-- About Mirai Engineering Title Card -->
+                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                    <h2 class="section-title" style="color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">About Mirai Engineering</h2>
                 </div>
-                
-                            <!-- Paragraph 3 -->
-                            <div class="paragraph-section" data-paragraph="3">
-                                <div class="paragraph-content">
-                                    <p class="overview-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;">We are committed to helping organizations unlock their full potential through intelligent automation and data-driven insights. It's your business, and we're here to provide the intelligence to unlock its full potential.</p>
+
+                <!-- About Mirai Engineering Interactive Timeline -->
+                <div id="about-mirai-timeline" style="margin-bottom: 30px;">
+                    <!-- Timeline Cards Container -->
+                    <div class="timeline-container" style="position: relative; max-width: 1200px; margin: 0 auto;">
+                        
+                        <!-- Timeline Line -->
+                        <div class="timeline-line" style="position: absolute; left: 50px; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--purple), var(--blue)); border-radius: 2px; z-index: 1;"></div>
+                        
+                        <!-- Card 1: The Problem -->
+                        <div class="timeline-card" data-card="1" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
+                            <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-size: 2rem; margin-right: 12px;">🎯</span>
+                                <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">The Problem We Solve</h3>
+                            </div>
+                            <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">Mirai was founded with a vision to <strong>democratize AI technology</strong>. After experiencing from first hand the lack of knowledge in many big companies when implementing AI solutions in a <strong>sustainable way</strong>, we saw an opportunity to bridge the gap between complex machine learning algorithms and real-world business applications.</p>
+                        </div>
+                        
+                        <!-- Card 2: Our Expertise -->
+                        <div class="timeline-card" data-card="2" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
+                            <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-size: 2rem; margin-right: 12px;">⚙️</span>
+                                <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Our Engineering Expertise</h3>
+                            </div>
+                            <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">We make sure that our engineers have a degree in engineering fields like <strong>mechanical, chemical, electrical or software engineering</strong>, while bringing <strong>strong experience in computer science</strong>. This unique combination ensures we understand both the technical and practical aspects of AI implementation.</p>
+                        </div>
+                        
+                        <!-- Card 3: Our Solution -->
+                        <div class="timeline-card" data-card="3" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
+                            <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-size: 2rem; margin-right: 12px;">☁️</span>
+                                <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Flexible AI Environments</h3>
+                            </div>
+                            <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">We believe the best AI solution is the one that fits <strong>your unique vision</strong>, not a one-size-fits-all model. Whether you prefer <strong>AWS or Google Cloud</strong> ecosystems, or require <strong>Cloud-Native but Premise-Independent</strong> solutions, we'll build it for you while prioritizing <strong>data sovereignty and cost-effectiveness</strong>.</p>
+                        </div>
+                        
+                        <!-- Card 4: Our Commitment -->
+                        <div class="timeline-card" data-card="4" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
+                            <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="font-size: 2rem; margin-right: 12px;">🚀</span>
+                                <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Our Commitment</h3>
+                            </div>
+                            <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">We are committed to helping organizations unlock their full potential through <strong>intelligent automation and data-driven insights</strong>. It's your business, and we're here to provide the intelligence to <strong>unlock its full potential</strong>.</p>
+                        </div>
+                        
                     </div>
-                        </div>
-                        </div>
                 </div>
 
                 <!-- Mission and Vision Cards Side by Side -->
@@ -197,14 +212,14 @@
                         <div style="background: white !important; background-color: white !important; background-image: none !important; border-radius: 12px !important; padding: 30px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important; text-align: center; position: relative; z-index: 3; opacity: 1 !important;">
                             <div class="mission-icon" style="font-size: 3rem; margin-bottom: 20px;">🎯</div>
                             <h3 class="mission-title" style="color: var(--gray-900); font-size: 2.2rem; font-weight: 700; margin-bottom: 25px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Our Mission</h3>
-                            <p class="mission-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">To demystify artificial intelligence and make it transparent and accessible to everyone. We believe AI should be understood, not feared. Our mission is to cut through the complexity and noise surrounding AI, empowering organizations to harness its true potential while maintaining ethical responsibility. We drive radical efficiency and unlock new possibilities for every client we serve. Together, let's build the future.</p>
+                            <p class="mission-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">To <strong>demystify artificial intelligence</strong> and make it <strong>transparent and accessible</strong> to everyone. We believe AI should be <strong>understood, not feared</strong>. Our mission is to cut through the complexity and noise surrounding AI, empowering organizations to <strong>harness its true potential</strong> while maintaining <strong>ethical responsibility</strong>. We drive <strong>radical efficiency</strong> and unlock new possibilities for every client we serve. Through <strong>collaborative partnerships</strong> and <strong>tailored solutions</strong>, we transform how businesses approach technology, ensuring that AI becomes a <strong>strategic advantage</strong> rather than a source of confusion.</p>
                         </div>
                         
                         <!-- Our Vision Card -->
                         <div style="background: white !important; background-color: white !important; background-image: none !important; border-radius: 12px !important; padding: 30px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important; text-align: center; position: relative; z-index: 3; opacity: 1 !important;">
                             <div class="vision-icon" style="font-size: 3rem; margin-bottom: 20px;">🔮</div>
                             <h3 class="vision-title" style="color: var(--gray-900); font-size: 2.2rem; font-weight: 700; margin-bottom: 25px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Our Vision</h3>
-                            <p class="vision-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">Having been at the forefront of the AI revolution since its inception, we've witnessed the critical gap between AI's potential and its practical implementation. Companies struggle with unrealistic expectations for AI engineering roles that barely existed before 2022, while simultaneously lacking clear pathways for in-house AI adoption. At Mirai, we envision a future where experience meets realistic expectations, where organizations can seamlessly integrate AI into their operations without the confusion and misalignment that currently plague the industry. We believe that by bridging this gap, we can unlock AI's true transformative potential.</p>
+                            <p class="vision-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">Having been at the <strong>forefront of the AI revolution</strong> since its inception, we've witnessed the critical gap between <strong>AI's potential and its practical implementation</strong>. Companies struggle with <strong>unrealistic expectations</strong> for AI engineering roles that barely existed before 2022, while lacking <strong>clear pathways for in-house AI adoption</strong>. We envision a future where <strong>experience meets realistic expectations</strong>, where organizations can <strong>seamlessly integrate AI</strong> into their operations without confusion. By bridging this gap, we can unlock <strong>AI's true transformative potential</strong>.</p>
                         </div>
                 </div>
             </div>
@@ -600,10 +615,80 @@
             }
         }
 
-        // Initialize the animated backgrounds when page loads
+        // Timeline Scroll Animation Controller
+        class TimelineAnimationController {
+            constructor() {
+                this.timelineCards = document.querySelectorAll('.timeline-card');
+                this.init();
+            }
+
+            init() {
+                // Set up intersection observer for scroll animations
+                const observerOptions = {
+                    threshold: 0.2,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            this.animateCard(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all timeline cards
+                this.timelineCards.forEach(card => {
+                    observer.observe(card);
+                });
+
+                // Add hover effects
+                this.addHoverEffects();
+            }
+
+            animateCard(card) {
+                // Add animation class
+                card.style.opacity = '1';
+                card.style.transform = 'translateX(0)';
+                
+                // Add a subtle bounce effect
+                card.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                
+                // Animate the timeline dot
+                const dot = card.querySelector('.timeline-dot');
+                if (dot) {
+                    setTimeout(() => {
+                        dot.style.transform = 'scale(1.2)';
+                        dot.style.transition = 'transform 0.3s ease';
+                        setTimeout(() => {
+                            dot.style.transform = 'scale(1)';
+                        }, 200);
+                    }, 300);
+                }
+            }
+
+            addHoverEffects() {
+                this.timelineCards.forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        card.style.transform = 'translateX(0) translateY(-5px)';
+                        card.style.boxShadow = '0 12px 40px rgba(139, 92, 246, 0.2)';
+                        card.style.transition = 'all 0.3s ease';
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'translateX(0) translateY(0)';
+                        card.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.15)';
+                        card.style.transition = 'all 0.3s ease';
+                    });
+                });
+            }
+        }
+
+        // Initialize the animated backgrounds and timeline animations when page loads
         document.addEventListener('DOMContentLoaded', function() {
             const companyOverviewNodeBackground = new AnimatedNodeBackground('company-overview-node-background');
             const leadershipValuesNodeBackground = new AnimatedNodeBackground('leadership-values-node-background');
+            const timelineController = new TimelineAnimationController();
         });
     </script>
 </body>

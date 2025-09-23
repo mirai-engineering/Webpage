@@ -26,7 +26,7 @@
                 <img src="assets/images/logos/logo.png" alt="Mirai Engineering" class="logo-image">
             </a>
             <ul class="nav-menu">
-                <li><a href="about.html" class="nav-link">Who we are</a></li>
+                <li><a href="about.html" class="nav-link">Who We Are</a></li>
                 <li><a href="ai-service.html" class="nav-link">AI as a Service</a></li>
                 <li><a href="industries.html" class="nav-link">Case Studies</a></li>
                 <li><a href="ai-tech-stack.html" class="nav-link">AI Tech Stack</a></li>
@@ -59,45 +59,54 @@
             <div id="blog-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
             
             <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
-                <!-- But... What is AI? Card -->
-                <div style="background: white !important; border-radius: 12px !important; padding: 40px !important; margin-bottom: 30px !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; border: 1px solid rgba(139, 92, 246, 0.1) !important;">
-                    <h2 class="section-title" style="color: var(--gray-900); margin-bottom: 30px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">But... What is AI?</h2>
+                <!-- But... What is AI? Timeline Section -->
+                <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
+                    <!-- But... What is AI? Title Card -->
+                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                        <h2 class="section-title" style="color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">But... What is AI?</h2>
+                    </div>
+
+                    <!-- AI Discovery Timeline -->
+                    <div id="ai-discovery-timeline" style="margin-bottom: 30px;">
+                        <!-- Timeline Cards Container -->
+                        <div class="timeline-container" style="position: relative; max-width: 1200px; margin: 0 auto;">
                             
-                            <!-- Paragraph 1 -->
-                            <div class="paragraph-section" data-paragraph="1">
-                                <div class="paragraph-content">
-                                    <p class="overview-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Picture this: You're craving the perfect cup of coffee. You know what great coffee tastes like, but you're clueless about machines, grind sizes, or bean varieties. Would you impulsively drop $15,000 on a commercial espresso machine? Of course not. You'd start with understanding your needs, learning the basics, and finding the right solution for your situation. AI works exactly the same way. Before diving into complex implementations, you need to understand where AI fits, how it works, and what it can truly do for your business. That's where we come in—guiding you through AI's potential with the clarity and expertise you deserve.</p>
+                            <!-- Timeline Line -->
+                            <div class="timeline-line" style="position: absolute; left: 50px; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--purple), var(--blue)); border-radius: 2px; z-index: 1;"></div>
+                            
+                            <!-- Card 1: The Coffee Analogy -->
+                            <div class="timeline-card" data-card="1" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
+                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                    <span style="font-size: 2rem; margin-right: 12px;">☕</span>
+                                    <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Understanding AI Through Coffee</h3>
                                 </div>
+                                <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">Picture this: You're craving the perfect cup of coffee. You know what great coffee tastes like, but you're clueless about machines, grind sizes, or bean varieties. Would you impulsively drop $15,000 on a commercial espresso machine? Of course not. You'd start with understanding your needs, learning the basics, and finding the right solution for your situation. <strong>AI works exactly the same way.</strong> Before diving into complex implementations, you need to understand where AI fits, how it works, and what it can truly do for your business. That's where we come in—guiding you through AI's potential with the clarity and expertise you deserve.</p>
                             </div>
                             
-                            <!-- Separator 1 -->
-                            <div class="scroll-separator" data-separator="1">
-                                <div class="separator-line"></div>
-                                <span class="separator-emoji">⚡</span>
-                                <div class="separator-line"></div>
-                </div>
-                
-                            <!-- Paragraph 2 -->
-                            <div class="paragraph-section" data-paragraph="2">
-                                <div class="paragraph-content">
-                                    <p class="overview-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">And here's something that might surprise you: AI isn't new, it's been around for decades. That calculator on your desk? This is one of the first forms of "Artificial Intelligence" that already outperforms humans. Not convinced? Try calculating 9,845.67 ÷ 37 in your head. Not so simple, right? AI is simply any system or model designed to mimic human thinking. From basic calculators to the sophisticated algorithms powering ChatGPT and Gemini.</p>
+                            <!-- Card 2: AI Isn't New -->
+                            <div class="timeline-card" data-card="2" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
+                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                    <span style="font-size: 2rem; margin-right: 12px;">🧮</span>
+                                    <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">AI Has Been Around for Decades</h3>
                                 </div>
-                    </div>
+                                <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">And here's something that might surprise you: <strong>AI isn't new, it's been around for decades.</strong> That calculator on your desk? This is one of the first forms of "Artificial Intelligence" that already outperforms humans. Not convinced? Try calculating 9,845.67 ÷ 37 in your head. Not so simple, right? AI is simply any system or model designed to mimic human thinking. From basic calculators to the sophisticated algorithms powering ChatGPT and Gemini.</p>
+                            </div>
                             
-                            <!-- Separator 2 -->
-                            <div class="scroll-separator" data-separator="2">
-                                <div class="separator-line"></div>
-                                <span class="separator-emoji">🚀</span>
-                                <div class="separator-line"></div>
-                        </div>
+                            <!-- Card 3: The Neural Network Revolution -->
+                            <div class="timeline-card" data-card="3" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
+                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                    <span style="font-size: 2rem; margin-right: 12px;">🧠</span>
+                                    <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">The Modern AI Explosion</h3>
+                                </div>
+                                <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0;">So why the sudden AI explosion? Thanks to huge breakthroughs in computing power and data availability, we've been able to efficiently train the <strong>magical engine behind AI: Neural Networks</strong> powered by the backpropagation algorithm. In 2017, researchers finally had enough data and processing power to train models on massive datasets, resulting in the famous paper "Attention is all you need". The results were so impressive that commercial applications exploded just a few years later. Now, the real question isn't what AI is—it's how to harness its power for your specific needs. At Mirai, we specialize in the two branches that matter most: <strong>Generative AI</strong> (creating new content) and <strong>Analytical AI</strong> (understanding and predicting). Ready to discover which one fits your business?</p>
+                            </div>
                             
-                            <!-- Paragraph 3 -->
-                            <div class="paragraph-section" data-paragraph="3">
-                                <div class="paragraph-content">
-                                    <p class="overview-text" style="color: var(--gray-700); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">So why the sudden AI explosion? Thanks to huge breakthroughs in computing power and data availability, we've been able to efficiently train the magical engine behind AI: Neural Networks powered by the backpropagation algorithm. In 2017, researchers finally had enough data and processing power to train models on massive datasets, resulting in the famous paper "Attention is all you need". The results were so impressive that commercial applications exploded just a few years later. Now, the real question isn't what AI is—it's how to harness its power for your specific needs. At Mirai, we specialize in the two branches that matter most: <strong>Generative AI</strong> (creating new content) and <strong>Analytical AI</strong> (understanding and predicting). Ready to discover which one fits your business?</p>
-                        </div>
                         </div>
                     </div>
+                </div>
 
                 <!-- Article Cards Grid -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
@@ -396,9 +405,79 @@
             }
         }
 
-        // Initialize the animated background when page loads
+        // AI Discovery Timeline Animation Controller
+        class AIDiscoveryTimelineController {
+            constructor() {
+                this.timelineCards = document.querySelectorAll('.timeline-card');
+                this.init();
+            }
+
+            init() {
+                // Set up intersection observer for scroll animations
+                const observerOptions = {
+                    threshold: 0.2,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            this.animateCard(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all timeline cards
+                this.timelineCards.forEach(card => {
+                    observer.observe(card);
+                });
+
+                // Add hover effects
+                this.addHoverEffects();
+            }
+
+            animateCard(card) {
+                // Add animation class
+                card.style.opacity = '1';
+                card.style.transform = 'translateX(0)';
+                
+                // Add a subtle bounce effect
+                card.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                
+                // Animate the timeline dot
+                const dot = card.querySelector('.timeline-dot');
+                if (dot) {
+                    setTimeout(() => {
+                        dot.style.transform = 'scale(1.2)';
+                        dot.style.transition = 'transform 0.3s ease';
+                        setTimeout(() => {
+                            dot.style.transform = 'scale(1)';
+                        }, 200);
+                    }, 300);
+                }
+            }
+
+            addHoverEffects() {
+                this.timelineCards.forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        card.style.transform = 'translateX(0) translateY(-5px)';
+                        card.style.boxShadow = '0 12px 40px rgba(139, 92, 246, 0.2)';
+                        card.style.transition = 'all 0.3s ease';
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'translateX(0) translateY(0)';
+                        card.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.15)';
+                        card.style.transition = 'all 0.3s ease';
+                    });
+                });
+            }
+        }
+
+        // Initialize the animated background and AI discovery timeline animations when page loads
         document.addEventListener('DOMContentLoaded', function() {
             const nodeBackground = new AnimatedNodeBackground('blog-node-background');
+            const aiDiscoveryTimelineController = new AIDiscoveryTimelineController();
         });
     </script>
 </body>
