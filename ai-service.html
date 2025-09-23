@@ -622,7 +622,7 @@
                             <p style="color: var(--gray-700); font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">Access our comprehensive AI workshop materials. Download the PDF to view the complete content with all details and examples.</p>
                             
                             <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
-                                <a href="assets/pdfs/workshop.pdf" download="Mirai-AI-Workshop.pdf" style="display: inline-flex; align-items: center; gap: 12px; background: var(--gradient-primary); color: white; padding: 15px 30px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(107, 70, 193, 0.3);">
+                                <a href="./assets/pdfs/workshop.pdf" download="Mirai-AI-Workshop.pdf" style="display: inline-flex; align-items: center; gap: 12px; background: var(--gradient-primary); color: white; padding: 15px 30px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(107, 70, 193, 0.3);" onclick="console.log('Download clicked, path:', this.href)">
                                     <span style="font-size: 1.2rem;">📥</span>
                                     Download Workshop PDF
                                 </a>
@@ -1089,7 +1089,7 @@
         }
         
         function tryOpenInNewTab() {
-            window.open('assets/pdfs/workshop.pdf', '_blank');
+            window.open('./assets/pdfs/workshop.pdf', '_blank');
         }
         
         
