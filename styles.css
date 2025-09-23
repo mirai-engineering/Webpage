@@ -197,7 +197,7 @@ body {
 /* Hero Section */
 .hero-section {
     background-image: url('assets/images/hero/main-background/clouds-clean.png');
-    background-size: 150% 150%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 70vh;
@@ -210,7 +210,6 @@ body {
     overflow: hidden;
     padding: var(--space-4xl) var(--space-xl);
     padding-top: calc(var(--space-4xl) + 80px);
-    animation: cloudDrift 50s ease-in-out infinite;
 }
 
 .hero-section::before {
@@ -224,20 +223,6 @@ body {
     z-index: 1;
 }
 
-@keyframes cloudDrift {
-    0%, 100% {
-        background-position: 45% 45%;
-    }
-    25% {
-        background-position: 55% 40%;
-    }
-    50% {
-        background-position: 40% 55%;
-    }
-    75% {
-        background-position: 60% 50%;
-    }
-}
 
 .hero-content {
     text-align: center;
@@ -1081,7 +1066,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     padding: var(--space-6xl) 0;
     position: relative;
     overflow: hidden;
@@ -1549,7 +1533,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     padding: var(--space-6xl) 0;
     position: relative;
     overflow: hidden;
@@ -1927,7 +1910,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     position: relative;
     padding: var(--space-6xl) 0;
 }
@@ -2225,7 +2207,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     padding: var(--space-3xl) 0;
     margin: var(--space-xl) 0;
     position: relative;
