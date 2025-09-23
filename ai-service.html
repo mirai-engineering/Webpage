@@ -1067,43 +1067,9 @@
             pdfViewer.style.display = 'none';
             pdfFallback.style.display = 'none';
             
-            // Try multiple PDF loading methods for production
+            // Try direct PDF first (most reliable)
             const pdfUrl = 'assets/pdfs/workshop.pdf';
-            const baseUrl = window.location.origin;
-            const fullPdfUrl = `${baseUrl}/${pdfUrl}`;
-            
-            // Method 1: Google Docs Viewer (most reliable for production)
-            const googleDocsUrl = `https://docs.google.com/gview?url=${encodeURIComponent(fullPdfUrl)}&embedded=true`;
-            
-            // Method 2: Direct PDF fallback
-            const directPdfUrl = pdfUrl;
-            
-            // Try Google Docs first (best for production)
-            tryGoogleDocsViewer(googleDocsUrl, directPdfUrl);
-        }
-        
-        function tryGoogleDocsViewer(googleUrl, directUrl) {
-            const pdfViewer = document.getElementById('pdfViewer');
-            const loading = document.getElementById('pdfLoading');
-            const pdfFallback = document.getElementById('pdfFallback');
-            
-            pdfViewer.src = googleUrl;
-            
-            // Set timeout for loading
-            const loadTimeout = setTimeout(() => {
-                tryDirectPdf(directUrl);
-            }, 5000);
-            
-            pdfViewer.onload = function() {
-                clearTimeout(loadTimeout);
-                loading.style.display = 'none';
-                pdfViewer.style.display = 'block';
-            };
-            
-            pdfViewer.onerror = function() {
-                clearTimeout(loadTimeout);
-                tryDirectPdf(directUrl);
-            };
+            tryDirectPdf(pdfUrl);
         }
         
         function tryDirectPdf(directUrl) {
@@ -1113,9 +1079,10 @@
             
             pdfViewer.src = directUrl;
             
+            // Shorter timeout for faster fallback
             const loadTimeout = setTimeout(() => {
                 showFallback();
-            }, 5000);
+            }, 3000);
             
             pdfViewer.onload = function() {
                 clearTimeout(loadTimeout);
