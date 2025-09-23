@@ -606,7 +606,7 @@
             <div style="height: calc(100% - 80px); position: relative;">
                 <!-- PDF Viewer Container -->
                 <div id="pdfContainer" style="width: 100%; height: 100%; position: relative;">
-                    <!-- Primary: Google Docs Viewer (more reliable) -->
+                    <!-- PDF Viewer -->
                     <iframe 
                         id="pdfViewer"
                         src="" 
@@ -614,15 +614,29 @@
                         title="AI Workshop PDF">
                     </iframe>
                     
-                    <!-- Fallback: Direct PDF link -->
-                    <div id="pdfFallback" style="display: none; width: 100%; height: 100%; background: #f8f9fa; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px;">
-                        <div style="font-size: 4rem; margin-bottom: 20px;">📄</div>
-                        <h4 style="color: var(--gray-900); font-size: 1.5rem; margin-bottom: 15px;">PDF Viewer Not Available</h4>
-                        <p style="color: var(--gray-700); font-size: 1rem; margin-bottom: 25px; max-width: 400px;">Your browser doesn't support inline PDF viewing. Click the button below to download and view the workshop content.</p>
-                        <a href="assets/pdfs/workshop.pdf" download="Mirai-AI-Workshop.pdf" style="display: inline-flex; align-items: center; gap: 10px; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">
-                            <span>📥</span>
-                            Download Workshop PDF
-                        </a>
+                    <!-- Fallback: Professional download interface -->
+                    <div id="pdfFallback" style="display: flex; width: 100%; height: 100%; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px;">
+                        <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); max-width: 500px; width: 100%;">
+                            <div style="font-size: 4rem; margin-bottom: 20px;">📚</div>
+                            <h4 style="color: var(--gray-900); font-size: 1.8rem; margin-bottom: 15px; font-weight: 700;">AI Workshop Content</h4>
+                            <p style="color: var(--gray-700); font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">Access our comprehensive AI workshop materials. Download the PDF to view the complete content with all details and examples.</p>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                                <a href="assets/pdfs/workshop.pdf" download="Mirai-AI-Workshop.pdf" style="display: inline-flex; align-items: center; gap: 12px; background: var(--gradient-primary); color: white; padding: 15px 30px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(107, 70, 193, 0.3);">
+                                    <span style="font-size: 1.2rem;">📥</span>
+                                    Download Workshop PDF
+                                </a>
+                                
+                                <button onclick="tryOpenInNewTab()" style="display: inline-flex; align-items: center; gap: 12px; background: rgba(139, 92, 246, 0.1); color: var(--purple); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; border: 2px solid rgba(139, 92, 246, 0.2); cursor: pointer;">
+                                    <span>🔗</span>
+                                    Open in New Tab
+                                </button>
+                            </div>
+                            
+                            <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(139, 92, 246, 0.2);">
+                                <p style="color: var(--gray-600); font-size: 0.9rem; margin: 0;">💡 Tip: The PDF contains detailed workshop materials, examples, and exercises</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -1062,49 +1076,22 @@
             const pdfViewer = document.getElementById('pdfViewer');
             const pdfFallback = document.getElementById('pdfFallback');
             
-            // Show loading
+            // Show loading briefly, then show fallback
             loading.style.display = 'flex';
             pdfViewer.style.display = 'none';
             pdfFallback.style.display = 'none';
             
-            // Try direct PDF first (most reliable)
-            const pdfUrl = 'assets/pdfs/workshop.pdf';
-            tryDirectPdf(pdfUrl);
-        }
-        
-        function tryDirectPdf(directUrl) {
-            const pdfViewer = document.getElementById('pdfViewer');
-            const loading = document.getElementById('pdfLoading');
-            const pdfFallback = document.getElementById('pdfFallback');
-            
-            pdfViewer.src = directUrl;
-            
-            // Shorter timeout for faster fallback
-            const loadTimeout = setTimeout(() => {
-                showFallback();
-            }, 3000);
-            
-            pdfViewer.onload = function() {
-                clearTimeout(loadTimeout);
+            // Show fallback after brief loading
+            setTimeout(() => {
                 loading.style.display = 'none';
-                pdfViewer.style.display = 'block';
-            };
-            
-            pdfViewer.onerror = function() {
-                clearTimeout(loadTimeout);
-                showFallback();
-            };
+                pdfFallback.style.display = 'flex';
+            }, 1000);
         }
         
-        function showFallback() {
-            const loading = document.getElementById('pdfLoading');
-            const pdfViewer = document.getElementById('pdfViewer');
-            const pdfFallback = document.getElementById('pdfFallback');
-            
-            loading.style.display = 'none';
-            pdfViewer.style.display = 'none';
-            pdfFallback.style.display = 'flex';
+        function tryOpenInNewTab() {
+            window.open('assets/pdfs/workshop.pdf', '_blank');
         }
+        
         
         function closeWorkshopModal() {
             const modal = document.getElementById('workshopModal');
