@@ -612,6 +612,13 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Fix hero section background on mobile */
+    .hero-section {
+        background-size: contain !important;
+        background-position: center top !important;
+        min-height: 60vh !important;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 0;
@@ -1716,6 +1723,36 @@ body {
     
     .scroll-separator {
         margin: 20px 0 !important;
+    }
+    
+    /* Timeline Cards Mobile Fixes */
+    .timeline-card {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 20px !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+    
+    .timeline-dot {
+        display: none !important;
+    }
+    
+    .timeline-line {
+        display: none !important;
+    }
+    
+    .timeline-container {
+        padding: 0 !important;
+    }
+    
+    .timeline-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .timeline-text {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
     }
     
     .separator-emoji {

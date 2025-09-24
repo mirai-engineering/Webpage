@@ -722,6 +722,36 @@
             background: rgba(139, 92, 246, 1) !important;
             transform: translateY(-1px);
         }
+        
+        /* Mobile PDF Modal Fixes */
+        @media (max-width: 768px) {
+            #workshopModal > div {
+                width: 95% !important;
+                height: 95% !important;
+                max-width: none !important;
+                max-height: none !important;
+                top: 50% !important;
+                left: 50% !important;
+                transform: translate(-50%, -50%) !important;
+            }
+            
+            #workshopModal iframe {
+                width: 100% !important;
+                height: calc(100% - 60px) !important;
+            }
+            
+            #workshopModal .modal-header {
+                padding: 15px 20px !important;
+            }
+            
+            #workshopModal h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            #workshopModal p {
+                font-size: 0.8rem !important;
+            }
+        }
     </style>
     <script>
         // Toggle function for expandable details
