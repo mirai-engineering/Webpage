@@ -614,9 +614,10 @@ body {
 @media (max-width: 768px) {
     /* Fix hero section background on mobile */
     .hero-section {
-        background-size: contain !important;
-        background-position: center top !important;
-        min-height: 60vh !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        min-height: 100vh !important;
+        background-attachment: scroll !important;
     }
     
     .nav-menu {
@@ -1658,12 +1659,16 @@ body {
     /* About Page Mobile Fixes */
     .card-grid {
         grid-template-columns: 1fr !important;
-        gap: var(--space-lg) !important;
+        gap: var(--space-md) !important;
+        padding: 0 10px !important;
     }
     
     .card {
-        padding: var(--space-lg) !important;
-        margin-bottom: var(--space-md) !important;
+        padding: 15px !important;
+        margin-bottom: var(--space-sm) !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
     
     .overview-text {
@@ -1753,6 +1758,73 @@ body {
     .timeline-text {
         font-size: 1rem !important;
         line-height: 1.6 !important;
+    }
+    
+    /* Leadership & Core Values Card Mobile Fixes */
+    .leadership-values-card {
+        padding: 15px !important;
+        margin: 10px 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .leadership-values-card .section-title {
+        font-size: 1.3rem !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .leadership-values-card .overview-text {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        margin: 15px 0 !important;
+    }
+    
+    .value-item {
+        padding: 10px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .value-item h4 {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .value-item p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Mission & Vision Cards Mobile Fixes */
+    .mission-vision-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        padding: 0 10px !important;
+    }
+    
+    .mission-card, .vision-card {
+        padding: 15px !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .mission-card .section-title,
+    .vision-card .section-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .mission-text, .vision-text {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
     }
     
     .separator-emoji {
