@@ -616,8 +616,9 @@ body {
     .hero-section {
         background-size: cover !important;
         background-position: center center !important;
-        min-height: 100vh !important;
+        min-height: 80vh !important;
         background-attachment: scroll !important;
+        background-repeat: no-repeat !important;
     }
     
     .nav-menu {
