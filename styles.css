@@ -612,10 +612,28 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Mobile hero section - replace cloud background with purple gradient */
+    /* Mobile hero section - purple gradient with neural network pattern */
     .hero-section {
-        background-image: none !important;
-        background: linear-gradient(135deg, #6B46C1 0%, #5B21B6 25%, #4C1D95 50%, #7C3AED 75%, #8B5CF6 100%) !important;
+        background: 
+            /* Neural network pattern overlay */
+            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.2) 3px, transparent 3px),
+            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+            radial-gradient(circle at 15% 70%, rgba(255, 255, 255, 0.25) 4px, transparent 4px),
+            radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.18) 2.5px, transparent 2.5px),
+            radial-gradient(circle at 45% 15%, rgba(255, 255, 255, 0.22) 3px, transparent 3px),
+            radial-gradient(circle at 60% 85%, rgba(255, 255, 255, 0.16) 2px, transparent 2px),
+            radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.24) 3.5px, transparent 3.5px),
+            radial-gradient(circle at 70% 40%, rgba(255, 255, 255, 0.2) 2.8px, transparent 2.8px),
+            /* Connection lines */
+            linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
+            linear-gradient(-30deg, transparent 48%, rgba(255, 255, 255, 0.08) 49%, rgba(255, 255, 255, 0.08) 51%, transparent 52%),
+            linear-gradient(75deg, transparent 48%, rgba(255, 255, 255, 0.09) 49%, rgba(255, 255, 255, 0.09) 51%, transparent 52%),
+            /* Purple gradient base */
+            linear-gradient(135deg, #6B46C1 0%, #5B21B6 25%, #4C1D95 50%, #7C3AED 75%, #8B5CF6 100%) !important;
+        background-size: 
+            100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+            150px 150px, 120px 120px, 180px 180px,
+            100% 100%;
         min-height: 80vh !important;
         background-attachment: scroll !important;
         background-repeat: no-repeat !important;
