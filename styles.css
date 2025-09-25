@@ -756,6 +756,11 @@ body {
         display: block !important;
     }
     
+    /* Mobile: Show mobile CEO bio card */
+    .mobile-ceo-bio-card {
+        display: block !important;
+    }
+    
     /* Mobile: Larger CEO image (30% bigger) */
     .mobile-leadership-card img {
         width: 156px !important;
