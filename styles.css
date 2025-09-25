@@ -709,18 +709,64 @@ body {
         transition-delay: 0s !important;
     }
     
-    /* Mobile: Simplified case studies grid */
-    .case-studies-grid {
+    /* Mobile: Force ALL grids to single column - comprehensive override */
+    .content-grid,
+    .services-grid,
+    .case-studies-grid,
+    .timeline-container,
+    .blog-grid,
+    .industries-grid,
+    .mission-vision-grid,
+    .values-grid,
+    .ceo-section,
+    .leadership-values-card {
         display: block !important;
+        grid-template-columns: none !important;
         gap: 0 !important;
     }
     
-    .case-studies-grid > div {
+    /* Mobile: Ensure all cards are full width */
+    .card,
+    .service-card,
+    .case-study-card,
+    .timeline-card,
+    .blog-card,
+    .industry-card,
+    .contact-card,
+    .mission-card,
+    .vision-card,
+    .value-item,
+    .ceo-card {
         width: 100% !important;
-        margin-bottom: 20px !important;
+        max-width: 100% !important;
+        margin: 0 0 20px 0 !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
     }
     
-    /* Mobile: Simplified about page cards */
+    /* Mobile: Override any inline grid styles */
+    [style*="grid-template-columns"],
+    [style*="display: grid"],
+    [style*="display: flex"] {
+        display: block !important;
+    }
+    
+    /* Mobile: Force single column for AI service project ideas */
+    .ai-project-ideas,
+    .ai-project-ideas > div,
+    .ai-project-ideas [style*="grid"] {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    /* Mobile: Override specific problematic sections */
+    .ai-project-ideas > div {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        max-width: none !important;
+    }
+    
+    /* Mobile: Specific fixes for About page */
     .timeline-container {
         display: block !important;
     }
@@ -729,6 +775,70 @@ body {
         width: 100% !important;
         margin-bottom: 20px !important;
         padding: 20px !important;
+    }
+    
+    /* Mobile: Fix blog page layout */
+    .blog-content,
+    .blog-posts,
+    .blog-grid {
+        display: block !important;
+    }
+    
+    .blog-post,
+    .blog-card {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Mobile: Fix contact page layout */
+    .contact-grid,
+    .contact-cards {
+        display: block !important;
+    }
+    
+    .contact-card {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Mobile: Ensure all sections have proper spacing */
+    .page-section,
+    .info-section,
+    .case-studies-section {
+        padding: 20px !important;
+    }
+    
+    /* Mobile: Fix any remaining grid issues */
+    .grid,
+    .grid-container,
+    .flex-container {
+        display: block !important;
+    }
+    
+    .grid > *,
+    .grid-container > *,
+    .flex-container > * {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+    
+    /* Mobile: Nuclear option - override ANY remaining layout issues */
+    @media (max-width: 768px) {
+        *[style*="display: grid"],
+        *[style*="grid-template-columns"],
+        *[style*="grid-template-rows"],
+        *[style*="flex-direction: row"] {
+            display: block !important;
+        }
+        
+        *[style*="width: 50%"],
+        *[style*="width: 33%"],
+        *[style*="width: 25%"],
+        *[style*="flex: 1"],
+        *[style*="flex: 2"] {
+            width: 100% !important;
+            flex: none !important;
+        }
     }
     
     /* Mobile: Optimize images */
@@ -747,10 +857,42 @@ body {
         margin-bottom: 30px !important;
     }
     
+    /* Mobile: Optimized header - compact and efficient */
+    .navigation {
+        padding: 10px 20px !important;
+        height: 60px !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1000 !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 1px solid rgba(139, 92, 246, 0.1) !important;
+    }
+    
+    .logo-image {
+        height: 30px !important;
+        width: auto !important;
+    }
+    
+    .nav-container {
+        height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+    
+    /* Mobile: Add proper spacing to hero sections */
+    .hero-section {
+        margin-top: 60px !important;
+        padding-top: 20px !important;
+    }
+    
     /* Mobile: Simplified navigation */
     .nav-menu {
         position: fixed;
-        top: 0;
+        top: 60px;
         right: -100%;
         width: 100%;
         height: 100vh;
