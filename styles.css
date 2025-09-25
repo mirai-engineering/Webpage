@@ -628,11 +628,13 @@ body {
     
     .logo-image {
         height: 50px;
-        width: auto;
+        width: 40vw;
+        max-width: 200px;
         background: white;
         padding: 5px;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        object-fit: contain;
     }
     
     /* Mobile: Use white-background logo for better visibility */
@@ -752,6 +754,12 @@ body {
     /* Mobile: Show mobile leadership card */
     .mobile-leadership-card {
         display: block !important;
+    }
+    
+    /* Mobile: Larger CEO image (30% bigger) */
+    .mobile-leadership-card img {
+        width: 156px !important;
+        height: 156px !important;
     }
     
     /* Mobile: Workshop outline button shows download text */
