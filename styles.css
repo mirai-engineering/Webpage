@@ -749,6 +749,11 @@ body {
         display: none !important;
     }
     
+    /* Mobile: Show mobile leadership card */
+    .mobile-leadership-card {
+        display: block !important;
+    }
+    
     /* Mobile: Workshop outline button shows download text */
     .workshop-outline-btn {
         position: relative;
