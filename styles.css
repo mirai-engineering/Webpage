@@ -680,51 +680,73 @@ body {
     }
     
     .ceo-card {
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 20px;
-        text-align: center;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        padding: 20px !important;
+        text-align: center !important;
     }
     
     .ceo-image {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto 15px auto;
-        border-radius: 50%;
+        width: 100px !important;
+        height: 100px !important;
+        margin: 0 auto 15px auto !important;
+        border-radius: 50% !important;
+    }
+    
+    .ceo-image img {
+        width: 100px !important;
+        height: 100px !important;
+        border-radius: 50% !important;
     }
     
     .ceo-name {
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin-bottom: 0;
+        font-size: 1.4rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 0 !important;
     }
     
-    /* Mobile: Workshop outline button shows download message */
+    .ceo-content {
+        text-align: center !important;
+        margin-top: 20px !important;
+    }
+    
+    .ceo-content h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .ceo-bio {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+        text-align: left !important;
+    }
+    
+    /* Mobile: Workshop outline button shows download text */
     .workshop-outline-btn {
         position: relative;
     }
     
-    .workshop-outline-btn::after {
-        content: "Please click here to download the workshop's outline as a PDF";
+    .workshop-outline-btn::before {
+        content: "Download our workshop outline";
         position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: var(--gray-900);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gradient-primary);
         color: white;
-        padding: 8px 12px;
-        border-radius: 6px;
-        font-size: 0.8rem;
-        white-space: nowrap;
-        z-index: 1000;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-        margin-top: 5px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        z-index: 10;
     }
     
-    .workshop-outline-btn:hover::after {
-        opacity: 1;
+    .workshop-outline-btn {
+        color: transparent !important;
     }
     
     /* Mobile: Larger touch targets */
