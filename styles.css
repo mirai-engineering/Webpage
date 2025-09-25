@@ -612,12 +612,17 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Mobile: Simplified static background for performance */
+    /* Mobile: Use clouds-clean.png background with purple overlay */
     .hero-section {
-        background: linear-gradient(135deg, #6B46C1 0%, #5B21B6 25%, #4C1D95 50%, #7C3AED 75%, #8B5CF6 100%);
+        background: 
+            linear-gradient(135deg, rgba(107, 70, 193, 0.7) 0%, rgba(91, 33, 182, 0.7) 25%, rgba(76, 29, 149, 0.7) 50%, rgba(124, 58, 237, 0.7) 75%, rgba(139, 92, 246, 0.7) 100%),
+            url('assets/images/hero/main-background/clouds-clean.png');
+        background-size: cover;
+        background-position: center;
         background-attachment: scroll;
         min-height: 70vh;
         padding: 40px 20px;
+        background-repeat: no-repeat;
     }
     
     /* Disable all animations on mobile for performance */
