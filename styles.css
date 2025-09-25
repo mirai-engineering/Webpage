@@ -612,17 +612,12 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Mobile: Use clouds-clean.png background with purple overlay */
+    /* Mobile: Darker purple background for hero sections */
     .hero-section {
-        background: 
-            linear-gradient(135deg, rgba(107, 70, 193, 0.7) 0%, rgba(91, 33, 182, 0.7) 25%, rgba(76, 29, 149, 0.7) 50%, rgba(124, 58, 237, 0.7) 75%, rgba(139, 92, 246, 0.7) 100%),
-            url('assets/images/hero/main-background/clouds-clean.png');
-        background-size: cover;
-        background-position: center;
+        background: linear-gradient(135deg, #4C1D95 0%, #3B0764 25%, #2D1B69 50%, #5B21B6 75%, #6B46C1 100%);
         background-attachment: scroll;
         min-height: 70vh;
         padding: 40px 20px;
-        background-repeat: no-repeat;
     }
     
     /* Disable all animations on mobile for performance */
@@ -782,7 +777,7 @@ body {
         padding: 20px !important;
     }
     
-    /* Mobile: Redesign CEO section - 3 separate cards */
+    /* Mobile: Fix CEO section layout */
     .ceo-section {
         display: block !important;
     }
@@ -813,21 +808,13 @@ body {
         margin-bottom: 0 !important;
     }
     
-    /* Mobile: Hide original CEO content */
+    /* Mobile: Hide original CEO content and replace with new content */
     .ceo-content {
         display: none !important;
     }
     
-    /* Mobile: Create new CEO content cards */
+    /* Mobile: Add new CEO content after the CEO card */
     .ceo-section::after {
-        content: "";
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    /* Mobile: First content card - Bruno's journey */
-    .ceo-section::before {
         content: "Bruno's journey began before the boom of the AI revolution. Long before ChatGPT or Gemini became household names, Bruno was already pioneering the use of artificial neural networks in the field of combustion engineering. After earning both his B.Sc. and M.Sc. in Engineering at RWTH Aachen University, he worked across projects in the aviation and automotive sectors, gaining experience with leading international companies such as Airbus and AVL. Bruno contributed to key projects at Porsche and Cariad and led transformative collaborations with MIT.";
         display: block;
         width: 100%;
@@ -842,12 +829,12 @@ body {
         box-sizing: border-box;
     }
     
-    /* Mobile: Second content card - Bruno's vision */
-    .ceo-section::after {
+    /* Mobile: Add second content card */
+    .ceo-section::before {
         content: "Bruno's vision: \"Artificial Neural Networks are the second most powerful form of intelligence we've encountered—just after human intelligence. I believe AI will always be a tool to enhance our productivity and deepen our understanding of the world, yet the foundations of the world can only be fully grasped through the abstraction capabilities unique to humans. It's a double-edged sword: While AI-powered tools enhance & boost our productivity, if we misuse it, we risk harming our own—human—neural networks. Let's use this gift of the 21st century responsibly.\"";
         display: block;
         width: 100%;
-        margin-bottom: 0;
+        margin-bottom: 20px;
         padding: 20px;
         background: white;
         border-radius: 12px;
