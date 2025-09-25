@@ -618,6 +618,63 @@ body {
         height: 60px;
     }
     
+    /* Mobile: Hide logo */
+    .logo-image {
+        display: none;
+    }
+    
+    /* Mobile: Show hamburger menu */
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Mobile: Hide regular navigation menu */
+    .nav-menu {
+        display: none;
+    }
+    
+    /* Mobile: Show navigation menu when hamburger is active */
+    .nav-menu.active {
+        display: flex;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-xl);
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Mobile: Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* Mobile: Navigation links styling */
+    .nav-menu.active .nav-link {
+        font-size: 1.2rem;
+        padding: 15px 0;
+        color: var(--gray-900);
+        font-weight: 600;
+    }
+    
+    .nav-menu.active .nav-link:hover {
+        color: var(--purple);
+    }
+    
     /* Mobile: Hero sections */
     .hero-section {
         background: linear-gradient(135deg, #4C1D95 0%, #3B0764 25%, #2D1B69 50%, #5B21B6 75%, #6B46C1 100%);
