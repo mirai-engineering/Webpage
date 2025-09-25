@@ -777,52 +777,80 @@ body {
         padding: 20px !important;
     }
     
-    /* Mobile: Optimize CEO section - compact layout */
+    /* Mobile: Redesign CEO section - 3 separate cards */
     .ceo-section {
         display: block !important;
     }
     
+    /* Mobile: CEO Header Card - Image and Name Only */
     .ceo-card {
         width: 100% !important;
-        margin-bottom: 15px !important;
-        padding: 15px !important;
+        margin-bottom: 20px !important;
+        padding: 20px !important;
+        background: white !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+        text-align: center !important;
     }
     
     .ceo-image {
-        width: 80px !important;
-        height: 80px !important;
-        margin: 0 auto 10px auto !important;
+        width: 100px !important;
+        height: 100px !important;
+        margin: 0 auto 15px auto !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
     }
     
     .ceo-name {
-        font-size: 1.2rem !important;
-        margin-bottom: 10px !important;
-    }
-    
-    .ceo-content {
-        font-size: 0.9rem !important;
-        line-height: 1.4 !important;
-    }
-    
-    /* Mobile: Split CEO content into separate cards */
-    .ceo-content p {
-        margin-bottom: 15px !important;
-    }
-    
-    .ceo-content p:first-child {
-        background: white !important;
-        padding: 15px !important;
-        border-radius: 8px !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .ceo-content p:last-child {
-        background: white !important;
-        padding: 15px !important;
-        border-radius: 8px !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+        font-size: 1.4rem !important;
+        font-weight: 700 !important;
+        color: var(--gray-900) !important;
         margin-bottom: 0 !important;
+    }
+    
+    /* Mobile: Hide original CEO content */
+    .ceo-content {
+        display: none !important;
+    }
+    
+    /* Mobile: Create new CEO content cards */
+    .ceo-section::after {
+        content: "";
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Mobile: First content card - Bruno's journey */
+    .ceo-section::before {
+        content: "Bruno's journey began before the boom of the AI revolution. Long before ChatGPT or Gemini became household names, Bruno was already pioneering the use of artificial neural networks in the field of combustion engineering. After earning both his B.Sc. and M.Sc. in Engineering at RWTH Aachen University, he worked across projects in the aviation and automotive sectors, gaining experience with leading international companies such as Airbus and AVL. Bruno contributed to key projects at Porsche and Cariad and led transformative collaborations with MIT.";
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: var(--gray-700);
+        box-sizing: border-box;
+    }
+    
+    /* Mobile: Second content card - Bruno's vision */
+    .ceo-section::after {
+        content: "Bruno's vision: \"Artificial Neural Networks are the second most powerful form of intelligence we've encountered—just after human intelligence. I believe AI will always be a tool to enhance our productivity and deepen our understanding of the world, yet the foundations of the world can only be fully grasped through the abstraction capabilities unique to humans. It's a double-edged sword: While AI-powered tools enhance & boost our productivity, if we misuse it, we risk harming our own—human—neural networks. Let's use this gift of the 21st century responsibly.\"";
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+        padding: 20px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: var(--gray-700);
+        box-sizing: border-box;
     }
     
     /* Mobile: Fix blog page layout */
