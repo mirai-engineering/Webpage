@@ -612,31 +612,22 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Mobile hero section - purple gradient with neural network pattern */
+    /* Mobile hero section - simplified purple gradient with subtle pattern */
     .hero-section {
         background: 
-            /* Neural network pattern overlay */
-            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.2) 3px, transparent 3px),
-            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
-            radial-gradient(circle at 15% 70%, rgba(255, 255, 255, 0.25) 4px, transparent 4px),
-            radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.18) 2.5px, transparent 2.5px),
-            radial-gradient(circle at 45% 15%, rgba(255, 255, 255, 0.22) 3px, transparent 3px),
-            radial-gradient(circle at 60% 85%, rgba(255, 255, 255, 0.16) 2px, transparent 2px),
-            radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.24) 3.5px, transparent 3.5px),
-            radial-gradient(circle at 70% 40%, rgba(255, 255, 255, 0.2) 2.8px, transparent 2.8px),
-            /* Connection lines */
-            linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
-            linear-gradient(-30deg, transparent 48%, rgba(255, 255, 255, 0.08) 49%, rgba(255, 255, 255, 0.08) 51%, transparent 52%),
-            linear-gradient(75deg, transparent 48%, rgba(255, 255, 255, 0.09) 49%, rgba(255, 255, 255, 0.09) 51%, transparent 52%),
+            /* Simple neural network dots */
+            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.3) 4px, transparent 4px),
+            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.25) 3px, transparent 3px),
+            radial-gradient(circle at 15% 70%, rgba(255, 255, 255, 0.35) 5px, transparent 5px),
+            radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.28) 3.5px, transparent 3.5px),
+            radial-gradient(circle at 45% 15%, rgba(255, 255, 255, 0.32) 4px, transparent 4px),
+            radial-gradient(circle at 60% 85%, rgba(255, 255, 255, 0.26) 3px, transparent 3px),
             /* Purple gradient base */
-            linear-gradient(135deg, #6B46C1 0%, #5B21B6 25%, #4C1D95 50%, #7C3AED 75%, #8B5CF6 100%) !important;
-        background-size: 
-            100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
-            150px 150px, 120px 120px, 180px 180px,
-            100% 100%;
-        min-height: 80vh !important;
-        background-attachment: scroll !important;
-        background-repeat: no-repeat !important;
+            linear-gradient(135deg, #6B46C1 0%, #5B21B6 25%, #4C1D95 50%, #7C3AED 75%, #8B5CF6 100%);
+        background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+        min-height: 80vh;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
     }
     
     .nav-menu {
@@ -722,6 +713,249 @@ body {
     .nav-container {
         padding: 2px;
     }
+    
+    /* AI Navigation Buttons */
+    .ai-navigation-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-md);
+    }
+    
+    /* About Page Mobile Fixes */
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+        padding: 0 10px;
+    }
+    
+    .card {
+        padding: 15px;
+        margin-bottom: var(--space-sm);
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .overview-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .ceo-section {
+        padding: var(--space-lg);
+    }
+    
+    .ceo-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .ceo-image {
+        margin: 0 auto var(--space-md) auto;
+    }
+    
+    /* About Page Mobile Fixes - About Mirai Engineering Card */
+    .card-large {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.1);
+    }
+    
+    .card-large .overview-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 16px;
+        color: var(--gray-700);
+    }
+    
+    .card-large .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: var(--gray-900);
+    }
+    
+    .paragraph-section {
+        margin-bottom: 20px;
+    }
+    
+    .scroll-separator {
+        margin: 20px 0;
+    }
+    
+    /* Timeline Cards Mobile Fixes */
+    .timeline-card {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+        transform: none;
+        opacity: 1;
+    }
+    
+    .timeline-dot {
+        display: none;
+    }
+    
+    .timeline-line {
+        display: none;
+    }
+    
+    .timeline-container {
+        padding: 0;
+    }
+    
+    .timeline-title {
+        font-size: 1.5rem;
+    }
+    
+    .timeline-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* Leadership & Core Values Card Mobile Fixes */
+    .leadership-values-card {
+        padding: 15px;
+        margin: 10px 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .leadership-values-card .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .leadership-values-card .overview-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 15px 0;
+    }
+    
+    .value-item {
+        padding: 10px;
+        margin-bottom: 8px;
+    }
+    
+    .value-item h4 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .value-item p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    /* Mission & Vision Cards Mobile Fixes */
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .mission-card, .vision-card {
+        padding: 15px;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .mission-card .section-title,
+    .vision-card .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .mission-text, .vision-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .separator-emoji {
+        font-size: 1.2rem;
+    }
+    
+    /* Leadership & Core Values Mobile Fixes */
+    .ceo-section {
+        margin-bottom: 30px;
+    }
+    
+    .ceo-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .ceo-image {
+        margin: 0 auto 20px auto;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .ceo-content {
+        width: 100%;
+    }
+    
+    .ceo-name {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+    
+    .ceo-bio {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    .ceo-credentials {
+        margin-top: 20px;
+    }
+    
+    .credential-item {
+        margin-bottom: 10px;
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .credential-label {
+        font-weight: 600;
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+    }
+    
+    .credential-value {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 640px) {
@@ -743,9 +977,15 @@ body {
         padding: var(--space-lg);
     }
     
-    .content-grid,
-    .case-studies-grid {
+    .content-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .case-studies-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
     
     .stats-section {
@@ -1134,8 +1374,11 @@ body {
 
 .case-studies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
     gap: var(--space-xl);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .case-study-card {
@@ -1668,342 +1911,71 @@ body {
     box-shadow: 0 2px 8px rgba(107, 70, 193, 0.2);
 }
 
-@media (max-width: 768px) {
-    .ai-navigation-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--space-md);
-    }
-    
-    /* About Page Mobile Fixes */
-    .card-grid {
-        grid-template-columns: 1fr !important;
-        gap: var(--space-md) !important;
-        padding: 0 10px !important;
-    }
-    
-    .card {
-        padding: 15px !important;
-        margin-bottom: var(--space-sm) !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-    
-    .overview-text {
-        font-size: 1rem !important;
-        line-height: 1.6 !important;
-    }
-    
-    .section-title {
-        font-size: 1.5rem !important;
-        margin-bottom: var(--space-md) !important;
-    }
-    
-    .values-grid {
-        grid-template-columns: 1fr !important;
-        gap: var(--space-md) !important;
-    }
-    
-    .ceo-section {
-        padding: var(--space-lg) !important;
-    }
-    
-    .ceo-content {
-        flex-direction: column !important;
-        text-align: center !important;
-    }
-    
-    .ceo-image {
-        margin: 0 auto var(--space-md) auto !important;
-    }
-    
-    /* About Page Mobile Fixes - About Mirai Engineering Card */
-    .card-large {
-        background: white !important;
-        border-radius: 12px !important;
-        padding: 20px !important;
-        margin-bottom: 20px !important;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
-        border: 1px solid rgba(139, 92, 246, 0.1) !important;
-    }
-    
-    .card-large .overview-text {
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
-        margin-bottom: 16px !important;
-        color: var(--gray-700) !important;
-    }
-    
-    .card-large .section-title {
-        font-size: 1.5rem !important;
-        margin-bottom: 20px !important;
-        color: var(--gray-900) !important;
-    }
-    
-    .paragraph-section {
-        margin-bottom: 20px !important;
-    }
-    
-    .scroll-separator {
-        margin: 20px 0 !important;
-    }
-    
-    /* Timeline Cards Mobile Fixes */
-    .timeline-card {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding: 20px !important;
-        transform: none !important;
-        opacity: 1 !important;
-    }
-    
-    .timeline-dot {
-        display: none !important;
-    }
-    
-    .timeline-line {
-        display: none !important;
-    }
-    
-    .timeline-container {
-        padding: 0 !important;
-    }
-    
-    .timeline-title {
-        font-size: 1.5rem !important;
-    }
-    
-    .timeline-text {
-        font-size: 1rem !important;
-        line-height: 1.6 !important;
-    }
-    
-    /* Leadership & Core Values Card Mobile Fixes */
-    .leadership-values-card {
-        padding: 15px !important;
-        margin: 10px 0 !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-    
-    .leadership-values-card .section-title {
-        font-size: 1.3rem !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .leadership-values-card .overview-text {
-        font-size: 0.9rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .values-grid {
-        grid-template-columns: 1fr !important;
-        gap: 10px !important;
-        margin: 15px 0 !important;
-    }
-    
-    .value-item {
-        padding: 10px !important;
-        margin-bottom: 8px !important;
-    }
-    
-    .value-item h4 {
-        font-size: 1rem !important;
-        margin-bottom: 8px !important;
-    }
-    
-    .value-item p {
-        font-size: 0.85rem !important;
-        line-height: 1.4 !important;
-    }
-    
-    /* Mission & Vision Cards Mobile Fixes */
-    .mission-vision-grid {
-        grid-template-columns: 1fr !important;
-        gap: 15px !important;
-        padding: 0 10px !important;
-    }
-    
-    .mission-card, .vision-card {
-        padding: 15px !important;
-        margin: 0 !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-    
-    .mission-card .section-title,
-    .vision-card .section-title {
-        font-size: 1.2rem !important;
-        margin-bottom: 10px !important;
-    }
-    
-    .mission-text, .vision-text {
-        font-size: 0.9rem !important;
-        line-height: 1.5 !important;
-    }
-    
-    .separator-emoji {
-        font-size: 1.2rem !important;
-    }
-    
-    /* Leadership & Core Values Mobile Fixes */
-    .ceo-section {
-        margin-bottom: 30px !important;
-    }
-    
-    .ceo-card {
-        flex-direction: column !important;
-        text-align: center !important;
-        padding: 20px !important;
-    }
-    
-    .ceo-image {
-        margin: 0 auto 20px auto !important;
-        width: 80px !important;
-        height: 80px !important;
-    }
-    
-    .ceo-content {
-        width: 100% !important;
-    }
-    
-    .ceo-name {
-        font-size: 1.25rem !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .ceo-bio {
-        font-size: 0.9rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .ceo-credentials {
-        margin-top: 20px !important;
-    }
-    
-    .credential-item {
-        margin-bottom: 10px !important;
-        flex-direction: column !important;
-        text-align: left !important;
-    }
-    
-    .credential-label {
-        font-weight: 600 !important;
-        font-size: 0.85rem !important;
-        margin-bottom: 5px !important;
-    }
-    
-    .credential-value {
-        font-size: 0.85rem !important;
-        line-height: 1.4 !important;
-    }
-    
-    .values-grid {
-        grid-template-columns: 1fr !important;
-        gap: 15px !important;
-    }
-    
-    .value-card {
-        padding: 20px !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .value-title {
-        font-size: 1.1rem !important;
-        margin-bottom: 10px !important;
-    }
-    
-    .value-description {
-        font-size: 0.9rem !important;
-        line-height: 1.5 !important;
-    }
-    
-    .value-icon {
-        font-size: 1.5rem !important;
-        margin-bottom: 10px !important;
-    }
-    
-    /* AI as a Service Page Mobile Fixes */
-    .ai-types-grid {
-        grid-template-columns: 1fr !important;
-        gap: var(--space-lg) !important;
-    }
-    
-    .ai-type-card {
-        padding: var(--space-lg) !important;
-        margin-bottom: var(--space-md) !important;
-    }
-    
-    .type-title {
-        font-size: 1.5rem !important;
-        margin-bottom: var(--space-md) !important;
-    }
-    
-    .type-description {
-        font-size: 1rem !important;
-        line-height: 1.6 !important;
-    }
-    
-    .type-image {
-        margin: var(--space-md) 0 !important;
-    }
-    
-    .type-image-content {
-        width: 100% !important;
-        height: auto !important;
-        max-width: 300px !important;
-    }
-    
-    /* Landing Page Mobile Fixes */
-    .case-studies-grid {
-        grid-template-columns: 1fr !important;
-        gap: var(--space-lg) !important;
-        padding: 0 var(--space-md) !important;
-    }
-    
-    .case-study-card {
-        margin: 0 !important;
-        padding: var(--space-lg) !important;
-    }
-    
-    .case-study-title {
-        font-size: 1.25rem !important;
-    }
-    
-    .case-study-description {
-        font-size: 0.95rem !important;
-        line-height: 1.5 !important;
-    }
-    
-    .content-grid {
-        grid-template-columns: 1fr !important;
-        gap: var(--space-lg) !important;
-    }
-    
-    .content-card {
-        padding: var(--space-lg) !important;
-    }
-    
-    .content-title {
-        font-size: 1.5rem !important;
-    }
-    
-    .content-description {
-        font-size: 1rem !important;
-        line-height: 1.6 !important;
-    }
+.ai-nav-btn {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
 }
-    
-    .ai-nav-btn {
-        width: 100%;
-        max-width: 200px;
-        text-align: center;
-    }
+
+/* Common Utility Classes */
+.full-width-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background-attachment: fixed;
+    margin-bottom: 0;
+}
+
+.hero-content-full {
+    max-width: none;
+    width: 100%;
+}
+
+.container-1200 {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.content-card-white {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.white-text-shadow {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-gradient {
+    display: inline-block;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);
+}
+
+.btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(107, 70, 193, 0.4);
 }
 
 /* AI Service Page Styles */
