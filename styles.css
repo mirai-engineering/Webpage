@@ -646,7 +646,7 @@ body {
     
     /* Mobile: Purple "AI" in MIRAI */
     .logo::after {
-        background: linear-gradient(90deg, black 0%, black 60%, var(--purple) 60%, var(--purple) 100%);
+        background: linear-gradient(90deg, black 0%, black 80%, var(--purple) 80%, var(--purple) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
