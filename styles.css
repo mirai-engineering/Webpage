@@ -781,6 +781,23 @@ body {
         display: none !important;
     }
     
+    /* Mobile: Override any remaining layout issues */
+    *[style*="display: grid"],
+    *[style*="grid-template-columns"],
+    *[style*="grid-template-rows"],
+    *[style*="flex-direction: row"] {
+        display: block !important;
+    }
+    
+    *[style*="width: 50%"],
+    *[style*="width: 33%"],
+    *[style*="width: 25%"],
+    *[style*="flex: 1"],
+    *[style*="flex: 2"] {
+        width: 100% !important;
+        flex: none !important;
+    }
+    
     /* Mobile: Larger CEO image (30% bigger) */
     .mobile-leadership-card img {
         width: 156px !important;
@@ -1109,25 +1126,6 @@ body {
         margin-bottom: 15px !important;
     }
     
-    /* Mobile: Nuclear option - override ANY remaining layout issues */
-    @media (max-width: 768px) {
-        *[style*="display: grid"],
-        *[style*="grid-template-columns"],
-        *[style*="grid-template-rows"],
-        *[style*="flex-direction: row"] {
-            display: block !important;
-        }
-        
-        *[style*="width: 50%"],
-        *[style*="width: 33%"],
-        *[style*="width: 25%"],
-        *[style*="flex: 1"],
-        *[style*="flex: 2"] {
-            width: 100% !important;
-            flex: none !important;
-        }
-    }
-    
     /* Mobile: Optimize images */
     img {
         max-width: 100% !important;
@@ -1142,32 +1140,6 @@ body {
     
     .footer-content > div {
         margin-bottom: 30px !important;
-    }
-    
-    /* Mobile: Optimized header - compact and efficient */
-    .navigation {
-        padding: 10px 20px !important;
-        height: 60px !important;
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        z-index: 1000 !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        backdrop-filter: blur(10px) !important;
-        border-bottom: 1px solid rgba(139, 92, 246, 0.1) !important;
-    }
-    
-    .logo-image {
-        height: 30px !important;
-        width: auto !important;
-    }
-    
-    .nav-container {
-        height: 40px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
     }
     
     /* Mobile: Add proper spacing to hero sections */
