@@ -722,6 +722,23 @@ body {
         text-align: left !important;
     }
     
+    /* Mobile: Hide Leadership & Core Values section completely */
+    .leadership-values-section {
+        display: none !important;
+    }
+    
+    /* Hide the entire Leadership & Core Values section container */
+    div[style*="Leadership & Core Values"] {
+        display: none !important;
+    }
+    
+    /* Hide CEO section and values grid on mobile */
+    .ceo-card,
+    .values-grid,
+    .value-card {
+        display: none !important;
+    }
+    
     /* Mobile: Workshop outline button shows download text */
     .workshop-outline-btn {
         position: relative;
