@@ -1132,6 +1132,23 @@ body {
         height: auto !important;
     }
     
+    /* Mobile: Lifecycle bullets - ensure proper alignment */
+    .lifecycle-bullets li {
+        display: flex !important;
+        align-items: flex-start !important;
+    }
+    
+    .lifecycle-bullets li .bullet-dot {
+        position: absolute !important;
+        left: 0 !important;
+        top: 8px !important;
+    }
+    
+    .lifecycle-bullets li .bullet-text {
+        padding-left: 5px !important;
+        flex: 1 !important;
+    }
+    
     /* Mobile: Simplified footer */
     .footer-content {
         flex-direction: column !important;
@@ -3169,6 +3186,38 @@ body {
     left: 0;
     color: var(--purple);
     font-weight: bold;
+}
+
+/* Lifecycle Bullet Points - Specific class to avoid mobile overrides */
+.lifecycle-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lifecycle-bullets li {
+    padding: 8px 0;
+    color: var(--gray-700);
+    position: relative;
+    padding-left: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.lifecycle-bullets li .bullet-dot {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.lifecycle-bullets li .bullet-text {
+    padding-left: 5px;
+    flex: 1;
 }
 
 /* Process Steps */
