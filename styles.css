@@ -631,21 +631,16 @@ body {
         display: none !important;
     }
     
-    /* Mobile: Text logo replacement */
+    /* Mobile: Text logo replacement with purple AI */
     .logo::after {
         content: "MIRAI ENGINEERING";
         display: block;
         font-size: 1.2rem;
         font-weight: 700;
-        color: black;
         width: 30vw;
         max-width: 150px;
         text-align: left;
         line-height: 1.2;
-    }
-    
-    /* Mobile: Purple "AI" in MIRAI */
-    .logo::after {
         background: linear-gradient(90deg, black 0%, black 80%, var(--purple) 80%, var(--purple) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -758,6 +753,16 @@ body {
     .ceo-card,
     .values-grid,
     .value-card {
+        display: none !important;
+    }
+    
+    /* Mobile: Hide the entire Leadership & Core Values section */
+    div[style*="Leadership & Core Values"] {
+        display: none !important;
+    }
+    
+    /* Mobile: Hide the Leadership & Core Values section container */
+    div[style*="padding: 35px 20px 60px 20px"] {
         display: none !important;
     }
     
