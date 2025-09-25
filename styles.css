@@ -620,6 +620,20 @@ body {
         padding: 40px 20px;
     }
     
+    /* Mobile: Compact header */
+    .navigation {
+        padding: 10px 20px;
+        height: 60px;
+    }
+    
+    .logo-image {
+        height: 30px;
+    }
+    
+    .hero-section {
+        margin-top: 60px;
+    }
+    
     /* Disable all animations on mobile for performance */
     .hero-section * {
         animation: none !important;
@@ -658,6 +672,59 @@ body {
         border-radius: 12px !important;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
         background: white !important;
+    }
+    
+    /* Mobile: Fix CEO section */
+    .ceo-section {
+        display: block;
+    }
+    
+    .ceo-card {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .ceo-image {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px auto;
+        border-radius: 50%;
+    }
+    
+    .ceo-name {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    
+    /* Mobile: Workshop outline button shows download message */
+    .workshop-outline-btn {
+        position: relative;
+    }
+    
+    .workshop-outline-btn::after {
+        content: "Please click here to download the workshop's outline as a PDF";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--gray-900);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        margin-top: 5px;
+    }
+    
+    .workshop-outline-btn:hover::after {
+        opacity: 1;
     }
     
     /* Mobile: Larger touch targets */
