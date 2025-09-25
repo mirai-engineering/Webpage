@@ -777,6 +777,54 @@ body {
         padding: 20px !important;
     }
     
+    /* Mobile: Optimize CEO section - compact layout */
+    .ceo-section {
+        display: block !important;
+    }
+    
+    .ceo-card {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        padding: 15px !important;
+    }
+    
+    .ceo-image {
+        width: 80px !important;
+        height: 80px !important;
+        margin: 0 auto 10px auto !important;
+    }
+    
+    .ceo-name {
+        font-size: 1.2rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .ceo-content {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Mobile: Split CEO content into separate cards */
+    .ceo-content p {
+        margin-bottom: 15px !important;
+    }
+    
+    .ceo-content p:first-child {
+        background: white !important;
+        padding: 15px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .ceo-content p:last-child {
+        background: white !important;
+        padding: 15px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+        margin-bottom: 0 !important;
+    }
+    
     /* Mobile: Fix blog page layout */
     .blog-content,
     .blog-posts,
@@ -806,6 +854,71 @@ body {
     .info-section,
     .case-studies-section {
         padding: 20px !important;
+    }
+    
+    /* Mobile: Fix "What experts say" card layout for iPhone */
+    .expert-quotes,
+    .testimonials,
+    .quotes-grid {
+        display: block !important;
+    }
+    
+    .expert-quote,
+    .testimonial,
+    .quote-card {
+        width: 100% !important;
+        margin-bottom: 12px !important;
+        padding: 15px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Mobile: Optimize expert quotes for iPhone screen */
+    .expert-quote h4,
+    .testimonial h4,
+    .quote-card h4 {
+        font-size: 1.1rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .expert-quote p,
+    .testimonial p,
+    .quote-card p {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .expert-quote .quote-author,
+    .testimonial .quote-author,
+    .quote-card .quote-author {
+        font-size: 0.8rem !important;
+        font-weight: 600 !important;
+        color: var(--purple) !important;
+    }
+    
+    /* Mobile: Specific fix for "What experts say" section */
+    .expert-quotes-container,
+    .testimonials-container,
+    .quotes-container {
+        display: block !important;
+        padding: 0 !important;
+    }
+    
+    .expert-quotes-container > div,
+    .testimonials-container > div,
+    .quotes-container > div {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        padding: 12px !important;
+        background: white !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Mobile: Perfect iPhone fit for expert quotes */
+    .expert-quotes-container > div:last-child {
+        margin-bottom: 0 !important;
     }
     
     /* Mobile: Fix any remaining grid issues */
