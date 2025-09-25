@@ -627,8 +627,17 @@ body {
     }
     
     .logo-image {
-        height: 45px;
+        height: 50px;
         width: auto;
+        background: white;
+        padding: 5px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Mobile: Use white-background logo for better visibility */
+    .logo-image {
+        content: url('assets/images/logos/logo-white-background.png');
     }
     
     .hero-section {
