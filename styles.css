@@ -612,183 +612,150 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Mobile: Darker purple background for hero sections */
-    .hero-section {
-        background: linear-gradient(135deg, #4C1D95 0%, #3B0764 25%, #2D1B69 50%, #5B21B6 75%, #6B46C1 100%);
-        background-attachment: scroll;
-        min-height: 70vh;
-        padding: 40px 20px;
-    }
-    
     /* Mobile: Compact header */
     .navigation {
         padding: 10px 20px;
         height: 60px;
     }
     
-    
+    /* Mobile: Hero sections */
     .hero-section {
+        background: linear-gradient(135deg, #4C1D95 0%, #3B0764 25%, #2D1B69 50%, #5B21B6 75%, #6B46C1 100%);
+        background-attachment: scroll;
+        min-height: 70vh;
+        padding: 40px 20px;
         margin-top: 60px;
-    }
-    
-    /* Disable all animations on mobile for performance */
-    .hero-section * {
-        animation: none !important;
-        transition: none !important;
     }
     
     /* Mobile: Simplified hero content */
     .hero-title {
-        font-size: 2.5rem !important;
-        line-height: 1.2 !important;
-        margin-bottom: 20px !important;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
     }
     
     .hero-subtitle {
-        font-size: 1.1rem !important;
-        line-height: 1.5 !important;
-        max-width: 100% !important;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        max-width: 100%;
     }
     
-    /* Mobile: Simplified card layouts - single column stack */
-    .content-grid {
-        display: block !important;
-        gap: 0 !important;
+    /* Mobile: Single column layout for all grids */
+    .content-grid,
+    .services-grid,
+    .case-studies-grid,
+    .industries-grid,
+    .mission-vision-grid,
+    .timeline-container,
+    .blog-grid,
+    .values-grid {
+        display: block;
+        gap: 0;
     }
     
-    .content-grid > div {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-        max-width: none !important;
+    .content-grid > div,
+    .services-grid > div,
+    .case-studies-grid > div,
+    .industries-grid > div,
+    .mission-vision-grid > div {
+        width: 100%;
+        margin-bottom: 20px;
+        max-width: none;
     }
     
     /* Mobile: Simplified card designs */
-    .card, .case-study-card, .service-card, .industry-card, .contact-card {
-        padding: 20px !important;
-        margin-bottom: 20px !important;
-        border-radius: 12px !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-        background: white !important;
+    .card, .case-study-card, .service-card, .industry-card, .contact-card,
+    .timeline-card, .blog-card, .mission-card, .vision-card, .value-item {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 20px 0;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background: white;
+        box-sizing: border-box;
     }
     
-    /* Mobile: Fix CEO section */
+    /* Mobile: CEO section */
     .ceo-section {
         display: block;
     }
     
     .ceo-card {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-        padding: 20px !important;
-        text-align: center !important;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+        text-align: center;
     }
     
     .ceo-image {
-        width: 100px !important;
-        height: 100px !important;
-        margin: 0 auto 15px auto !important;
-        border-radius: 50% !important;
-    }
-    
-    .ceo-image img {
-        width: 100px !important;
-        height: 100px !important;
-        border-radius: 50% !important;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px auto;
+        border-radius: 50%;
     }
     
     .ceo-name {
-        font-size: 1.4rem !important;
-        font-weight: 700 !important;
-        margin-bottom: 0 !important;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 0;
     }
     
     .ceo-content {
-        text-align: center !important;
-        margin-top: 20px !important;
+        text-align: center;
+        margin-top: 20px;
     }
     
     .ceo-content h2 {
-        font-size: 1.8rem !important;
-        margin-bottom: 20px !important;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
     }
     
     .ceo-bio {
-        font-size: 1rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 15px !important;
-        text-align: left !important;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        text-align: left;
     }
     
-    /* Mobile: Hide Leadership & Core Values section completely */
+    /* Mobile: Hide Leadership & Core Values section */
     .leadership-values-section {
-        display: none !important;
+        display: none;
     }
     
-    /* Hide the entire Leadership & Core Values section container */
-    div[style*="Leadership & Core Values"] {
-        display: none !important;
-    }
-    
-    /* Hide CEO section and values grid on mobile */
-    .ceo-card,
-    .values-grid,
-    .value-card {
-        display: none !important;
-    }
-    
-    /* Mobile: Hide the entire Leadership & Core Values section */
-    div[style*="Leadership & Core Values"] {
-        display: none !important;
-    }
-    
-    /* Mobile: Hide the Leadership & Core Values section container */
-    div[style*="padding: 35px 20px 60px 20px"] {
-        display: none !important;
-    }
-    
-    /* Mobile: Show mobile leadership card */
+    /* Mobile: Show mobile leadership cards */
     .mobile-leadership-card {
-        display: block !important;
+        display: block;
     }
     
-    /* Mobile: Show mobile CEO bio card */
     .mobile-ceo-bio-card {
-        display: block !important;
+        display: block;
     }
     
     /* Mobile: Hide "Ready to Transform Your Business" card */
     .mobile-hide-card {
-        display: none !important;
+        display: none;
     }
     
-    /* Mobile: Override any remaining layout issues */
-    *[style*="display: grid"],
-    *[style*="grid-template-columns"],
-    *[style*="grid-template-rows"],
-    *[style*="flex-direction: row"] {
-        display: block !important;
+    /* Mobile: Force single column for inline styles */
+    [style*="display: grid"],
+    [style*="grid-template-columns"] {
+        display: block;
     }
     
-    *[style*="width: 50%"],
-    *[style*="width: 33%"],
-    *[style*="width: 25%"],
-    *[style*="flex: 1"],
-    *[style*="flex: 2"] {
-        width: 100% !important;
-        flex: none !important;
+    [style*="width: 50%"],
+    [style*="width: 33%"],
+    [style*="width: 25%"] {
+        width: 100%;
     }
     
-    /* Mobile: Larger CEO image (30% bigger) */
+    /* Mobile: Larger CEO image */
     .mobile-leadership-card img {
-        width: 156px !important;
-        height: 156px !important;
+        width: 156px;
+        height: 156px;
     }
     
     /* Mobile: Workshop outline button shows download text */
-    .workshop-outline-btn {
-        position: relative;
-    }
-    
     .workshop-outline-btn::before {
         content: "Download our workshop outline";
         position: absolute;
@@ -808,656 +775,49 @@ body {
     }
     
     .workshop-outline-btn {
-        color: transparent !important;
+        position: relative;
+        color: transparent;
     }
     
     /* Mobile: Larger touch targets */
     .btn-primary, .btn-secondary, .btn-gradient, button {
-        min-height: 44px !important;
-        padding: 12px 20px !important;
-        font-size: 1rem !important;
+        min-height: 44px;
+        padding: 12px 20px;
+        font-size: 1rem;
     }
     
     /* Mobile: Simplified typography */
     .section-title {
-        font-size: 1.8rem !important;
-        line-height: 1.3 !important;
+        font-size: 1.8rem;
+        line-height: 1.3;
     }
     
     .section-subtitle {
-        font-size: 1rem !important;
-        line-height: 1.5 !important;
+        font-size: 1rem;
+        line-height: 1.5;
     }
     
     .card h3, .card h4 {
-        font-size: 1.3rem !important;
-        line-height: 1.3 !important;
-        margin-bottom: 15px !important;
+        font-size: 1.3rem;
+        line-height: 1.3;
+        margin-bottom: 15px;
     }
     
     .card p {
-        font-size: 1rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 15px !important;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
     }
     
     /* Mobile: Disable parallax and heavy effects */
     .parallax-effect {
-        transform: none !important;
-        background-attachment: scroll !important;
+        transform: none;
+        background-attachment: scroll;
     }
     
     .animated-background {
-        animation: none !important;
-        background: linear-gradient(135deg, #6B46C1 0%, #5B21B6 25%, #4C1D95 50%, #7C3AED 75%, #8B5CF6 100%) !important;
-    }
-    
-    /* Mobile: Disable all complex animations */
-    * {
-        animation-duration: 0s !important;
-        animation-delay: 0s !important;
-        transition-duration: 0s !important;
-        transition-delay: 0s !important;
-    }
-    
-    /* Mobile: Force ALL grids to single column - comprehensive override */
-    .content-grid,
-    .services-grid,
-    .case-studies-grid,
-    .timeline-container,
-    .blog-grid,
-    .industries-grid,
-    .mission-vision-grid,
-    .values-grid,
-    .ceo-section,
-    .leadership-values-card {
-        display: block !important;
-        grid-template-columns: none !important;
-        gap: 0 !important;
-    }
-    
-    /* Mobile: Ensure all cards are full width */
-    .card,
-    .service-card,
-    .case-study-card,
-    .timeline-card,
-    .blog-card,
-    .industry-card,
-    .contact-card,
-    .mission-card,
-    .vision-card,
-    .value-item,
-    .ceo-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 0 20px 0 !important;
-        padding: 20px !important;
-        box-sizing: border-box !important;
-    }
-    
-    /* Mobile: Override any inline grid styles */
-    [style*="grid-template-columns"],
-    [style*="display: grid"],
-    [style*="display: flex"] {
-        display: block !important;
-    }
-    
-    /* Mobile: Force single column for AI service project ideas */
-    .ai-project-ideas,
-    .ai-project-ideas > div,
-    .ai-project-ideas [style*="grid"] {
-        display: block !important;
-        width: 100% !important;
-    }
-    
-    /* Mobile: Override specific problematic sections */
-    .ai-project-ideas > div {
-        width: 100% !important;
-        margin-bottom: 15px !important;
-        max-width: none !important;
-    }
-    
-    /* Mobile: Specific fixes for About page */
-    .timeline-container {
-        display: block !important;
-    }
-    
-    .timeline-card {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-        padding: 20px !important;
-    }
-    
-    /* Mobile: Fix CEO section layout */
-    .ceo-section {
-        display: block !important;
-    }
-    
-    /* Mobile: CEO Header Card - Image and Name Only */
-    .ceo-card {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-        padding: 20px !important;
-        background: white !important;
-        border-radius: 12px !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-        text-align: center !important;
-    }
-    
-    .ceo-image {
-        width: 100px !important;
-        height: 100px !important;
-        margin: 0 auto 15px auto !important;
-        border-radius: 50% !important;
-        object-fit: cover !important;
-    }
-    
-    .ceo-name {
-        font-size: 1.4rem !important;
-        font-weight: 700 !important;
-        color: var(--gray-900) !important;
-        margin-bottom: 0 !important;
-    }
-    
-    /* Mobile: Hide original CEO content and replace with new content */
-    .ceo-content {
-        display: none !important;
-    }
-    
-    /* Mobile: Add new CEO content after the CEO card */
-    .ceo-section::after {
-        content: "Bruno's journey began before the boom of the AI revolution. Long before ChatGPT or Gemini became household names, Bruno was already pioneering the use of artificial neural networks in the field of combustion engineering. After earning both his B.Sc. and M.Sc. in Engineering at RWTH Aachen University, he worked across projects in the aviation and automotive sectors, gaining experience with leading international companies such as Airbus and AVL. Bruno contributed to key projects at Porsche and Cariad and led transformative collaborations with MIT.";
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 20px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        font-size: 0.95rem;
-        line-height: 1.5;
-        color: var(--gray-700);
-        box-sizing: border-box;
-    }
-    
-    /* Mobile: Add second content card */
-    .ceo-section::before {
-        content: "Bruno's vision: \"Artificial Neural Networks are the second most powerful form of intelligence we've encountered—just after human intelligence. I believe AI will always be a tool to enhance our productivity and deepen our understanding of the world, yet the foundations of the world can only be fully grasped through the abstraction capabilities unique to humans. It's a double-edged sword: While AI-powered tools enhance & boost our productivity, if we misuse it, we risk harming our own—human—neural networks. Let's use this gift of the 21st century responsibly.\"";
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 20px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        font-size: 0.95rem;
-        line-height: 1.5;
-        color: var(--gray-700);
-        box-sizing: border-box;
-    }
-    
-    /* Mobile: Fix blog page layout */
-    .blog-content,
-    .blog-posts,
-    .blog-grid {
-        display: block !important;
-    }
-    
-    .blog-post,
-    .blog-card {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-    }
-    
-    /* Mobile: Fix contact page layout */
-    .contact-grid,
-    .contact-cards {
-        display: block !important;
-    }
-    
-    .contact-card {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-    }
-    
-    /* Mobile: Ensure all sections have proper spacing */
-    .page-section,
-    .info-section,
-    .case-studies-section {
-        padding: 20px !important;
-    }
-    
-    /* Mobile: Fix "What experts say" card layout for iPhone */
-    .expert-quotes,
-    .testimonials,
-    .quotes-grid {
-        display: block !important;
-    }
-    
-    .expert-quote,
-    .testimonial,
-    .quote-card {
-        width: 100% !important;
-        margin-bottom: 12px !important;
-        padding: 15px !important;
-        box-sizing: border-box !important;
-    }
-    
-    /* Mobile: Optimize expert quotes for iPhone screen */
-    .expert-quote h4,
-    .testimonial h4,
-    .quote-card h4 {
-        font-size: 1.1rem !important;
-        line-height: 1.3 !important;
-        margin-bottom: 8px !important;
-    }
-    
-    .expert-quote p,
-    .testimonial p,
-    .quote-card p {
-        font-size: 0.9rem !important;
-        line-height: 1.4 !important;
-        margin-bottom: 8px !important;
-    }
-    
-    .expert-quote .quote-author,
-    .testimonial .quote-author,
-    .quote-card .quote-author {
-        font-size: 0.8rem !important;
-        font-weight: 600 !important;
-        color: var(--purple) !important;
-    }
-    
-    /* Mobile: Specific fix for "What experts say" section */
-    .expert-quotes-container,
-    .testimonials-container,
-    .quotes-container {
-        display: block !important;
-        padding: 0 !important;
-    }
-    
-    .expert-quotes-container > div,
-    .testimonials-container > div,
-    .quotes-container > div {
-        width: 100% !important;
-        margin-bottom: 10px !important;
-        padding: 12px !important;
-        background: white !important;
-        border-radius: 8px !important;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
-    }
-    
-    /* Mobile: Perfect iPhone fit for expert quotes */
-    .expert-quotes-container > div:last-child {
-        margin-bottom: 0 !important;
-    }
-    
-    /* Mobile: Fix any remaining grid issues */
-    .grid,
-    .grid-container,
-    .flex-container {
-        display: block !important;
-    }
-    
-    .grid > *,
-    .grid-container > *,
-    .flex-container > * {
-        width: 100% !important;
-        margin-bottom: 15px !important;
-    }
-    
-    /* Mobile: Optimize images */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-    
-    /* Mobile: Lifecycle bullets - ensure proper alignment */
-    .lifecycle-bullets li {
-        display: flex !important;
-        align-items: flex-start !important;
-    }
-    
-    .lifecycle-bullets li .bullet-dot {
-        position: absolute !important;
-        left: 0 !important;
-        top: 8px !important;
-    }
-    
-    .lifecycle-bullets li .bullet-text {
-        padding-left: 5px !important;
-        flex: 1 !important;
-    }
-    
-    /* Mobile: Simplified footer */
-    .footer-content {
-        flex-direction: column !important;
-        text-align: center !important;
-    }
-    
-    .footer-content > div {
-        margin-bottom: 30px !important;
-    }
-    
-    /* Mobile: Add proper spacing to hero sections */
-    .hero-section {
-        margin-top: 60px !important;
-        padding-top: 20px !important;
-    }
-    
-    /* Mobile: Simplified navigation */
-    .nav-menu {
-        position: fixed;
-        top: 60px;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background: var(--white);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: var(--space-xl);
-        transition: right 0.3s ease;
-        z-index: 1000;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .hamburger {
-        display: flex;
-        z-index: 1001;
-    }
-    
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-    
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .services-grid,
-    .industries-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-    .flip-card {
-        height: 900px;
-        margin-bottom: var(--space-xl);
-    }
-    
-    .step-content-row {
-        flex-direction: column;
-        gap: var(--space-lg);
-    }
-    
-    .step-image {
-        max-width: 100%;
-        max-height: 200px;
-        align-self: center;
-    }
-    
-    .container {
-        padding: var(--space-xl) var(--space-md);
-    }
-    
-    .nav-container {
-        padding: 2px;
-    }
-    
-    /* AI Navigation Buttons */
-    .ai-navigation-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--space-md);
-    }
-    
-    /* About Page Mobile Fixes */
-    .card-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
-        padding: 0 10px;
-    }
-    
-    .card {
-        padding: 15px;
-        margin-bottom: var(--space-sm);
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .overview-text {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    
-    .section-title {
-        font-size: 1.5rem;
-        margin-bottom: var(--space-md);
-    }
-    
-    .values-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
-    }
-    
-    .ceo-section {
-        padding: var(--space-lg);
-    }
-    
-    .ceo-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .ceo-image {
-        margin: 0 auto var(--space-md) auto;
-    }
-    
-    /* About Page Mobile Fixes - About Mirai Engineering Card */
-    .card-large {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(139, 92, 246, 0.1);
-    }
-    
-    .card-large .overview-text {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 16px;
-        color: var(--gray-700);
-    }
-    
-    .card-large .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        color: var(--gray-900);
-    }
-    
-    .paragraph-section {
-        margin-bottom: 20px;
-    }
-    
-    .scroll-separator {
-        margin: 20px 0;
-    }
-    
-    /* Timeline Cards Mobile Fixes */
-    .timeline-card {
-        margin-left: 0;
-        margin-right: 0;
-        padding: 20px;
-        transform: none;
-        opacity: 1;
-    }
-    
-    .timeline-dot {
-        display: none;
-    }
-    
-    .timeline-line {
-        display: none;
-    }
-    
-    .timeline-container {
-        padding: 0;
-    }
-    
-    .timeline-title {
-        font-size: 1.5rem;
-    }
-    
-    .timeline-text {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    
-    /* Leadership & Core Values Card Mobile Fixes */
-    .leadership-values-card {
-        padding: 15px;
-        margin: 10px 0;
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .leadership-values-card .section-title {
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-    }
-    
-    .leadership-values-card .overview-text {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        margin-bottom: 15px;
-    }
-    
-    .values-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        margin: 15px 0;
-    }
-    
-    .value-item {
-        padding: 10px;
-        margin-bottom: 8px;
-    }
-    
-    .value-item h4 {
-        font-size: 1rem;
-        margin-bottom: 8px;
-    }
-    
-    .value-item p {
-        font-size: 0.85rem;
-        line-height: 1.4;
-    }
-    
-    /* Mission & Vision Cards Mobile Fixes */
-    .mission-vision-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 0 10px;
-    }
-    
-    .mission-card, .vision-card {
-        padding: 15px;
-        margin: 0;
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .mission-card .section-title,
-    .vision-card .section-title {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
-    
-    .mission-text, .vision-text {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-    
-    .separator-emoji {
-        font-size: 1.2rem;
-    }
-    
-    /* Leadership & Core Values Mobile Fixes */
-    .ceo-section {
-        margin-bottom: 30px;
-    }
-    
-    .ceo-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .ceo-image {
-        margin: 0 auto 20px auto;
-        width: 80px;
-        height: 80px;
-    }
-    
-    .ceo-content {
-        width: 100%;
-    }
-    
-    .ceo-name {
-        font-size: 1.25rem;
-        margin-bottom: 15px;
-    }
-    
-    .ceo-bio {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        margin-bottom: 15px;
-    }
-    
-    .ceo-credentials {
-        margin-top: 20px;
-    }
-    
-    .credential-item {
-        margin-bottom: 10px;
-        flex-direction: column;
-        text-align: left;
-    }
-    
-    .credential-label {
-        font-weight: 600;
-        font-size: 0.85rem;
-        margin-bottom: 5px;
-    }
-    
-    .credential-value {
-        font-size: 0.85rem;
+        animation: none;
+        background: linear-gradient(135deg, #6B46C1 0%, #5B21B6 25%, #4C1D95 50%, #7C3AED 75%, #8B5CF6 100%);
     }
 }
 
