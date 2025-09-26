@@ -621,7 +621,7 @@ body {
     
     /* Mobile: Show company name text */
     .mobile-logo-text {
-        display: block !important;
+        display: block;
         font-size: 1.75rem;
         font-weight: 700;
         width: 60%;
@@ -633,24 +633,15 @@ body {
     }
     
     .mir-text {
-        color: black !important;
-        display: inline;
-        margin: 0;
-        padding: 0;
+        color: black;
     }
     
     .ai-text {
-        color: var(--purple) !important;
-        display: inline;
-        margin: 0;
-        padding: 0;
+        color: var(--purple);
     }
     
     .engineering-text {
-        color: black !important;
-        display: inline;
-        margin: 0;
-        padding: 0;
+        color: black;
     }
     
     /* Mobile: Show hamburger menu */
@@ -824,17 +815,6 @@ body {
         display: none;
     }
     
-    /* Mobile: Force single column for inline styles */
-    [style*="display: grid"],
-    [style*="grid-template-columns"] {
-        display: block;
-    }
-    
-    [style*="width: 50%"],
-    [style*="width: 33%"],
-    [style*="width: 25%"] {
-        width: 100%;
-    }
     
     /* Mobile: Larger CEO image */
     .mobile-leadership-card img {
@@ -842,29 +822,6 @@ body {
         height: 156px;
     }
     
-    /* Mobile: Workshop outline button shows download text */
-    .workshop-outline-btn::before {
-        content: "Download our workshop outline";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--gradient-primary);
-        color: white;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1rem;
-        z-index: 10;
-    }
-    
-    .workshop-outline-btn {
-        position: relative;
-        color: transparent;
-    }
     
     /* Mobile: Larger touch targets */
     .btn-primary, .btn-secondary, .btn-gradient, button {
@@ -933,10 +890,10 @@ body {
     }
     
     .case-studies-grid {
-        grid-template-columns: 1fr !important;
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     .stats-section {
