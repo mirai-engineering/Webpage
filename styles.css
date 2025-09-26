@@ -802,6 +802,11 @@ body {
         display: none;
     }
     
+    /* Mobile: Show mobile cards */
+    .mobile-cards-section {
+        display: block;
+    }
+    
     /* Mobile: Show only mobile values section */
     .mobile-values {
         display: block;
