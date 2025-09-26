@@ -629,18 +629,28 @@ body {
         line-height: 1;
         margin: 0;
         padding: 0;
+        white-space: nowrap;
     }
     
     .mir-text {
-        color: black;
+        color: black !important;
+        display: inline;
+        margin: 0;
+        padding: 0;
     }
     
     .ai-text {
-        color: var(--purple);
+        color: var(--purple) !important;
+        display: inline;
+        margin: 0;
+        padding: 0;
     }
     
     .engineering-text {
-        color: black;
+        color: black !important;
+        display: inline;
+        margin: 0;
+        padding: 0;
     }
     
     /* Mobile: Show hamburger menu */
