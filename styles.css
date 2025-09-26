@@ -802,24 +802,6 @@ body {
         display: none;
     }
     
-    /* Mobile: Show mobile leadership cards */
-    .mobile-leadership-card {
-        display: block;
-    }
-    
-    .mobile-ceo-bio-card {
-        display: block;
-    }
-    
-    .mobile-ceo-image-card {
-        display: block;
-    }
-    
-    /* Mobile: Show mobile story cards */
-    .mobile-story-card {
-        display: block;
-    }
-    
     /* Mobile: Hide timeline on mobile */
     .timeline-container {
         display: none;
