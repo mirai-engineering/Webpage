@@ -802,26 +802,46 @@ body {
         display: none;
     }
     
-    /* Mobile: Simplify values - hide descriptions */
-    .value-description {
-        display: none;
+    /* Mobile: Show only mobile values section */
+    .mobile-values {
+        display: block;
+        margin: 30px 20px;
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(139, 92, 246, 0.1);
     }
     
-    /* Mobile: Adjust values grid for simplified layout */
-    .values-grid {
+    /* Mobile: Values grid layout */
+    .mobile-values .values-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+        margin: 0;
     }
     
-    .value-card {
+    .mobile-values .value-card {
         padding: 20px 15px;
         text-align: center;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.1);
     }
     
-    .value-title {
+    .mobile-values .value-title {
         font-size: 1.2rem;
         margin-bottom: 0;
+    }
+    
+    .mobile-values .value-description {
+        display: none;
+    }
+    
+    /* Mobile: Show mobile CTA card */
+    .mobile-cta-card {
+        display: block;
     }
     
     /* Mobile: Hide "Ready to Transform Your Business" card */
