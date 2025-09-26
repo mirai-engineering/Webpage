@@ -797,18 +797,8 @@ body {
         text-align: left;
     }
     
-    /* Mobile: Hide Leadership & Core Values section */
-    .leadership-values-section {
-        display: none;
-    }
-    
-    /* Mobile: Hide timeline on mobile */
-    .timeline-container {
-        display: none;
-    }
-    
-    /* Mobile: Hide mission and vision cards */
-    #mission-vision {
+    /* Mobile: Hide desktop-only elements */
+    .desktop-only {
         display: none;
     }
     
