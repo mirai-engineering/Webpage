@@ -128,6 +128,11 @@ body {
     transform: scale(1.05);
 }
 
+/* Hide mobile logo text on desktop */
+.mobile-logo-text {
+    display: none;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -612,6 +617,30 @@ body {
     /* Mobile: Hide logo */
     .logo-image {
         display: none;
+    }
+    
+    /* Mobile: Show company name text */
+    .mobile-logo-text {
+        display: block !important;
+        font-size: 1.2rem;
+        font-weight: 700;
+        width: 25%;
+        text-align: left;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .mirai-text {
+        color: black;
+    }
+    
+    .ai-text {
+        color: var(--purple);
+    }
+    
+    .engineering-text {
+        color: black;
     }
     
     /* Mobile: Show hamburger menu */
