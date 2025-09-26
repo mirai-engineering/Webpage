@@ -799,14 +799,11 @@
         function scrollToSection(sectionId) {
             const element = document.getElementById(sectionId);
             if (element) {
-                console.log('Scrolling to element:', element);
                 element.scrollIntoView({ 
                     behavior: 'smooth',
                     block: 'start',
                     inline: 'nearest'
                 });
-            } else {
-                console.log('Element not found:', sectionId);
             }
         }
 

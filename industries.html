@@ -697,19 +697,6 @@
     <script src="script.js?v=5"></script>
     <script>
         // Clean expandable case study functionality
-        function toggleDetails(button) {
-            const card = button.closest('.case-study-card');
-            const details = card.querySelector('.case-study-details');
-            const isExpanded = details.classList.contains('expanded');
-            
-            if (isExpanded) {
-                details.classList.remove('expanded');
-                button.textContent = 'Learn More';
-            } else {
-                details.classList.add('expanded');
-                button.textContent = 'Show Less';
-            }
-        }
         
         // Event listeners for all expand buttons
         document.addEventListener('DOMContentLoaded', function() {

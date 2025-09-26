@@ -309,7 +309,6 @@
                     // Send email using EmailJS sendForm method
                     emailjs.sendForm('service_j5xal3n', 'template_ex0jzsm', contactForm)
                     .then(() => {
-                        console.log('SUCCESS!');
                         // Success
                         submitBtn.textContent = 'Message Sent!';
                         submitBtn.style.background = '#10B981';
@@ -325,7 +324,6 @@
                             submitBtn.style.background = '';
                         }, 3000);
                     }, (error) => {
-                        console.log('FAILED...', error);
                         // Error
                         console.error('Email sending failed:', error);
                         submitBtn.textContent = 'Error - Try Again';

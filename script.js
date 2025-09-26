@@ -15,7 +15,6 @@ function toggleDetails(button) {
 
 // Page initialization
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Page loaded successfully');
     
     // Initialize mobile navigation
     initMobileNavigation();
