@@ -811,6 +811,47 @@ body {
         display: block;
     }
     
+    .mobile-ceo-image-card {
+        display: block;
+    }
+    
+    /* Mobile: Show mobile story cards */
+    .mobile-story-card {
+        display: block;
+    }
+    
+    /* Mobile: Hide timeline on mobile */
+    .timeline-container {
+        display: none;
+    }
+    
+    /* Mobile: Hide mission and vision cards */
+    #mission-vision {
+        display: none;
+    }
+    
+    /* Mobile: Simplify values - hide descriptions */
+    .value-description {
+        display: none;
+    }
+    
+    /* Mobile: Adjust values grid for simplified layout */
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .value-card {
+        padding: 20px 15px;
+        text-align: center;
+    }
+    
+    .value-title {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    
     /* Mobile: Hide "Ready to Transform Your Business" card */
     .mobile-hide-card {
         display: none;
