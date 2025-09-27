@@ -1,17 +1,4 @@
-// Clean expandable case study functionality
-function toggleDetails(button) {
-    const card = button.closest('.case-study-card');
-    const details = card.querySelector('.case-study-details');
-    const isExpanded = details.classList.contains('expanded');
-    
-    if (isExpanded) {
-        details.classList.remove('expanded');
-        button.textContent = 'Learn More';
-    } else {
-        details.classList.add('expanded');
-        button.textContent = 'Show Less';
-    }
-}
+// Removed unused toggleDetails function - functionality is handled in ai-service.html
 
 // Page initialization
 document.addEventListener('DOMContentLoaded', function() {
@@ -19,8 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize mobile navigation
     initMobileNavigation();
     
-    // Initialize scroll animations for about page
-    initScrollAnimations();
+    // Removed unused scroll animations - no paragraph-section elements exist
     
     // Initialize hero buttons functionality
     initHeroButtons();
@@ -62,36 +48,7 @@ function initMobileNavigation() {
     }
 }
 
-// Scroll-triggered animations for about page
-function initScrollAnimations() {
-    const paragraphSections = document.querySelectorAll('.paragraph-section');
-    const scrollSeparators = document.querySelectorAll('.scroll-separator');
-    
-    if (paragraphSections.length === 0) return; // Only run on about page
-    
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe paragraph sections
-    paragraphSections.forEach(section => {
-        observer.observe(section);
-    });
-    
-    // Observe scroll separators
-    scrollSeparators.forEach(separator => {
-        observer.observe(separator);
-    });
-}
+// Removed unused initScrollAnimations function - no paragraph-section elements exist
 
 // Hero buttons functionality for index page
 function initHeroButtons() {
@@ -159,20 +116,20 @@ function initHideOnScrollNavigation() {
         }, 150);
     }
     
-    // Throttle scroll events for better performance
+    // Optimized scroll event handling
     let ticking = false;
     function requestTick() {
         if (!ticking) {
             requestAnimationFrame(handleScroll);
             ticking = true;
-            setTimeout(() => { ticking = false; }, 16); // ~60fps
         }
     }
     
+    // Use passive listener for better performance
     window.addEventListener('scroll', requestTick, { passive: true });
 }
 
-// Animated tagline functionality
+// Optimized animated tagline functionality
 function initAnimatedTagline() {
     const taglineElement = document.getElementById('animated-tagline');
     
@@ -188,13 +145,20 @@ function initAnimatedTagline() {
     ];
     
     let currentIndex = 0;
+    let intervalId;
     
     function updateTagline() {
         taglineElement.textContent = taglines[currentIndex];
         currentIndex = (currentIndex + 1) % taglines.length;
     }
     
-    // Update every 3 seconds
-    setInterval(updateTagline, 3000);
+    // Start animation
+    updateTagline(); // Show first tagline immediately
+    intervalId = setInterval(updateTagline, 3000);
+    
+    // Clean up interval when page unloads
+    window.addEventListener('beforeunload', () => {
+        if (intervalId) clearInterval(intervalId);
+    });
 }
 

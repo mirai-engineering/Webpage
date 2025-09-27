@@ -47,13 +47,13 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- AI as a Service Hero Section -->
-        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important; margin-bottom: 0 !important;">
-            <div class="hero-content" style="max-width: none; width: 100%;">
-                <h1 class="hero-title" style="color: white !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;">
+        <section class="hero-section ai-hero-section">
+            <div class="hero-content ai-hero-content">
+                <h1 class="hero-title ai-hero-title">
                     <span class="hero-title-line1">AI as a Service</span>
                 </h1>
-                <p class="hero-subtitle" style="color: white !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;">At <strong>Mirai</strong>, we specialize in the AI <strong>everyone's using</strong> and the AI <strong>few companies know they need</strong>. Explore both worlds and discover what's possible for your business - and <strong>how we make it happen.</strong><p>
-                <div class="hero-cta" style="margin-top: 30px;">
+                <p class="hero-subtitle ai-hero-subtitle">At <strong>Mirai</strong>, we specialize in the AI <strong>everyone's using</strong> and the AI <strong>few companies know they need</strong>. Explore both worlds and discover what's possible for your business - and <strong>how we make it happen.</strong><p>
+                <div class="hero-cta ai-hero-cta">
                     <a href="#services" class="btn-primary">Our Services</a>
                     <a href="#lifecycle" class="btn-secondary">How do we do it?</a>
                 </div>
@@ -61,100 +61,100 @@
         </section>
 
         <!-- Services and AI Types Section with Animated Node Background -->
-        <div style="padding: 60px 20px; background: transparent; position: relative; overflow: hidden;">
+        <div class="ai-main-container">
             <!-- Animated Node Background -->
-            <div id="node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+            <div id="node-background" class="ai-node-background"></div>
             
-            <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
+            <div class="ai-content-wrapper">
                 <!-- What do we offer Title Card -->
-                <div id="services" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px;">
-                        <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2; text-align: center;">What do we offer</h2>
-                        <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin: 0;">Our comprehensive suite of AI services is designed <strong>to meet you</strong> wherever you are in your AI journey. From strategic <strong>consulting</strong> to hands-on <strong>implementation</strong> and <strong>team education</strong>, we provide the expertise and support you need to successfully integrate AI into your business operations.</p>
+                <div id="services" class="ai-services-section">
+                        <h2 class="ai-section-title">What do we offer</h2>
+                        <p class="ai-section-description">Our comprehensive suite of AI services is designed <strong>to meet you</strong> wherever you are in your AI journey. From strategic <strong>consulting</strong> to hands-on <strong>implementation</strong> and <strong>team education</strong>, we provide the expertise and support you need to successfully integrate AI into your business operations.</p>
                     </div>
                     
                 <!-- Services Grid -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                <div class="ai-cards-grid">
                     <!-- Professional AI Consulting Card -->
-                    <div style="background: white; border-radius: 16px; padding: 40px 30px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); display: flex; flex-direction: column; align-items: center; text-align: center;">
-                        <div style="margin-bottom: 20px;">
-                            <span style="font-size: 2rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🧠</span>
+                    <div class="card-base card-radius-lg card-padding-lg" style="text-align: center;">
+                        <div class="ai-card-icon" style="display: flex; justify-content: center; margin-bottom: 20px;">
+                            <span class="ai-card-icon-emoji">🧠</span>
                         </div>
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.3;">Professional AI Consulting</h3>
-                        <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Expert guidance across the vast field of applied AI — beyond just LLMs. Discover innovative applications designed for your industry's specific challenges.</p>
-                        <div>
-                            <a href="contact.html#schedule-meeting" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">Book a consult</a>
+                        <h3 class="ai-card-title" style="text-align: center; margin-bottom: 20px;">Professional AI Consulting</h3>
+                        <p class="ai-card-description" style="text-align: center; margin-bottom: 25px;">Expert guidance across the vast field of applied AI — beyond just LLMs. Discover innovative applications designed for your industry's specific challenges.</p>
+                        <div style="display: flex; justify-content: center;">
+                            <a href="contact.html#schedule-meeting" class="ai-card-button">Book a consult</a>
                         </div>
                     </div>
                     
                     <!-- AI Implementation Card -->
-                    <div style="background: white; border-radius: 16px; padding: 40px 30px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); display: flex; flex-direction: column; align-items: center; text-align: center;">
-                        <div style="margin-bottom: 20px;">
-                            <span style="font-size: 2rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">⚙️</span>
+                    <div class="card-base card-radius-lg card-padding-lg" style="text-align: center;">
+                        <div class="ai-card-icon" style="display: flex; justify-content: center; margin-bottom: 20px;">
+                            <span class="ai-card-icon-emoji">⚙️</span>
                         </div>
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.3;">AI Implementation</h3>
-                        <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">From concept to deployment, we design and implement the right solution for you. Whether through established cloud infrastructures like AWS and GCP or fully custom builds, we make AI work seamlessly for your business.</p>
-                        <div>
-                            <a href="#lifecycle" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);">How does it work</a>
+                        <h3 class="ai-card-title" style="text-align: center; margin-bottom: 20px;">AI Implementation</h3>
+                        <p class="ai-card-description" style="text-align: center; margin-bottom: 25px;">From concept to deployment, we design and implement the right solution for you. Whether through established cloud infrastructures like AWS and GCP or fully custom builds, we make AI work seamlessly for your business.</p>
+                        <div style="display: flex; justify-content: center;">
+                            <a href="#lifecycle" class="ai-card-button">How does it work</a>
                         </div>
                     </div>
                     
                     <!-- Comprehensive AI Workshops Card -->
-                    <div style="background: white; border-radius: 16px; padding: 40px 30px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); display: flex; flex-direction: column; align-items: center; text-align: center;">
-                        <div style="margin-bottom: 20px;">
-                            <span style="font-size: 2rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🎓</span>
+                    <div class="card-base card-radius-lg card-padding-lg" style="text-align: center;">
+                        <div class="ai-card-icon" style="display: flex; justify-content: center; margin-bottom: 20px;">
+                            <span class="ai-card-icon-emoji">🎓</span>
                         </div>
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.3;">Comprehensive AI Workshops</h3>
-                        <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">From fundamentals to advanced applications, our workshops empower your team with practical knowledge. Perfect for beginners and advanced professionals alike.</p>
-                        <div>
-                            <button onclick="openWorkshopModal()" class="workshop-outline-btn" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3); border: none; cursor: pointer;">Workshop outline</button>
+                        <h3 class="ai-card-title" style="text-align: center; margin-bottom: 20px;">Comprehensive AI Workshops</h3>
+                        <p class="ai-card-description" style="text-align: center; margin-bottom: 25px;">From fundamentals to advanced applications, our workshops empower your team with practical knowledge. Perfect for beginners and advanced professionals alike.</p>
+                        <div style="display: flex; justify-content: center;">
+                            <button onclick="openWorkshopModal()" class="workshop-outline-btn ai-card-button" style="border: none; cursor: pointer;">Workshop outline</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- What Kind of AI Title Card -->
-                <div id="applications" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px;">
-                        <h2 class="intro-title centered-title" style="color: var(--gray-900) !important; background: var(--gradient-primary) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; text-shadow: none !important; margin: 0 0 20px 0 !important; font-size: 2.2rem !important; font-weight: 700 !important; line-height: 1.2 !important;">The AI You Know vs. The AI That Knows Your Industry</h2>
-                        <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin: 0 0 20px 0;">There's the AI <strong>making headlines</strong> in the news - and there's the AI <strong>quietly transforming engineering and business operations</strong> behind the scenes. <strong>Both are powerful</strong>, but they solve completely different challenges. Understanding when you need the former -<strong>Generative AI</strong>- versus the latter -<strong>Applied Engineering AI</strong>- is crucial for choosing the right solution for <strong>your specific business</strong> needs.
+                <div id="applications" class="ai-services-section">
+                        <h2 class="ai-section-title">The AI You Know vs. The AI That Knows Your Industry</h2>
+                        <p class="ai-section-description">There's the AI <strong>making headlines</strong> in the news - and there's the AI <strong>quietly transforming engineering and business operations</strong> behind the scenes. <strong>Both are powerful</strong>, but they solve completely different challenges. Understanding when you need the former -<strong>Generative AI</strong>- versus the latter -<strong>Applied Engineering AI</strong>- is crucial for choosing the right solution for <strong>your specific business</strong> needs.
                             If this distinction is new to you, here's a link to our blog post:</p>
                         <div style="text-align: center;">
-                            <a href="blog.html" style="display: inline-block; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3); margin-bottom: 20px;">But... What is AI?</a>
+                            <a href="blog.html" class="ai-card-button" style="margin-bottom: 20px;">But... What is AI?</a>
                         </div>
                     </div>
 
                 <!-- Generative AI Main Card -->
-                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px;">
-                        <h3 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">Generative AI: Creating the future</h3>
-                        <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 30px;">This is the AI making headlines - <strong>intelligent agents, stunning visuals, and automated content creation</strong>. It's transforming how businesses communicate, innovate, and scale their operations. Powerful and versatile, it's the creative force behind tomorrow's digital experiences. <strong>Grab some inspiration from some of our favorite examples!</strong></p>
+                <div class="ai-services-section">
+                        <h3 class="ai-section-title">Generative AI: Creating the future</h3>
+                        <p class="ai-section-description" style="margin-bottom: 30px;">This is the AI making headlines - <strong>intelligent agents, stunning visuals, and automated content creation</strong>. It's transforming how businesses communicate, innovate, and scale their operations. Powerful and versatile, it's the creative force behind tomorrow's digital experiences. <strong>Grab some inspiration from some of our favorite examples!</strong></p>
                         <div style="text-align: center;">
                             <div style="width: 100%; height: 160px; overflow: hidden; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: #f8f9fa;">
-                                <img src="assets/images/aiaas/face diffusion.png" alt="Face Diffusion Model - Advanced AI image generation technology" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                <img src="assets/images/aiaas/face diffusion.png" alt="Face Diffusion Model - Advanced AI image generation technology" class="ai-content-image">
                             </div>
                         </div>
                     </div>
                     
                 <!-- 2x2 Grid Layout for Cards 2, 3, 4, 5 -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px;">
+                <div class="ai-2x2-grid">
                         <!-- AI Agents & Automation Card -->
-                        <div style="background: white; border-radius: 16px; padding: 40px 30px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
-                            <h4 style="font-size: 1.8rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: flex; align-items: center; gap: 10px;">AI Agents & Automation <span style="font-size: 2.2rem; color: #6B46C1;">🤖</span></h4>
-                            <div style="width: 100%; height: 2px; background: var(--gradient-primary); margin-bottom: 25px; border-radius: 1px;"></div>
+                        <div class="card-base-large card-radius-lg card-padding-lg">
+                            <h4 class="ai-section-header gradient-text">AI Agents & Automation <span class="ai-section-emoji">🤖</span></h4>
+                            <div class="section-divider ai-section-divider"></div>
                             
                             <!-- Learn More Button -->
-                            <div style="text-align: center; margin-bottom: 20px;">
-                                <button onclick="toggleDetails('ai-agents')" style="background: var(--gradient-primary); color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3); display: flex; align-items: center; gap: 8px; margin: 0 auto;">
+                            <div class="ai-learn-more-container">
+                                <button onclick="toggleDetails('ai-agents')" class="btn-base ai-learn-more-button">
                                     <span>Learn More</span>
-                                    <span id="ai-agents-icon" style="transition: transform 0.3s ease;">▼</span>
+                                    <span id="ai-agents-icon" class="ai-toggle-icon">▼</span>
                                 </button>
                             </div>
                             
                             <!-- Expandable Content -->
-                            <div id="ai-agents-details" style="display: none; margin-bottom: 25px;">
-                                <div style="display: flex; flex-direction: column; gap: 20px;">
-                                    <div>
-                                        <p style="color: var(--gray-700); line-height: 1.6; margin: 0;"><strong style="color: var(--gray-900);">• HR Automation</strong><br>AI agents handle employee onboarding/offboarding by automatically generating contracts, provisioning accounts, and processing exit checklists.</p>
+                            <div id="ai-agents-details" class="ai-expandable-content">
+                                <div class="ai-content-grid">
+                                    <div class="ai-content-item">
+                                        <p class="ai-content-text"><strong class="ai-content-strong">• HR Automation</strong><br>AI agents handle employee onboarding/offboarding by automatically generating contracts, provisioning accounts, and processing exit checklists.</p>
                                     </div>
-                                    <div>
-                                        <p style="color: var(--gray-700); line-height: 1.6; margin: 0;"><strong style="color: var(--gray-900);">• Customer Service Desk</strong><br>Deploy agents that autonomously triage tickets, resolve common issues, and escalate only when needed.</p>
+                                    <div class="ai-content-item">
+                                        <p class="ai-content-text"><strong class="ai-content-strong">• Customer Service Desk</strong><br>Deploy agents that autonomously triage tickets, resolve common issues, and escalate only when needed.</p>
                                     </div>
                                 </div>
                             </div>

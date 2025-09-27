@@ -1,41 +1,31 @@
 // components.js - Dynamic Component Loader
 class ComponentLoader {
     static async loadComponent(containerId, htmlFile) {
-        console.log(`Attempting to load ${htmlFile} into ${containerId}`);
-        
         try {
             const response = await fetch(htmlFile);
-            console.log(`Fetch response status: ${response.status}`);
             
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             
             const html = await response.text();
-            console.log(`Successfully loaded ${htmlFile}, content length: ${html.length}`);
             
             const container = document.getElementById(containerId);
             if (container) {
                 container.innerHTML = html;
-                console.log(`Successfully injected content into ${containerId}`);
                 // Re-initialize any scripts that need to run after content loads
                 this.initializeScripts();
-            } else {
-                console.warn(`Container with id '${containerId}' not found`);
             }
         } catch (error) {
-            console.error(`Failed to load component ${htmlFile}:`, error);
             // Fallback: use embedded footer content
             this.loadEmbeddedFooter(containerId);
         }
     }
     
     static loadEmbeddedFooter(containerId) {
-        console.log('Loading embedded footer as fallback...');
         const container = document.getElementById(containerId);
         if (container) {
             container.innerHTML = this.getEmbeddedFooterHTML();
-            console.log('Embedded footer loaded successfully');
             this.initializeScripts();
         }
     }
