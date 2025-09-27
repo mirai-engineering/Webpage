@@ -105,6 +105,12 @@ class MobileApp {
         
         // Debounced resize handler
         this.setupResizeHandler();
+        
+        // Preload critical resources
+        this.preloadCriticalResources();
+        
+        // Optimize touch events
+        this.optimizeTouchEvents();
     }
     
     setupLazyLoading() {
@@ -165,6 +171,37 @@ class MobileApp {
         if (window.innerWidth > 768) {
             this.closeMobileMenu();
         }
+    }
+    
+    preloadCriticalResources() {
+        // Preload critical CSS and fonts
+        const criticalResources = [
+            'styles-mobile.css',
+            'https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'
+        ];
+        
+        criticalResources.forEach(resource => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'style';
+            link.href = resource;
+            document.head.appendChild(link);
+        });
+    }
+    
+    optimizeTouchEvents() {
+        // Add touch-action CSS for better touch performance
+        const style = document.createElement('style');
+        style.textContent = `
+            * {
+                touch-action: manipulation;
+            }
+            .btn, .mobile-menu-link, .hamburger {
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: transparent;
+            }
+        `;
+        document.head.appendChild(style);
     }
     
     setupScrollOptimizations() {
