@@ -133,6 +133,58 @@ body {
     display: none;
 }
 
+/* ========================================
+   MOBILE FLASH PREVENTION
+   ======================================== */
+
+/* Hide desktop content on mobile devices immediately */
+@media (max-width: 768px) {
+    /* Hide desktop navigation */
+    .navigation {
+        display: none !important;
+    }
+    
+    /* Hide desktop main content */
+    .main-content {
+        display: none !important;
+    }
+    
+    /* Hide desktop footer */
+    #footer-container {
+        display: none !important;
+    }
+    
+    /* Show mobile redirect message with animation */
+    body::before {
+        content: "🚀 Loading mobile version...";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(135deg, #6b46c1 0%, #4c1d95 100%);
+        color: white;
+        padding: 24px 32px;
+        border-radius: 12px;
+        font-family: 'Figtree', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        z-index: 9999;
+        box-shadow: 0 8px 32px rgba(107, 70, 193, 0.3);
+        animation: mobileRedirectPulse 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes mobileRedirectPulse {
+        0%, 100% { 
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+        50% { 
+            transform: translate(-50%, -50%) scale(1.05);
+            opacity: 0.8;
+        }
+    }
+}
+
 .nav-menu {
     display: flex;
     list-style: none;

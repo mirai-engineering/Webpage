@@ -129,16 +129,58 @@ class DeviceDetector {
     }
 }
 
-// Initialize device detection with safety measures
+// Initialize device detection immediately for mobile users
+(function() {
+    // Check if we're on mobile immediately (before DOM loads)
+    const isMobile = (() => {
+        const userAgent = navigator.userAgent.toLowerCase();
+        const mobileKeywords = ['mobile', 'android', 'iphone', 'ipad', 'ipod', 'blackberry', 'windows phone', 'opera mini'];
+        const isMobileUA = mobileKeywords.some(keyword => userAgent.includes(keyword));
+        const isMobileScreen = window.innerWidth <= 768;
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        return isMobileUA || (isMobileScreen && isTouchDevice);
+    })();
+    
+    // If mobile, redirect immediately
+    if (isMobile && !window.location.pathname.includes('/mobile/')) {
+        const currentPath = window.location.pathname;
+        const pageMap = {
+            '/index.html': '/mobile/index.html',
+            '/about.html': '/mobile/about.html',
+            '/ai-service.html': '/mobile/ai-service.html',
+            '/industries.html': '/mobile/industries.html',
+            '/contact.html': '/mobile/contact.html',
+            '/ai-tech-stack.html': '/mobile/ai-service.html',
+            '/blog.html': '/mobile/contact.html'
+        };
+        const mobilePath = pageMap[currentPath] || '/mobile/index.html';
+        window.location.href = mobilePath;
+        return; // Exit early for mobile users
+    }
+})();
+
+// Initialize device detection with safety measures for desktop users
 document.addEventListener('DOMContentLoaded', () => {
-    // Add small delay to ensure page is fully loaded
-    setTimeout(() => {
-        try {
-            new DeviceDetector();
-        } catch (error) {
-            console.warn('Device detection failed, staying on current version:', error);
-        }
-    }, 100);
+    // Only run for desktop users or if we're already on mobile
+    if (window.location.pathname.includes('/mobile/')) {
+        // We're on mobile, initialize mobile detection
+        setTimeout(() => {
+            try {
+                new DeviceDetector();
+            } catch (error) {
+                console.warn('Mobile device detection failed:', error);
+            }
+        }, 50);
+    } else {
+        // We're on desktop, initialize desktop detection
+        setTimeout(() => {
+            try {
+                new DeviceDetector();
+            } catch (error) {
+                console.warn('Desktop device detection failed:', error);
+            }
+        }, 100);
+    }
 });
 
 // Handle window resize with throttling
