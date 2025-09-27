@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mirai Engineering Mobile</title>
+    <meta name="description" content="Get in touch with Mirai Engineering. Schedule a consultation or learn more about our AI solutions.">
+    <link rel="icon" type="image/png" href="../assets/images/logos/logo-white-background.png">
+    <link rel="stylesheet" href="styles-mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a href="index.html" class="mobile-logo">MIRAI</a>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <a href="about.html" class="mobile-menu-link">Who We Are</a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="ai-service.html" class="mobile-menu-link">AI as a Service</a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="industries.html" class="mobile-menu-link">Case Studies</a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="contact.html" class="mobile-menu-link active">Get in Touch</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Mobile Hero Section -->
+    <section class="hero-mobile" style="min-height: 60vh; padding: 100px 0 40px;">
+        <div class="container">
+            <h1 class="hero-title-mobile">Get in Touch</h1>
+            <p class="hero-subtitle-mobile">Ready to transform your business with AI? Let's start the conversation.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section-mobile">
+        <div class="container">
+            <div class="form-mobile">
+                <h2 style="margin-bottom: 24px; text-align: center;">Send us a message</h2>
+                
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company" class="form-label">Company</label>
+                        <input type="text" id="company" name="company" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service" class="form-label">Service Interest</label>
+                        <select id="service" name="service" class="form-input">
+                            <option value="">Select a service</option>
+                            <option value="consulting">AI Consulting</option>
+                            <option value="implementation">AI Implementation</option>
+                            <option value="workshops">AI Workshops</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us about your project and how we can help..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="section-mobile" style="background: #f9fafb;">
+        <div class="container">
+            <h2 class="section-title-mobile">Contact Information</h2>
+            
+            <div class="grid-mobile">
+                <div class="card">
+                    <h3 class="card-title">📧 Email</h3>
+                    <p class="card-description">Get in touch with our team</p>
+                    <a href="mailto:contact@mirai-engineering.com" class="btn btn-secondary btn-full">contact@mirai-engineering.com</a>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">📱 Phone</h3>
+                    <p class="card-description">Call us directly</p>
+                    <a href="tel:+491792122655" class="btn btn-secondary btn-full">+49 179 2122655</a>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">📍 Location</h3>
+                    <p class="card-description">Our office</p>
+                    <p style="color: #6b7280; font-size: 0.9rem;">Ahtri tn 12, 15551 Tallinn, Estonia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions Section -->
+    <section class="section-mobile">
+        <div class="container">
+            <h2 class="section-title-mobile">Quick Actions</h2>
+            
+            <div class="grid-mobile">
+                <div class="card">
+                    <h3 class="card-title">📅 Schedule a Call</h3>
+                    <p class="card-description">Book a free 30-minute consultation to discuss your AI needs.</p>
+                    <a href="mailto:contact@mirai-engineering.com?subject=Schedule Consultation" class="btn btn-primary btn-full">Schedule Now</a>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">📋 Get a Quote</h3>
+                    <p class="card-description">Request a personalized quote for your AI project.</p>
+                    <a href="mailto:contact@mirai-engineering.com?subject=Project Quote Request" class="btn btn-primary btn-full">Request Quote</a>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">💼 Case Studies</h3>
+                    <p class="card-description">See how we've helped other businesses with AI solutions.</p>
+                    <a href="industries.html" class="btn btn-secondary btn-full">View Cases</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Footer -->
+    <footer class="footer-mobile">
+        <div class="container">
+            <p>&copy; 2025 Mirai Engineering OÜ. All rights reserved.</p>
+            <p style="margin-top: 8px;">
+                <a href="mailto:contact@mirai-engineering.com">contact@mirai-engineering.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script-mobile.js"></script>
+</body>
+</html>
