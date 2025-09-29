@@ -1016,9 +1016,15 @@ body {
         line-height: 1;
     }
     
-    .contact-text {
-        font-size: 0.9rem;
-    }
+.contact-text {
+    font-size: 0.9rem;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: #ffffff;
+    margin-right: 8px;
+}
     
     .footer-tagline {
         font-size: 1.25rem;
@@ -3368,7 +3374,7 @@ body {
 
 .footer-tagline {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: normal;
     margin: 0;
     background: linear-gradient(45deg, #ffffff, #a78bfa, #60a5fa, #ffffff);
     background-size: 300% 300%;
