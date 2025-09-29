@@ -84,8 +84,12 @@ p {
 .mobile-logo {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #6b46c1;
+    color: #000000;
     text-decoration: none;
+}
+
+.mobile-logo .ai-highlight {
+    color: #6b46c1;
 }
 
 .hamburger {
@@ -168,7 +172,7 @@ p {
 
 /* Mobile Hero Section */
 .hero-mobile {
-    background: linear-gradient(rgba(107, 70, 193, 0.8), rgba(76, 29, 149, 0.8)), url('../assets/images/hero/main-background/clouds-clean.png');
+    background: url('../assets/images/hero/main-background/clouds-clean.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
