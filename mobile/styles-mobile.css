@@ -178,6 +178,7 @@ p {
     background-repeat: no-repeat;
     color: #ffffff;
     padding: 40px 0 40px;
+    margin-top: 0.5cm;
     text-align: center;
     min-height: 60vh;
     display: flex;
