@@ -1020,10 +1020,28 @@ body {
     font-size: 0.9rem;
 }
 
-.contact-label {
+.footer-contact .contact-label {
     font-weight: 600;
     color: #ffffff;
-    margin-right: 8px;
+    margin-right: 12px;
+    min-width: 80px;
+    display: inline-block;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.footer-contact .contact-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    display: inline-block;
+}
+
+.footer-contact .contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 0;
 }
     
     .footer-tagline {

@@ -322,6 +322,17 @@
             padding: 0 !important;
         }
         
+        .case-study-details {
+            display: none;
+            margin-top: var(--space-lg);
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(107, 70, 193, 0.1);
+        }
+        
+        .case-study-details.expanded {
+            display: block !important;
+        }
+        
     </style>
 </head>
 <body>
@@ -921,7 +932,32 @@
         // Initialize the animated background for case studies
         document.addEventListener('DOMContentLoaded', function() {
             const caseStudiesNodeBackground = new AnimatedNodeBackground('case-studies-node-background');
+            
+            // Initialize Learn More button functionality
+            initLearnMoreButtons();
         });
+        
+        function initLearnMoreButtons() {
+            const expandButtons = document.querySelectorAll('.expand-button');
+            
+            expandButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const caseStudyCard = this.closest('.case-study-card');
+                    const details = caseStudyCard.querySelector('.case-study-details');
+                    
+                    if (details) {
+                        // Toggle the details visibility using class-based approach
+                        if (details.classList.contains('expanded')) {
+                            details.classList.remove('expanded');
+                            this.textContent = 'Learn More';
+                        } else {
+                            details.classList.add('expanded');
+                            this.textContent = 'Show Less';
+                        }
+                    }
+                });
+            });
+        }
     </script>
 </body>
 </html>
