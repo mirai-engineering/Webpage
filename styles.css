@@ -1020,28 +1020,26 @@ body {
     font-size: 0.9rem;
 }
 
+.footer-contact .contact-item {
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
 .footer-contact .contact-label {
     font-weight: 600;
     color: #ffffff;
-    margin-right: 12px;
-    min-width: 80px;
     display: inline-block;
-    text-align: left;
-    flex-shrink: 0;
+    width: 60px;
+    font-size: 0.9rem;
+    vertical-align: top;
 }
 
 .footer-contact .contact-text {
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.9rem;
-    line-height: 1.4;
+    line-height: 1.5;
     display: inline-block;
-}
-
-.footer-contact .contact-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 12px;
-    gap: 0;
+    vertical-align: top;
 }
     
     .footer-tagline {
@@ -3361,7 +3359,7 @@ body {
 .footer-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: var(--space-4xl);
+    gap: var(--space-6xl);
     margin-bottom: var(--space-4xl);
 }
 
