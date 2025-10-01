@@ -70,16 +70,16 @@ class ComponentLoader {
             <div class="footer-contact">
                 <h3 class="footer-title">Contact Us</h3>
                 <div class="contact-item">
+                    <span class="contact-label">Delivery:</span>
+                    <span class="contact-text">Fully remote services with the possibility of real-life discovery phase</span>
+                </div>
+                <div class="contact-item">
                     <span class="contact-label">Loc.:</span>
                     <span class="contact-text">Ahtri tn 12, 15551 Tallinn, Estonia</span>
                 </div>
                 <div class="contact-item">
                     <span class="contact-label">Email:</span>
                     <span class="contact-text">contact@mirai-engineering.com</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-label">Tel.:</span>
-                    <span class="contact-text">+49 179 2122655</span>
                 </div>
             </div>
             
