@@ -1079,7 +1079,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(249, 250, 251, 0.8) 0%, rgba(243, 244, 246, 0.8) 100%);
+    background: transparent;
     z-index: 1;
 }
 
@@ -1090,7 +1090,7 @@ section {
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
     margin-bottom: var(--space-4xl);
 }
@@ -3870,7 +3870,7 @@ html {
 /* AI Content Grid */
 .ai-content-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto 30px auto;
