@@ -89,17 +89,17 @@ class DeviceDetector {
         
         // Map desktop pages to mobile pages
         const pageMap = {
-            '/index.html': '/mobile/index.html',
-            '/about.html': '/mobile/about.html',
-            '/ai-service.html': '/mobile/ai-service.html',
-            '/industries.html': '/mobile/industries.html',
-            '/contact.html': '/mobile/contact.html',
-            '/ai-tech-stack.html': '/mobile/ai-service.html', // Redirect to main service page
-            '/blog.html': '/mobile/contact.html' // Redirect to contact for now
+            '/index.html': '/mobile/index-mobile.html',
+            '/about.html': '/mobile/about-mobile.html',
+            '/ai-service.html': '/mobile/ai-service-mobile.html',
+            '/industries.html': '/mobile/industries-mobile.html',
+            '/contact.html': '/mobile/contact-mobile.html',
+            '/ai-tech-stack.html': '/mobile/ai-service-mobile.html', // Redirect to main service page
+            '/blog.html': '/mobile/contact-mobile.html' // Redirect to contact for now
         };
         
         // Default to mobile index if no mapping found
-        return baseUrl + (pageMap[currentPath] || '/mobile/index.html');
+        return baseUrl + (pageMap[currentPath] || '/mobile/index-mobile.html');
     }
     
     ensureDesktopVersion() {
@@ -145,15 +145,15 @@ class DeviceDetector {
     if (isMobile && !window.location.pathname.includes('/mobile/')) {
         const currentPath = window.location.pathname;
         const pageMap = {
-            '/index.html': '/mobile/index.html',
-            '/about.html': '/mobile/about.html',
-            '/ai-service.html': '/mobile/ai-service.html',
-            '/industries.html': '/mobile/industries.html',
-            '/contact.html': '/mobile/contact.html',
-            '/ai-tech-stack.html': '/mobile/ai-service.html',
-            '/blog.html': '/mobile/contact.html'
+            '/index.html': '/mobile/index-mobile.html',
+            '/about.html': '/mobile/about-mobile.html',
+            '/ai-service.html': '/mobile/ai-service-mobile.html',
+            '/industries.html': '/mobile/industries-mobile.html',
+            '/contact.html': '/mobile/contact-mobile.html',
+            '/ai-tech-stack.html': '/mobile/ai-service-mobile.html',
+            '/blog.html': '/mobile/contact-mobile.html'
         };
-        const mobilePath = pageMap[currentPath] || '/mobile/index.html';
+        const mobilePath = pageMap[currentPath] || '/mobile/index-mobile.html';
         window.location.href = mobilePath;
         return; // Exit early for mobile users
     }
