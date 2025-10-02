@@ -354,35 +354,61 @@ section {
 }
 
 /* ============================================
-   HERO SECTION COMPONENT
+   MODULAR HERO SECTION SYSTEM
    ============================================
    
    USAGE:
    <section class="hero-section-new">
-       <div class="bg-orbs">
-           <div class="orb orb1"></div>
-           <div class="orb orb2"></div>
-           <div class="orb orb3"></div>
+       <!-- Optional: Animated Background Elements -->
+       <div class="hero-bg-orbs">
+           <div class="orb orb-1"></div>
+           <div class="orb orb-2"></div>
+           <div class="orb orb-3"></div>
        </div>
-       <div class="grid-overlay"></div>
-       <div class="hero-content">
-           <span class="hero-tag">YOUR TAG</span>
-           <h1>Your Title <span class="highlight">Highlighted</span></h1>
-           <p class="subheadline">Your subtitle text</p>
-           <div class="cta-buttons">
-               <a href="#" class="btn btn-primary">Button 1</a>
-               <a href="#" class="btn btn-secondary">Button 2</a>
+       
+       <!-- Optional: Grid Overlay -->
+       <div class="hero-grid-overlay"></div>
+       
+       <!-- Main Content Container -->
+       <div class="hero-content-new">
+           <!-- Optional: Tag Label -->
+           <div class="hero-tag">
+               <span>YOUR TAG</span>
+           </div>
+           
+           <!-- Main Title -->
+           <h1 class="hero-headline">
+               <span class="hero-headline-line1">TITLE LINE 1</span>
+               <span class="hero-headline-line2">TITLE LINE 2</span>
+           </h1>
+           
+           <!-- Subtitle -->
+           <p class="hero-subheadline">Your subtitle text</p>
+           
+           <!-- Optional: CTA Buttons -->
+           <div class="hero-cta-buttons">
+               <a href="#" class="btn-primary-new">Button 1</a>
+               <a href="#" class="btn-secondary-new">Button 2</a>
            </div>
        </div>
    </section>
    
+   COMPONENTS:
+   - hero-section-new: Main container
+   - hero-bg-orbs: Animated background (optional)
+   - hero-grid-overlay: Grid overlay (optional)
+   - hero-content-new: Content container
+   - hero-tag: Tag label (optional)
+   - hero-headline: Main title
+   - hero-subheadline: Subtitle
+   - hero-cta-buttons: CTA buttons (optional)
+   
    CUSTOMIZATION:
    Override CSS variables in page-specific styles or via modifier classes.
-   See documentation above for all available variables.
-   
-   VARIABLES:
-   All hero variables start with --hero- prefix.
-   Spacing, colors, typography all configurable.
+   ============================================ */
+
+/* ============================================
+   MODULAR HERO SECTION - BASE CONTAINER
    ============================================ */
 
 /* Hero Container - Clean Background Only */
@@ -398,6 +424,114 @@ section {
     align-items: center; /* Back to center for proper vertical centering */
     padding: 0;
     margin: 0;
+}
+
+/* ============================================
+   OPTIONAL HERO COMPONENTS
+   ============================================ */
+
+/* Animated Background Orbs (Optional) */
+.hero-bg-orbs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-bg-orbs .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-bg-orbs .orb-1 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0.1) 50%, transparent 100%);
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hero-bg-orbs .orb-2 {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(167, 139, 250, 0.4) 0%, rgba(167, 139, 250, 0.1) 50%, transparent 100%);
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.hero-bg-orbs .orb-3 {
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(196, 181, 253, 0.3) 0%, rgba(196, 181, 253, 0.1) 50%, transparent 100%);
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+/* Grid Overlay (Optional) */
+.hero-grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Scroll Down Arrow */
+.hero-scroll-arrow {
+    position: absolute;
+    bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.scroll-arrow-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-4px);
+    }
 }
 
 /* ============================================
@@ -444,19 +578,7 @@ section {
     --hero-subtitle-spacing: 4rem;
 }
 
-/* Case Studies Section - Professional Layout */
-.case-studies-section {
-    background-image: url('assets/images/hero/main-background/clouds-clean.png') !important;
-    background-size: 120% !important; /* Zoomed out for better quality */
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important; /* Ensure background stays fixed */
-    position: relative;
-    z-index: 2;
-    padding: var(--section-spacing) 0;
-    min-height: 100vh;
-    width: 100%;
-}
+/* Case Studies Section - Professional Layout (Clouds background removed for industries.html) */
 
 /* Welcome Section Styles */
 .welcome-title {
@@ -1184,17 +1306,6 @@ section {
 
 /* Case Studies Section - Duplicate removed, using the one above */
 
-.case-studies-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.05);
-    z-index: 1;
-}
-
 .case-studies-decorative {
     position: absolute;
     top: 0;
@@ -1211,10 +1322,7 @@ section {
     z-index: 2;
 }
 
-.case-studies-section .section-title,
-.case-studies-section .section-subtitle {
-    color: var(--white);
-}
+/* White text colors removed - case studies now has white background */
 
 /* Add more vertical margin to case studies title */
 .case-studies-section .section-title {
@@ -3504,13 +3612,25 @@ html {
     background: white;
 }
 
+/* Ensure animated node background covers full section width */
+.case-studies-section .ai-node-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    transform: translateX(calc(-50vw + 50%));
+}
+
 /* Case Studies Content Container */
 .case-studies-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
 /* Animated Background */
@@ -3532,6 +3652,8 @@ html {
     gap: 30px;
     width: 100%;
     margin: 20px 0 30px 0;
+    position: relative;
+    z-index: 10;
     align-items: center;
 }
 
@@ -3748,7 +3870,7 @@ html {
 /* AI Content Grid */
 .ai-content-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto 30px auto;

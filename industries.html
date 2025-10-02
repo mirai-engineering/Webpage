@@ -361,26 +361,41 @@
     <!-- Main Content -->
     <main class="main-content" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
         <!-- Industries Hero Section -->
-        <section class="hero-section" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background-attachment: fixed !important; margin-bottom: 0 !important;">
-            <div class="hero-content" style="max-width: none; width: 100%;">
-                <h1 class="hero-title">
-                    <span class="hero-title-line1">Industries &</span>
-                    <span class="hero-title-line2">Case Studies</span>
+        <section class="hero-section-new">
+            <!-- Hero Content -->
+            <div class="hero-content-new">
+                <div class="hero-tag">
+                    <span>PROVEN RESULTS</span>
+                </div>
+                
+                <h1 class="hero-headline">
+                    <span class="hero-headline-line1">Industries &</span>
+                    <span class="hero-headline-line2">Case Studies</span>
                 </h1>
-                <p class="hero-subtitle">At Mirai Engineering, we let our <strong>results speak for themselves</strong>. Our case studies demonstrate <strong>technical versatility</strong> and <strong>unwavering commitment</strong> to transforming <strong>complex challenges into innovative solutions</strong>.</p>
+                
+                <p class="hero-subheadline">At Mirai Engineering, we let our <strong>results speak for themselves</strong>. Our case studies demonstrate <strong>technical versatility</strong> and <strong>unwavering commitment</strong> to transforming <strong>complex challenges into innovative solutions</strong>.</p>
+            </div>
+            
+            <!-- Scroll Down Arrow -->
+            <div class="hero-scroll-arrow">
+                <a href="#case-studies-content" class="scroll-arrow-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4V16M7 11L12 16L17 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </section>
 
         <!-- Case Studies Content Section -->
-        <section class="info-section case-studies-section">
+        <section id="case-studies-content" class="info-section case-studies-section">
+            <!-- Animated Node Background for Case Studies - Full Width -->
+            <div id="case-studies-node-background" class="ai-node-background"></div>
             <div class="case-studies-container">
-                <!-- Animated Node Background for Case Studies -->
-                <div id="case-studies-node-background" class="case-studies-background"></div>
                 <div class="industries-grid">
                     <!-- Title Card -->
                     <div class="case-study-card title-card">
                         <h2 class="title-card-heading">What Mirai has delivered</h2>
-                        <p class="title-card-description">Real-world AI implementations that drive measurable business results across diverse industries. From <strong>engineering</strong> to <strong>business operations</strong>, or <strong>medicine</strong> to <strong>financial markets</strong> - we've got you covered.</p>
+                        <p class="title-card-description" style="text-align: justify;">Real-world AI implementations that drive measurable business results across diverse industries. From <strong>engineering</strong> to <strong>business operations</strong>, or <strong>medicine</strong> to <strong>financial markets</strong> - we've got you covered.</p>
                     </div>
                     
                     <div class="case-study-card" id="molecular-optimization">
@@ -490,9 +505,7 @@
                         </div>
                         
                         <div class="case-study-image">
-                            <div style="width: 100%; height: 300px; overflow: hidden; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: #f8f9fa;">
-                                <img src="assets/images/case-studies/market-analysis.png" alt="Market Analysis with AI" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                            </div>
+                            <img src="assets/images/case-studies/market-analysis.png" alt="Market Analysis with AI">
                         </div>
                         
                         <div class="case-study-results">
@@ -688,13 +701,33 @@
 
             createNodes() {
                 const containerRect = this.container.getBoundingClientRect();
-                const nodeCount = 120; // Balanced network density for optimal visual appeal
+                const nodeCount = 300; // Ultra-dense neural network for maximum visual impact
                 
                 for (let i = 0; i < nodeCount; i++) {
+                    // Edge-weighted distribution: 70% bias towards edges
+                    const edgeBias = 0.7;
+                    const isEdge = Math.random() < edgeBias;
+                    const edgeZone = 0.35; // 35% of container width/height for edge zones (increased for taller cards)
+                    
+                    let x, y;
+                    if (isEdge) {
+                        // Place in edge zones (outer 35% of container)
+                        x = Math.random() < 0.5 ? 
+                            Math.random() * edgeZone * containerRect.width : 
+                            containerRect.width - Math.random() * edgeZone * containerRect.width;
+                        y = Math.random() < 0.5 ? 
+                            Math.random() * edgeZone * containerRect.height : 
+                            containerRect.height - Math.random() * edgeZone * containerRect.height;
+                    } else {
+                        // Place anywhere (including center for balance)
+                        x = Math.random() * containerRect.width;
+                        y = Math.random() * containerRect.height;
+                    }
+                    
                     const node = {
                         id: i,
-                        x: Math.random() * containerRect.width,
-                        y: Math.random() * containerRect.height,
+                        x: x,
+                        y: y,
                         vx: (Math.random() - 0.5) * 0.1, // Much slower for dense network
                         vy: (Math.random() - 0.5) * 0.1,
                         size: Math.random() * 2 + 3, // Size between 3-5px (smaller for density)

@@ -44,16 +44,33 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- AI as a Service Hero Section -->
-        <section class="hero-section ai-hero-section">
-            <div class="hero-content ai-hero-content">
-                <h1 class="hero-title ai-hero-title">
-                    <span class="hero-title-line1">AI as a Service</span>
-                </h1>
-                <p class="hero-subtitle ai-hero-subtitle">At <strong>Mirai</strong>, we specialize in the AI <strong>everyone's using</strong> and the AI <strong>few companies know they need</strong>. Explore both worlds and discover what's possible for your business - and <strong>how we make it happen.</strong><p>
-                <div class="hero-cta ai-hero-cta">
-                    <a href="#services" class="btn-primary">Our Services</a>
-                    <a href="#lifecycle" class="btn-secondary">How do we do it?</a>
+        <section class="hero-section-new">
+            <!-- Hero Content -->
+            <div class="hero-content-new">
+                <div class="hero-tag">
+                    <span>AI SOLUTIONS</span>
                 </div>
+                
+                <h1 class="hero-headline">
+                    <span class="hero-headline-line1">AI as a Service</span>
+                </h1>
+                
+                <p class="hero-subheadline">At <strong>Mirai</strong>, we specialize in the AI <strong>everyone's using</strong> and the AI <strong>few companies know they need</strong>. Explore both worlds and discover what's possible for your business - and <strong>how we make it happen.</strong></p>
+                
+                <!-- Hero Buttons -->
+                <div class="hero-cta-buttons">
+                    <a href="#services" class="btn-primary-new">Our Services</a>
+                    <a href="#lifecycle" class="btn-secondary-new">How do we do it?</a>
+                </div>
+            </div>
+            
+            <!-- Scroll Down Arrow -->
+            <div class="hero-scroll-arrow">
+                <a href="#services" class="scroll-arrow-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4V16M7 11L12 16L17 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </section>
 
@@ -77,7 +94,7 @@
                             <span class="ai-card-icon-emoji">🧠</span>
                         </div>
                         <h3 class="ai-card-title" style="text-align: center; margin-bottom: 20px;">Professional AI Consulting</h3>
-                        <p class="ai-card-description" style="text-align: center; margin-bottom: 25px;">The question <strong>"Can't an AI just solve this?"</strong> has been asked too many times, returning very vague answers <strong>—because its a vage question—</strong>. Our experience has taught us that the more <strong>the client knows about AI and its applications</strong>, the better the final outcome of our collaborations. Our consulting services will help you <strong>cut through the noise</strong>.</p>
+                        <p class="ai-card-description" style="text-align: justify; margin-bottom: 25px;">The question <strong>"Can't an AI just solve this?"</strong> has been asked too many times, returning very vague answers <strong>—because its a vage question—</strong>. Our experience has taught us that the more <strong>the client knows about AI and its applications</strong>, the better the final outcome of our collaborations. Our consulting services will help you <strong>cut through the noise</strong>.</p>
                         <div style="display: flex; justify-content: center;">
                             <a href="contact.html#schedule-meeting" class="ai-card-button">Discover Real AI Applications</a>
                         </div>
@@ -89,7 +106,7 @@
                             <span class="ai-card-icon-emoji">⚙️</span>
                         </div>
                         <h3 class="ai-card-title" style="text-align: center; margin-bottom: 20px;">AI Implementation</h3>
-                        <p class="ai-card-description" style="text-align: center; margin-bottom: 25px;">From <strong>initial draft</strong> to <strong>deployment</strong>, we design and implement the right solution for you. By following our <strong>"Real-World AI Lifecycle"</strong> process, our solutions are implemented in a way that is <strong>tailored to your unique business needs</strong>. Whether through established cloud infrastructures like AWS and GCP or fully custom builds, we make AI work <strong>seamlessly ans sustainably</strong>.</p>
+                        <p class="ai-card-description" style="text-align: justify; margin-bottom: 25px;">From <strong>initial draft</strong> to <strong>deployment</strong>, we design and implement the right solution for you. By following our <strong>"Real-World AI Lifecycle"</strong> process, our solutions are implemented in a way that is <strong>tailored to your unique business needs</strong>. Whether through established cloud infrastructures like AWS and GCP or fully custom builds, we make AI work <strong>seamlessly ans sustainably</strong>.</p>
                         <div style="display: flex; justify-content: center;">
                             <a href="#lifecycle" class="ai-card-button">Real-World AI Lifecycle</a>
                         </div>
@@ -101,7 +118,7 @@
                             <span class="ai-card-icon-emoji">🎓</span>
                         </div>
                         <h3 class="ai-card-title" style="text-align: center; margin-bottom: 20px;">Comprehensive AI Workshops</h3>
-                        <p class="ai-card-description" style="text-align: center; margin-bottom: 25px;">From <strong>fundamentals</strong> to <strong>advanced applications</strong>, our workshops empower your team with practical knowledge. Perfect for <strong>beginners and advanced professionals</strong> alike. Like everything we do, we dedicate a tremendous amount of time to make each workshop <strong>unique and tailored to your use case</strong>, and all models will <strong>belong to you.</strong></p>
+                        <p class="ai-card-description" style="text-align: justify; margin-bottom: 25px;">From <strong>fundamentals</strong> to <strong>advanced applications</strong>, our workshops empower your team with practical knowledge. Perfect for <strong>beginners and advanced professionals</strong> alike. Like everything we do, we dedicate a tremendous amount of time to make each workshop <strong>unique and tailored to your use case</strong>, and all models will <strong>belong to you.</strong></p>
                         <div style="display: flex; justify-content: center;">
                             <button onclick="openWorkshopModal()" class="workshop-outline-btn ai-card-button" style="border: none; cursor: pointer;">View Workshops</button>
                         </div>
@@ -170,7 +187,7 @@
 
                         <!-- Automated Reporting & Moderation Card -->
                         <div style="background: white; border-radius: 16px; padding: 40px 30px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
-                            <h4 style="font-size: 1.8rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: flex; align-items: center; gap: 10px;">Automated Reporting & Moderation <span style="font-size: 2.2rem; color: #6B46C1;">📊</span></h4>
+                            <h4 style="font-size: 1.8rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: flex; align-items: center; gap: 10px;">Automated Reporting & Moderation <span style="font-size: 2.2rem; color: #6B46C1;">📑</span></h4>
                             <div style="width: 100%; height: 2px; background: var(--gradient-primary); margin-bottom: 25px; border-radius: 1px;"></div>
                             
                             <!-- Learn More Button -->
