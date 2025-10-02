@@ -41,7 +41,54 @@
     --font-primary: 'Figtree', system-ui, -apple-system, sans-serif;
     --font-secondary: 'SF Pro Display', system-ui, sans-serif;
 
+    /* Spacing System - Single Source of Truth */
+    --section-spacing: 120px;      /* Space between major sections */
+    --content-spacing-lg: 60px;    /* Large content gaps */
+    --content-spacing-md: 40px;    /* Medium content gaps */
+    --content-spacing-sm: 24px;    /* Small content gaps */
+    --content-spacing-xs: 16px;    /* Tiny content gaps */
+    
+    /* ============================================
+       HERO COMPONENT VARIABLES
+       ============================================ */
+    
     /* Spacing */
+    --hero-padding-vertical: 1px;     /* Small padding for flexbox centering */
+    --hero-padding-horizontal: 4rem;    /* Left and right padding */
+    --hero-content-max-width: 1400px;   /* Maximum content width */
+    
+    /* Content Spacing */
+    --hero-tag-spacing: 2rem;           /* Space below tag */
+    --hero-title-spacing: 1.5rem;       /* Space below title */
+    --hero-subtitle-spacing: 3rem;      /* Space below subtitle */
+    
+    /* Typography - Sizes */
+    --hero-tag-size: 0.85rem;
+    --hero-title-size: 4.5rem;
+    --hero-subtitle-size: 1.3rem;
+    
+    /* Typography - Weights */
+    --hero-tag-weight: 500;
+    --hero-title-weight: 700;
+    --hero-subtitle-weight: 400;
+    
+    /* Typography - Colors */
+    --hero-tag-color: #c4b5fd;
+    --hero-title-color: #ffffff;
+    --hero-title-highlight-start: #7c3aed;
+    --hero-title-highlight-end: #a855f7;
+    --hero-subtitle-color: #ffffff;     /* Pure white for maximum contrast */
+    
+    /* Background */
+    --hero-bg-gradient-start: rgba(15, 12, 41, 0.95);
+    --hero-bg-gradient-mid: rgba(26, 19, 71, 0.95);
+    --hero-bg-gradient-end: rgba(36, 36, 62, 0.95);
+    --hero-bg-image: url('assets/images/hero/main-background/clouds-clean.png');
+    
+    /* Buttons */
+    --hero-btn-spacing: 1.5rem;         /* Gap between buttons */
+    
+    /* Legacy spacing variables for compatibility */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -128,12 +175,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Hide mobile logo text on desktop */
-.mobile-logo-text {
-    display: none;
-}
-
-/* Mobile redirect handled by separate mobile folder - no overrides needed */
 
 .nav-menu {
     display: flex;
@@ -184,9 +225,43 @@ body {
     transition: 0.3s;
 }
 
+/* ============================================
+   1. CSS VARIABLES (already defined above)
+   ============================================ */
+
+/* ============================================
+   2. RESET & BASE STYLES
+   ============================================ */
+
+/* All major sections follow this pattern */
+section {
+    padding: var(--section-spacing) 0;
+    margin: 0; /* Never use margin on sections */
+}
+
+/* ============================================
+   3. LAYOUT COMPONENTS
+   ============================================ */
+
+/* 3.1 Navigation */
+
+/* Hero is special - it needs different spacing */
+.hero-section-new {
+    padding: 0; /* Hero controls its own internal spacing */
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 /* Main Content */
 .main-content {
     margin-top: 80px;
+}
+
+/* Hero section should not be affected by main-content margin */
+.hero-section-new {
+    margin-top: 0 !important; /* Override main-content margin for hero */
 }
 
 .section {
@@ -232,6 +307,7 @@ body {
     z-index: 1;
 }
 
+/* Original hero content - for other pages */
 .hero-content {
     text-align: center;
     max-width: 4xl;
@@ -275,63 +351,180 @@ body {
     flex-wrap: wrap;
 }
 
-/* ========================================
-   HERO SECTION - NEW DESIGN (for index.html only)
-   ======================================== */
+/* ============================================
+   HERO SECTION COMPONENT
+   ============================================
+   
+   USAGE:
+   <section class="hero-section-new">
+       <div class="bg-orbs">
+           <div class="orb orb1"></div>
+           <div class="orb orb2"></div>
+           <div class="orb orb3"></div>
+       </div>
+       <div class="grid-overlay"></div>
+       <div class="hero-content">
+           <span class="hero-tag">YOUR TAG</span>
+           <h1>Your Title <span class="highlight">Highlighted</span></h1>
+           <p class="subheadline">Your subtitle text</p>
+           <div class="cta-buttons">
+               <a href="#" class="btn btn-primary">Button 1</a>
+               <a href="#" class="btn btn-secondary">Button 2</a>
+           </div>
+       </div>
+   </section>
+   
+   CUSTOMIZATION:
+   Override CSS variables in page-specific styles or via modifier classes.
+   See documentation above for all available variables.
+   
+   VARIABLES:
+   All hero variables start with --hero- prefix.
+   Spacing, colors, typography all configurable.
+   ============================================ */
 
 /* Hero Container - Clean Background Only */
-section.hero-section-new {
-    position: relative;
-    min-height: auto;
-    display: flex;
-    align-items: flex-start;
-    background-image: url('./assets/images/hero/main-background/clouds-clean.png');
+.hero-section-new {
+    min-height: 100vh;
+    background: url('assets/images/hero/main-background/clouds-clean.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    padding: 4rem 4rem 2rem 4rem;
-    margin-top: 0 !important;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Back to center for proper vertical centering */
+    padding: 0;
+    margin: 0;
+}
+
+/* ============================================
+   SECTION TRANSITION FIX
+   ============================================ */
+
+/* First section after hero needs specific handling */
+.hero-section-new + section,
+.hero-section-new + * {
+    margin-top: 0 !important; /* Only acceptable use of !important */
+    padding-top: var(--section-spacing);
+}
+
+/* ============================================
+   HERO COMPONENT - PAGE-SPECIFIC CUSTOMIZATION EXAMPLES
+   ============================================ */
+
+/* Example: About page customization */
+.hero--about {
+    --hero-title-size: 4rem;
+    --hero-padding-vertical: 50px;
+    --hero-subtitle-color: #e0e7ff;
+}
+
+/* Example: Services page customization */
+.hero--services {
+    --hero-subtitle-color: #cbd5e1;
+    --hero-bg-image: url('assets/images/hero/services-bg.jpg');
+    --hero-title-highlight-start: #3b82f6;
+    --hero-title-highlight-end: #1d4ed8;
+}
+
+/* Example: Compact variant for testing */
+.hero--compact {
+    --hero-padding-vertical: 30px;
+    --hero-title-size: 4rem;
+    --hero-subtitle-spacing: 2rem;
+}
+
+/* Example: Large variant for testing */
+.hero--large {
+    --hero-padding-vertical: 100px;
+    --hero-title-size: 5.5rem;
+    --hero-subtitle-spacing: 4rem;
+}
+
+/* Case Studies Section - Professional Layout */
+.case-studies-section {
+    background-image: url('assets/images/hero/main-background/clouds-clean.png') !important;
+    background-size: 120% !important; /* Zoomed out for better quality */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important; /* Ensure background stays fixed */
+    position: relative;
+    z-index: 2;
+    padding: var(--section-spacing) 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Welcome Section Styles */
+.welcome-title {
+    color: var(--gray-900);
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.welcome-description {
+    margin: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* No gradient overlay - just the clean background image */
 
 /* Background elements removed to avoid interference */
 
-/* Hero Content */
+/* Hero content container - symmetric padding */
 .hero-content-new {
+    width: 100%;
+    max-width: var(--hero-content-max-width);
+    margin: 0 auto;
+    padding: var(--hero-padding-vertical) var(--hero-padding-horizontal);
     position: relative;
     z-index: 10;
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
-    padding-top: 2rem;
+    /* Ensure padding is actually applied */
+    box-sizing: border-box;
 }
 
-/* Tag Label */
+/* ============================================
+   CONTENT ELEMENTS - Professional Spacing Reset
+   ============================================ */
+
+/* Reset all heading margins within hero */
+.hero-content-new h1,
+.hero-content-new h2,
+.hero-content-new p,
+.hero-content-new .hero-tag,
+.hero-content-new .hero-subheadline {
+    margin-top: 0; /* Never use top margin */
+}
+
+/* Tag label */
 .hero-tag {
-    margin-bottom: calc(0.15rem + 5px);
-}
-
-.hero-tag span {
     display: inline-block;
+    padding: 0.5rem 1.2rem;
     background: rgba(124, 58, 237, 0.15);
     border: 1px solid rgba(124, 58, 237, 0.3);
-    padding: 0.5rem 1.2rem;
     border-radius: 50px;
-    color: #c4b5fd;
-    font-size: 0.85rem;
-    font-weight: 500;
+    color: var(--hero-tag-color);
+    font-size: var(--hero-tag-size);
+    font-weight: var(--hero-tag-weight);
     letter-spacing: 0.5px;
+    margin-bottom: var(--hero-tag-spacing);
+    backdrop-filter: blur(10px);
+    margin-top: 0;
 }
 
-/* Main Headline */
-.hero-headline {
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: #ffffff;
+/* Main title */
+.hero-content-new h1 {
+    font-size: var(--hero-title-size);
+    font-weight: var(--hero-title-weight);
+    color: var(--hero-title-color);
     line-height: 1.15;
     letter-spacing: -2px;
-    margin-bottom: calc(0.15rem + 5px);
+    margin-top: 0;
+    margin-bottom: var(--hero-title-spacing);
 }
 
 .hero-headline-line1,
@@ -339,8 +532,12 @@ section.hero-section-new {
     display: block;
 }
 
+/* Title highlight (AI text) */
 .ai-highlight {
-    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    background: linear-gradient(135deg, 
+        var(--hero-title-highlight-start) 0%, 
+        var(--hero-title-highlight-end) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -348,20 +545,21 @@ section.hero-section-new {
 
 /* Subheadline */
 .hero-subheadline {
-    font-size: 1.3rem;
-    color: #ffffff !important;
+    font-size: var(--hero-subtitle-size);
+    font-weight: var(--hero-subtitle-weight);
+    color: #ffffff !important; /* Force pure white for maximum contrast */
     line-height: 1.7;
     max-width: 800px;
-    font-weight: 400;
-    margin-bottom: calc(0.3rem + 5px);
+    margin-top: 0;
+    margin-bottom: var(--hero-subtitle-spacing);
 }
 
-/* CTA Buttons */
+/* CTA Buttons container */
 .hero-cta-buttons {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 0;
-    margin-top: calc(1rem + 5px);
+    gap: var(--hero-btn-spacing);
+    margin-top: 0;
+    margin-bottom: 0; /* Last element, no bottom margin */
 }
 
 .btn-primary-new {
@@ -730,40 +928,16 @@ section.hero-section-new {
     min-height: 120px;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-    
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-    }
-    
-    .case-studies-grid {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
 
 
 
-        min-width: 28px;
-        height: 28px;
-        line-height: 1;
-    }
-    
 /* General contact text styling for non-footer uses */
 .contact-text {
     font-size: 0.9rem;
 }
-    
-    .footer-tagline {
-        font-size: 1.25rem;
-    }
+
+.footer-tagline {
+    font-size: 1.25rem;
 }
 
 /* Info Section (What is AI) */
@@ -1006,18 +1180,7 @@ section.hero-section-new {
     transform: translateY(-1px);
 }
 
-/* Case Studies Section */
-.case-studies-section {
-    background-image: url('assets/images/hero/main-background/clouds-clean.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: var(--space-6xl) 0;
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-}
+/* Case Studies Section - Duplicate removed, using the one above */
 
 .case-studies-section::before {
     content: '';
@@ -1049,6 +1212,11 @@ section.hero-section-new {
 .case-studies-section .section-title,
 .case-studies-section .section-subtitle {
     color: var(--white);
+}
+
+/* Add more vertical margin to case studies title */
+.case-studies-section .section-title {
+    margin-top: 2rem; /* Additional top margin for the title */
 }
 
 .case-studies-grid {
@@ -1480,10 +1648,7 @@ section.hero-section-new {
 }
 
 .case-studies-content {
-    background-image: url('assets/images/hero/main-background/clouds-clean.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* Background removed - using parent section background instead */
     padding: var(--space-6xl) 0;
     position: relative;
     overflow: hidden;
@@ -1492,14 +1657,8 @@ section.hero-section-new {
 }
 
 .case-studies-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.05);
-    z-index: 1;
+    /* Overlay removed - using clean background from parent section */
+    display: none;
 }
 
 .case-studies-content .container {
@@ -2333,7 +2492,7 @@ section.hero-section-new {
     font-weight: bold;
 }
 
-/* Lifecycle Bullet Points - Specific class to avoid mobile overrides */
+/* Lifecycle Bullet Points */
 .lifecycle-bullets {
     list-style: none;
     padding: 0;
@@ -3485,8 +3644,6 @@ html {
     color: white;
 }
 
-/* Mobile Responsive */
-
 /* ========================================
    UTILITY CLASSES - CONSOLIDATED PATTERNS
    ======================================== */
@@ -3875,4 +4032,3 @@ html {
 
 /* Responsive Design */
 
-/* Mobile responsive styles removed - handled by separate mobile folder */
