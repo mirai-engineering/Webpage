@@ -144,8 +144,10 @@ body {
     transform: translateY(0);
 }
 
+/* Hide header on scroll down */
 .navigation.hidden {
-    transform: translateY(-100%);
+    transform: translateY(-100%) !important;
+    transition: transform 0.3s ease !important;
 }
 
 .nav-container {
@@ -4008,9 +4010,7 @@ html {
 
 /* Removed duplicate ai-content-grid rule - using the main one above */
 
-.ai-content-item {
-    /* No specific styles needed - inherits from parent */
-}
+/* ai-content-item inherits styles from parent - no specific rules needed */
 
 .ai-content-text {
     color: var(--gray-700);
