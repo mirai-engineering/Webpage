@@ -336,10 +336,208 @@ class MobileFormHandler {
     }
 }
 
+// Lightweight Mobile Node Animation
+class MobileNodeBackground {
+    constructor(containerId) {
+        this.container = document.getElementById(containerId);
+        this.nodes = [];
+        this.connections = [];
+        this.animationId = null;
+        this.init();
+    }
+
+    init() {
+        if (!this.container) return;
+        
+        // Reduced node count for mobile performance
+        this.createNodes(40); // Much fewer nodes than desktop (120)
+        this.createConnections();
+        this.animate();
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            this.resize();
+        });
+    }
+
+    createNodes(nodeCount = 40) {
+        const containerRect = this.container.getBoundingClientRect();
+        
+        for (let i = 0; i < nodeCount; i++) {
+            const node = {
+                id: i,
+                x: Math.random() * containerRect.width,
+                y: Math.random() * containerRect.height,
+                vx: (Math.random() - 0.5) * 0.08, // Slower for mobile
+                vy: (Math.random() - 0.5) * 0.08,
+                size: Math.random() * 1.5 + 2, // Smaller nodes (2-3.5px)
+                opacity: Math.random() * 0.15 + 0.3, // More subtle (0.3-0.45)
+                pulse: Math.random() * Math.PI * 2,
+                pulseSpeed: Math.random() * 0.03 + 0.02, // Slower pulse
+                connections: []
+            };
+            this.nodes.push(node);
+        }
+    }
+
+    createConnections() {
+        this.connections = [];
+        
+        // Simplified connection strategy for mobile
+        for (let i = 0; i < this.nodes.length; i++) {
+            const node = this.nodes[i];
+            node.connections = [];
+            
+            // Connect to nearby nodes only (within 120px)
+            for (let j = i + 1; j < this.nodes.length; j++) {
+                const targetNode = this.nodes[j];
+                const distance = this.getDistance(node, targetNode);
+                
+                if (distance < 120) {
+                    const connection = {
+                        from: node,
+                        to: targetNode,
+                        opacity: Math.max(0.1, 1 - distance / 120) * 0.5,
+                        strength: Math.max(0.2, 1 - distance / 120),
+                        distance: distance
+                    };
+                    
+                    this.connections.push(connection);
+                    node.connections.push(targetNode);
+                    targetNode.connections.push(node);
+                }
+            }
+        }
+    }
+
+    getDistance(node1, node2) {
+        const dx = node1.x - node2.x;
+        const dy = node1.y - node2.y;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    updateNodes() {
+        const containerRect = this.container.getBoundingClientRect();
+        
+        this.nodes.forEach(node => {
+            // Update position
+            node.x += node.vx;
+            node.y += node.vy;
+            
+            // Bounce off edges
+            if (node.x <= 0 || node.x >= containerRect.width) {
+                node.vx *= -1;
+                node.x = Math.max(0, Math.min(containerRect.width, node.x));
+            }
+            if (node.y <= 0 || node.y >= containerRect.height) {
+                node.vy *= -1;
+                node.y = Math.max(0, Math.min(containerRect.height, node.y));
+            }
+            
+            // Update pulse
+            node.pulse += node.pulseSpeed;
+        });
+    }
+
+    updateConnections() {
+        this.connections.forEach(connection => {
+            const distance = this.getDistance(connection.from, connection.to);
+            connection.opacity = Math.max(0, 1 - distance / 150) * 0.4;
+        });
+    }
+
+    render() {
+        const containerRect = this.container.getBoundingClientRect();
+        let svg = this.container.querySelector('svg');
+        
+        if (!svg) {
+            svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.style.position = 'absolute';
+            svg.style.top = '0';
+            svg.style.left = '0';
+            svg.style.width = '100%';
+            svg.style.height = '100%';
+            svg.style.pointerEvents = 'none';
+            svg.style.zIndex = '1';
+            this.container.appendChild(svg);
+        }
+        
+        svg.setAttribute('width', containerRect.width);
+        svg.setAttribute('height', containerRect.height);
+        svg.innerHTML = '';
+        
+        // Render connections (simplified for mobile)
+        this.connections.forEach(connection => {
+            if (connection.opacity > 0.05) {
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('x1', connection.from.x);
+                line.setAttribute('y1', connection.from.y);
+                line.setAttribute('x2', connection.to.x);
+                line.setAttribute('y2', connection.to.y);
+                line.setAttribute('stroke', '#8B5CF6');
+                line.setAttribute('stroke-width', Math.max(0.3, connection.strength * 1.5));
+                line.setAttribute('opacity', connection.opacity);
+                line.setAttribute('stroke-linecap', 'round');
+                svg.appendChild(line);
+            }
+        });
+        
+        // Render nodes (simplified for mobile)
+        this.nodes.forEach(node => {
+            const pulseSize = node.size + Math.sin(node.pulse) * 0.5;
+            const nodeOpacity = node.opacity + Math.sin(node.pulse) * 0.05;
+            
+            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle.setAttribute('cx', node.x);
+            circle.setAttribute('cy', node.y);
+            circle.setAttribute('r', pulseSize);
+            circle.setAttribute('fill', '#8B5CF6');
+            circle.setAttribute('opacity', nodeOpacity);
+            svg.appendChild(circle);
+        });
+    }
+
+    animate() {
+        this.updateNodes();
+        this.updateConnections();
+        this.render();
+        this.animationId = requestAnimationFrame(() => this.animate());
+    }
+
+    resize() {
+        // Recreate nodes for new container size
+        this.nodes = [];
+        this.connections = [];
+        this.createNodes();
+        this.createConnections();
+    }
+
+    destroy() {
+        if (this.animationId) {
+            cancelAnimationFrame(this.animationId);
+        }
+    }
+}
+
 // Initialize mobile app
 document.addEventListener('DOMContentLoaded', () => {
     new MobileApp();
     new MobileFormHandler();
+    
+    // Initialize mobile node backgrounds for sections with white backgrounds
+    const mobileNodeBackgrounds = [
+        'success-stories-section', // index-mobile.html
+        'our-values-section',      // about-mobile.html  
+        'ai-types-section',        // ai-service-mobile.html
+        'contact-info-section'     // contact-mobile.html
+    ];
+    
+    mobileNodeBackgrounds.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            new MobileNodeBackground(id);
+        }
+    });
 });
 
 // Service Worker for caching (optional)
