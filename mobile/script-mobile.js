@@ -529,7 +529,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'success-stories-section', // index-mobile.html
         'our-values-section',      // about-mobile.html  
         'ai-types-section',        // ai-service-mobile.html
-        'contact-info-section'     // contact-mobile.html
+        'contact-info-section',    // contact-mobile.html
+        'welcome-section',         // index-mobile.html
+        'what-we-offer-section',   // index-mobile.html
+        'about-section',           // about-mobile.html
+        'leadership-section',      // about-mobile.html
+        'services-section',        // ai-service-mobile.html
+        'ai-lifecycle-section',    // ai-service-mobile.html
+        'contact-form-section',    // contact-mobile.html
+        'quick-actions-section',   // contact-mobile.html
+        'what-we-delivered-section' // industries-mobile.html
     ];
     
     mobileNodeBackgrounds.forEach(id => {
