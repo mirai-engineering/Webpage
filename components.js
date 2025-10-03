@@ -71,7 +71,7 @@ class ComponentLoader {
                 <h3 class="footer-title">Contact Us</h3>
                 <div class="contact-item">
                     <span class="contact-label">Delivery:</span>
-                    <span class="contact-text">Fully remote services with the possibility of real-life discovery phase</span>
+                    <span class="contact-text">Fully remote services with the possibility of meeting & working in person</span>
                 </div>
                 <div class="contact-item">
                     <span class="contact-label">Loc.:</span>

@@ -398,240 +398,330 @@
                         <p class="title-card-description" style="text-align: justify;">Real-world AI implementations that drive measurable business results across diverse industries. From <strong>engineering</strong> to <strong>business operations</strong>, or <strong>medicine</strong> to <strong>financial markets</strong> - we've got you covered.</p>
                     </div>
                     
-                    <div class="case-study-card" id="molecular-optimization">
-                        <div class="case-study-header">
-                            <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Optimization Frameworks with Artificial Neural Networks</h3>
-                        </div>
-                        <p class="case-study-description" style="color: black !important;">In <strong>optimization</strong>, we always have an objective value(s) that we want to tweak, either increase or decrease. This objective value can dependend on multiple input variables. In these use cases, we start with a <strong>parameter search space</strong>, e.g. atoms in a molecule, parts in a machine or elements in a material. Then, we define an objective, e.g.: to increase molecular stability, machine lifetime, or material stability. The problem? There is an <strong>endless combination</strong> where your scientists have to tweak the input parameters in the search space, in order to improve the desired outcome(s).</strong> With AI & ML models<strong>you can transform these processes</strong> so that your experts can skip the costly iterations & test directly the <strong>optimal solutions</strong>. Below we describe our approach where we use AI to optimize the design of new eco-friendly fuels (e-Fuels).</p>
-                        
-                        <div class="case-study-overview">
-                            <h4>Molecular Optimization</h4>
-                            <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
-                            <p>We were involved in the early days of molecular-modeling with Artificial Networks. Nowadays it is spread as "Graph Neural Networks". By training an AI model with sufficient data, you can create new molecules and predict key properties.</p>
-                            <p>In concrete: we reduced the experimental design of new e-Fuels from several weeks to seconds. Additionally, you can immerse the model into an optimization-framework that can output a tailored-made fuel that maximizes power output by using only carbon-free components in the chemical structure.</p>
-                        </div>
-                        
-                        <div class="case-study-image">
-                            <img src="assets/images/case-studies/gnn.png" alt="Graph Neural Networks for Molecular Optimization">
-                </div>
-                
-                            <div class="case-study-results">
-                                <div class="result-item">
-                                <span class="result-value">Weeks → Seconds</span>
-                                <span class="result-label">Design Time Reduction</span>
-                                </div>
-                                <div class="result-item">
-                                <span class="result-value">100%</span>
-                                <span class="result-label">Carbon-Free Optimization</span>
+                    <div class="case-study-card expandable-card" id="molecular-optimization">
+                        <!-- Collapsed View -->
+                        <div class="card-collapsed">
+                            <div class="case-study-header">
+                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Optimization Frameworks with Artificial Neural Networks</h3>
                             </div>
-                        </div>
-                        
-                        <button class="expand-button" id="learn-more-btn">Learn More</button>
-                        
-                        <div class="case-study-details">
-                            <h5>How Did We Do It?</h5>
-                            <p>We built an AI model that predicts how fast different fuels burn. To do this, we combined two sources of data:</p>
-                            <ul>
-                                <li>Real measurements from 124 fuel compounds.</li>
-                                <li>Computer simulations based on detailed chemical models.</li>
-                            </ul>
-                            <p>The AI takes into account the fuel's molecular structure, as well as conditions like pressure, temperature, and fuel-to-air ratio. With this information, it can accurately estimate burning speed — within just a few centimeters per second of the true values. Beyond prediction, the model also helps us understand why fuels behave differently. By analyzing how certain molecular groups affect burning, we can compare fuels more systematically and design new ones more efficiently. If you're curious, check out the paper below!</p>
                             
                             <div class="case-study-image">
-                                <img src="assets/images/case-studies/gnn/lbv-gnn.png" alt="Graph Neural Networks for Molecular Optimization">
-                                </div>
-                            
-                            <div class="paper-reference">
-                                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010218021002686?via%3Dihub" target="_blank" class="paper-button">Go to the Paper</a>
+                                <img src="assets/images/case-studies/gnn.png" alt="Graph Neural Networks for Molecular Optimization">
                             </div>
+                            
+                            <div class="case-study-results">
+                                <div class="result-item">
+                                    <span class="result-value">Weeks → Seconds</span>
+                                    <span class="result-label">Design Time Reduction</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-value">100%</span>
+                                    <span class="result-label">Carbon-Free Optimization</span>
+                                </div>
+                            </div>
+                            
+                            <button class="expand-button" onclick="toggleCard('molecular-optimization')">
+                                <span class="button-text">Learn More</span>
+                                <span class="button-icon">▼</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Expanded View -->
+                        <div class="card-expanded">
+                            <p class="case-study-description" style="color: black !important; text-align: justify;">In <strong>optimization</strong>, we always have an objective value(s) that we want to tweak, either increase or decrease. This objective value can dependend on multiple input variables. In these use cases, we start with a <strong>parameter search space</strong>, e.g. atoms in a molecule, parts in a machine or elements in a material. Then, we define an objective, e.g.: to increase molecular stability, machine lifetime, or material stability. The problem? There is an <strong>endless combination</strong> where your scientists have to tweak the input parameters in the search space, in order to improve the desired outcome(s). With AI & ML models you can transform these processes so that your experts can skip the costly iterations & test directly the <strong>optimal solutions</strong>. Below we describe our approach where we use AI to optimize the design of new eco-friendly fuels (e-Fuels).</p>
+                            
+                            <div class="case-study-overview">
+                                <h4>Molecular Optimization</h4>
+                                <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
+                                <p style="text-align: justify;">We were involved in the early days of molecular-modeling with Artificial Networks. Nowadays it is spread as "Graph Neural Networks". By training an AI model with sufficient data, you can create new molecules and predict key properties.</p>
+                                <p style="text-align: justify;">In concrete: we reduced the experimental design of new e-Fuels from several weeks to seconds. Additionally, you can immerse the model into an optimization-framework that can output a tailored-made fuel that maximizes power output by using only carbon-free components in the chemical structure.</p>
+                            </div>
+                            
+                            <div class="case-study-details">
+                                <h5>How Did We Do It?</h5>
+                                <p style="text-align: justify;">We built an AI model that predicts how fast different fuels burn. To do this, we combined two sources of data:</p>
+                                <ul>
+                                    <li>Real measurements from 124 fuel compounds.</li>
+                                    <li>Computer simulations based on detailed chemical models.</li>
+                                </ul>
+                                <p style="text-align: justify;">The AI takes into account the fuel's molecular structure, as well as conditions like pressure, temperature, and fuel-to-air ratio. With this information, it can accurately estimate burning speed — within just a few centimeters per second of the true values. Beyond prediction, the model also helps us understand why fuels behave differently. By analyzing how certain molecular groups affect burning, we can compare fuels more systematically and design new ones more efficiently. If you're curious, check out the paper below!</p>
+                                
+                                <div class="case-study-image">
+                                    <img src="assets/images/case-studies/gnn/lbv-gnn.png" alt="Graph Neural Networks for Molecular Optimization">
+                                </div>
+                                
+                                <div class="paper-reference">
+                                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010218021002686?via%3Dihub" target="_blank" class="paper-button">Go to the Paper</a>
+                                </div>
+                            </div>
+                            
+                            <button class="collapse-button" onclick="toggleCard('molecular-optimization')">
+                                <span class="button-text">Show Less</span>
+                                <span class="button-icon">▲</span>
+                            </button>
                         </div>
                     </div>
                     
-                    <div class="case-study-card" id="medical-imaging">
-                        <div class="case-study-header">
-                            <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Medical Imaging with Connvolutional Neural Networks</h3>
-                        </div>
-                        <p class="case-study-description" style="color: black !important;">Doctors can spend <strong>over 6 months</strong> tracing vascular structures in high-resolution 3D HiP-CT scans. Therefore, automating this tracing process with <strong>machine learning</strong>, can save valuable time & resources, enabling doctors and researchers to map cellular relationships across human organs in a fraction of the time. This project addresses challenges in generalization due to anatomical variability and changing imaging quality.</p>
-                        
-                        <div class="case-study-overview">
-                            <h4>Kidney Vasculature Segmentation with U-Net</h4>
-                            <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
-                            <p>Our deep learning model uses a convolutional neural network, applying U-Net architecture to automatically segment kidney vasculature from high-resolution 3D HiP-CT scans. The model detects vessels, closing gaps often left by manual annotation, thereby supporting efforts like the Vascular Common Coordinate Framework (VCCF) & Human Reference Atlas (HRA).</p>
-                            <p>As mentioned before, manual segmentation of vascular structures can take months for a single dataset—due to the complexity and high resolution. With our AI model, we achieve ~97% accuracy, reducing segmentation time from severalmonths to seconds per dataset.</p>
-                        </div>
-                        
-                        <div class="case-study-image">
-                            <img src="assets/images/case-studies/cv.png" alt="Computer Vision for Medical Image Segmentation">
-                        </div>
-                        
+                    <div class="case-study-card expandable-card" id="medical-imaging">
+                        <!-- Collapsed View -->
+                        <div class="card-collapsed">
+                            <div class="case-study-header">
+                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Medical Imaging with Connvolutional Neural Networks</h3>
+                            </div>
+                            
+                            <div class="case-study-image">
+                                <img src="assets/images/case-studies/cv.png" alt="Computer Vision for Medical Image Segmentation">
+                            </div>
+                            
                             <div class="case-study-results">
                                 <div class="result-item">
-                                <span class="result-value">97%</span>
+                                    <span class="result-value">97%</span>
                                     <span class="result-label">Accuracy Rate</span>
                                 </div>
                                 <div class="result-item">
-                                <span class="result-value">Months → Hours</span>
-                                <span class="result-label">Processing Time</span>
+                                    <span class="result-value">Months → Hours</span>
+                                    <span class="result-label">Processing Time</span>
+                                </div>
                             </div>
+                            
+                            <button class="expand-button" onclick="toggleCard('medical-imaging')">
+                                <span class="button-text">Learn More</span>
+                                <span class="button-icon">▼</span>
+                            </button>
                         </div>
                         
-                        <button class="expand-button">Learn More</button>
-                        
-                        <div class="case-study-details">
-                            <h5>Accelerate Medical Research</h5>
-                            <p>You get ultra-fast, reliable vascular maps without the manual overhead. Whether for basic research or product-development use cases involving medical imaging, you can free up expert time, increase throughput, and improve reproducibility. Due to confidentiality reasons, we can't share the results of this project, but you can check out a similar paper below!</p>
+                        <!-- Expanded View -->
+                        <div class="card-expanded">
+                            <p class="case-study-description" style="color: black !important; text-align: justify;">Doctors can spend <strong>over 6 months</strong> tracing vascular structures in high-resolution 3D HiP-CT scans. Therefore, automating this tracing process with <strong>machine learning</strong>, can save valuable time & resources, enabling doctors and researchers to map cellular relationships across human organs in a fraction of the time. This project addresses challenges in generalization due to anatomical variability and changing imaging quality.</p>
                             
-                            <div class="case-study-image">
-                                <img src="assets/images/case-studies/segmentation.png" alt="Medical Image Segmentation with U-Net">
+                            <div class="case-study-overview">
+                                <h4>Kidney Vasculature Segmentation with U-Net</h4>
+                                <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
+                                <p style="text-align: justify;">Our deep learning model uses a convolutional neural network, applying U-Net architecture to automatically segment kidney vasculature from high-resolution 3D HiP-CT scans. The model detects vessels, closing gaps often left by manual annotation, thereby supporting efforts like the Vascular Common Coordinate Framework (VCCF) & Human Reference Atlas (HRA).</p>
+                                <p style="text-align: justify;">As mentioned before, manual segmentation of vascular structures can take months for a single dataset—due to the complexity and high resolution. With our AI model, we achieve ~97% accuracy, reducing segmentation time from severalmonths to seconds per dataset.</p>
                             </div>
                             
-                            <div class="paper-reference">
-                                <a href="https://www.nature.com/articles/s41598-024-84901-3" target="_blank" class="paper-button">Go to the Paper</a>
+                            <div class="case-study-details">
+                                <h5>Accelerate Medical Research</h5>
+                                <p style="text-align: justify;">You get ultra-fast, reliable vascular maps without the manual overhead. Whether for basic research or product-development use cases involving medical imaging, you can free up expert time, increase throughput, and improve reproducibility. Due to confidentiality reasons, we can't share the results of this project, but you can check out a similar paper below!</p>
+                                
+                                <div class="case-study-image">
+                                    <img src="assets/images/case-studies/segmentation.png" alt="Medical Image Segmentation with U-Net">
+                                </div>
+                                
+                                <div class="paper-reference">
+                                    <a href="https://www.nature.com/articles/s41598-024-84901-3" target="_blank" class="paper-button">Go to the Paper</a>
+                                </div>
                             </div>
+                            
+                            <button class="collapse-button" onclick="toggleCard('medical-imaging')">
+                                <span class="button-text">Show Less</span>
+                                <span class="button-icon">▲</span>
+                            </button>
                         </div>
                     </div>
                 
-                    <div class="case-study-card" id="financial-markets">
-                        <div class="case-study-header">
-                            <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Intelligent Financial Markets Analysis</h3>
-                        </div>
-                        <p class="case-study-description" style="color: black !important;">Real-time market analysis and forecasting models can help tremendously market specialists. With advanced ML models coupled with <i>Large Language Models</i> performing sentiment analysis, we can decrease the uncertainty of market predictions. By combining powerful time-series models such as <strong>ARIMA & LSTM</strong> with a sentiment-analysis pipeline powered by a <strong>fine-tuned LLM</strong>, we can create a system that ingests real-time data, trains models, and delivers forecasts that adapt continuously to market conditions and public opinion.</p>
-                        
-                        <div class="case-study-overview">
-                            <h4>Real-Time Market Forecasting with AI</h4>
-                            <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
-                            <p>Our system processes multiple data streams simultaneously: price feeds, volume data, economic indicators, and news sentiment. The architecture features automated model retraining every 4 hours to adapt to changing market conditions, with A/B testing capabilities to compare different model versions in production.</p>
-                            <p>The infrastructure includes real-time data validation, anomaly detection, and automated rollback mechanisms. We implemented MLflow for experiment tracking, Apache Kafka for data streaming, and Grafana dashboards for real-time monitoring.</p>
-                        </div>
-                        
-                        <div class="case-study-image">
-                            <img src="assets/images/case-studies/market-analysis.png" alt="Market Analysis with AI">
-                        </div>
-                        
-                        <div class="case-study-results">
-                            <div class="result-item">
-                                <span class="result-value">Real-Time</span>
-                                <span class="result-label">Data Processing</span>
-                                </div>
-                            <div class="result-item">
-                                <span class="result-value">LLM-Powered</span>
-                                <span class="result-label">Sentiment Analysis</span>
+                    <div class="case-study-card expandable-card" id="financial-markets">
+                        <!-- Collapsed View -->
+                        <div class="card-collapsed">
+                            <div class="case-study-header">
+                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Intelligent Financial Markets Analysis</h3>
                             </div>
+                            
+                            <div class="case-study-image">
+                                <img src="assets/images/case-studies/market-analysis.png" alt="Market Analysis with AI">
+                            </div>
+                            
+                            <div class="case-study-results">
+                                <div class="result-item">
+                                    <span class="result-value">Real-Time</span>
+                                    <span class="result-label">Data Processing</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-value">LLM-Powered</span>
+                                    <span class="result-label">Sentiment Analysis</span>
+                                </div>
+                            </div>
+                            
+                            <button class="expand-button" onclick="toggleCard('financial-markets')">
+                                <span class="button-text">Learn More</span>
+                                <span class="button-icon">▼</span>
+                            </button>
                         </div>
                         
-                        <button class="expand-button">Learn More</button>
-                        
-                        <div class="case-study-details">
-                            <h5>Make Data-Driven Decisions Faster</h5>
-                            <p>Whether you're monitoring financial markets, supply chains, or consumer demand, AI-driven forecasting enables faster, data-backed decisions. With scalable infrastructure and automated model management, you get reliable, real-time insights that evolve with your data.</p>
+                        <!-- Expanded View -->
+                        <div class="card-expanded">
+                            <p class="case-study-description" style="color: black !important; text-align: justify;">Real-time market analysis and forecasting models can help tremendously market specialists. With advanced ML models coupled with <i>Large Language Models</i> performing sentiment analysis, we can decrease the uncertainty of market predictions. By combining powerful time-series models such as <strong>ARIMA & LSTM</strong> with a sentiment-analysis pipeline powered by a <strong>fine-tuned LLM</strong>, we can create a system that ingests real-time data, trains models, and delivers forecasts that adapt continuously to market conditions and public opinion.</p>
+                            
+                            <div class="case-study-overview">
+                                <h4>Real-Time Market Forecasting with AI</h4>
+                                <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
+                                <p style="text-align: justify;">Our system processes multiple data streams simultaneously: price feeds, volume data, economic indicators, and news sentiment. The architecture features automated model retraining every 4 hours to adapt to changing market conditions, with A/B testing capabilities to compare different model versions in production.</p>
+                                <p style="text-align: justify;">The infrastructure includes real-time data validation, anomaly detection, and automated rollback mechanisms. We implemented MLflow for experiment tracking, Apache Kafka for data streaming, and Grafana dashboards for real-time monitoring.</p>
+                            </div>
+                            
+                            <div class="case-study-details">
+                                <h5>Make Data-Driven Decisions Faster</h5>
+                                <p style="text-align: justify;">Whether you're monitoring financial markets, supply chains, or consumer demand, AI-driven forecasting enables faster, data-backed decisions. With scalable infrastructure and automated model management, you get reliable, real-time insights that evolve with your data.</p>
+                            </div>
+                            
+                            <button class="collapse-button" onclick="toggleCard('financial-markets')">
+                                <span class="button-text">Show Less</span>
+                                <span class="button-icon">▲</span>
+                            </button>
                         </div>
                     </div>
                     
-                    <div class="case-study-card" id="ai-agents">
-                        <div class="case-study-header">
-                            <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">AI Agents - In-house Specialists -.</h3>
-                        </div>
-                        <p class="industry-description" style="color: black !important;">One of the biggest challenges when investing in the stock market, is keeping up-to date with the latest news & developments in real-time. Using intelligent agents for automated market & news analysis, with <strong>on-demand real-time insights delivery</strong> by WhatsApp (or any other messaging platform), we can help you stay ahead of the curve.</p>
-                        
-                        <div class="case-study-overview">
-                            <h4>Real-Time Market Analyst Agent with LLMs</h4>
-                            <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
-                            <p>We built an AI agent that continuously monitors global news streams and transforms them into actionable market insights in real time. Using a Retrieval-Augmented Generation (RAG) pipeline and a vector database holding hundreds of thousands of articles, the agent can search, summarize, and contextualize the latest developments as they happen.</p>
-                            <p>The system connects directly through WhatsApp, providing instant, conversational access to market updates and trend analysis. Behind the scenes, it leverages Model Context Protocol (MCP) and optimized LLM serving/inference, ensuring fast, efficient responses even at scale.</p>
-                        </div>
-                        
-                        <div class="case-study-image">
-                            <img src="assets/images/case-studies/agents.png" alt="AI Agents for Market Analysis">
-                        </div>
-                        
+                    <div class="case-study-card expandable-card" id="ai-agents">
+                        <!-- Collapsed View -->
+                        <div class="card-collapsed">
+                            <div class="case-study-header">
+                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">AI Agents - In-house Specialists -</h3>
+                            </div>
+                            
+                            <div class="case-study-image">
+                                <img src="assets/images/case-studies/agents.png" alt="AI Agents for Market Analysis">
+                            </div>
+                            
                             <div class="case-study-results">
                                 <div class="result-item">
-                                <span class="result-value">WhatsApp</span>
-                                <span class="result-label">Instant Access</span>
+                                    <span class="result-value">WhatsApp</span>
+                                    <span class="result-label">Instant Access</span>
                                 </div>
                                 <div class="result-item">
-                                <span class="result-value">100K+</span>
-                                <span class="result-label">Articles Analyzed</span>
+                                    <span class="result-value">100K+</span>
+                                    <span class="result-label">Articles Analyzed</span>
+                                </div>
                             </div>
+                            
+                            <button class="expand-button" onclick="toggleCard('ai-agents')">
+                                <span class="button-text">Learn More</span>
+                                <span class="button-icon">▼</span>
+                            </button>
                         </div>
                         
-                        <button class="expand-button">Learn More</button>
-                        
-                        <div class="case-study-details">
-                            <h5>Your Personal AI Analyst</h5>
-                            <p>Wether you need a market analysts, an intelligent HR assistant, or a smart companion that knows everything inside your company (and data you don't want to share with OpenAI, Google etc.) - we can build you an AI agent that can do all of that. Instead of manually scanning endless news feeds, you get a personal AI assistant at your fingertips to summarize events, highlight risks, and surface opportunities in real time, enabling faster, smarter decision-making.</p>
+                        <!-- Expanded View -->
+                        <div class="card-expanded">
+                            <p class="industry-description" style="color: black !important; text-align: justify;">One of the biggest challenges when investing in the stock market, is keeping up-to date with the latest news & developments in real-time. Using intelligent agents for automated market & news analysis, with <strong>on-demand real-time insights delivery</strong> by WhatsApp (or any other messaging platform), we can help you stay ahead of the curve.</p>
+                            
+                            <div class="case-study-overview">
+                                <h4>Real-Time Market Analyst Agent with LLMs</h4>
+                                <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
+                                <p style="text-align: justify;">We built an AI agent that continuously monitors global news streams and transforms them into actionable market insights in real time. Using a Retrieval-Augmented Generation (RAG) pipeline and a vector database holding hundreds of thousands of articles, the agent can search, summarize, and contextualize the latest developments as they happen.</p>
+                                <p style="text-align: justify;">The system connects directly through WhatsApp, providing instant, conversational access to market updates and trend analysis. Behind the scenes, it leverages Model Context Protocol (MCP) and optimized LLM serving/inference, ensuring fast, efficient responses even at scale.</p>
+                            </div>
+                            
+                            <div class="case-study-details">
+                                <h5>Your Personal AI Analyst</h5>
+                                <p style="text-align: justify;">Wether you need a market analysts, an intelligent HR assistant, or a smart companion that knows everything inside your company (and data you don't want to share with OpenAI, Google etc.) - we can build you an AI agent that can do all of that. Instead of manually scanning endless news feeds, you get a personal AI assistant at your fingertips to summarize events, highlight risks, and surface opportunities in real time, enabling faster, smarter decision-making.</p>
+                            </div>
+                            
+                            <button class="collapse-button" onclick="toggleCard('ai-agents')">
+                                <span class="button-text">Show Less</span>
+                                <span class="button-icon">▲</span>
+                            </button>
                         </div>
                     </div>
                     
-                    <div class="case-study-card">
-                        <div class="case-study-header">
-                            <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Computer Vision - <em>Ongoing Project</em> -</h3>
-                        </div>
-                        <p class="industry-description" style="color: black !important;">Edge-based computer vision for real-time customer insights and behavior analysis. Using advanced <strong>Convolutional Neural Networks (CNNs)</strong>, we are developing a system that can identify and classify people entering a store in real time. By distinguishing between different customer groups, the solution will allow businesses to track how <strong>marketing campaigns impact foot traffic</strong> and audience engagement.</p>
-                        
-                        <div class="case-study-overview">
-                            <h4>Object Identification for Customer Insights</h4>
-                            <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
-                            <p>Using advanced Convolutional Neural Networks (CNNs), we are developing a system that can identify and classify people entering a store in real time. By distinguishing between different customer groups, the solution will allow businesses to track how marketing campaigns impact foot traffic and audience engagement.</p>
-                            <p>The camera-based system will run efficiently at the edge, delivering immediate insights without the need for heavy infrastructure. This will enable businesses to measure the effectiveness of their campaigns, adapt strategies quickly, and maximize return on investment.</p>
-                        </div>
-                        
-                        <div class="case-study-image">
-                            <img src="assets/images/case-studies/cv.png" alt="Computer Vision for Customer Insights">
-                        </div>
-                        
+                    <div class="case-study-card expandable-card" id="computer-vision">
+                        <!-- Collapsed View -->
+                        <div class="card-collapsed">
+                            <div class="case-study-header">
+                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Computer Vision - <em>Ongoing Project</em> -</h3>
+                            </div>
+                            
+                            <div class="case-study-image">
+                                <img src="assets/images/case-studies/cv.png" alt="Computer Vision for Customer Insights">
+                            </div>
+                            
                             <div class="case-study-results">
                                 <div class="result-item">
-                                <span class="result-value">Real-Time</span>
-                                <span class="result-label">Customer Analysis</span>
+                                    <span class="result-value">Real-Time</span>
+                                    <span class="result-label">Customer Analysis</span>
                                 </div>
                                 <div class="result-item">
-                                <span class="result-value">Edge</span>
-                                <span class="result-label">Processing</span>
+                                    <span class="result-value">Edge</span>
+                                    <span class="result-label">Processing</span>
+                                </div>
                             </div>
+                            
+                            <button class="expand-button" onclick="toggleCard('computer-vision')">
+                                <span class="button-text">Learn More</span>
+                                <span class="button-icon">▼</span>
+                            </button>
                         </div>
                         
-                        <button class="expand-button">Learn More</button>
-                        
-                        <div class="case-study-details">
-                            <h5>Quantify Your Marketing Impact</h5>
-                            <p>Turn raw video streams into actionable insights. Instead of guessing whether your marketing works, you can quantify audience response in real time and make data-driven decisions to refine your strategy.</p>
+                        <!-- Expanded View -->
+                        <div class="card-expanded">
+                            <p class="industry-description" style="color: black !important; text-align: justify;">Edge-based computer vision for real-time customer insights and behavior analysis. Using advanced <strong>Convolutional Neural Networks (CNNs)</strong>, we are developing a system that can identify and classify people entering a store in real time. By distinguishing between different customer groups, the solution will allow businesses to track how <strong>marketing campaigns impact foot traffic</strong> and audience engagement.</p>
+                            
+                            <div class="case-study-overview">
+                                <h4>Object Identification for Customer Insights</h4>
+                                <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
+                                <p style="text-align: justify;">Using advanced Convolutional Neural Networks (CNNs), we are developing a system that can identify and classify people entering a store in real time. By distinguishing between different customer groups, the solution will allow businesses to track how marketing campaigns impact foot traffic and audience engagement.</p>
+                                <p style="text-align: justify;">The camera-based system will run efficiently at the edge, delivering immediate insights without the need for heavy infrastructure. This will enable businesses to measure the effectiveness of their campaigns, adapt strategies quickly, and maximize return on investment.</p>
+                            </div>
+                            
+                            <div class="case-study-details">
+                                <h5>Quantify Your Marketing Impact</h5>
+                                <p style="text-align: justify;">Turn raw video streams into actionable insights. Instead of guessing whether your marketing works, you can quantify audience response in real time and make data-driven decisions to refine your strategy.</p>
+                            </div>
+                            
+                            <button class="collapse-button" onclick="toggleCard('computer-vision')">
+                                <span class="button-text">Show Less</span>
+                                <span class="button-icon">▲</span>
+                            </button>
                         </div>
                     </div>
                     
-                    <div class="case-study-card">
-                        <div class="case-study-header">
-                            <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Predictive Maintenance - <em>Ongoing Project</em> -</h3>
-                </div>
-                        <p class="industry-description" style="color: black !important;">AI-powered predictive maintenance for heavy industry and manufacturing operations. By analyzing <strong>sensor data, operational logs, and historical maintenance records</strong>, we are developing a model that will identify <strong>early warning signs</strong> that equipment may be heading toward downtime.</p>
-                        
-                        <div class="case-study-overview">
-                            <h4>Predictive Maintenance in Heavy Industry</h4>
-                            <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
-                            <p>We are building an AI system that leverages predictive modeling to anticipate machinery failures in the mining sector. By analyzing sensor data, operational logs, and historical maintenance records, the model will identify early warning signs that equipment may be heading toward downtime.</p>
-                            <p>Instead of reacting to breakdowns, this approach will empower companies to schedule interventions proactively, reducing costly unplanned outages and extending machinery lifespan.</p>
-                </div>
-
-                        <div class="case-study-image">
-                            <img src="assets/images/case-studies/pdm.png" alt="Predictive Maintenance with AI">
-                        </div>
-                        
+                    <div class="case-study-card expandable-card" id="predictive-maintenance">
+                        <!-- Collapsed View -->
+                        <div class="card-collapsed">
+                            <div class="case-study-header">
+                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Predictive Maintenance - <em>Ongoing Project</em> -</h3>
+                            </div>
+                            
+                            <div class="case-study-image">
+                                <img src="assets/images/case-studies/pdm.png" alt="Predictive Maintenance with AI">
+                            </div>
+                            
                             <div class="case-study-results">
                                 <div class="result-item">
-                                <span class="result-value">Proactive</span>
-                                <span class="result-label">Maintenance</span>
+                                    <span class="result-value">Proactive</span>
+                                    <span class="result-label">Maintenance</span>
                                 </div>
                                 <div class="result-item">
-                                <span class="result-value">Extended</span>
-                                <span class="result-label">Equipment Life</span>
+                                    <span class="result-value">Extended</span>
+                                    <span class="result-label">Equipment Life</span>
+                                </div>
                             </div>
+                            
+                            <button class="expand-button" onclick="toggleCard('predictive-maintenance')">
+                                <span class="button-text">Learn More</span>
+                                <span class="button-icon">▼</span>
+                            </button>
                         </div>
                         
-                        <button class="expand-button">Learn More</button>
-                        
-                        <div class="case-study-details">
-                            <h5>Transform Maintenance into Strategic Advantage</h5>
-                            <p>AI transforms maintenance from a reactive cost center into a strategic advantage. Whether in mining, manufacturing, or energy, predictive maintenance minimizes downtime, lowers repair costs, and ensures your operations run safely and efficiently.</p>
+                        <!-- Expanded View -->
+                        <div class="card-expanded">
+                            <p class="industry-description" style="color: black !important; text-align: justify;">AI-powered predictive maintenance for heavy industry and manufacturing operations. By analyzing <strong>sensor data, operational logs, and historical maintenance records</strong>, we are developing a model that will identify <strong>early warning signs</strong> that equipment may be heading toward downtime.</p>
+                            
+                            <div class="case-study-overview">
+                                <h4>Predictive Maintenance in Heavy Industry</h4>
+                                <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
+                                <p style="text-align: justify;">We are building an AI system that leverages predictive modeling to anticipate machinery failures in the mining sector. By analyzing sensor data, operational logs, and historical maintenance records, the model will identify early warning signs that equipment may be heading toward downtime.</p>
+                                <p style="text-align: justify;">Instead of reacting to breakdowns, this approach will empower companies to schedule interventions proactively, reducing costly unplanned outages and extending machinery lifespan.</p>
+                            </div>
+                            
+                            <div class="case-study-details">
+                                <h5>Transform Maintenance into Strategic Advantage</h5>
+                                <p style="text-align: justify;">AI transforms maintenance from a reactive cost center into a strategic advantage. Whether in mining, manufacturing, or energy, predictive maintenance minimizes downtime, lowers repair costs, and ensures your operations run safely and efficiently.</p>
+                            </div>
+                            
+                            <button class="collapse-button" onclick="toggleCard('predictive-maintenance')">
+                                <span class="button-text">Show Less</span>
+                                <span class="button-icon">▲</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -959,6 +1049,14 @@
             }
         }
 
+        // Global toggle function for expandable cards
+        function toggleCard(cardId) {
+            const card = document.getElementById(cardId);
+            if (card && card.classList.contains('expandable-card')) {
+                card.classList.toggle('expanded');
+            }
+        }
+        
         // Initialize the animated background for case studies
         document.addEventListener('DOMContentLoaded', function() {
             const caseStudiesNodeBackground = new AnimatedNodeBackground('case-studies-node-background');
