@@ -17,6 +17,7 @@ class ComponentLoader {
                 this.initializeScripts();
             }
         } catch (error) {
+            console.warn(`Failed to load footer from ${htmlFile}:`, error.message);
             // Fallback: use embedded footer content
             this.loadEmbeddedFooter(containerId);
         }
@@ -74,7 +75,7 @@ class ComponentLoader {
                     <span class="contact-text">Fully remote services with the possibility of meeting & working in person</span>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">Loc.:</span>
+                    <span class="contact-label">Headquarters:</span>
                     <span class="contact-text">Ahtri tn 12, 15551 Tallinn, Estonia</span>
                 </div>
                 <div class="contact-item">
@@ -123,11 +124,9 @@ class ComponentLoader {
 
 // Auto-load footer on all pages when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, looking for footer container...');
     // Load footer if container exists
     const footerContainer = document.getElementById('footer-container');
     if (footerContainer) {
-        console.log('Footer container found, loading footer...');
         ComponentLoader.loadComponent('footer-container', 'footer.html');
     } else {
         console.warn('Footer container not found!');

@@ -121,6 +121,98 @@
     --container-max-width: 1280px;
 }
 
+/* Utility Classes for Common Inline Styles */
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+.card-base {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title {
+    color: var(--gray-900);
+    margin: 0;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.content-title {
+    color: var(--gray-900);
+    margin: 0;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.node-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.stats-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 3px solid rgba(139, 92, 246, 0.6);
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--purple);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--gray-900);
+    font-weight: 500;
+}
+
+.image-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(139, 92, 246, 0.2);
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
+}
+
 body {
     font-family: var(--font-primary);
     font-weight: 400;
@@ -146,8 +238,8 @@ body {
 
 /* Hide header on scroll down */
 .navigation.hidden {
-    transform: translateY(-100%) !important;
-    transition: transform 0.3s ease !important;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
 }
 
 .nav-container {
@@ -247,23 +339,9 @@ section {
 
 /* 3.1 Navigation */
 
-/* Hero is special - it needs different spacing */
-.hero-section-new {
-    padding: 0; /* Hero controls its own internal spacing */
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
 /* Main Content */
 .main-content {
     margin-top: 80px;
-}
-
-/* Hero section should not be affected by main-content margin */
-.hero-section-new {
-    margin-top: 0 !important; /* Override main-content margin for hero */
 }
 
 .section {
@@ -421,9 +499,10 @@ section {
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: center; /* Back to center for proper vertical centering */
+    align-items: center;
     padding: 0;
     margin: 0;
+    margin-top: 0; /* Override main-content margin for hero */
 }
 
 /* ============================================
@@ -541,7 +620,7 @@ section {
 /* First section after hero needs specific handling */
 .hero-section-new + section,
 .hero-section-new + * {
-    margin-top: 0 !important; /* Only acceptable use of !important */
+    margin-top: 0;
     padding-top: var(--section-spacing);
 }
 
@@ -671,7 +750,7 @@ section {
 .hero-subheadline {
     font-size: var(--hero-subtitle-size);
     font-weight: var(--hero-subtitle-weight);
-    color: #ffffff !important; /* Force pure white for maximum contrast */
+    color: #ffffff;
     line-height: 1.7;
     max-width: 800px;
     margin-top: 0;
@@ -1535,18 +1614,17 @@ section {
 }
 
 .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg) !important;
+    transform: rotateY(180deg);
 }
 
 .flip-card.flipped {
-    border-radius: var(--radius-xl) !important;
+    border-radius: var(--radius-xl);
 }
 
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background: var(--white);
     border-radius: var(--radius-xl);
@@ -1888,11 +1966,6 @@ section {
 }
 
 .content-card-white {
-    background: white;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(139, 92, 246, 0.1);
     margin-bottom: 30px;
     text-align: center;
     position: relative;
@@ -1909,6 +1982,57 @@ section {
 .white-text-shadow {
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* White section title - overrides gradient background */
+.section-title.white-text-shadow {
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: white;
+    background-clip: unset;
+    color: white;
+}
+
+/* White section subtitle - ensures proper white color */
+.section-subtitle.white-text-shadow {
+    color: white;
+}
+
+/* CTA Card Styles */
+.cta-card {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.cta-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cta-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-title {
+    color: var(--gray-900);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-description {
+    color: var(--purple);
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
 }
 
 .btn-gradient {
@@ -3948,6 +4072,11 @@ html {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto 30px auto;
+}
+
+/* Single column variant for vertical bullet points */
+.ai-content-grid.ai-content-grid-vertical {
+    grid-template-columns: 1fr;
 }
 
 /* Case Study Card Spacing - Integrated into main .case-study-card rule */

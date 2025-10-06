@@ -110,6 +110,9 @@ function initAnimatedTagline() {
     
     if (!taglineElement) return;
     
+    // Prevent multiple initializations
+    if (taglineElement.dataset.initialized === 'true') return;
+    
     const taglines = [
         "Got a project? Let's talk",
         "Ready to transform your business?",
@@ -131,9 +134,24 @@ function initAnimatedTagline() {
     updateTagline(); // Show first tagline immediately
     intervalId = setInterval(updateTagline, 3000);
     
+    // Mark as initialized to prevent multiple initializations
+    taglineElement.dataset.initialized = 'true';
+    
     // Clean up interval when page unloads
     window.addEventListener('beforeunload', () => {
         if (intervalId) clearInterval(intervalId);
     });
+}
+
+// Footer-specific initialization function called by components.js
+function initializeFooterScripts() {
+    // Initialize the animated tagline when footer is loaded
+    initAnimatedTagline();
+}
+
+// General animations initialization function called by components.js
+function initializeAnimations() {
+    // Re-initialize any animations that might need to run after dynamic content loads
+    initAnimatedTagline();
 }
 
