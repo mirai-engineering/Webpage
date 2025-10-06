@@ -3612,8 +3612,7 @@ html {
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    background: white url('assets/images/hero/main-background/clouds-clean.png') center/cover no-repeat;
-    background-attachment: fixed;
+    background: white;
 }
 
 /* Ensure case study cards maintain their appearance */
