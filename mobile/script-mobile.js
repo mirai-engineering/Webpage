@@ -317,22 +317,101 @@ class MobileFormHandler {
     }
     
     handleFormSubmission(form) {
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-        
         // Show loading state
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        // Simulate form submission (replace with actual endpoint)
-        setTimeout(() => {
-            alert('Thank you for your message! We\'ll get back to you soon.');
+        // Send email using EmailJS sendForm method
+        emailjs.sendForm('service_j5xal3n', 'template_ex0jzsm', form)
+        .then(() => {
+            // Success
+            submitBtn.textContent = 'Message Sent!';
+            submitBtn.style.background = '#10B981';
             form.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
+            
+            // Show success message
+            this.showNotification('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.background = '';
+            }, 3000);
+        }, (error) => {
+            // Error
+            console.error('Email sending failed:', error);
+            submitBtn.textContent = 'Error - Try Again';
+            submitBtn.style.background = '#EF4444';
+            
+            // Show error message
+            this.showNotification('Sorry, there was an error sending your message. Please try again or contact us directly at contact@mirai-engineering.com', 'error');
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.background = '';
+            }, 3000);
+        });
+    }
+    
+    showNotification(message, type) {
+        // Remove existing notifications
+        const existingNotification = document.querySelector('.notification');
+        if (existingNotification) {
+            existingNotification.remove();
+        }
+        
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${type === 'success' ? '#10B981' : '#EF4444'};
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 10000;
+            max-width: 400px;
+            font-weight: 500;
+            animation: slideIn 0.3s ease-out;
+        `;
+        notification.textContent = message;
+        
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Add to page
+        document.body.appendChild(notification);
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            notification.style.animation = 'slideIn 0.3s ease-out reverse';
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 300);
+        }, 5000);
     }
 }
 
@@ -518,6 +597,15 @@ class MobileNodeBackground {
         }
     }
 }
+
+// Initialize EmailJS
+(function(){
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init({
+          publicKey: "qI1ENg1mzZ8Z5OzwL",
+        });
+    }
+})();
 
 // Initialize mobile app
 document.addEventListener('DOMContentLoaded', () => {

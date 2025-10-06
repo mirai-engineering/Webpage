@@ -7,6 +7,8 @@
     <meta name="description" content="Get in touch with Mirai Engineering. Schedule a consultation or learn more about our AI solutions.">
     <link rel="icon" type="image/png" href="../assets/images/logos/logo-white-background.png">
     <link rel="stylesheet" href="styles-mobile.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -56,12 +58,12 @@
                 
                 <form id="contact-form">
                     <div class="form-group">
-                        <label for="name" class="form-label">Name *</label>
+                        <label for="name" class="form-label">Full Name *</label>
                         <input type="text" id="name" name="name" class="form-input" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email" class="form-label">Email *</label>
+                        <label for="email" class="form-label">Email Address *</label>
                         <input type="email" id="email" name="email" class="form-input" required>
                     </div>
                     
@@ -71,24 +73,55 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="phone" class="form-label">Phone</label>
-                        <input type="tel" id="phone" name="phone" class="form-input">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service" class="form-label">Service Interest</label>
-                        <select id="service" name="service" class="form-input">
-                            <option value="">Select a service</option>
-                            <option value="consulting">AI Consulting</option>
-                            <option value="implementation">AI Implementation</option>
-                            <option value="workshops">AI Workshops</option>
+                        <label for="industry" class="form-label">Industry</label>
+                        <select id="industry" name="industry" class="form-input">
+                            <option value="">Select Industry</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="medical">Medical</option>
+                            <option value="mining">Mining</option>
+                            <option value="business">Business</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message" class="form-label">Message *</label>
-                        <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us about your project and how we can help..."></textarea>
+                        <label for="project-type" class="form-label">Project Type</label>
+                        <select id="project-type" name="project-type" class="form-input">
+                            <option value="">Select Project Type</option>
+                            <option value="custom-model">Custom Model Development</option>
+                            <option value="deployment">In-House Deployment</option>
+                            <option value="optimization">Performance Optimization</option>
+                            <option value="consultation">AI Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget" class="form-label">Budget Range</label>
+                        <select id="budget" name="budget" class="form-input">
+                            <option value="">Select Budget Range</option>
+                            <option value="under-50k">Under $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="100k-500k">$100,000 - $500,000</option>
+                            <option value="over-500k">Over $500,000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline" class="form-label">Project Timeline</label>
+                        <select id="timeline" name="timeline" class="form-input">
+                            <option value="">Select Timeline</option>
+                            <option value="asap">ASAP</option>
+                            <option value="1-3-months">1-3 Months</option>
+                            <option value="3-6-months">3-6 Months</option>
+                            <option value="6-12-months">6-12 Months</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Project Description *</label>
+                        <textarea id="message" name="message" class="form-textarea" required placeholder="Please describe your project requirements, goals, and any specific challenges you're facing..."></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-full">Send Message</button>
@@ -135,9 +168,9 @@
             
             <div class="grid-mobile">
                 <div class="card">
-                    <h3 class="card-title">📅 Schedule a Call</h3>
-                    <p class="card-description">Book a free 30-minute consultation to discuss your AI needs.</p>
-                    <a href="mailto:contact@mirai-engineering.com?subject=Schedule Consultation" class="btn btn-primary btn-full">Schedule Now</a>
+                    <h3 class="card-title">🗓 Schedule a Meeting</h3>
+                    <p class="card-description">Book a 30-minute consultation for free to discuss your AI project requirements and explore how Mirai Engineering can help transform your business with cutting-edge AI solutions.</p>
+                    <a href="https://calendly.com/contact-mirai-engineering/30min" target="_blank" class="btn btn-primary btn-full">Book a Meeting</a>
                 </div>
                 
                 <div class="card">
@@ -150,6 +183,38 @@
                     <h3 class="card-title">💼 Case Studies</h3>
                     <p class="card-description">See how we've helped other businesses with AI solutions.</p>
                     <a href="industries-mobile.html" class="btn btn-secondary btn-full">View Cases</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-mobile" style="background: #f9fafb; position: relative;" id="faq-section">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="card">
+                <h2 class="card-title">Frequently Asked Questions</h2>
+                <p class="card-description">Find answers to common questions about our AI services, project timelines, and implementation process.</p>
+            </div>
+            
+            <div class="grid-mobile">
+                <div class="card">
+                    <h3 class="card-title">How long does a typical AI project take?</h3>
+                    <p class="card-description">Project timelines vary based on complexity and scope. Simple AI implementations can take 2-4 weeks, while comprehensive AIaaS solutions typically require 3-6 months. Our discovery phase (4-6 weeks) helps us provide accurate timelines and deliverables tailored to your specific requirements.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Do you provide ongoing support after deployment?</h3>
+                    <p class="card-description">Yes, we build automated monitoring and maintenance into every AI solution we deploy. Our AIaaS lifecycle includes intelligent model monitoring systems, automated performance optimization, and self-improving algorithms that continuously enhance your AI solutions without requiring constant human intervention.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">What industries do you specialize in?</h3>
+                    <p class="card-description">We specialize in Engineering, Medical/Healthcare, Financial Technology, and Data Processing industries. Our expertise spans molecular optimization, medical imaging, real-time market forecasting, and AI agents. We work with companies of all sizes, from startups to enterprise organizations seeking to leverage AI for competitive advantage.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Can you work with our existing data infrastructure?</h3>
+                    <p class="card-description">Absolutely! We design AI solutions that integrate seamlessly with your existing systems and data infrastructure. Our team has extensive experience with cloud platforms (AWS, GCP), on-premises deployments, and hybrid architectures. We ensure minimal disruption to your current operations while maximizing the value of your existing data assets.</p>
                 </div>
             </div>
         </div>
