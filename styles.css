@@ -3605,14 +3605,15 @@ html {
    CASE STUDIES SECTION - PROFESSIONAL LAYOUT
    ======================================== */
 
-/* Case Studies Section Container - MAIN RULE - DO NOT OVERRIDE */
+/* Case Studies Section Container - Default for index.html */
 .case-studies-section {
     padding: 60px 0;
     margin-bottom: 0;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    background: white;
+    background: white url('assets/images/hero/main-background/clouds-clean.png') center/cover no-repeat;
+    background-attachment: fixed;
 }
 
 /* Ensure case study cards maintain their appearance */
@@ -3621,8 +3622,13 @@ html {
     backdrop-filter: blur(15px);
 }
 
-/* Ensure animated node background covers full section width */
-.case-studies-section .ai-node-background {
+/* Industries page case studies section - white background with neural network */
+.info-section.case-studies-section {
+    background: white;
+}
+
+/* Ensure animated node background covers full section width for industries page */
+.info-section.case-studies-section .ai-node-background {
     position: absolute;
     top: 0;
     left: 0;
