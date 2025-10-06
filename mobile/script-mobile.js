@@ -625,7 +625,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'services-section',        // ai-service-mobile.html
         'ai-lifecycle-section',    // ai-service-mobile.html
         'contact-form-section',    // contact-mobile.html
-        'quick-actions-section',   // contact-mobile.html
+        'faq-section',             // contact-mobile.html
         'what-we-delivered-section' // industries-mobile.html
     ];
     
