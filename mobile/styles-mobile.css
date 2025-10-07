@@ -613,6 +613,70 @@ html {
     transform: translateY(-4px);
 }
 
+/* ========================================
+   CARD TITLE VISUAL ENHANCEMENTS
+   ======================================== */
+
+/* Main section titles - Gradient Background Highlight */
+.card-title-highlight {
+    background: linear-gradient(135deg, #6b46c1 0%, #8b5cf6 100%);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);
+    font-weight: 700;
+}
+
+/* Card titles - Animated Underline */
+.card-title-underline {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.card-title-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #6b46c1, #8b5cf6, #a78bfa);
+    border-radius: 2px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-in .card-title-underline::after,
+.card-title-underline.animate-in::after {
+    width: 100%;
+}
+
+/* Emphasis titles - Glowing Text Effect */
+.card-title-glow {
+    text-shadow: 
+        0 0 10px rgba(107, 70, 193, 0.4),
+        0 0 20px rgba(107, 70, 193, 0.2),
+        0 0 30px rgba(107, 70, 193, 0.1);
+    animation: textGlow 3s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 10px rgba(107, 70, 193, 0.4),
+            0 0 20px rgba(107, 70, 193, 0.2);
+    }
+    50% {
+        text-shadow: 
+            0 0 15px rgba(107, 70, 193, 0.6),
+            0 0 30px rgba(107, 70, 193, 0.4),
+            0 0 45px rgba(107, 70, 193, 0.2);
+    }
+}
+
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
     * {
