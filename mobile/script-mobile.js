@@ -150,7 +150,7 @@ class MobileApp {
                 threshold: 0.1
             });
             
-            document.querySelectorAll('.card, .section-mobile').forEach(el => {
+            document.querySelectorAll('.card, .section-mobile, .animate-on-scroll').forEach(el => {
                 animationObserver.observe(el);
             });
         }
