@@ -627,6 +627,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'contact-form-section',    // contact-mobile.html
         'faq-section',             // contact-mobile.html
         'what-we-delivered-section', // industries-mobile.html
+        'case-studies-section',    // industries-mobile.html
         'ai-explanation-section',  // blog-mobile.html
         'featured-articles-section', // blog-mobile.html
         'newsletter-section'       // blog-mobile.html
