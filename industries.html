@@ -240,23 +240,7 @@
             position: relative !important;
         }
         
-        .case-study-details {
-            max-height: 0 !important;
-            overflow: hidden !important;
-            margin-top: 0 !important;
-            padding-top: 0 !important;
-            border-top: none !important;
-            opacity: 0 !important;
-            transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease, margin 0.3s ease !important;
-        }
         
-        .case-study-details.expanded {
-            max-height: 2000px !important;
-            margin-top: var(--space-lg) !important;
-            padding-top: var(--space-lg) !important;
-            border-top: 1px solid rgba(139, 92, 246, 0.1) !important;
-            opacity: 1 !important;
-        }
         
         .case-study-details h5 {
             font-size: 1.3rem !important;
@@ -332,7 +316,7 @@
         .case-study-details.expanded {
             display: block !important;
         }
-        
+
     </style>
 </head>
 <body>
@@ -428,12 +412,12 @@
                         
                         <!-- Expanded View -->
                         <div class="card-expanded">
-                            <p class="case-study-description" style="color: black !important; text-align: justify;">In <strong>optimization</strong>, we always have an objective value(s) that we want to tweak, either increase or decrease. This objective value can dependend on multiple input variables. In these use cases, we start with a <strong>parameter search space</strong>, e.g. atoms in a molecule, parts in a machine or elements in a material. Then, we define an objective, e.g.: to increase molecular stability, machine lifetime, or material stability. The problem? There is an <strong>endless combination</strong> where your scientists have to tweak the input parameters in the search space, in order to improve the desired outcome(s). With AI & ML models you can transform these processes so that your experts can skip the costly iterations & test directly the <strong>optimal solutions</strong>. Below we describe our approach where we use AI to optimize the design of new eco-friendly fuels (e-Fuels).</p>
+                            <p class="case-study-description" style="color: black !important; text-align: justify;">Optimization challenges involve finding the <strong>best combination of parameters</strong> to achieve desired outcomes—whether <strong>maximizing</strong> molecular stability, extending machine lifetime, or optimizing supply chain efficiency. In practice, this means <strong>exploring vast parameter spaces</strong>: atoms in a molecule, components in a machine, or logistics variables in operations. Instead of testing countless iterations manually, <strong>AI rapidly identifies optimal configurations</strong>, <em>accelerating development cycles and reducing costs</em>. Below we describe our approach where we use AI to optimize the design of new eco-friendly fuels (e-Fuels).</p>
                             
                             <div class="case-study-overview">
                                 <h4>Molecular Optimization</h4>
                                 <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
-                                <p style="text-align: justify;">We were involved in the early days of molecular-modeling with Artificial Networks. Nowadays it is spread as "Graph Neural Networks". By training an AI model with sufficient data, you can create new molecules and predict key properties.</p>
+                                <p style="text-align: justify;">We were involved in the early days of molecular-modeling with Artificial Networks, nowadays spread as "Graph Neural Networks". By training an AI model with sufficient data, you can create new molecules and predict key properties.</p>
                                 <p style="text-align: justify;">In concrete: we reduced the experimental design of new e-Fuels from several weeks to seconds. Additionally, you can immerse the model into an optimization-framework that can output a tailored-made fuel that maximizes power output by using only carbon-free components in the chemical structure.</p>
                             </div>
                             
@@ -551,7 +535,7 @@
                         
                         <!-- Expanded View -->
                         <div class="card-expanded">
-                            <p class="case-study-description" style="color: black !important; text-align: justify;">Real-time market analysis and forecasting models can help tremendously market specialists. With advanced ML models coupled with <i>Large Language Models</i> performing sentiment analysis, we can decrease the uncertainty of market predictions. By combining powerful time-series models such as <strong>ARIMA & LSTM</strong> with a sentiment-analysis pipeline powered by a <strong>fine-tuned LLM</strong>, we can create a system that ingests real-time data, trains models, and delivers forecasts that adapt continuously to market conditions and public opinion.</p>
+                            <p class="case-study-description" style="color: black !important; text-align: justify;">Real-time market analysis and forecasting models can be of tremendous help for market specialists. With <strong>advanced ML models</strong> coupled with <i>Large Language Models</i> performing sentiment analysis, we can <em>decrease the uncertainty of market predictions</em>. By combining powerful time-series models such as <strong>ARIMA & LSTM</strong> with a sentiment-analysis pipeline powered by a <strong>fine-tuned LLM</strong>, we can create a system that ingests real-time data, trains models, and delivers forecasts that adapt continuously to market conditions and public opinion.</p>
                             
                             <div class="case-study-overview">
                                 <h4>Real-Time Market Forecasting with AI</h4>
@@ -1054,6 +1038,12 @@
             const card = document.getElementById(cardId);
             if (card && card.classList.contains('expandable-card')) {
                 card.classList.toggle('expanded');
+                
+                // Also toggle case-study-details within the card
+                const details = card.querySelector('.case-study-details');
+                if (details) {
+                    details.classList.toggle('expanded');
+                }
             }
         }
         
@@ -1066,7 +1056,9 @@
         });
         
         function initLearnMoreButtons() {
-            const expandButtons = document.querySelectorAll('.expand-button');
+            // This function is now only needed for cards that use .case-study-details
+            // Cards with .card-expanded use the standard toggleCard() function
+            const expandButtons = document.querySelectorAll('.expand-button:not([onclick])');
             
             expandButtons.forEach(button => {
                 button.addEventListener('click', function() {
@@ -1074,13 +1066,12 @@
                     const details = caseStudyCard.querySelector('.case-study-details');
                     
                     if (details) {
-                        // Toggle the details visibility using class-based approach
                         if (details.classList.contains('expanded')) {
                             details.classList.remove('expanded');
-                            this.textContent = 'Learn More';
+                            this.querySelector('.button-text').textContent = 'Learn More';
                         } else {
                             details.classList.add('expanded');
-                            this.textContent = 'Show Less';
+                            this.querySelector('.button-text').textContent = 'Show Less';
                         }
                     }
                 });
