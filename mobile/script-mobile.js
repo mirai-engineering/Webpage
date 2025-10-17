@@ -607,6 +607,30 @@ class MobileNodeBackground {
     }
 })();
 
+// Image Toggle Functionality
+function toggleImage(imageId) {
+    const imageContainer = document.getElementById(imageId);
+    const button = document.querySelector(`button[onclick="toggleImage('${imageId}')"]`);
+    
+    if (imageContainer && button) {
+        const isExpanded = imageContainer.classList.contains('expanded');
+        
+        if (isExpanded) {
+            // Collapse
+            imageContainer.classList.remove('expanded');
+            button.classList.remove('expanded');
+            button.querySelector('.btn-text').textContent = 'View Project Image';
+            button.querySelector('.btn-icon').textContent = '▼';
+        } else {
+            // Expand
+            imageContainer.classList.add('expanded');
+            button.classList.add('expanded');
+            button.querySelector('.btn-text').textContent = 'Hide Image';
+            button.querySelector('.btn-icon').textContent = '▲';
+        }
+    }
+}
+
 // Initialize mobile app
 document.addEventListener('DOMContentLoaded', () => {
     new MobileApp();

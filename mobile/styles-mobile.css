@@ -810,6 +810,82 @@ html {
     }
 }
 
+/* ========================================
+   IMAGE TOGGLE FUNCTIONALITY
+   ======================================== */
+
+/* Image Toggle Button */
+.image-toggle-btn {
+    background: linear-gradient(135deg, #6b46c1 0%, #4c1d95 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.image-toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(107, 70, 193, 0.4);
+}
+
+.image-toggle-btn:active {
+    transform: translateY(0);
+}
+
+.image-toggle-btn .btn-icon {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.image-toggle-btn.expanded .btn-icon {
+    transform: rotate(180deg);
+}
+
+/* Image Container - Hidden by default */
+.image-container {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0;
+    padding: 0;
+}
+
+.image-container.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    margin: 16px 0;
+    padding: 0;
+}
+
+/* Case Study Images */
+.case-study-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.case-study-image:hover {
+    transform: scale(1.02);
+}
+
 /* Mobile-specific performance optimizations */
 @media (max-width: 768px) {
     /* Reduce repaints and reflows */
@@ -826,6 +902,17 @@ html {
     
     /* Optimize button interactions */
     .btn {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+    
+    /* Optimize image toggle animations */
+    .image-toggle-btn {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+    
+    .image-container {
         transform: translateZ(0);
         -webkit-transform: translateZ(0);
     }
