@@ -89,6 +89,7 @@ class DeviceDetector {
         
         // Map desktop pages to mobile pages
         const pageMap = {
+            '/': '/mobile/index-mobile.html',
             '/index.html': '/mobile/index-mobile.html',
             '/about.html': '/mobile/about-mobile.html',
             '/ai-service.html': '/mobile/ai-service-mobile.html',
@@ -145,6 +146,7 @@ class DeviceDetector {
     if (isMobile && !window.location.pathname.includes('/mobile/')) {
         const currentPath = window.location.pathname;
         const pageMap = {
+            '/': '/mobile/index-mobile.html',
             '/index.html': '/mobile/index-mobile.html',
             '/about.html': '/mobile/about-mobile.html',
             '/ai-service.html': '/mobile/ai-service-mobile.html',

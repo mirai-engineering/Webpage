@@ -16,6 +16,7 @@
     <meta name="twitter:title" content="Mirai Engineering - Transform Your Business with AI">
     <meta name="twitter:description" content="Expert AI consultancy and implementation services. Custom AI solutions for Engineering, Medical, Fintech & Data Processing industries.">
     <meta name="twitter:image" content="https://mirai-engineering.com/assets/images/logos/logo.png">
+    <link rel="canonical" href="https://mirai-engineering.com/">
     <link rel="icon" type="image/png" href="assets/images/logos/logo-white-background.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
@@ -45,6 +46,30 @@
         }
     </style>
     <link rel="stylesheet" href="styles.css?v=29">
+    <script>
+        // Normalize URL: hide /index.html in the address bar without reloading
+        (function() {
+            try {
+                if (window.location.pathname.endsWith('/index.html')) {
+                    window.history.replaceState(null, '', '/');
+                }
+            } catch (e) { /* noop */ }
+        })();
+        
+        // Fix logo links to work both locally and when deployed
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoLinks = document.querySelectorAll('a.logo, a.footer-logo');
+            logoLinks.forEach(link => {
+                // If we're on file:// protocol (local testing), use index.html
+                // If we're on http/https, use /
+                if (window.location.protocol === 'file:') {
+                    link.href = 'index.html';
+                } else {
+                    link.href = '/';
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Navigation -->
