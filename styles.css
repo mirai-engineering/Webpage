@@ -3450,7 +3450,7 @@ section {
     background: var(--gradient-hero);
     color: var(--white);
     padding: var(--space-6xl) 0 var(--space-xl);
-    margin-top: var(--space-6xl);
+    margin-top: 0;
     position: relative;
     overflow: hidden;
 }
