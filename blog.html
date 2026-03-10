@@ -15,6 +15,44 @@
     <link rel="icon" type="image/png" href="assets/images/logos/logo-white-background.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+        /* Article cards: intuitive hover and link feedback */
+        .article-card {
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.25s ease, transform 0.25s ease;
+        }
+        .article-card:hover {
+            box-shadow: 0 12px 40px rgba(139, 92, 246, 0.12);
+            transform: translateY(-2px);
+        }
+        /* Same space for title across all cards (~3 lines) */
+        .article-card h3 {
+            min-height: 5.2em;
+            margin-bottom: 15px;
+        }
+        /* Same space for description across all cards (~3 lines); flex fills remainder so footers align */
+        .article-card > p {
+            flex: 1;
+            min-height: 4.8em;
+            margin-bottom: 24px;
+        }
+        .article-card .article-card-title-link {
+            color: var(--gray-900);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .article-card .article-card-title-link:hover {
+            color: #8B5CF6;
+        }
+        .article-card .article-card-cta {
+            color: #8B5CF6;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease, gap 0.2s ease;
+        }
+        .article-card .article-card-cta:hover {
+            color: #7c3aed;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css?v=53">
@@ -168,36 +206,64 @@
 
                 <!-- Article Cards Grid -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
-                    <!-- Article 1 -->
-                    <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
-                        <div style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;"><i class="fa-solid fa-robot"></i></div>
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 15px;">AI Agents: The Future of Business Automation</h3>
-                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 20px; text-align: justify;">Discover how AI agents are revolutionizing business operations, from customer service to internal processes. Learn about the latest developments in autonomous AI systems and how they can transform your workflow.</p>
-                        <div style="display: inline-block; background: #f8fafc; color: #6b7280; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e5e7eb;">To be published: Oct 20, 2024</div>
+                    <!-- Article 1: Kidney vessel segmentation (Jan 19, 2026) -->
+                    <div class="article-card" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;"><a class="article-card-title-link" href="https://miraiengineering.substack.com/p/automated-blood-vessel-segmentation" target="_blank" rel="noopener noreferrer">Automated Blood Vessel Segmentation in Kidneys: A Deep Learning Web Application</a></h3>
+                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 24px; text-align: justify;">A deep learning system for medical image analysis. We cover what the system does, the problem it solves, the technology choices, and how we built it—from upload to segmentation results.</p>
+                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding-top: 4px;">
+                            <span style="display: inline-block; background: #f8fafc; color: #6b7280; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e5e7eb;">Jan 19, 2026</span>
+                            <a class="article-card-cta" href="https://miraiengineering.substack.com/p/automated-blood-vessel-segmentation" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">Read article <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem; opacity: 0.85;"></i></a>
+                        </div>
                     </div>
-                    
-                    <!-- Article 2 -->
-                    <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
-                        <div style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;"><i class="fa-solid fa-brain"></i></div>
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 15px;">Neural Networks Explained: From Theory to Practice</h3>
-                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 20px; text-align: justify;">A comprehensive guide to understanding neural networks, their architecture, and real-world applications. Perfect for business leaders who want to understand the technology behind AI solutions.</p>
-                        <div style="display: inline-block; background: #f8fafc; color: #6b7280; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e5e7eb;">To be published: Oct 27, 2024</div>
+
+                    <!-- Article 2: AI coding agents (Jan 10, 2026) -->
+                    <div class="article-card" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;"><a class="article-card-title-link" href="https://miraiengineering.substack.com/p/how-to-avoid-ai-coding-agents-to" target="_blank" rel="noopener noreferrer">How to avoid AI coding agents to mess up (the code, and your brain)</a></h3>
+                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 24px; text-align: justify;">While using coding agents might help you ship your code faster, it might cost you your next job interview if you're not careful when you use them. Practical guidance on using agents as leverage without losing the understanding that keeps you employable.</p>
+                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding-top: 4px;">
+                            <span style="display: inline-block; background: #f8fafc; color: #6b7280; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e5e7eb;">Jan 10, 2026</span>
+                            <a class="article-card-cta" href="https://miraiengineering.substack.com/p/how-to-avoid-ai-coding-agents-to" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">Read article <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem; opacity: 0.85;"></i></a>
+                        </div>
                     </div>
-                    
-                    <!-- Article 3 -->
-                    <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
-                        <div style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;"><i class="fa-solid fa-database"></i></div>
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 15px;">Data Quality: The Foundation of Successful AI</h3>
-                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 20px; text-align: justify;">Why data quality matters more than algorithm complexity in AI projects. Learn best practices for data preparation, cleaning, and validation to ensure your AI initiatives succeed.</p>
-                        <div style="display: inline-block; background: #f8fafc; color: #6b7280; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e5e7eb;">To be published: Nov 3, 2024</div>
+
+                    <!-- Article 3: Shipping AI on mobile (Dec 29, 2025) -->
+                    <div class="article-card" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;"><a class="article-card-title-link" href="https://miraiengineering.substack.com/p/shipping-ai-powered-apps-on-mobile" target="_blank" rel="noopener noreferrer">Shipping AI-Powered Apps on Mobile: The Ecosystem Matters More Than the Model</a></h3>
+                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 24px; text-align: justify;">A walkthrough of the obstacles you only see when building as an ML engineer: compilation, data sync, and inference. Covers React Native, Expo, SQLite, Turso, and on-device LLMs.</p>
+                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding-top: 4px;">
+                            <span style="display: inline-block; background: #f8fafc; color: #6b7280; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e5e7eb;">Dec 29, 2025</span>
+                            <a class="article-card-cta" href="https://miraiengineering.substack.com/p/shipping-ai-powered-apps-on-mobile" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">Read article <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem; opacity: 0.85;"></i></a>
+                        </div>
                     </div>
-                    
-                    <!-- Article 4 -->
-                    <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
-                        <div style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;"><i class="fa-solid fa-chart-line"></i></div>
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 15px;">Predictive Analytics: Forecasting the Future</h3>
-                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 20px; text-align: justify;">Explore how predictive analytics can help your business anticipate trends, optimize operations, and make data-driven decisions. Real-world examples and implementation strategies.</p>
-                        <div style="display: inline-block; background: #f8fafc; color: #6b7280; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e5e7eb;">To be published: Nov 10, 2024</div>
+
+                    <!-- Article 4: Chimera ML (Dec 15, 2025) -->
+                    <div class="article-card" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;"><a class="article-card-title-link" href="https://miraiengineering.substack.com/p/chimera-machine-learning-when-hybrid" target="_blank" rel="noopener noreferrer">Chimera Machine Learning: When Hybrid Architectures Beat Fancy Models</a></h3>
+                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 24px; text-align: justify;">How combining architectures and smarter math solves real problems better than chasing the latest model. From energy fraud detection to autoencoders and directional thresholds—with full code.</p>
+                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding-top: 4px;">
+                            <span style="display: inline-block; background: #f8fafc; color: #6b7280; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e5e7eb;">Dec 15, 2025</span>
+                            <a class="article-card-cta" href="https://miraiengineering.substack.com/p/chimera-machine-learning-when-hybrid" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">Read article <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem; opacity: 0.85;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Article 5: Human NN vs Artificial (Nov 18, 2025) -->
+                    <div class="article-card" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;"><a class="article-card-title-link" href="https://miraiengineering.substack.com/p/human-neural-networks-vs-artificial" target="_blank" rel="noopener noreferrer">Human Neural Networks vs Artificial Neural Networks</a></h3>
+                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 24px; text-align: justify;">Or: how we're outsourcing the only competitive advantage that matters. On the MIT study about cognitive debt, why strong HNNs still win, and using AI as a sparring partner instead of a replacement.</p>
+                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding-top: 4px;">
+                            <span style="display: inline-block; background: #f8fafc; color: #6b7280; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e5e7eb;">Nov 18, 2025</span>
+                            <a class="article-card-cta" href="https://miraiengineering.substack.com/p/human-neural-networks-vs-artificial" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">Read article <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem; opacity: 0.85;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Article 6: Thought process ML project (Nov 04, 2025) -->
+                    <div class="article-card" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;"><a class="article-card-title-link" href="https://miraiengineering.substack.com/p/what-is-the-thought-process-behind" target="_blank" rel="noopener noreferrer">What is the Thought Process Behind an end-to-end Machine Learning Project?</a></h3>
+                        <p style="font-size: 1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 24px; text-align: justify;">Learn how to build ML systems from scratch using modular thinking: a simple framework for breaking down complex problems into connected boxes and translating business needs into engineering solutions.</p>
+                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding-top: 4px;">
+                            <span style="display: inline-block; background: #f8fafc; color: #6b7280; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e5e7eb;">Nov 04, 2025</span>
+                            <a class="article-card-cta" href="https://miraiengineering.substack.com/p/what-is-the-thought-process-behind" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">Read article <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem; opacity: 0.85;"></i></a>
+                        </div>
                     </div>
                 </div>
                 
