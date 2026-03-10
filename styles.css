@@ -121,6 +121,21 @@
     --container-max-width: 1280px;
 }
 
+/* Global decorative icon styling */
+.case-study-icon i,
+.cta-icon i,
+.timeline-card span i,
+.mission-icon i,
+.vision-icon i,
+.value-icon i,
+.ai-card-icon-emoji i,
+.ai-section-emoji i,
+.contact-icon i,
+.btn-icon i,
+.fa-solid {
+    color: var(--purple);
+}
+
 /* Utility Classes for Common Inline Styles */
 .text-center { text-align: center; }
 .text-justify { text-align: justify; }
