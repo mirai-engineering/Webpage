@@ -1038,12 +1038,28 @@
         function toggleCard(cardId) {
             const card = document.getElementById(cardId);
             if (card && card.classList.contains('expandable-card')) {
+                const wasExpanded = card.classList.contains('expanded');
+                
                 card.classList.toggle('expanded');
                 
                 // Also toggle case-study-details within the card
                 const details = card.querySelector('.case-study-details');
                 if (details) {
                     details.classList.toggle('expanded');
+                }
+
+                // When expanding, scroll so the top of the card (or just above it)
+                // is aligned with the viewport, so the newly revealed text starts in view
+                if (!wasExpanded) {
+                    const navigation = document.querySelector('.navigation');
+                    const navHeight = navigation ? navigation.getBoundingClientRect().height : 0;
+                    const cardTop = card.getBoundingClientRect().top + window.pageYOffset;
+                    const offset = 24; // small visual offset below the nav
+                    
+                    window.scrollTo({
+                        top: cardTop - navHeight - offset,
+                        behavior: 'smooth'
+                    });
                 }
             }
         }
