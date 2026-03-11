@@ -125,12 +125,14 @@
                         <!-- Timeline Cards Container -->
                         <div class="timeline-container" style="position: relative; max-width: 1200px; margin: 0 auto;">
                             
-                            <!-- Timeline Line -->
-                            <div class="timeline-line" style="position: absolute; left: 50px; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--purple), var(--blue)); border-radius: 2px; z-index: 1;"></div>
+                            <!-- Timeline Line: track (full height) + progress bar (fills on scroll) -->
+                            <div class="timeline-progress-track" style="position: absolute; left: 50px; top: 0; bottom: 0; width: 4px; background: rgba(139, 92, 246, 0.2); border-radius: 2px; z-index: 1; overflow: hidden;">
+                                <div id="blog-timeline-progress-bar" class="timeline-progress-bar" style="position: absolute; left: 0; top: 0; width: 100%; height: 0%; background: linear-gradient(180deg, var(--purple), var(--blue)); border-radius: 2px; transition: height 0.2s ease-out;"></div>
+                            </div>
                             
                             <!-- Card 1: The Coffee Analogy -->
                             <div class="timeline-card" data-card="1" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
-                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; border-radius: 50%; border: 4px solid white; z-index: 2;"></div>
                                 <div style="display: flex; align-items: center; margin-bottom: 15px;">
                                     <span style="font-size: 2rem; margin-right: 12px;"><i class="fa-solid fa-mug-saucer"></i></span>
                                     <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0;">AI is Like Choosing the Right Coffee Equipment</h3>
@@ -140,7 +142,7 @@
                             
                             <!-- Card 2: AI Isn't New -->
                             <div class="timeline-card" data-card="2" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
-                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; border-radius: 50%; border: 4px solid white; z-index: 2;"></div>
                                 <div style="display: flex; align-items: center; margin-bottom: 15px;">
                                     <span style="font-size: 2rem; margin-right: 12px;"><i class="fa-solid fa-calculator"></i></span>
                                     <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0;">AI Isn't New: It's Been Around for Decades</h3>
@@ -150,7 +152,7 @@
                             
                             <!-- Card 3: The Neural Network Revolution -->
                             <div class="timeline-card" data-card="3" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
-                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; border-radius: 50%; border: 4px solid white; z-index: 2;"></div>
                                 <div style="display: flex; align-items: center; margin-bottom: 15px;">
                                     <span style="font-size: 2rem; margin-right: 12px;"><i class="fa-solid fa-chart-line"></i></span>
                                     <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0;">Why AI Exploded in the Last Decade</h3>
@@ -160,7 +162,7 @@
                             
                             <!-- Card 4: The Two Branches That Matter -->
                             <div class="timeline-card" data-card="4" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
-                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
+                                <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; border-radius: 50%; border: 4px solid white; z-index: 2;"></div>
                                 <div style="display: flex; align-items: center; margin-bottom: 15px;">
                                     <span style="font-size: 2rem; margin-right: 12px;"><i class="fa-solid fa-diagram-project"></i></span>
                                     <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0;">The Two AI Branches Every Business Should Know</h3>
@@ -197,7 +199,7 @@
                 </div>
 
                 <!-- Our Latest Articles Card -->
-                <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); text-align: center; margin-bottom: 30px;">
+                <div id="blog-content" style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); text-align: center; margin-bottom: 30px;">
                     <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">Our Latest Articles</h2>
                     <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 20px; max-width: 95%; margin-left: auto; margin-right: auto; text-align: justify;">Visit our <a href="https://miraiengineering.substack.com/" target="_blank" style="color: #8B5CF6; text-decoration: none; font-weight: 600;">Substack blog</a> to see past articles and more! Our newsletter features <strong>in-depth</strong> technical discussions, <strong>practical AI implementation guides</strong>, and <strong>real-world</strong> case studies from our engineering projects.</p>
                     <p style="font-size: 1.1rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 30px; max-width: 95%; margin-left: auto; margin-right: auto; text-align: justify;">Each article is crafted to <strong>bridge the gap</strong> between cutting-edge AI research and practical business applications, helping you understand not just what AI can do, but <strong>how to implement it</strong> effectively in your organization. From neural network architectures to deployment strategies, we cover the <strong>full spectrum</strong> of AI engineering challenges.</p>
@@ -466,6 +468,62 @@
             }
         }
 
+        // Blog timeline: vertical line progress on scroll (same behaviour as about.html story timeline)
+        class BlogTimelineProgressController {
+            constructor() {
+                this.section = document.getElementById('ai-discovery-timeline');
+                this.progressBar = document.getElementById('blog-timeline-progress-bar');
+                this.progressTrack = this.progressBar ? this.progressBar.closest('.timeline-progress-track') : null;
+                this.cards = document.querySelectorAll('#ai-discovery-timeline .timeline-card');
+                if (!this.section || !this.progressBar || !this.progressTrack || !this.cards.length) return;
+                this.init();
+            }
+
+            init() {
+                window.addEventListener('scroll', () => this.onScroll(), { passive: true });
+                this.onScroll();
+            }
+
+            onScroll() {
+                const viewHeight = window.innerHeight;
+                const viewportRefY = viewHeight * 0.4;
+                const sectionRect = this.section.getBoundingClientRect();
+                const trackRect = this.progressTrack.getBoundingClientRect();
+                const trackTop = trackRect.top;
+                const trackHeight = trackRect.height;
+
+                const dotCenters = Array.from(this.cards).map(card => {
+                    const dot = card.querySelector('.timeline-dot');
+                    if (!dot) return null;
+                    const r = dot.getBoundingClientRect();
+                    return r.top + r.height / 2;
+                }).filter(v => v !== null);
+
+                const refY = viewportRefY;
+                const firstDot = dotCenters[0];
+                const lastDot = dotCenters[dotCenters.length - 1];
+                const targetY = firstDot !== undefined && lastDot !== undefined
+                    ? Math.min(lastDot, Math.max(firstDot, refY))
+                    : refY;
+
+                const fillFromTop = targetY - trackTop;
+                let progress = (fillFromTop / trackHeight) * 100;
+                progress = Math.min(100, Math.max(0, progress));
+
+                this.progressBar.style.height = progress + '%';
+
+                // Line "end" in viewport Y; dot is colored only when the line has crossed it
+                const lineEndY = trackTop + (progress / 100) * trackHeight;
+                this.cards.forEach((card, i) => {
+                    const dot = card.querySelector('.timeline-dot');
+                    if (!dot || !dotCenters[i]) return;
+                    const dotCenterY = dotCenters[i];
+                    const isReached = lineEndY >= dotCenterY;
+                    dot.classList.toggle('is-reached', isReached);
+                });
+            }
+        }
+
         // AI Discovery Timeline Animation Controller
         class AIDiscoveryTimelineController {
             constructor() {
@@ -535,9 +593,10 @@
             }
         }
 
-        // Initialize the animated background and AI discovery timeline animations when page loads
+        // Initialize the animated background, timeline progress line, and AI discovery timeline animations when page loads
         document.addEventListener('DOMContentLoaded', function() {
             const nodeBackground = new AnimatedNodeBackground('blog-node-background');
+            const blogTimelineProgress = new BlogTimelineProgressController();
             const aiDiscoveryTimelineController = new AIDiscoveryTimelineController();
         });
     </script>

@@ -136,6 +136,17 @@
     color: var(--purple);
 }
 
+/* Blog timeline dots: gray until the progress line crosses them */
+#ai-discovery-timeline .timeline-dot {
+    background: var(--gray-300);
+    box-shadow: none;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+#ai-discovery-timeline .timeline-dot.is-reached {
+    background: var(--gradient-primary);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
 /* Utility Classes for Common Inline Styles */
 .text-center { text-align: center; }
 .text-justify { text-align: justify; }
