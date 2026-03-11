@@ -168,59 +168,96 @@
             <div id="company-overview-node-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
             
             <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
-                <!-- About Mirai Engineering Title Card -->
-                <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; text-align: center; max-width: 1200px; margin-left: auto; margin-right: auto;">
-                    <h2 class="section-title" style="color: var(--gray-900); margin: 0; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">About Mirai Engineering</h2>
-                </div>
+                <!-- About Mirai Engineering - Story Section -->
+                <div id="about-mirai-story" class="section_story">
+                    <div class="story_component">
+                        <div class="story_heading">
+                            <div class="padding-global">
+                                <div class="container-small">
+                                    <div class="padding-section-large">
+                                        <div class="text-align-center">
+                                            <div class="margin-bottom margin-small">
+                                                <h2>About Mirai Engineering</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="story_timeline">
+                            <div class="padding-global">
+                                <div class="container-large">
+                                    <div class="story_layout">
+                                        <div class="story_progress">
+                                            <div id="story-progress-bar" class="story_progress-bar"></div>
+                                            <div class="story_fade-overlay-top"></div>
+                                            <div class="story_fade-overlay-bottom"></div>
+                                        </div>
 
-                <!-- About Mirai Engineering Interactive Timeline -->
-                <div id="about-mirai-timeline" style="margin-bottom: 30px;">
-                    <!-- Timeline Cards Container -->
-                    <div class="timeline-container" style="position: relative; max-width: 1200px; margin: 0 auto;">
-                        
-                        <!-- Timeline Line -->
-                        <div class="timeline-line" style="position: absolute; left: 50px; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--purple), var(--blue)); border-radius: 2px; z-index: 1;"></div>
-                        
-                        <!-- Card 1: The Problem -->
-                        <div class="timeline-card" data-card="1" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
-                            <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
-                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <span style="font-size: 2rem; margin-right: 12px;"><i class="fa-solid fa-bullseye"></i></span>
-                                <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0;">The Problem We Solve</h3>
+                                        <div class="story_item" data-story="1">
+                                            <div class="story_left">
+                                                <h3 class="story_date-text">The Problem We Solve</h3>
+                                            </div>
+                                            <div class="story_centre">
+                                                <div class="story_circle" style="background-color: var(--purple-light);"></div>
+                                            </div>
+                                            <div class="story_right">
+                                                <div class="margin-bottom margin-xlarge">
+                                                    <p class="text-size-medium">Mirai delivers AI-engineering <strong>world-wide</strong>, and is based in <strong>Europe</strong>. It was founded with a vision to <strong>democratize AI technology</strong>. After experiencing first-hand the <strong>lack of knowledge</strong> in many big companies when implementing AI solutions in a <strong>sustainable way</strong>, we saw an opportunity to bridge the gap between complex machine learning algorithms and real-world business applications.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="story_item" data-story="2">
+                                            <div class="story_left">
+                                                <h3 class="story_date-text">Our Engineering Expertise</h3>
+                                            </div>
+                                            <div class="story_centre">
+                                                <div class="story_circle" style="background-color: var(--gray-300);"></div>
+                                            </div>
+                                            <div class="story_right">
+                                                <div class="margin-bottom margin-xlarge">
+                                                    <p class="text-size-medium">We make sure that our engineers have a degree in engineering fields like <strong>mechanical, chemical, electrical or software engineering</strong>, while bringing <strong>strong experience in computer science</strong>. This unique combination ensures we understand both the technical and practical aspects of AI implementation.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="story_item" data-story="3">
+                                            <div class="story_left">
+                                                <h3 class="story_date-text">Flexible AI Environments</h3>
+                                            </div>
+                                            <div class="story_centre">
+                                                <div class="story_circle" style="background-color: var(--gray-300);"></div>
+                                            </div>
+                                            <div class="story_right">
+                                                <div class="margin-bottom margin-xlarge">
+                                                    <p class="text-size-medium">We believe the best AI solution is the one that fits <strong>your unique vision</strong>, not a one-size-fits-all model. Whether you prefer <strong>AWS or Google Cloud</strong> ecosystems, or require <strong>Cloud-Native but Premise-Independent</strong> solutions, we'll build it for you while prioritizing <strong>data sovereignty and cost-effectiveness</strong>.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="story_item" data-story="4">
+                                            <div class="story_left">
+                                                <h3 class="story_date-text">Our Commitment</h3>
+                                            </div>
+                                            <div class="story_centre">
+                                                <div class="story_circle" style="background-color: var(--gray-300);"></div>
+                                            </div>
+                                            <div class="story_right">
+                                                <div class="margin-bottom margin-xlarge">
+                                                    <p class="text-size-medium">We are committed to helping organizations unlock their full potential through <strong>intelligent automation and data-driven insights</strong>. It's your business, and we're here to provide the intelligence to <strong>unlock its full potential</strong>.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0; text-align: justify;">Mirai delivers AI-engineering <strong>world-wide</strong>, and its based in <strong>Europe</strong>. It was founded with a vision to <strong>democratize AI technology</strong>. After experiencing from first hand the <strong>lack of knowledge</strong> in many big companies when implementing AI solutions in a <strong>sustainable way</strong>, we saw an opportunity to bridge the gap between complex machine learning algorithms and real-world business applications.</p>
                         </div>
-                        
-                        <!-- Card 2: Our Expertise -->
-                        <div class="timeline-card" data-card="2" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
-                            <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
-                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <span style="font-size: 2rem; margin-right: 12px;"><i class="fa-solid fa-gears"></i></span>
-                                <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0;">Our Engineering Expertise</h3>
+                        <div class="story_heading">
+                            <div class="story_cta-line">
+                                <h2>We're here to provide the intelligence to unlock your business's full potential.</h2>
                             </div>
-                            <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0; text-align: justify;">We make sure that our engineers have a degree in engineering fields like <strong>mechanical, chemical, electrical or software engineering</strong>, while bringing <strong>strong experience in computer science</strong>. This unique combination ensures we understand both the technical and practical aspects of AI implementation.</p>
                         </div>
-                        
-                        <!-- Card 3: Our Solution -->
-                        <div class="timeline-card" data-card="3" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
-                            <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
-                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <span style="font-size: 2rem; margin-right: 12px;"><i class="fa-solid fa-cloud"></i></span>
-                                <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0;">Flexible AI Environments</h3>
-                            </div>
-                            <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0; text-align: justify;">We believe the best AI solution is the one that fits <strong>your unique vision</strong>, not a one-size-fits-all model. Whether you prefer <strong>AWS or Google Cloud</strong> ecosystems, or require <strong>Cloud-Native but Premise-Independent</strong> solutions, we'll build it for you while prioritizing <strong>data sovereignty and cost-effectiveness</strong>.</p>
-                        </div>
-                        
-                        <!-- Card 4: Our Commitment -->
-                        <div class="timeline-card" data-card="4" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(139, 92, 246, 0.1); margin-bottom: 30px; margin-left: 80px; position: relative; opacity: 0; transform: translateX(50px); transition: all 0.6s ease;">
-                            <div class="timeline-dot" style="position: absolute; left: -65px; top: 30px; width: 20px; height: 20px; background: var(--gradient-primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 2;"></div>
-                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <span style="font-size: 2rem; margin-right: 12px;"><i class="fa-solid fa-rocket"></i></span>
-                                <h3 class="timeline-title" style="color: var(--gray-900); font-size: 1.8rem; font-weight: 700; margin: 0;">Our Commitment</h3>
-                            </div>
-                            <p class="timeline-text" style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.6; margin: 0; text-align: justify;">We are committed to helping organizations unlock their full potential through <strong>intelligent automation and data-driven insights</strong>. It's your business, and we're here to provide the intelligence to <strong>unlock its full potential</strong>.</p>
-                        </div>
-                        
                     </div>
                 </div>
 
@@ -580,80 +617,89 @@
             }
         }
 
-        // Timeline Scroll Animation Controller
-        class TimelineAnimationController {
+        // Story section: smooth progress between circles; active item drives opacity + circle
+        class StoryScrollController {
             constructor() {
-                this.timelineCards = document.querySelectorAll('.timeline-card');
+                this.section = document.getElementById('about-mirai-story');
+                this.progressBar = document.getElementById('story-progress-bar');
+                this.progressTrack = this.progressBar ? this.progressBar.closest('.story_progress') : null;
+                this.items = document.querySelectorAll('.story_item');
+                if (!this.section || !this.progressBar || !this.progressTrack || !this.items.length) return;
                 this.init();
             }
 
             init() {
-                // Set up intersection observer for scroll animations
-                const observerOptions = {
-                    threshold: 0.2,
-                    rootMargin: '0px 0px -50px 0px'
-                };
+                window.addEventListener('scroll', () => this.onScroll(), { passive: true });
+                this.onScroll();
+            }
 
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            this.animateCard(entry.target);
-                        }
-                    });
-                }, observerOptions);
+            onScroll() {
+                const viewHeight = window.innerHeight;
+                const viewportMid = viewHeight * 0.4;
+                const sectionRect = this.section.getBoundingClientRect();
 
-                // Observe all timeline cards
-                this.timelineCards.forEach(card => {
-                    observer.observe(card);
+                // Active item: which item's center is closest to the reference line (just above center)
+                let activeIndex = 0;
+                let minDist = Infinity;
+                this.items.forEach((item, i) => {
+                    const itemRect = item.getBoundingClientRect();
+                    const itemMid = itemRect.top + itemRect.height / 2;
+                    const dist = Math.abs(itemMid - viewportMid);
+                    if (dist < minDist) {
+                        minDist = dist;
+                        activeIndex = i;
+                    }
                 });
 
-                // Add hover effects
-                this.addHoverEffects();
-            }
+                // Progress bar: compute a smooth position between the first and last circles
+                const trackRect = this.progressTrack.getBoundingClientRect();
+                const trackTop = trackRect.top;
+                const trackHeight = trackRect.height;
 
-            animateCard(card) {
-                // Add animation class
-                card.style.opacity = '1';
-                card.style.transform = 'translateX(0)';
-                
-                // Add a subtle bounce effect
-                card.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-                
-                // Animate the timeline dot
-                const dot = card.querySelector('.timeline-dot');
-                if (dot) {
-                    setTimeout(() => {
-                        dot.style.transform = 'scale(1.2)';
-                        dot.style.transition = 'transform 0.3s ease';
-                        setTimeout(() => {
-                            dot.style.transform = 'scale(1)';
-                        }, 200);
-                    }, 300);
+                // Reference line inside the section (same Y we usamos para elegir el activo)
+                const refYInSection = viewportMid - sectionRect.top;
+
+                // Obtener centros de todos los círculos en coordenadas de sección
+                const circleCentersInSection = Array.from(this.items).map(item => {
+                    const circle = item.querySelector('.story_circle');
+                    if (!circle) return null;
+                    const circleRect = circle.getBoundingClientRect();
+                    return circleRect.top + circleRect.height / 2 - sectionRect.top;
+                }).filter(v => v !== null);
+
+                let targetYInSection = refYInSection;
+                if (circleCentersInSection.length) {
+                    const first = circleCentersInSection[0];
+                    const last = circleCentersInSection[circleCentersInSection.length - 1];
+                    // Clamp para que nunca pase del primer ni del último punto
+                    targetYInSection = Math.min(last, Math.max(first, refYInSection));
                 }
-            }
 
-            addHoverEffects() {
-                this.timelineCards.forEach(card => {
-                    card.addEventListener('mouseenter', () => {
-                        card.style.transform = 'translateX(0) translateY(-5px)';
-                        card.style.boxShadow = '0 12px 40px rgba(139, 92, 246, 0.2)';
-                        card.style.transition = 'all 0.3s ease';
-                    });
+                // Convertir a porcentaje dentro del track
+                const trackTopInSection = trackTop - sectionRect.top;
+                const fillFromTop = targetYInSection - trackTopInSection;
+                let progress = (fillFromTop / trackHeight) * 100;
+                progress = Math.min(100, Math.max(0, progress));
 
-                    card.addEventListener('mouseleave', () => {
-                        card.style.transform = 'translateX(0) translateY(0)';
-                        card.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.15)';
-                        card.style.transition = 'all 0.3s ease';
-                    });
+                this.progressBar.style.height = progress + '%';
+
+                this.items.forEach((item, i) => {
+                    const circle = item.querySelector('.story_circle');
+                    const isActive = i === activeIndex;
+                    item.classList.toggle('is-active', isActive);
+                    item.style.opacity = isActive ? '1' : '0.35';
+                    if (circle) {
+                        circle.style.backgroundColor = isActive ? 'var(--purple-light)' : 'var(--gray-300)';
+                    }
                 });
             }
         }
 
-        // Initialize the animated backgrounds and timeline animations when page loads
+        // Initialize the animated backgrounds and story scroll when page loads
         document.addEventListener('DOMContentLoaded', function() {
             const companyOverviewNodeBackground = new AnimatedNodeBackground('company-overview-node-background');
             const leadershipValuesNodeBackground = new AnimatedNodeBackground('leadership-values-node-background');
-            const timelineController = new TimelineAnimationController();
+            const storyController = new StoryScrollController();
         });
     </script>
 </body>
