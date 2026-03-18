@@ -616,13 +616,11 @@ function toggleImage(imageId) {
         const isExpanded = imageContainer.classList.contains('expanded');
         
         if (isExpanded) {
-            // Collapse
             imageContainer.classList.remove('expanded');
             button.classList.remove('expanded');
             button.querySelector('.btn-text').textContent = 'View Project Image';
             button.querySelector('.btn-icon').textContent = '▼';
         } else {
-            // Expand
             imageContainer.classList.add('expanded');
             button.classList.add('expanded');
             button.querySelector('.btn-text').textContent = 'Hide Image';

@@ -1,4 +1,26 @@
 // Device Detection & Mobile Routing - Enhanced with Safety Measures
+const desktopToMobileMap = {
+    '/': '/mobile/index-mobile.html',
+    '/index.html': '/mobile/index-mobile.html',
+    '/about.html': '/mobile/about-mobile.html',
+    '/ai-service.html': '/mobile/ai-service-mobile.html',
+    '/industries.html': '/mobile/industries-mobile.html',
+    '/contact.html': '/mobile/contact-mobile.html',
+    '/ai-tech-stack.html': '/mobile/ai-service-mobile.html',
+    '/blog.html': '/mobile/blog-mobile.html',
+    '/nutrition-mate-privacy.html': '/mobile/nutrition-mate-privacy-mobile.html'
+};
+
+const mobileToDesktopMap = {
+    '/mobile/index-mobile.html': '/index.html',
+    '/mobile/about-mobile.html': '/about.html',
+    '/mobile/ai-service-mobile.html': '/ai-service.html',
+    '/mobile/industries-mobile.html': '/industries.html',
+    '/mobile/contact-mobile.html': '/contact.html',
+    '/mobile/blog-mobile.html': '/blog.html',
+    '/mobile/nutrition-mate-privacy-mobile.html': '/nutrition-mate-privacy.html'
+};
+
 class DeviceDetector {
     constructor() {
         this.isMobile = this.detectMobile();
@@ -59,13 +81,14 @@ class DeviceDetector {
     redirectToMobile() {
         const currentPath = window.location.pathname;
         const mobilePath = this.getMobilePath(currentPath);
+        const hash = window.location.hash || '';
         
         // Safety: Only redirect if not already on mobile version
         if (!currentPath.includes('/mobile/')) {
             // Add error handling for mobile file access
             this.checkMobileFileExists(mobilePath).then(exists => {
                 if (exists) {
-                    window.location.href = mobilePath;
+                    window.location.href = mobilePath + hash;
                 } else {
                     console.warn('Mobile file not found, staying on desktop version');
                 }
@@ -86,31 +109,24 @@ class DeviceDetector {
     
     getMobilePath(currentPath) {
         const baseUrl = window.location.origin;
-        
-        // Map desktop pages to mobile pages
-        const pageMap = {
-            '/': '/mobile/index-mobile.html',
-            '/index.html': '/mobile/index-mobile.html',
-            '/about.html': '/mobile/about-mobile.html',
-            '/ai-service.html': '/mobile/ai-service-mobile.html',
-            '/industries.html': '/mobile/industries-mobile.html',
-            '/contact.html': '/mobile/contact-mobile.html',
-            '/ai-tech-stack.html': '/mobile/ai-service-mobile.html', // Redirect to main service page
-            '/blog.html': '/mobile/contact-mobile.html' // Redirect to contact for now
-        };
-        
-        // Default to mobile index if no mapping found
-        return baseUrl + (pageMap[currentPath] || '/mobile/index-mobile.html');
+
+        return baseUrl + (desktopToMobileMap[currentPath] || '/mobile/index-mobile.html');
     }
     
     ensureDesktopVersion() {
         // If on mobile version but desktop detected, redirect to desktop
         if (window.location.pathname.includes('/mobile/')) {
-            const desktopPath = window.location.pathname.replace('/mobile/', '/');
+            const desktopPath = mobileToDesktopMap[window.location.pathname];
+            const hash = window.location.hash || '';
+
+            if (!desktopPath) {
+                return;
+            }
+
             // Safety: Check if desktop file exists before redirecting
             this.checkDesktopFileExists(desktopPath).then(exists => {
                 if (exists) {
-                    window.location.href = desktopPath;
+                    window.location.href = desktopPath + hash;
                 } else {
                     console.warn('Desktop file not found, staying on mobile version');
                 }
@@ -145,18 +161,9 @@ class DeviceDetector {
     // If mobile, redirect immediately
     if (isMobile && !window.location.pathname.includes('/mobile/')) {
         const currentPath = window.location.pathname;
-        const pageMap = {
-            '/': '/mobile/index-mobile.html',
-            '/index.html': '/mobile/index-mobile.html',
-            '/about.html': '/mobile/about-mobile.html',
-            '/ai-service.html': '/mobile/ai-service-mobile.html',
-            '/industries.html': '/mobile/industries-mobile.html',
-            '/contact.html': '/mobile/contact-mobile.html',
-            '/ai-tech-stack.html': '/mobile/ai-service-mobile.html',
-            '/blog.html': '/mobile/contact-mobile.html'
-        };
-        const mobilePath = pageMap[currentPath] || '/mobile/index-mobile.html';
-        window.location.href = mobilePath;
+        const hash = window.location.hash || '';
+        const mobilePath = desktopToMobileMap[currentPath] || '/mobile/index-mobile.html';
+        window.location.href = mobilePath + hash;
         return; // Exit early for mobile users
     }
 })();
