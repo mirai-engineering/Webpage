@@ -40,6 +40,19 @@
             display: block !important;
             margin: 0 auto !important;
         }
+        .case-study-image-placeholder {
+            min-height: 320px !important;
+            background: #000 !important;
+            border-radius: var(--radius-md) !important;
+            padding: 24px !important;
+        }
+        .case-study-image-placeholder img {
+            max-height: 360px !important;
+            width: 100% !important;
+            object-fit: contain !important;
+            background: #000 !important;
+            box-shadow: none !important;
+        }
         .paper-reference {
             text-align: center !important;
             margin-top: var(--space-lg) !important;
@@ -381,6 +394,67 @@
                     <div class="case-study-card title-card">
                         <h2 class="title-card-heading">What Mirai has delivered</h2>
                         <p class="title-card-description" style="text-align: justify;">Real-world AI implementations that drive measurable business results across diverse industries. From <strong>engineering</strong> to <strong>business operations</strong>, or <strong>medicine</strong> to <strong>financial markets</strong> - we've got you covered.</p>
+                    </div>
+
+                    <div class="case-study-card expandable-card" id="nutrition-mate">
+                        <!-- Collapsed View -->
+                        <div class="card-collapsed">
+                            <div class="case-study-header">
+                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Intelligent Calorie Tracking with On-Device AI</h3>
+                            </div>
+
+                            <div class="case-study-image case-study-image-placeholder">
+                                <img src="assets/images/case-studies/nutrition-mate.svg" alt="Nutrition Mate app interface">
+                            </div>
+
+                            <div class="case-study-results">
+                                <div class="result-item">
+                                    <span class="result-value">5 Searches → 1 Sentence</span>
+                                    <span class="result-label">Logging Time Reduction</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-value">100%</span>
+                                    <span class="result-label">On-Device Privacy</span>
+                                </div>
+                            </div>
+
+                            <button class="expand-button" onclick="toggleCard('nutrition-mate')">
+                                <span class="button-text">Learn More</span>
+                                <span class="button-icon">▼</span>
+                            </button>
+                        </div>
+
+                        <!-- Expanded View -->
+                        <div class="card-expanded">
+                            <p class="case-study-description" style="color: black !important; text-align: justify;">Calorie tracking only works when it is precise, and precision requires the user to specify ingredients, quantities, and preparation methods. No camera can tell you whether chicken was air-fried or oil-fried, how much sauce was used, or what is hidden inside a wrap. That context lives with the user, not in a photo. The problem is that precise logging is slow. Searching databases, adjusting portions, and navigating food lists is exactly the friction that makes users quit. Nutrition Mate was built around a different question: instead of replacing logging with guesswork, what if AI made precise logging instant?</p>
+
+                            <div class="case-study-overview">
+                                <h4>How It Works</h4>
+                                <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
+                                <p style="text-align: justify;">Nutrition Mate uses a fine-tuned small language model that runs entirely on the user's phone. A user can type a natural sentence such as <strong>"200g chicken breast, 120g rice, 10g olive oil"</strong>, and the system parses the input, identifies the foods, matches quantities, and builds the entry in seconds. No cloud calls, no API latency, and no food data leaving the device.</p>
+                                <p style="text-align: justify;">The AI does not replace the user's discipline. It accelerates it. Users still control the ingredients and the grams while the model removes the friction between knowing what they ate and having it logged. For companies evaluating AI-enabled products, this project is a clear example of how specialized on-device models can improve retention, responsiveness, and trust at the same time.</p>
+                            </div>
+
+                            <div class="case-study-details">
+                                <h5>Why On-Device?</h5>
+                                <p style="text-align: justify;">Most AI-powered apps depend on cloud APIs from large model providers. That introduces latency, outage risk, ongoing cost dependency, and sensitive dietary data leaving the phone. We took a different path: a small, specialized model fine-tuned specifically for food understanding and deployed locally on consumer hardware. The result is fast responses, complete privacy, and zero external dependency. This reflects a broader thesis we hold at Mirai: the future of applied AI may not be bigger models, but smaller, specialized ones that live directly inside the product.</p>
+
+                                <div class="business-value">
+                                    <h5>What this proves for product teams</h5>
+                                    <p>When privacy, speed, and unit economics matter, AI does not need to sit behind a third-party API. We can embed specialized intelligence directly into a customer-facing product and turn slow manual workflows into fast structured data capture without sending sensitive information off-device.</p>
+                                </div>
+
+                                <div class="paper-reference" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                                    <a href="nutrition-mate-privacy.html" class="paper-button">View Privacy Policy</a>
+                                    <a href="contact.html" class="paper-button">Discuss a Similar Product</a>
+                                </div>
+                            </div>
+
+                            <button class="collapse-button" onclick="toggleCard('nutrition-mate')">
+                                <span class="button-text">Show Less</span>
+                                <span class="button-icon">▲</span>
+                            </button>
+                        </div>
                     </div>
                     
                     <div class="case-study-card expandable-card" id="molecular-optimization">
@@ -1070,6 +1144,27 @@
                 }
             }
         }
+
+        function expandCardForHash() {
+            const hash = window.location.hash;
+            if (!hash) {
+                return;
+            }
+
+            const target = document.querySelector(hash);
+            if (!target) {
+                return;
+            }
+
+            const card = target.classList.contains('expandable-card') ? target : target.closest('.expandable-card');
+            if (card && !card.classList.contains('expanded')) {
+                toggleCard(card.id);
+            }
+
+            requestAnimationFrame(() => {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
         
         // Initialize the animated background for case studies
         document.addEventListener('DOMContentLoaded', function() {
@@ -1077,7 +1172,10 @@
             
             // Initialize Learn More button functionality
             initLearnMoreButtons();
+            expandCardForHash();
         });
+
+        window.addEventListener('hashchange', expandCardForHash);
         
         function initLearnMoreButtons() {
             // This function is now only needed for cards that use .case-study-details
