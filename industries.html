@@ -319,6 +319,22 @@
             height: fit-content !important;
             padding: 0 !important;
         }
+
+        /* The updated AI Agents asset is square, so it needs to escape the
+           default 200px-tall case-study image slot used by landscape images. */
+        #ai-agents .case-study-image {
+            height: auto !important;
+            max-width: 520px !important;
+            overflow: visible !important;
+        }
+
+        #ai-agents .case-study-image img {
+            width: 100% !important;
+            max-width: 520px !important;
+            height: auto !important;
+            max-height: 520px !important;
+            object-fit: contain !important;
+        }
         
         .case-study-details {
             display: none;
@@ -461,7 +477,7 @@
                         <!-- Collapsed View -->
                         <div class="card-collapsed">
                             <div class="case-study-header">
-                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Optimization Frameworks with Artificial Neural Networks</h3>
+                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Molecular Optimization with AI</h3>
                             </div>
                             
                             <div class="case-study-image">
