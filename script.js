@@ -18,20 +18,32 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimatedTagline();
 });
 
-// Mobile navigation functionality
+// Mobile navigation functionality - usa solo el nav del header (nav.navigation)
 function initMobileNavigation() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    const nav = document.querySelector('nav.navigation');
+    if (!nav) return;
+    const hamburger = nav.querySelector('.hamburger');
+    const navMenu = nav.querySelector('.nav-menu');
     
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
+        // Cerrar menú al redimensionar a desktop (breakpoint 992px)
+        function closeMenuIfDesktop() {
+            if (window.innerWidth > 992) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        }
+        window.addEventListener('resize', closeMenuIfDesktop);
+        
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
         
         // Close menu when clicking on a link
         const navLinks = navMenu.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
+        navLinks.forEach(function(link) {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
                 hamburger.classList.remove('active');
@@ -40,10 +52,10 @@ function initMobileNavigation() {
         
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
-            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-            }
+            if (!navMenu.classList.contains('active')) return;
+            if (hamburger.contains(event.target) || navMenu.contains(event.target)) return;
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
         });
     }
 }
