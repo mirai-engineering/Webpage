@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 150 1200 450" role="img" aria-labelledby="title desc">
+  <title id="title">Industries served by Mirai Engineering</title>
+  <desc id="desc">A central AI engineering platform connected to engineering, financial services, healthcare, mobility, and data operations.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#251342"/></linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="1200" height="700" rx="30" fill="url(#bg)"/><circle cx="600" cy="350" r="250" fill="none" stroke="#a78bfa" opacity=".08" stroke-width="70"/>
+  <text x="70" y="78" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">INDUSTRY KNOWLEDGE × AI ENGINEERING</text>
+  <text x="70" y="127" fill="white" font-family="Arial, sans-serif" font-size="34" font-weight="700">Different domains. Purpose-built intelligence.</text>
+  <g fill="none" stroke="#8b5cf6" stroke-width="4" opacity=".75"><path d="M452 316 311 244"/><path d="M444 372 300 471"/><path d="M748 316 889 244"/><path d="M756 372 900 471"/><path d="M600 456v95"/></g>
+  <g fill="#c4b5fd"><circle cx="382" cy="280" r="7"/><circle cx="371" cy="422" r="7"/><circle cx="818" cy="280" r="7"/><circle cx="829" cy="422" r="7"/><circle cx="600" cy="503" r="7"/></g>
+  <g filter="url(#shadow)">
+    <rect x="440" y="226" width="320" height="232" rx="34" fill="url(#core)"/>
+    <g transform="translate(600 304)" fill="none" stroke="white" stroke-width="7" stroke-linecap="round"><circle r="38" opacity=".3"/><circle r="14"/><path d="M0-58v20M0 38v20M-58 0h20M38 0h20M-41-41l14 14M27 27l14 14M41-41 27-27M-27 27l-14 14"/></g>
+    <text x="600" y="385" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="29" font-weight="700">MIRAI AI SYSTEMS</text><text x="600" y="417" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="18">Models · Agents · Optimization</text>
+    <g font-family="Arial, sans-serif">
+      <rect x="66" y="169" width="270" height="150" rx="22" fill="white"/>
+      <circle cx="126" cy="225" r="32" fill="#ede9fe"/><path d="M106 244h40M113 244v-37h26v37M120 207v-14h12v14" fill="none" stroke="#7c3aed" stroke-width="6" stroke-linejoin="round"/>
+      <text x="173" y="218" fill="#111827" font-size="23" font-weight="700">ENGINEERING</text><text x="173" y="248" fill="#4b5563" font-size="17">Design optimization</text><text x="173" y="274" fill="#4b5563" font-size="17">Predictive systems</text>
+      <rect x="66" y="400" width="270" height="150" rx="22" fill="white"/>
+      <circle cx="126" cy="456" r="32" fill="#dcfce7"/><path d="M108 471v-31M124 471v-19M140 471v-41" stroke="#16a34a" stroke-width="7" stroke-linecap="round"/>
+      <text x="173" y="449" fill="#111827" font-size="23" font-weight="700">FINANCE</text><text x="173" y="479" fill="#4b5563" font-size="17">Market intelligence</text><text x="173" y="505" fill="#4b5563" font-size="17">Real-time forecasting</text>
+      <rect x="864" y="169" width="270" height="150" rx="22" fill="white"/>
+      <circle cx="924" cy="225" r="32" fill="#fee2e2"/><path d="M924 244v-38M905 225h38" stroke="#dc2626" stroke-width="8" stroke-linecap="round"/>
+      <text x="971" y="218" fill="#111827" font-size="23" font-weight="700">HEALTHCARE</text><text x="971" y="248" fill="#4b5563" font-size="17">Medical imaging</text><text x="971" y="274" fill="#4b5563" font-size="17">Private on-device AI</text>
+      <rect x="864" y="400" width="270" height="150" rx="22" fill="white"/>
+      <circle cx="924" cy="456" r="32" fill="#e0f2fe"/><path d="M902 468h44l-7-24h-30zM911 468v9M937 468v9" fill="none" stroke="#0284c7" stroke-width="6" stroke-linejoin="round"/>
+      <text x="971" y="449" fill="#111827" font-size="23" font-weight="700">MOBILITY</text><text x="971" y="479" fill="#4b5563" font-size="17">Computer vision</text><text x="971" y="505" fill="#4b5563" font-size="17">Automation &amp; safety</text>
+      <rect x="430" y="488" width="340" height="92" rx="22" fill="white"/>
+      <circle cx="487" cy="534" r="29" fill="#fef3c7"/><path d="M470 519h34M470 534h34M470 549h34" stroke="#d97706" stroke-width="6" stroke-linecap="round"/>
+      <text x="535" y="526" fill="#111827" font-size="23" font-weight="700">DATA OPERATIONS</text><text x="535" y="554" fill="#4b5563" font-size="17">From raw information to decisions</text>
+    </g>
+  </g>
+</svg>

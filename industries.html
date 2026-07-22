@@ -320,22 +320,6 @@
             padding: 0 !important;
         }
 
-        /* The updated AI Agents asset is square, so it needs to escape the
-           default 200px-tall case-study image slot used by landscape images. */
-        #ai-agents .case-study-image {
-            height: auto !important;
-            max-width: 520px !important;
-            overflow: visible !important;
-        }
-
-        #ai-agents .case-study-image img {
-            width: 100% !important;
-            max-width: 520px !important;
-            height: auto !important;
-            max-height: 520px !important;
-            object-fit: contain !important;
-        }
-        
         .case-study-details {
             display: none;
             margin-top: var(--space-lg);
@@ -461,6 +445,7 @@
                                 </div>
 
                                 <div class="paper-reference" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                                    <a href="https://apps.apple.com/de/app/nutrition-mate/id6758606688?l=en-GB" target="_blank" rel="noopener noreferrer" class="paper-button">View on the App Store ↗</a>
                                     <a href="nutrition-mate-privacy.html" class="paper-button">View Privacy Policy</a>
                                     <a href="contact.html" class="paper-button">Discuss a Similar Product</a>
                                 </div>
@@ -473,6 +458,114 @@
                         </div>
                     </div>
                     
+                    <div class="case-study-card expandable-card" id="applai">
+                        <div class="card-collapsed">
+                            <div class="case-study-header">
+                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Applai: From Job Posting to Interview-Ready Application</h3>
+                            </div>
+
+                            <div class="case-study-image case-study-image-placeholder">
+                                <img src="assets/images/case-studies/applai.png" alt="Applai AI career application platform">
+                            </div>
+
+                            <div class="case-study-results">
+                                <div class="result-item">
+                                    <span class="result-value">3 Workflows</span>
+                                    <span class="result-label">One Application Workspace</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-value">URL → CV</span>
+                                    <span class="result-label">End-to-End Automation</span>
+                                </div>
+                            </div>
+
+                            <button class="expand-button" onclick="toggleCard('applai')">
+                                <span class="button-text">Learn More</span>
+                                <span class="button-icon">▼</span>
+                            </button>
+                        </div>
+
+                        <div class="card-expanded">
+                            <p class="case-study-description" style="color: black !important; text-align: justify;">Applying for a role usually means moving between a job description, an old resume, ATS checkers, document editors, and generic cover-letter tools. Applai brings those disconnected steps into one guided workspace, helping candidates create stronger applications without inventing experience or losing control of their story.</p>
+
+                            <div class="case-study-overview">
+                                <h4>One Intelligent Application Workflow</h4>
+                                <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
+                                <p style="text-align: justify;">Applai can ingest a job posting directly from its URL, understand the role alongside the candidate's professional history, and coordinate three specialized AI workflows: resume tailoring, ATS assessment, and cover-letter generation. Conversational clarification resolves missing context before documents are produced, keeping outputs relevant and truthful.</p>
+                                <p style="text-align: justify;">Candidates can review a polished HTML preview, choose from adaptive one-page templates, and download validated HTML or PDF documents. Authentication, persistent user data, subscription billing, and paid access controls make the experience a complete production product rather than an isolated AI demonstration.</p>
+                            </div>
+
+                            <div class="case-study-details">
+                                <h5>What this proves for digital product teams</h5>
+                                <p style="text-align: justify;">Reliable AI products require more than a prompt. Applai combines agentic workflows, human clarification, deterministic document validation, and production SaaS infrastructure to turn generative AI into a focused customer journey with dependable outputs.</p>
+
+                                <div class="paper-reference" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                                    <a href="https://wonderful-vibrancy-production-db7a.up.railway.app" target="_blank" rel="noopener noreferrer" class="paper-button">Visit Applai ↗</a>
+                                    <a href="contact.html" class="paper-button">Discuss a Similar Product</a>
+                                </div>
+                            </div>
+
+                            <button class="collapse-button" onclick="toggleCard('applai')">
+                                <span class="button-text">Show Less</span>
+                                <span class="button-icon">▲</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="case-study-card expandable-card" id="mirai-engine">
+                        <div class="card-collapsed">
+                            <div class="case-study-header">
+                                <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">Mirai Engine: From Experimental Data to Better Designs</h3>
+                            </div>
+
+                            <div class="case-study-image case-study-image-placeholder">
+                                <img src="assets/images/case-studies/mirai-engine.png" alt="Mirai Engine scientific experimentation platform">
+                            </div>
+
+                            <div class="case-study-results">
+                                <div class="result-item">
+                                    <span class="result-value">1 Package</span>
+                                    <span class="result-label">Full ML Lifecycle</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-value">Human-Governed</span>
+                                    <span class="result-label">Model Promotion</span>
+                                </div>
+                            </div>
+
+                            <button class="expand-button" onclick="toggleCard('mirai-engine')">
+                                <span class="button-text">Learn More</span>
+                                <span class="button-icon">▼</span>
+                            </button>
+                        </div>
+
+                        <div class="card-expanded">
+                            <p class="case-study-description" style="color: black !important; text-align: justify;">Scientific and engineering teams often depend on project-specific spreadsheets, tribal knowledge, and one-off modeling scripts. Mirai Engine replaces that fragmented process with a governed platform that takes teams from structured experimental data to model-backed design decisions and proposed next experiments.</p>
+
+                            <div class="case-study-overview">
+                                <h4>A Reusable Experimentation Lifecycle</h4>
+                                <div style="width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 15px 0 20px 0; border-radius: 1px;"></div>
+                                <p style="text-align: justify;">A manifest-driven experiment package defines tables, joins, inputs, outputs, units, bounds, and optimization directions. Mirai Engine validates that contract, builds canonical training data, generates preprocessing and quality artifacts, and requires an approval gate before training begins.</p>
+                                <p style="text-align: justify;">The platform trains and compares surrogate models, tracks candidates in MLflow, and registers only the selected challenger without automatically replacing the champion. Scientists can then inspect model quality, explore candidate designs, and use Bayesian optimization to identify promising next experiments while preserving untouched test data for evaluation.</p>
+                            </div>
+
+                            <div class="case-study-details">
+                                <h5>What this proves for R&amp;D teams</h5>
+                                <p style="text-align: justify;">Advanced optimization can be operationalized without hiding scientific decisions inside brittle code. Mirai Engine combines flexible data contracts, traceable model governance, interactive design exploration, and production infrastructure in one auditable system designed for multidisciplinary teams.</p>
+
+                                <div class="paper-reference" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                                    <a href="https://mirai-doe-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="paper-button">Open Mirai Engine ↗</a>
+                                    <a href="contact.html" class="paper-button">Discuss a Similar Platform</a>
+                                </div>
+                            </div>
+
+                            <button class="collapse-button" onclick="toggleCard('mirai-engine')">
+                                <span class="button-text">Show Less</span>
+                                <span class="button-icon">▲</span>
+                            </button>
+                        </div>
+                    </div>
+
                     <div class="case-study-card expandable-card" id="molecular-optimization">
                         <!-- Collapsed View -->
                         <div class="card-collapsed">
@@ -662,8 +755,8 @@
                                 <h3 class="case-study-title" style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center;">AI Agents for Financial Markets</h3>
                             </div>
                             
-                            <div class="case-study-image">
-                                <img src="assets/images/case-studies/agents.png" alt="AI Agents for Market Analysis">
+                            <div class="case-study-image case-study-image-placeholder">
+                                <img src="assets/images/case-studies/ai-agents.png" alt="AI Agents for Market Analysis">
                             </div>
                             
                             <div class="case-study-results">

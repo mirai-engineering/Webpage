@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 180" role="img" aria-labelledby="title desc">
+  <title id="title">Applai</title>
+  <desc id="desc">Applai career application platform wordmark</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#4c1d95"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="750" height="180" rx="24" fill="url(#bg)"/>
+  <g transform="translate(88 45)" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="0" width="70" height="90" rx="8"/>
+    <path d="M18 25h34M18 45h34M18 65h22"/>
+    <path d="m58 72 13 13 25-31" stroke="#c4b5fd"/>
+  </g>
+  <text x="220" y="105" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">Applai</text>
+  <text x="224" y="138" fill="#ddd6fe" font-family="Arial, Helvetica, sans-serif" font-size="20">AI-powered career applications</text>
+</svg>
